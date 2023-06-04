@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial'), url('./../fonts/arial/arial-400.woff2') format('woff2'),
+    url('./../fonts/arial/arial-400.woff') format('woff'),
+    url('./../fonts/arial/arial-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial'), url('./../fonts/arial/arial-bold.woff2') format('woff2'),
+    url('./../fonts/arial/arial-bold.woff') format('woff'),
+    url('./../fonts/arial/arial-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NAMU';
+  src: local('NAMU'), url('./../fonts/namu/NAMU-1990.woff2') format('woff2'),
+    url('./../fonts/namu/NAMU-1990.woff') format('woff'),
+    url('./../fonts/namu/NAMU-1990.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
