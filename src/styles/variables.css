@@ -1,7 +1,11 @@
 :root {
-  --blue-color: #3a67b1;
+  --blue-70-color: #233e6a;
+  --blue-60-color: #2e528e;
+  --blue-navy-color: #3a67b1;
+  --blue-40-color: #6185c1;
   --blue-30-color: #89a4d0;
-  --blue-10-color: #89a4d0;
+  --blue-20-color: #b0c2e0;
+  --blue-10-color: #d8e1ef;
 
   --aqua-color: #0097d7;
   --aqua-10-color: #cceaf7;
