@@ -1,4 +1,3 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
 import CharacteristicCard from '../Characteristic_card/Characteristic_card';
