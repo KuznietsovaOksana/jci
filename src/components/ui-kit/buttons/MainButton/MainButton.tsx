@@ -9,7 +9,6 @@ interface ButtonProps {
   onClick?: () => void;
   style?: 'primary' | 'secondary';
   paddings?: number;
-
 }
 
 export const MainButton = memo(
@@ -41,4 +40,3 @@ export const MainButton = memo(
 );
 
 MainButton.displayName = 'MainButton';
-
