@@ -2,9 +2,10 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
-// import Header from '@/components/Header_Layout/Header_Layout';
 import { Container } from '@/components/Container/Container';
 import Layout from '@/components/Layout';
+import { HeroSection } from '@/components/Hero_section/Hero_section';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,7 +24,7 @@ export default function Home() {
           <main className={`${styles.main} ${inter.className}`}>
             <div>
               <p>Beginning</p>
-
+              <HeroSection />
               <CharacteristicSection />
             </div>
           </main>
