@@ -1,0 +1,38 @@
+.characteristic_card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.characteristic_icon {
+  width: 32px;
+  height: 32px;
+}
+.characteristic_title {
+  color: var(--blue-navy-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .characteristic-card {
+    gap: 16px;
+  }
+  .characteristic_icon {
+    width: 48px;
+    height: 48px;
+  }
+  .characteristic_title {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .characteristic_icon {
+    width: 72px;
+    height: 72px;
+  }
+  .characteristic_title {
+    font-size: 18px;
+  }
+}
