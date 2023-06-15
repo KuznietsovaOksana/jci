@@ -1,0 +1,25 @@
+.mainBtn {
+  display: block;
+  font-weight: 700; 
+  border-radius: 100px;
+  padding: 15px 100px;
+  border: none;
+  color: var(--white-color);
+  background-color: var(--blue-primary-color);
+  font-size: 18px;
+}
+
+
+.primary {
+  background-color: var(--blue-primary-color);
+}
+
+.secondary {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: var(--blue-primary-color);
+  background: none;
+  border: 1px solid var(--blue-primary-color);
+}
+
+
