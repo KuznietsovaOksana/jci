@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import styles from './HeroSlider.module.css';
-import { Pagination } from "swiper";
+import { Autoplay ,Pagination } from "swiper";
 
 
 interface Image {
@@ -24,10 +24,13 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
 return (
     <>
       <Swiper
+        autoplay={{
+          delay: 3000,
+        }}
         pagination={{
           dynamicBullets: false,
         }}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
         className={styles.heroSlider}
       >
         {images.map((image, index) => (
