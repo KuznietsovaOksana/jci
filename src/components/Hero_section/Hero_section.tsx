@@ -1,6 +1,9 @@
 import React from 'react';
 import css from './Hero_section.module.css';
 import { MainButton } from '../ui-kit/buttons/MainButton/MainButton';
+import HeroSlider from '../ui-kit/sliders/HeroSlider/HeroSlider';
+import {images} from './images'
+
 
 export const HeroSection = () => {
   return (
@@ -13,6 +16,7 @@ export const HeroSection = () => {
         paddings={150}
       />
       <MainButton type='button' text='Read more' style='primary' />
+      <HeroSlider images={images}/>
     </div>
   );
 };

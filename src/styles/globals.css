@@ -110,3 +110,22 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.swiper-pagination{
+  left: 53.5% !important;
+  width: max-content !important;
+}
+
+.swiper-pagination-bullet{
+  width: 12px !important;
+  height: 12px !important;
+  background-color: var(--white-color) !important;
+  border: 1px solid var(--blue-primary-color) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--blue-primary-color) !important;
+}
+
