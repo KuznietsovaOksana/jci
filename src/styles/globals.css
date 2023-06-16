@@ -111,6 +111,7 @@ a {
   }
 }
 
+
 .swiper-pagination{
   left: 53.5% !important;
   width: max-content !important;
@@ -127,3 +128,4 @@ a {
 .swiper-pagination-bullet-active {
   background-color: var(--blue-primary-color) !important;
 }
+

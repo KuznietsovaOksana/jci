@@ -5,7 +5,7 @@ import CharacteristicSection from '@/components/Characteristic_section/Character
 import { Container } from '@/components/Container/Container';
 import Layout from '@/components/Layout';
 import { HeroSection } from '@/components/Hero_section/Hero_section';
-
+import ProjectSection from '@/components/Project_section/Project_section';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,6 +26,7 @@ export default function Home() {
               <p>Beginning</p>
               <HeroSection />
               <CharacteristicSection />
+              <ProjectSection />
             </div>
           </main>
         </Layout>
