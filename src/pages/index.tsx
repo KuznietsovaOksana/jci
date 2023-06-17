@@ -21,10 +21,11 @@ export default function Home() {
 
       <Container>
         <Layout>
+          <HeroSection />
           <main className={`${styles.main} ${inter.className}`}>
             <div>
               <p>Beginning</p>
-              <HeroSection />
+              
               <CharacteristicSection />
               <ProjectSection />
             </div>

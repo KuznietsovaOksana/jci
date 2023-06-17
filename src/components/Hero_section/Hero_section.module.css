@@ -1,38 +1,120 @@
-.characteristic_card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
+.title {
+font-family: 'NAMU';
+font-style: normal;
+font-weight: 800;
+line-height: 120%;
+text-wrap: balance;
+
+color: #0A0F29;
 }
-.characteristic_icon {
-  width: 32px;
-  height: 32px;
-}
-.characteristic_title {
-  color: var(--blue-navy-color);
+
+.description {
+  font-family: 'Arial';
+  font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 120%;
-  text-transform: uppercase;
+  line-height: 140%;
+  text-wrap: balance;
+
+  color: #414042;
 }
-@media (min-width: 768px) {
-  .characteristic-card {
-    gap: 16px;
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 40px;
   }
-  .characteristic_icon {
-    width: 48px;
-    height: 48px;
+  .title {
+    width: 288px;
+    font-size: 30px;
   }
-  .characteristic_title {
-    font-size: 16px;
+  .accentTitle {
+    color: var(--blue-primary-color);
+  }
+  .flag {
+    margin-left: 12px;
+    width: 44px;
+    height: 24px;
+  }
+  .description {
+    margin-top: 24px;
+    width: 288px;
+    font-size: 14px;
+  }
+  .cta {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sliderblock {
+    margin-top: 40px;
+    position: relative;
+    left: -16px;
   }
 }
-@media (min-width: 1440px) {
-  .characteristic_icon {
-    width: 72px;
-    height: 72px;
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .hero {
+    padding-top: 80px;
   }
-  .characteristic_title {
+  .title {
+    width: 551px;
+    font-size: 40px;
+  }
+  .flag {
+    margin-left: 14px;
+    margin-right: 14px;
+    width: 44px;
+    height: 24px;
+  }
+  .description {
+    width: 264px;
     font-size: 18px;
+  }
+  .cta {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .infoblock {
+    display: flex;
+    margin-top: 24px;
+    gap: 24px;
+  }
+  .sliderblock {
+    position: relative;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    padding-top: 120px;
+  }
+  .desktopVersion {
+    display: flex;
+    gap: 24px;
+  }
+  .title {
+    width: 552px;
+    font-size: 58px;
+  }
+  .flag {
+    margin-left: 24px;
+    width: 90px;
+    height: 45px;
+  }
+  .description {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    width: 552px;
+    font-size: 20px;
+  }
+  .cta {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+  }
+  .sliderblock {
+    position: relative;
   }
 }
