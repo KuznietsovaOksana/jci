@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
-import css from './Container.module.css';
 
-export function Container({ children }: PropsWithChildren) {
-  return <div className={css.container}>{children}</div>;
-}
+import s from './Container.module.css';
+
+export const Container = ({ children }: PropsWithChildren) => {
+  return <div className={s.container}>{children}</div>;
+};

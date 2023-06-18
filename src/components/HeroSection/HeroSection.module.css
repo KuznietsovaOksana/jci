@@ -1,29 +1,19 @@
 .title {
-font-family: 'NAMU';
-font-style: normal;
-font-weight: 800;
-line-height: 120%;
-text-wrap: balance;
-
-color: #0A0F29;
+  font-family: 'NAMU';
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--black-color);
 }
 
 .description {
   font-family: 'Arial';
-  font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  text-wrap: balance;
-
-  color: #414042;
+  line-height: 1.4;
+  color: var(--black-90-color);
 }
 
 @media (max-width: 767px) {
-  .hero {
-    padding-top: 40px;
-  }
   .title {
-    width: 288px;
     font-size: 30px;
   }
   .accentTitle {
@@ -36,7 +26,6 @@ color: #0A0F29;
   }
   .description {
     margin-top: 24px;
-    width: 288px;
     font-size: 14px;
   }
   .cta {
@@ -53,9 +42,6 @@ color: #0A0F29;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-  .hero {
-    padding-top: 80px;
-  }
   .title {
     width: 551px;
     font-size: 40px;
@@ -87,9 +73,6 @@ color: #0A0F29;
 }
 
 @media (min-width: 1440px) {
-  .hero {
-    padding-top: 120px;
-  }
   .desktopVersion {
     display: flex;
     gap: 24px;

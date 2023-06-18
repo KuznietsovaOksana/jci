@@ -1,19 +1,15 @@
 import { useState } from 'react';
 import Head from 'next/head';
-// import { Inter } from 'next/font/google';
-// import styles from '@/styles/Home.module.css';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
-import { Container } from '@/components/Container/Container';
-import Layout from '@/components/Layout';
-import { HeroSection } from '@/components/Hero_section/Hero_section';
+import { Layout } from '@/components/Layout';
+import { HeroSection } from '@/components/HeroSection';
 import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
-import { Accordion } from '@/components/Accordion/Accordion';
-import { faqs } from '@/components/Accordion/data';
+import { WarSection } from '@/sections/WarSection';
+import { TogetherSection } from '@/sections/TogetherSection';
+import { FAQSection } from '@/sections/FAQSection';
 import { NewsSection } from '@/components/News_section/News_section';
-
-// const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -30,21 +26,17 @@ export default function Home() {
           <ModalMenu setShowModal={setShowModal} />
         </Portal>
       )}
-      <Container>
-        <Layout setShowModal={setShowModal}>
-          <main
-          // className={`${styles.main} ${inter.className}`}
-          >
-            <div>
-              <HeroSection />
-              <NewsSection />
-              <CharacteristicSection />
-              <ProjectSection />
-              <Accordion faqs={faqs} />
-            </div>
-          </main>
-        </Layout>
-      </Container>
+      <Layout setShowModal={setShowModal}>
+        <main>
+          <HeroSection />
+          <CharacteristicSection />
+          <WarSection />
+          <TogetherSection />
+          <ProjectSection />
+          <NewsSection />
+          <FAQSection />
+        </main>
+      </Layout>
     </>
   );
 }

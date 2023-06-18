@@ -1,0 +1,82 @@
+.war_title {
+  font-family: 'NAMU';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+  color: var(--black-color);
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .war_title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .war_title {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.war_title__span {
+  color: var(--blue-primary-color);
+}
+
+.war_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .war_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 34px;
+    column-gap: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .war_list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: none;
+    gap: 25px;
+  }
+}
+
+.war_button {
+  display: flex;
+  align-items: center;
+  color: var(--blue-navy-color);
+  background-color: transparent;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 39px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+}
+@media (min-width: 768px) {
+  .war_button {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .war_button {
+    margin-top: 85px;
+    font-size: 18px;
+  }
+}
+
+.war_icon {
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
+}

@@ -7,7 +7,8 @@ import Logo from '../../../public/icons/logo_JCI_Ukraine.svg';
 import En from '../../../public/icons/language_switch_Eng.svg';
 import Ua from '../../../public/icons/language_switch_Ua.svg';
 import NavLink from '../NavLink';
-import { ILayout } from './../Layout';
+import { ILayout } from '../Layout/Layout';
+import { Container } from '../Container/Container';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -25,42 +26,44 @@ const Header: FC<ILayout> = ({ setShowModal }) => {
   const [language, setLanguage] = useState(true);
 
   return (
-    <header className={css.header}>
-      <MediaQuery maxWidth={1439}>
-        <Menu className={css.menu} onClick={() => setShowModal(true)} />
-      </MediaQuery>
-      <Logo className={css.logo} />
-      <MediaQuery minWidth={1440}>
-        <>
-          <nav className={css.nav}>
-            <ul className={css.nav_list}>
-              {nav.map(({ name, path }, ind) => (
-                <li key={ind}>
-                  <NavLink exact className={css.nav_link} href={path}>
-                    {name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div
-            className={css.language}
-            onClick={() => setLanguage(prevState => !prevState)}
-          >
-            {language ? <En /> : <Ua />}
-          </div>
-        </>
-      </MediaQuery>
+    <Container>
+      <header className={css.header}>
+        <MediaQuery maxWidth={1439}>
+          <Menu className={css.menu} onClick={() => setShowModal(true)} />
+        </MediaQuery>
+        <Logo className={css.logo} />
+        <MediaQuery minWidth={1440}>
+          <>
+            <nav className={css.nav}>
+              <ul className={css.nav_list}>
+                {nav.map(({ name, path }, ind) => (
+                  <li key={ind}>
+                    <NavLink exact className={css.nav_link} href={path}>
+                      {name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div
+              className={css.language}
+              onClick={() => setLanguage(prevState => !prevState)}
+            >
+              {language ? <En /> : <Ua />}
+            </div>
+          </>
+        </MediaQuery>
 
-      <MediaQuery minWidth={768}>
-        <button
-          // onClick={() => alert('HI!')}
-          className={`${css.button} ${css.button_media}`}
-        >
-          Join us
-        </button>
-      </MediaQuery>
-    </header>
+        <MediaQuery minWidth={768}>
+          <button
+            // onClick={() => alert('HI!')}
+            className={`${css.button} ${css.button_media}`}
+          >
+            Join us
+          </button>
+        </MediaQuery>
+      </header>
+    </Container>
   );
 };
 
