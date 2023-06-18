@@ -1,13 +1,21 @@
 .container {
+  width: 100%;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     padding-left: 108px;
     padding-right: 108px;
+    width: 768px;
   }
 }
 
@@ -15,5 +23,6 @@
   .container {
     padding-left: 156px;
     padding-right: 156px;
+    width: 1440px;
   }
 }
