@@ -3,9 +3,8 @@ import Head from 'next/head';
 // import { Inter } from 'next/font/google';
 // import styles from '@/styles/Home.module.css';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
-// import { Container } from '@/components/Container/Container';
-import { Layout } from '@/components/Layout/Layout';
-import { HeroSection } from '@/components/Hero_section/Hero_section';
+import { Layout } from '@/components/Layout';
+import { HeroSection } from '@/components/HeroSection';
 import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
@@ -34,14 +33,12 @@ export default function Home() {
         <main
         // className={`${styles.main} ${inter.className}`}
         >
-          <div>
-            <HeroSection />
-            <CharacteristicSection />
-            <WarSection />
-            <TogetherSection />
-            <ProjectSection />
-            <FAQSection />
-          </div>
+          <HeroSection />
+          <CharacteristicSection />
+          <WarSection />
+          <TogetherSection />
+          <ProjectSection />
+          <FAQSection />
         </main>
       </Layout>
     </>
