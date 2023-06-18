@@ -11,6 +11,7 @@ import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
 import { Accordion } from '@/components/Accordion/Accordion';
 import { faqs } from '@/components/Accordion/data';
+import { NewsSection } from '@/components/News_section/News_section';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default function Home() {
           >
             <div>
               <HeroSection />
+              <NewsSection />
               <CharacteristicSection />
               <ProjectSection />
               <Accordion faqs={faqs} />
