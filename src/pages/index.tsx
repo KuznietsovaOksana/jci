@@ -9,7 +9,10 @@ import { HeroSection } from '@/components/Hero_section/Hero_section';
 import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
+import WarSection from '@/components/War_section/War_section';
+import TogetherSection from '@/components/Together_section/Together_section';
 import { FAQSection } from '@/sections/FAQSection/FAQSection';
+
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -28,20 +31,20 @@ export default function Home() {
           <ModalMenu setShowModal={setShowModal} />
         </Portal>
       )}
-      {/* <Container> */}
       <Layout setShowModal={setShowModal}>
         <main
         // className={`${styles.main} ${inter.className}`}
         >
           <div>
-            <HeroSection />
+              <HeroSection />
             <CharacteristicSection />
+              <WarSection />
+            <TogetherSection />
             <ProjectSection />
-            <FAQSection />
+        <FAQSection />
           </div>
         </main>
       </Layout>
-      {/* </Container> */}
     </>
   );
 }
