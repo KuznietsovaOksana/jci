@@ -1,13 +1,14 @@
 import ArrowRight from 'public/icons/arrow-right.svg';
-import { WarCard } from '@/components/WarCard/WarCard';
-import { Container } from '@/components/Container/Container';
+import { WarCard } from '@/components/WarCard';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
 
 import { warData } from './data';
 import s from './WarSection.module.css';
 
 export const WarSection = () => {
   return (
-    <section className={s.war_section}>
+    <Section>
       <Container>
         <h2 className={s.war_title}>
           <span className={s.war_title__span}>War </span>
@@ -25,6 +26,6 @@ export const WarSection = () => {
           <ArrowRight className={s.war_icon} />
         </button>
       </Container>
-    </section>
+    </Section>
   );
 };

@@ -4,14 +4,14 @@ import Head from 'next/head';
 // import styles from '@/styles/Home.module.css';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
 // import { Container } from '@/components/Container/Container';
-import Layout from '@/components/Layout';
+import { Layout } from '@/components/Layout/Layout';
 import { HeroSection } from '@/components/Hero_section/Hero_section';
 import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
-import { WarSection } from '@/sections/WarSection/WarSection';
-import { TogetherSection } from '@/sections/TogetherSection/TogetherSection';
-import { FAQSection } from '@/sections/FAQSection/FAQSection';
+import { WarSection } from '@/sections/WarSection';
+import { TogetherSection } from '@/sections/TogetherSection';
+import { FAQSection } from '@/sections/FAQSection';
 
 // const inter = Inter({ subsets: ['latin'] });
 
