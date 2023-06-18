@@ -1,5 +1,3 @@
-import React from 'react';
-import css from './Hero_section.module.css';
 import { MainButton } from '../ui-kit/buttons/MainButton/MainButton';
 import HeroSlider from '../ui-kit/sliders/HeroSlider/HeroSlider';
 import { images } from './images';

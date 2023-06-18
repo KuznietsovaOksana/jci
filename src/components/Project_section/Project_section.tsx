@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import React from 'react';
 import ProjectCard from '../Project_card/Project_card';
 import css from './Project_section.module.css';
 import Arrow from 'public/icons/arrow-right.svg';
@@ -43,7 +42,7 @@ const projects = [
   },
 ];
 
-const ArrowWithClass = () => <Arrow className={css.button_icon} />;
+// const ArrowWithClass = () => <Arrow className={css.button_icon} />;
 
 const ProjectSection: NextPage = () => {
   return (
