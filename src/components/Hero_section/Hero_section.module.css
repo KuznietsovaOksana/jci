@@ -1,11 +1,11 @@
 .title {
-font-family: 'NAMU';
-font-style: normal;
-font-weight: 800;
-line-height: 120%;
-text-wrap: balance;
+  font-family: 'NAMU';
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  text-wrap: balance;
 
-color: #0A0F29;
+  color: #0a0f29;
 }
 
 .description {

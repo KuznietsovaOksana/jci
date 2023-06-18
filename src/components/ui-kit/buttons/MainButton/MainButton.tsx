@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import s from './MainButton.module.css';
 
-interface ButtonProps  {
+interface ButtonProps {
   className?: string;
   type: 'button' | 'submit';
   text: string;
@@ -11,7 +11,7 @@ interface ButtonProps  {
   paddings?: number;
 }
 
-export const MainButton: React.FC<ButtonProps>  = ({
+export const MainButton: React.FC<ButtonProps> = ({
   type = 'button',
   text,
   icon,
