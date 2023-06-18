@@ -1,9 +1,9 @@
 import ArrowRight from 'public/icons/arrow-right.svg';
-import WarCard from '@/components/War_card/War_card';
+import { WarCard } from '@/components/WarCard/WarCard';
 import { Container } from '@/components/Container/Container';
 
 import { warData } from './data';
-import s from './War_section.module.css';
+import s from './WarSection.module.css';
 
 export const WarSection = () => {
   return (

@@ -9,7 +9,7 @@ import { HeroSection } from '@/components/Hero_section/Hero_section';
 import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
-import { WarSection } from '@/sections/War_section/War_section';
+import { WarSection } from '@/sections/WarSection/WarSection';
 import TogetherSection from '@/components/Together_section/Together_section';
 import { FAQSection } from '@/sections/FAQSection/FAQSection';
 
