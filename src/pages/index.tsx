@@ -10,7 +10,7 @@ import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
 import { WarSection } from '@/sections/WarSection/WarSection';
-import TogetherSection from '@/components/Together_section/Together_section';
+import { TogetherSection } from '@/sections/TogetherSection/TogetherSection';
 import { FAQSection } from '@/sections/FAQSection/FAQSection';
 
 // const inter = Inter({ subsets: ['latin'] });
