@@ -47,6 +47,7 @@
 }
 .nav {
   display: flex;
+  color: black;
   margin-left: 95px;
   font-weight: bold;
   font-size: 18px;
@@ -64,10 +65,11 @@
   padding-top: 41px;
   padding-bottom: 41px;
 }
-.nav_link_active {
-  border-bottom: 2px solid black;
+@media (min-width: 1440px) {
+  .nav_link_active {
+    border-bottom: 2px solid black;
+  }
 }
-
 .language {
   width: 24px;
   height: 24px;
