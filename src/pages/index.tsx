@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
+// import { Inter } from 'next/font/google';
+// import styles from '@/styles/Home.module.css';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
 import { Container } from '@/components/Container/Container';
 import Layout from '@/components/Layout';
@@ -11,8 +11,10 @@ import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
 import WarSection from '@/components/War_section/War_section';
 import TogetherSection from '@/components/Together_section/Together_section';
+import { Accordion } from '@/components/Accordion/Accordion';
+import { faqs } from '@/components/Accordion/data';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -36,7 +38,9 @@ export default function Home() {
         >
           <div>
             <p>Beginning</p>
-            <HeroSection />
+            <Container>
+              <HeroSection />
+            </Container>
             <CharacteristicSection />
             <Container>
               <WarSection />

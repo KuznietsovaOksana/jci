@@ -12,7 +12,7 @@ const Sustainable = dynamic(
 const Trusted = dynamic(() => import('public/icons/trusted_graphic.svg'));
 
 interface Characteristic {
-  icon: any;
+  icon: React.ReactNode;
   text: string;
 }
 

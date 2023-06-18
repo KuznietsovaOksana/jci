@@ -1,7 +1,7 @@
-import { memo } from 'react';
+import React from "react";
 import s from './MainButton.module.css';
 
-interface ButtonProps {
+interface ButtonProps  {
   className?: string;
   type: 'button' | 'submit';
   text: string;
@@ -11,32 +11,30 @@ interface ButtonProps {
   paddings?: number;
 }
 
-export const MainButton = memo(
-  ({
-    type = 'button',
-    text,
-    icon,
-    onClick,
-    style = 'primary',
-    paddings,
-    className,
-  }: ButtonProps) => {
-    const styles = {
-      paddingLeft: `${paddings}px`,
-      paddingRight: `${paddings}px`,
-    };
-    return (
-      <button
-        style={styles}
-        onClick={onClick}
-        type={type}
-        className={`${s.mainBtn} ${s[style]} ${className}`}
-      >
-        {icon}
-        {text}
-      </button>
-    );
-  }
-);
+export const MainButton: React.FC<ButtonProps>  = ({
+  type = 'button',
+  text,
+  icon,
+  onClick,
+  style = 'primary',
+  paddings,
+  className,
+}) => {
+  const styles = {
+    paddingLeft: `${paddings}px`,
+    paddingRight: `${paddings}px`,
+  };
+  return (
+    <button
+      style={styles}
+      onClick={onClick}
+      type={type}
+      className={`${s.mainBtn} ${s[style]} ${className}`}
+    >
+      {icon}
+      {text}
+    </button>
+  );
+};
 
 MainButton.displayName = 'MainButton';

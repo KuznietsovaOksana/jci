@@ -226,3 +226,10 @@
     transform: rotate(0deg);
   }
 }
+
+
+.container {
+  width: 1128px;
+  margin-left: auto;
+  margin-right: auto;
+}
