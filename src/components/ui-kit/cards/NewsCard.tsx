@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './NewsCard.module.css';
+import s from './NewsCard.module.css';
 
 interface Card {
   picture: {
@@ -27,10 +27,10 @@ interface NewsCardProps {
 export const NewsCard: React.FC<NewsCardProps> = ({ cards }) => {
   return (
     <>
-      <div className={css.newsCards}>
+      <div className={s.newsCards}>
         {cards.map((card, index) => (
-          <div key={index} className={css.card}>
-            <div className={css.picture}>
+          <div key={index} className={s.card}>
+            <div className={s.picture}>
               <picture>
                 <source
                   srcSet={card.picture.resolutions.large}
@@ -46,19 +46,19 @@ export const NewsCard: React.FC<NewsCardProps> = ({ cards }) => {
                 />
               </picture>
             </div>
-            <div className={css.textblock}>
-              <div className={css.data}>
-                <div className={css.datePrimary}>
-                  <p className={css.date}>{card.data.date}</p>
-                  <span className={css.decor}>|</span>
-                  <p className={css.location}>{card.data.location}</p>
+            <div className={s.textblock}>
+              <div className={s.data}>
+                <div className={s.datePrimary}>
+                  <p className={s.date}>{card.data.date}</p>
+                  <span className={s.decor}>|</span>
+                  <p className={s.location}>{card.data.location}</p>
                 </div>
-                <span className={css.decorCircle}>&#8226;</span>
-                <p className={css.level}>{card.data.level}</p>
+                <span className={s.decorCircle}>&#8226;</span>
+                <p className={s.level}>{card.data.level}</p>
               </div>
-              <div className={css.info}>
-                <h3 className={css.title}>{card.title}</h3>
-                <p className={css.text}>{card.text}</p>
+              <div className={s.info}>
+                <h3 className={s.title}>{card.title}</h3>
+                <p className={s.text}>{card.text}</p>
               </div>
             </div>
           </div>
