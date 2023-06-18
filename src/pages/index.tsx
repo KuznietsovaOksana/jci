@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import Head from 'next/head';
-// import { Inter } from 'next/font/google';
-// import styles from '@/styles/Home.module.css';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
 import { Layout } from '@/components/Layout';
 import { HeroSection } from '@/components/HeroSection';
@@ -11,8 +9,6 @@ import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
 import { WarSection } from '@/sections/WarSection';
 import { TogetherSection } from '@/sections/TogetherSection';
 import { FAQSection } from '@/sections/FAQSection';
-
-// const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -30,9 +26,7 @@ export default function Home() {
         </Portal>
       )}
       <Layout setShowModal={setShowModal}>
-        <main
-        // className={`${styles.main} ${inter.className}`}
-        >
+        <main>
           <HeroSection />
           <CharacteristicSection />
           <WarSection />
