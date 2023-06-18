@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import css from './ModalMenu.module.css';
-import { ILayout } from './../Layout';
+import { ILayout } from '../Layout/Layout';
 import CloseMenu from '../../../public/icons/remove.svg';
 import En from '../../../public/icons/language_switch_Eng.svg';
 import Ua from '../../../public/icons/language_switch_Ua.svg';

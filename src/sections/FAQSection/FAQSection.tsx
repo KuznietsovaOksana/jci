@@ -1,11 +1,13 @@
-import { Container } from '@/components/Container/Container';
-import { Accordion } from '@/components/Accordion/Accordion';
+import { Container } from '@/components/Container';
+import { Accordion } from '@/components/Accordion';
+import { Section } from '@/components/Section';
 import { faqs } from '@/components/Accordion/data';
+
 import s from './FAQSection.module.css';
 
 export const FAQSection = () => {
   return (
-    <section className={s.section}>
+    <Section>
       <Container>
         <div className={s.box}>
           <h2 className={s.title}>
@@ -14,6 +16,6 @@ export const FAQSection = () => {
           <Accordion faqs={faqs} />
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
