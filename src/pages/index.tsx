@@ -9,6 +9,7 @@ import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
 import { WarSection } from '@/sections/WarSection';
 import { TogetherSection } from '@/sections/TogetherSection';
 import { FAQSection } from '@/sections/FAQSection';
+import { NewsSection } from '@/sections/NewsSection/NewsSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
           <WarSection />
           <TogetherSection />
           <ProjectSection />
+          <NewsSection />
           <FAQSection />
         </main>
       </Layout>
