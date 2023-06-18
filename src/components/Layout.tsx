@@ -1,8 +1,14 @@
 import { PropsWithChildren } from 'react';
+
 import Header from './Header/Header';
-const Layout = ({ children }: PropsWithChildren) => (
+
+export interface ILayout {
+  setShowModal: (show: boolean) => void;
+}
+
+const Layout = ({ children, setShowModal }: PropsWithChildren<ILayout>) => (
   <>
-    <Header />
+    <Header setShowModal={setShowModal} />
     {children}
     {/* <Footer/> */}
   </>

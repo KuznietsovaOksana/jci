@@ -7,6 +7,7 @@ import {images} from './images'
 
 import Flag from '../../../public/icons/Icon.svg';
 
+
 export const HeroSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });

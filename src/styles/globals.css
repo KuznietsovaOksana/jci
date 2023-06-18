@@ -111,13 +111,12 @@ a {
   }
 }
 
-
-.swiper-pagination{
+.swiper-pagination {
   left: 53.5% !important;
   width: max-content !important;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
   background-color: var(--white-color) !important;
@@ -128,4 +127,3 @@ a {
 .swiper-pagination-bullet-active {
   background-color: var(--blue-primary-color) !important;
 }
-

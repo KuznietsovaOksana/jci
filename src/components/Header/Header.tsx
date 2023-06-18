@@ -7,26 +7,27 @@ import Logo from '../../../public/icons/logo_JCI_Ukraine.svg';
 import En from '../../../public/icons/language_switch_Eng.svg';
 import Ua from '../../../public/icons/language_switch_Ua.svg';
 import NavLink from '../NavLink';
+import { ILayout } from './../Layout';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
-const nav = [
-  { name: 'Who we are', path: '/' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Donation', path: '/donation' },
-  { name: 'News', path: '/news' },
-  { name: 'Contacts', path: 'contacts' },
+export const nav = [
+  { number: '01', name: 'Who we are', path: '/' },
+  { number: '02', name: 'Projects', path: '/projects' },
+  { number: '03', name: 'Donation', path: '/donation' },
+  { number: '04', name: 'News', path: '/news' },
+  { number: '05', name: 'Contacts', path: 'contacts' },
 ];
 
-const Header: FC = () => {
+const Header: FC<ILayout> = ({ setShowModal }) => {
   const [language, setLanguage] = useState(true);
 
   return (
     <header className={css.header}>
       <MediaQuery maxWidth={1439}>
-        <Menu className={css.menu} />
+        <Menu className={css.menu} onClick={() => setShowModal(true)} />
       </MediaQuery>
       <Logo className={css.logo} />
       <MediaQuery minWidth={1440}>
@@ -52,7 +53,12 @@ const Header: FC = () => {
       </MediaQuery>
 
       <MediaQuery minWidth={768}>
-        <button className={`${css.button} ${css.button_media}`}>Join us</button>
+        <button
+          // onClick={() => alert('HI!')}
+          className={`${css.button} ${css.button_media}`}
+        >
+          Join us
+        </button>
       </MediaQuery>
     </header>
   );

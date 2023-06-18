@@ -8,20 +8,18 @@
     /* margin-right: 0 !important; */
 }
 
-@media screen and (min-width: 768px)  {
-    .heroSlider {
-        width: 372px;
-        height: 268px;
-        border-radius: 150px 0px 0px 150px;
-    }
+@media screen and (min-width: 768px) {
+  .heroSlider {
+    width: 372px;
+    height: 268px;
+    border-radius: 150px 0px 0px 150px;
+  }
 }
 
-@media screen and (min-width: 1440px)  {
-    .heroSlider {
-        width: 708px;
-        height: 508px;
-        border-radius: 300px 0px 0px 300px;
-    }
+@media screen and (min-width: 1440px) {
+  .heroSlider {
+    width: 708px;
+    height: 508px;
+    border-radius: 300px 0px 0px 300px;
+  }
 }
-
-
