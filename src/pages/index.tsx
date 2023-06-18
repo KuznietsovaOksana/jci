@@ -9,7 +9,7 @@ import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
 import { WarSection } from '@/sections/WarSection';
 import { TogetherSection } from '@/sections/TogetherSection';
 import { FAQSection } from '@/sections/FAQSection';
-import { NewsSection } from '@/components/News_section/News_section';
+import { NewsSection } from '@/sections/NewsSection/NewsSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
