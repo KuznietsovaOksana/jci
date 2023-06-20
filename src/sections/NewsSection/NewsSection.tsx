@@ -11,29 +11,52 @@ import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 import Arrow from 'public/icons/arrow-right.svg';
 
-
-
 export const NewsSection = () => {
   return (
     <Section>
       <Container>
         <h3 className={s.news_title}>
-          <span className={s.news_title_span}>News</span>: Learn about our activities
+          <span className={s.news_title_span}>News</span>: Learn about our
+          activities
         </h3>
-        <div className="newsSliderContainer">
+        <div className='newsSliderContainer'>
           <Swiper
-          slidesPerView={3}
-          slidesPerGroup={3}
-          spaceBetween={24}
-          pagination={{
-          type: "fraction",
-          }}
-          navigation={{
+            slidesPerView={3}
+            slidesPerGroup={3}
+            spaceBetween={24}
+            // pagination={{
+            // type: "fraction",
+            // }}
+            navigation={{
               prevEl: '.newsSliderBtnPrev',
               nextEl: '.newsSliderBtnNext',
             }}
-          modules={[Navigation]}
-          className='newsSlider'
+            modules={[Navigation]}
+            className='newsSlider'
+            breakpoints={{
+              320: {
+                // effect: 'coverflow',
+                // coverflowEffect: {
+                //   rotate: 0,
+                //   stretch: 0,
+                //   depth: 100,
+                //   modifier: 1,
+                // },
+                slidesPerView: 1,
+                spaceBetween: 16,
+                slidesPerGroup: 1,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+                slidesPerGroup: 2,
+              },
+              1440: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                slidesPerGroup: 3,
+              },
+            }}
           >
             {cards.map((card, index) => (
               <SwiperSlide key={index}>
@@ -42,9 +65,13 @@ export const NewsSection = () => {
             ))}
           </Swiper>
           <div className='newsSliderNavBtns'>
-            <div className='newsSliderBtnPrev'><LeftArrow /></div>
-            <div className='newsSliderBtnNext'><RightArrow /></div>
-          </div>  
+            <div className='newsSliderBtnPrev'>
+              <LeftArrow />
+            </div>
+            <div className='newsSliderBtnNext'>
+              <RightArrow />
+            </div>
+          </div>
         </div>
         <div className={s.button_wrapper}>
           <a href='#' className={s.news_link}>

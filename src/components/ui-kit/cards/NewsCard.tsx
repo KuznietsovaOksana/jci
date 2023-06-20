@@ -41,10 +41,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ card }) => {
               srcSet={card.picture.resolutions.medium}
               media='(min-width: 768px)'
             />
-            <img
-              src={card.picture.resolutions.small}
-              alt={card.picture.alt}
-            />
+            <img src={card.picture.resolutions.small} alt={card.picture.alt} />
           </picture>
         </div>
         <div className={s.textblock}>

@@ -42,20 +42,18 @@ a {
   background-color: var(--blue-primary-color) !important;
 }
 
-
 .newsSliderBtnPrev {
   z-index: 1;
   display: flex !important;
   width: 48px !important;
-  height: 48px !important; 
-  border: 1px solid #D8E1EF;  
+  height: 48px !important;
+  border: 1px solid #d8e1ef;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
 }
 
-.newsSliderBtnPrev svg{
-  
+.newsSliderBtnPrev svg {
   width: 24px !important;
   height: 24px !important;
 }
@@ -64,16 +62,15 @@ a {
   z-index: 1;
   display: flex !important;
   width: 48px !important;
-  height: 48px !important; 
+  height: 48px !important;
 
-  border: 1px solid #D8E1EF;
+  border: 1px solid #d8e1ef;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
 }
 
-.newsSliderBtnNext svg{
-  
+.newsSliderBtnNext svg {
   width: 24px !important;
   height: 24px !important;
 }
@@ -85,27 +82,52 @@ a {
 }
 
 .newsSliderNavBtns {
-  position: absolute;
+  display: none;
+  /* position: absolute;
   display: flex;
   z-index: 1;
   top: 50%;
   transform: translateY(-50%) ;
   gap: 1224px;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .swiper-button-disabled {
   /* position: absolute !important; */
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
+  /* width: 1px !important;
+  height: 1px !important; */
+  /* margin: -1px !important; */
   border: 0 !important;
   padding: 0 !important;
-  
+
   white-space: nowrap !important;
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .newsSlider .swiper-slide {
+    flex-shrink: 1 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .newsSliderNavBtns {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 612px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .newsSliderNavBtns {
+    gap: 1224px;
+  }
 }
