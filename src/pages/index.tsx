@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
 import { Layout } from '@/components/Layout';
-import { HeroSection } from '@/components/HeroSection';
+import { HeroSection } from '@/sections/HeroSection';
 import ProjectSection from '@/components/Project_section/Project_section';
 import { Portal } from '@/components/Portal/Portal';
 import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
@@ -10,6 +10,7 @@ import { WarSection } from '@/sections/WarSection';
 import { TogetherSection } from '@/sections/TogetherSection';
 import { FAQSection } from '@/sections/FAQSection';
 import { NewsSection } from '@/sections/NewsSection/NewsSection';
+import { OurPresident } from '@/sections/OurPresident';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -34,6 +35,7 @@ export default function Home() {
           <TogetherSection />
           <ProjectSection />
           <NewsSection />
+          <OurPresident />
           <FAQSection />
         </main>
       </Layout>
