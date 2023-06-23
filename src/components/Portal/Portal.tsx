@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
+
 import styles from './Portal.module.css';
 
 interface PortalProps {

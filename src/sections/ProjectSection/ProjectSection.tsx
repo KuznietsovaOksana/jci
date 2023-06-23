@@ -1,7 +1,10 @@
 import { NextPage } from 'next';
-import ProjectCard from '../Project_card/Project_card';
-import css from './Project_section.module.css';
+
 import Arrow from 'public/icons/arrow-right.svg';
+
+import { ProjectCard } from '../../components/ProjectCard';
+
+import css from './ProjectSection.module.css';
 
 const projects = [
   {
@@ -44,7 +47,7 @@ const projects = [
 
 // const ArrowWithClass = () => <Arrow className={css.button_icon} />;
 
-const ProjectSection: NextPage = () => {
+export const ProjectSection: NextPage = () => {
   return (
     <section className={css.project_section}>
       <h3 className={css.project_title}>
@@ -74,5 +77,3 @@ const ProjectSection: NextPage = () => {
     </section>
   );
 };
-
-export default ProjectSection;

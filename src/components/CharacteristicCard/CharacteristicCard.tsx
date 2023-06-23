@@ -1,5 +1,6 @@
 import React from 'react';
-import css from './Characteristic_card.module.css';
+
+import css from './CharacteristicCard.module.css';
 
 interface CharacteristicCardProps {
   icon: React.ReactNode;
@@ -7,7 +8,7 @@ interface CharacteristicCardProps {
   iconClassName?: string;
 }
 
-const CharacteristicCard: React.FC<CharacteristicCardProps> = ({
+export const CharacteristicCard: React.FC<CharacteristicCardProps> = ({
   icon,
   text,
 }) => {
@@ -22,5 +23,3 @@ const CharacteristicCard: React.FC<CharacteristicCardProps> = ({
     </div>
   );
 };
-
-export default CharacteristicCard;

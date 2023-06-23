@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+
 import { togetherData } from './data';
 
 import s from './TogetherSection.module.css';

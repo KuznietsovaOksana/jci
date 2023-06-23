@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import Header from '../Header/Header';
+import { Header } from '../Header';
 
 export interface ILayout {
   setShowModal: (show: boolean) => void;

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 import styles from './HeroSlider.module.css';
-import { Autoplay, Pagination } from 'swiper';
 
 interface Image {
   src: string;
@@ -19,7 +20,7 @@ interface HeroSliderProps {
   images: Image[];
 }
 
-const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
+export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   return (
     <>
       <Swiper
@@ -51,5 +52,3 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
     </>
   );
 };
-
-export default HeroSlider;

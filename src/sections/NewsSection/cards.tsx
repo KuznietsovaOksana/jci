@@ -16,6 +16,7 @@ interface Card {
   title: string;
   text: string;
 }
+
 export const cards: Card[] = [
   {
     picture: {

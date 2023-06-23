@@ -1,15 +1,16 @@
-import { useState } from 'react';
 import Head from 'next/head';
-import CharacteristicSection from '@/components/Characteristic_section/Characteristic_section';
+import { useState } from 'react';
+
 import { Layout } from '@/components/Layout';
-import { HeroSection } from '@/components/HeroSection';
-import ProjectSection from '@/components/Project_section/Project_section';
-import { Portal } from '@/components/Portal/Portal';
-import { ModalMenu } from '@/components/ModalMenu/ModalMenu';
+import { Portal } from '@/components/Portal';
+import { ModalMenu } from '@/components/ModalMenu';
 import { WarSection } from '@/sections/WarSection';
-import { TogetherSection } from '@/sections/TogetherSection';
 import { FAQSection } from '@/sections/FAQSection';
-import { NewsSection } from '@/sections/NewsSection/NewsSection';
+import { NewsSection } from '@/sections/NewsSection';
+import { HeroSection } from '@/sections/HeroSection';
+import { ProjectSection } from '@/sections/ProjectSection';
+import { TogetherSection } from '@/sections/TogetherSection';
+import { CharacteristicSection } from '@/sections/CharacteristicSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);

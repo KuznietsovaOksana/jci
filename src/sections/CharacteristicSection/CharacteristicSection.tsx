@@ -1,7 +1,9 @@
 import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
-import CharacteristicCard from '../Characteristic_card/Characteristic_card';
-import css from './Characteristic_section.module.css';
+
+import { CharacteristicCard } from '../../components/CharacteristicCard';
+
+import css from './CharacteristicSection.module.css';
 
 const Care = dynamic(() => import('public/icons/caring_graphic.svg'));
 const Help = dynamic(() => import('public/icons/helping_graphic.svg'));
@@ -24,7 +26,7 @@ const characteristicData: Characteristic[] = [
   { icon: <Trusted />, text: 'Trusted' },
 ];
 
-const CharacteristicSection: NextPage = () => {
+export const CharacteristicSection: NextPage = () => {
   return (
     <section className={css.characteristic_section}>
       {characteristicData.map((characteristic, index) => (
@@ -37,5 +39,3 @@ const CharacteristicSection: NextPage = () => {
     </section>
   );
 };
-
-export default CharacteristicSection;
