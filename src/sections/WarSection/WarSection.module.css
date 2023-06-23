@@ -61,6 +61,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .war_button {
