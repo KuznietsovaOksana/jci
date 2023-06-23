@@ -5,7 +5,7 @@ import { cards } from './cards';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation } from 'swiper';
 import s from './NewsSection.module.css';
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
