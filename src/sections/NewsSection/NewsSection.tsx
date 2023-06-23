@@ -1,15 +1,20 @@
-import { Container } from '../../components/Container';
-import { Section } from '../../components/Section';
-import { NewsCard } from '../../components/ui-kit/cards/NewsCard';
-import { cards } from './cards';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+// import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper';
-import s from './NewsSection.module.css';
+
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
+import { NewsCard } from '@/components/ui-kit/cards/NewsCard';
+
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 import Arrow from 'public/icons/arrow-right.svg';
+
+import { cards } from './cards';
+
+import s from './NewsSection.module.css';
 
 export const NewsSection = () => {
   return (

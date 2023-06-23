@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import css from './Project_card.module.css';
 import dynamic from 'next/dynamic';
+
+import css from './ProjectCard.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -16,7 +17,7 @@ interface ProjectCardProps {
   hover_m: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+export const ProjectCard: React.FC<ProjectCardProps> = ({
   image_dt,
   image_m,
   title,
@@ -72,5 +73,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     </div>
   );
 };
-
-export default ProjectCard;

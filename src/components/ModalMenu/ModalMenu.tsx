@@ -1,19 +1,24 @@
-import { FC, useState } from 'react';
-import css from './ModalMenu.module.css';
-import { ILayout } from '../Layout/Layout';
-import CloseMenu from '../../../public/icons/remove.svg';
-import En from '../../../public/icons/language_switch_Eng.svg';
-import Ua from '../../../public/icons/language_switch_Ua.svg';
-import Arrow from '../../../public/icons/chevron_Right.svg';
-import { nav } from '../Header/Header';
-import NavLink from '../NavLink';
 import dynamic from 'next/dynamic';
+import { FC, useState } from 'react';
+
+import CloseMenu from 'public/icons/remove.svg';
+import En from 'public/icons/language_switch_Eng.svg';
+import Ua from 'public/icons/language_switch_Ua.svg';
+import Arrow from 'public/icons/chevron_Right.svg';
+
+import { ILayout } from '../Layout';
+import { nav } from '../Header';
+import NavLink from '../NavLink';
+
+import css from './ModalMenu.module.css';
+
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
 export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
   const [language, setLanguage] = useState(true);
+
   return (
     <div className={css.modal}>
       <div className={css.top_modal}>

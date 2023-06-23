@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import ArrowUp from 'public/icons/chevron_Up.svg';
+
 import s from './Accordion.module.css';
 
 interface AccordionItem {
