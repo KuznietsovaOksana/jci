@@ -73,6 +73,7 @@
 .language {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .button {
@@ -80,6 +81,7 @@
   background-color: var(--blue-navy-color);
   border-radius: 30px;
   border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
