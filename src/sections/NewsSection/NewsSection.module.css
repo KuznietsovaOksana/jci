@@ -33,6 +33,17 @@
   color: var(--blue-primary-color);
 }
 
+@media (max-width: 767px) {
+  .newsSliderContainer {
+        /* overflow-x: scroll; */
+        display: none !important; 
+  }
+  .newsSliderCards {
+    /* display: flex; */
+  }
+  
+}
+
 @media (min-width: 768px) {
   .news_title {
     font-size: 30px;

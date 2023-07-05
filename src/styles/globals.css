@@ -110,8 +110,30 @@ a {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .newsSlider .swiper-slide {
-    flex-shrink: 1 !important;
+    /* flex-shrink: 1 !important; */
   }
+
+}
+
+@media (max-width: 767px) {
+  .newsSliderContainer {
+    width: 100%;
+        overflow-x: scroll !important;
+        justify-content: start;
+        /* display: none !important;  */
+        /* gap: 10px; */
+  }
+  .newsSliderCards {
+    display: flex !important;
+    gap: 16px !important;
+  }
+
+  .newsSliderCards .swiper-slide {
+    width: 252px !important;
+    /* margin-left: 16px;
+    margin-right: 0; */
+  }
+  
 }
 
 @media screen and (min-width: 768px) {

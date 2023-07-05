@@ -15,11 +15,51 @@ import Arrow from 'public/icons/arrow-right.svg';
 import { cards } from './cards';
 
 import s from './NewsSection.module.css';
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export const NewsSection = () => {
+
+  const [isMounted, setIsMounted] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isNotMobile = useMediaQuery({ minWidth: 768 });
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Render nothing on the server side until the component is mounted on the client side
+  }
+
   return (
     <Section>
-      <Container>
+      {isMobile && (
+        <Container>
+          <h3 className={s.news_title}>
+            <span className={s.news_title_span}>News</span>: Learn about our
+            activities
+          </h3>
+          <div className='newsSliderContainer'>
+            <div className="newsSliderCards">
+              {cards.map((card, index) => (
+                <SwiperSlide key={index}>
+                  <NewsCard card={card} />
+                </SwiperSlide>
+              ))}
+            </div>
+          </div>
+          <div className={s.button_wrapper}>
+            <a href='#' className={s.news_link}>
+              Go to all news
+            </a>
+            <Arrow className={s.button_icon} />
+          </div>
+        </Container>
+      )}
+
+      {isNotMobile && (
+        <Container>
         <h3 className={s.news_title}>
           <span className={s.news_title_span}>News</span>: Learn about our
           activities
@@ -39,18 +79,18 @@ export const NewsSection = () => {
             modules={[Navigation]}
             className='newsSlider'
             breakpoints={{
-              320: {
-                // effect: 'coverflow',
-                // coverflowEffect: {
-                //   rotate: 0,
-                //   stretch: 0,
-                //   depth: 100,
-                //   modifier: 1,
-                // },
-                slidesPerView: 1,
-                spaceBetween: 16,
-                slidesPerGroup: 1,
-              },
+              // 320: {
+              //   // effect: 'coverflow',
+              //   // coverflowEffect: {
+              //   //   rotate: 0,
+              //   //   stretch: 0,
+              //   //   depth: 100,
+              //   //   modifier: 1,
+              //   // },
+              //   slidesPerView: 1,
+              //   spaceBetween: 16,
+              //   slidesPerGroup: 1,
+              // },
               768: {
                 slidesPerView: 2,
                 spaceBetween: 24,
@@ -85,10 +125,7 @@ export const NewsSection = () => {
           <Arrow className={s.button_icon} />
         </div>
       </Container>
-      {/* <div className='navigateBtns'>
-        <div className='newsSliderBtnPrev'><LeftArrow /></div>
-        <div className='newsSliderBtnNext'><RightArrow /></div>
-      </div>         */}
+      )}
     </Section>
   );
 };
