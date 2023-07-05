@@ -1,18 +1,23 @@
 .heroSlider {
   display: block;
-  width: 320px;
+  /* width: 320px;
   height: 240px;
-  border-radius: 135px 0px 0px 135px;
-  margin: 0 auto !important;
+  border-radius: 135px 0px 0px 135px; */
+  width: 288px;
+  /* width: 100%; */
+  /* max-width: 100%; */
+  height: 216px;
+  border-radius: 8px;
+  /* margin: 0 auto !important; */
   /* margin-left: auto !important; */
   /* margin-right: 0 !important; */
 }
 
 @media screen and (min-width: 768px) {
   .heroSlider {
-    width: 372px;
-    height: 268px;
-    border-radius: 150px 0px 0px 150px;
+    width: 552px;
+    height: 428px;
+    border-radius: 16px;
   }
 }
 

@@ -26,8 +26,8 @@ a {
 }
 
 .swiper-pagination {
-  left: 53.5% !important;
-  width: max-content !important;
+  /* left: 53.5% !important; */
+  /* width: max-content !important; */
 }
 
 .swiper-pagination-bullet {
