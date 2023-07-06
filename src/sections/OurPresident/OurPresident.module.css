@@ -67,5 +67,19 @@
       .position {
     font-size: 18px;
   }
-
+  .textBlock {
+    width: 456px;
+  }
+  .presidentSection{
+    display: flex;
+  }
+  .photoBlock {
+    /* width: 552px;
+    height: 508px; */
+    border-radius: 24px;
+  }
+  .photo {
+    width: 552px;
+    height: 508px;
+  }
 }

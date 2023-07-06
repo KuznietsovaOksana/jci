@@ -62,19 +62,19 @@ export const OurPresident = () => {
             {isDesktop && (
                 <Container>
                         <div className={s.presidentSection}>
-                        <div className={s.photoBlock}>
-                            <picture>
-                                <source srcSet={isDesktop ? imgD.src : isTablet ? imgT.src : imgM.src} />
-                                <img src={imgM.src} alt="President Photo" />
-                            </picture>
-                        </div>
-                        <div className={s.textBlock}>
-                            <h2 className={s.title}>Julia Kuznetsova</h2>
-                            <p className={s.position}>JCI Ukraine President</p>
-                            <p className={s.description}>
-                                As National President, Kuznetsova is responsible for overseeing JCI's operations and initiatives in Ukraine, and leading the organisation's efforts to engage and empower young people in the country. Her role also involves representing JCI Ukraine at the international level and collaborating with other JCI chapters around the world.
-                            </p>
-                        </div>
+                            <div className={s.photoBlock}>
+                                <picture >
+                                    <source srcSet={isDesktop ? imgD.src : isTablet ? imgT.src : imgM.src} />
+                                    <img src={imgM.src} alt="President Photo" className={s.photo}/>
+                                </picture>
+                            </div>
+                            <div className={s.textBlock}>
+                                <h2 className={s.title}>Julia Kuznetsova</h2>
+                                <p className={s.position}>JCI Ukraine President</p>
+                                <p className={s.description}>
+                                    As National President, Kuznetsova is responsible for overseeing JCI's operations and initiatives in Ukraine, and leading the organisation's efforts to engage and empower young people in the country. Her role also involves representing JCI Ukraine at the international level and collaborating with other JCI chapters around the world.
+                                </p>
+                            </div>
                         </div>
                 </Container>
             )}
