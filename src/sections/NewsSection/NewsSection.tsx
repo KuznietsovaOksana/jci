@@ -56,6 +56,47 @@ export const NewsSection = () => {
             <Arrow className={s.button_icon} />
           </div>
         </Container>
+        // <>
+        //   <Container>
+        //     <h3 className={s.news_title}>
+        //       <span className={s.news_title_span}>News</span>: Learn about our
+        //       activities
+        //     </h3>
+        //     {/* <div className='newsSliderContainer'>
+        //       <div className="newsSliderCards">
+        //         {cards.map((card, index) => (
+        //           <SwiperSlide key={index}>
+        //             <NewsCard card={card} />
+        //           </SwiperSlide>
+        //         ))}
+        //       </div>
+        //     </div> */}
+        //     {/* <div className={s.button_wrapper}>
+        //       <a href='#' className={s.news_link}>
+        //         Go to all news
+        //       </a>
+        //       <Arrow className={s.button_icon} />
+        //     </div> */}
+        //   </Container>
+        //   <div className='newsSliderContainer'>
+        //     <div className="newsSliderCards">
+        //       {cards.map((card, index) => (
+        //         <SwiperSlide key={index}>
+        //           <NewsCard card={card} />
+        //         </SwiperSlide>
+        //       ))}
+        //     </div>
+        //   </div>
+        //   <Container>
+        //     <div className={s.button_wrapper}>
+        //       <a href='#' className={s.news_link}>
+        //         Go to all news
+        //       </a>
+        //       <Arrow className={s.button_icon} />
+        //     </div>
+        //   </Container>
+        // </>
+        
       )}
 
       {isNotMobile && (

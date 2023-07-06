@@ -36,7 +36,7 @@ export const OurPresident = () => {
                     <div className={s.photoBlock}>
                         <picture>
                             <source srcSet={isDesktop ? imgD.src : isTablet ? imgT.src : imgM.src} />
-                            <img src={imgM.src} alt="President Photo" />
+                            <img src={imgM.src} alt="President Photo" className={s.photo}/>
                         </picture>
                     </div>
                     <p className={s.description}>
@@ -51,7 +51,7 @@ export const OurPresident = () => {
                     <div className={s.photoBlock}>
                         <picture>
                             <source srcSet={isDesktop ? imgD.src : isTablet ? imgT.src : imgM.src} />
-                            <img src={imgM.src} alt="President Photo" />
+                            <img src={imgM.src} alt="President Photo" className={s.photo} />
                         </picture>
                     </div>
                     <p className={s.description}>
