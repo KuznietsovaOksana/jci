@@ -74,7 +74,7 @@ export const HeroSection = () => {
             <h1 className={s.title}>
               JCI Ukraine
               <Flag className={s.flag} />
-              is a leading global network of young leaders
+              is a leading global network of <span className={s.accentTitle}>young leaders</span>
             </h1>
             <div className={s.sliderblock}>
                 <HeroSlider images={images} />
@@ -139,9 +139,9 @@ export const HeroSection = () => {
                 JCI Ukraine
                 <Flag className={s.flag} />
                 <br />
-                is a leading global network of
+                is a global network
                 <br />
-                young leaders
+                of <span className={s.accentTitle}>young leaders</span>
               </h1>
               <p className={s.description}>
                 We are a non-profit organization within a global network of
@@ -153,14 +153,14 @@ export const HeroSection = () => {
                   type='button'
                   text='Join us'
                   style='primary'
-                  paddings={100}
+                  paddings={76}
                   onClick={() => console.log('Join us')}
                 />
                 <MainButton
                   type='button'
                   text='Donate'
                   style='secondary'
-                  paddings={100}
+                  paddings={76}
                   onClick={() => console.log('Donate')}
                 />
               </div>

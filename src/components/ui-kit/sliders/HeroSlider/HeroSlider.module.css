@@ -3,10 +3,12 @@
   /* width: 320px;
   height: 240px;
   border-radius: 135px 0px 0px 135px; */
-  width: 288px;
+  min-width: 288px;
+  width: 100%;
   /* width: 100%; */
   /* max-width: 100%; */
-  height: 216px;
+  min-height: 216px;
+  height: 100%;
   border-radius: 8px;
   /* margin: 0 auto !important; */
   /* margin-left: auto !important; */
@@ -23,8 +25,8 @@
 
 @media screen and (min-width: 1440px) {
   .heroSlider {
-    width: 708px;
-    height: 508px;
-    border-radius: 300px 0px 0px 300px;
+    width: 552px;
+    height: 428px;
+    border-radius: 24px;
   }
 }
