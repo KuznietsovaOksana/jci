@@ -29,8 +29,12 @@ export const Accordion: React.FC<AccordionProps> = ({ faqs }) => {
   return (
     <ul className={s.faqlist}>
       {faqs.map((faq, index) => (
-        <li className={s.faqitem} key={index}>
-          <div className={s.box} onClick={() => handleClick(index)}>
+        <li
+          className={s.faqitem}
+          key={index}
+          onClick={() => handleClick(index)}
+        >
+          <div className={s.box}>
             <h3 className={s.question}>{faq.question}</h3>
             <ArrowUp
               className={`${s.arrow} ${activeIndex === index ? s.up : s.down}`}
