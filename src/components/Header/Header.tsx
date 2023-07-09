@@ -33,7 +33,9 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
         <MediaQuery maxWidth={1439}>
           <Menu className={css.menu} onClick={() => setShowModal(true)} />
         </MediaQuery>
-        <Logo className={css.logo} />
+        <a href='/'>
+          <Logo className={css.logo} />
+        </a>
         <MediaQuery minWidth={1440}>
           <nav className={css.nav}>
             <ul className={css.nav_list}>
