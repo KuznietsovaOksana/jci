@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { MainButton } from '../../components/ui-kit/buttons/MainButton';
-import { HeroSlider } from '../../components/ui-kit/sliders/HeroSlider';
+import { MainButton } from '@/components/ui-kit/buttons/MainButton';
+import { HeroSlider } from '@/components/ui-kit/sliders/HeroSlider';
 import Flag from 'public/icons/Icon.svg';
 
-import { Section } from '../../components/Section';
-import { Container } from '../../components/Container';
+import { Section } from '@/components/Section';
+import { Container } from '@/components/Container';
 
 import { images } from './images';
 
