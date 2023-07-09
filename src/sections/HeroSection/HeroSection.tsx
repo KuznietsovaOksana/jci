@@ -74,15 +74,16 @@ export const HeroSection = () => {
             <h1 className={s.title}>
               JCI Ukraine
               <Flag className={s.flag} />
-              is a leading global network of <span className={s.accentTitle}>young leaders</span>
+              is a leading global network of{' '}
+              <span className={s.accentTitle}>young leaders</span>
             </h1>
             <div className={s.sliderblock}>
-                <HeroSlider images={images} />
+              <HeroSlider images={images} />
             </div>
             <p className={s.description}>
-                  We are a non-profit organization within a global network of
-                  Junior Chamber International (JCI) and are currently focusing
-                  on mitigating the effects of the russian invasion countrywide.
+              We are a non-profit organization within a global network of Junior
+              Chamber International (JCI) and are currently focusing on
+              mitigating the effects of the russian invasion countrywide.
             </p>
             <div className={s.cta}>
               <MainButton

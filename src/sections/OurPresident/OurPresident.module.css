@@ -11,22 +11,22 @@
 
 .position {
   margin-top: 8px;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 120%;
-    color: #5C5F63;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+  color: #5c5f63;
 }
 
-.description{
+.description {
   margin-top: 32px;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: #414042;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #414042;
 }
 
 .photoBlock {
@@ -36,23 +36,20 @@
   max-width: 465px;
   /* height: 240px; */
   max-height: 387px;
-
 }
 
-  .photo {
-    width: 100%;
-    max-width: 465px;
-    height: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-  }
+.photo {
+  width: 100%;
+  max-width: 465px;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
 @media (min-width: 768px) {
-
   .title {
     font-size: 30px;
     max-width: 552px;
-
   }
 
   .description {
@@ -64,9 +61,9 @@
     font-size: 16px;
   }
 
-    .photoBlock {
-      margin-top: 32px;
-      height: 381px;
+  .photoBlock {
+    margin-top: 32px;
+    height: 381px;
   }
   .photo {
     width: 100%;
@@ -76,25 +73,23 @@
   }
 }
 @media (min-width: 1440px) {
-
   .title {
     font-size: 40px;
     max-width: 100%;
-
   }
-    .description {
-        font-size: 16px;
-        margin-top: 40px;
-    }
-    .position {
-      margin-top: 16px;
-      font-size: 18px;
-    }
+  .description {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+  .position {
+    margin-top: 16px;
+    font-size: 18px;
+  }
   .textBlock {
     width: 456px;
     padding: 112px 0;
   }
-  .presidentSection{
+  .presidentSection {
     display: flex;
     gap: 120px;
   }
