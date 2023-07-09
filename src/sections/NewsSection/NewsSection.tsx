@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-// import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
@@ -12,11 +14,9 @@ import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 import Arrow from 'public/icons/arrow-right.svg';
 
-import { cards } from './cards';
 
+import { cards } from './cards';
 import s from './NewsSection.module.css';
-import { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 
 export const NewsSection = () => {
   const [isMounted, setIsMounted] = useState(false);
