@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 
 import Arrow from 'public/icons/arrow-right.svg';
 
-import { ProjectCard } from '../../components/ProjectCard';
+import { ProjectCard } from '@/components/ProjectCard';
 
 import css from './ProjectSection.module.css';
 

@@ -11,6 +11,7 @@ import { HeroSection } from '@/sections/HeroSection';
 import { ProjectSection } from '@/sections/ProjectSection';
 import { TogetherSection } from '@/sections/TogetherSection';
 import { CharacteristicSection } from '@/sections/CharacteristicSection';
+import { OurPresident } from '@/sections/OurPresident';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -35,6 +36,7 @@ export default function Home() {
           <TogetherSection />
           <ProjectSection />
           <NewsSection />
+          <OurPresident />
           <FAQSection />
         </main>
       </Layout>

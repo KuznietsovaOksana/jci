@@ -12,13 +12,15 @@
   color: var(--black-90-color);
 }
 
+.accentTitle {
+  color: var(--blue-primary-color);
+}
+
 @media (max-width: 767px) {
   .title {
     font-size: 30px;
   }
-  .accentTitle {
-    color: var(--blue-primary-color);
-  }
+
   .flag {
     margin-left: 12px;
     width: 44px;
@@ -35,16 +37,16 @@
     gap: 20px;
   }
   .sliderblock {
-    margin-top: 40px;
-    position: relative;
-    left: -16px;
+    margin-top: 24px;
+    /* position: relative; */
+    /* left: -16px; */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .title {
     width: 551px;
-    font-size: 40px;
+    font-size: 34px;
   }
   .flag {
     margin-left: 14px;
@@ -53,14 +55,15 @@
     height: 24px;
   }
   .description {
-    width: 264px;
+    margin-top: 25px;
+    width: 551px;
     font-size: 18px;
   }
   .cta {
     margin-top: 24px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    /* flex-direction: column; */
+    gap: 24px;
   }
   .infoblock {
     display: flex;
@@ -68,7 +71,8 @@
     gap: 24px;
   }
   .sliderblock {
-    position: relative;
+    margin-top: 24px;
+    /* position: relative; */
   }
 }
 
@@ -78,8 +82,8 @@
     gap: 24px;
   }
   .title {
-    width: 552px;
-    font-size: 58px;
+    width: 456px;
+    font-size: 48px;
   }
   .flag {
     margin-left: 24px;
@@ -89,7 +93,7 @@
   .description {
     margin-top: 24px;
     margin-bottom: 40px;
-    width: 552px;
+    width: 456px;
     font-size: 20px;
   }
   .cta {
@@ -97,7 +101,10 @@
     display: flex;
     gap: 24px;
   }
+  .infoblock {
+    width: 552px;
+  }
   .sliderblock {
-    position: relative;
+    /* position: relative; */
   }
 }
