@@ -14,7 +14,6 @@ import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 import Arrow from 'public/icons/arrow-right.svg';
 
-
 import { cards } from './cards';
 import s from './NewsSection.module.css';
 

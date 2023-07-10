@@ -40,9 +40,9 @@ export const OurPresident = () => {
           </div>
           <p className={s.description}>
             As National President, Kuznetsova is responsible for overseeing
-            JCI's operations and initiatives in Ukraine, and leading the
-            organisation's efforts to engage and empower young people in the
-            country. Her role also involves representing JCI Ukraine at the
+            JCI&apos;s operations and initiatives in Ukraine, and leading the
+            organisation&apos;s efforts to engage and empower young people in
+            the country. Her role also involves representing JCI Ukraine at the
             international level and collaborating with other JCI chapters around
             the world.
           </p>
@@ -62,9 +62,9 @@ export const OurPresident = () => {
           </div>
           <p className={s.description}>
             As National President, Kuznetsova is responsible for overseeing
-            JCI's operations and initiatives in Ukraine, and leading the
-            organisation's efforts to engage and empower young people in the
-            country. Her role also involves representing JCI Ukraine at the
+            JCI&apos;s operations and initiatives in Ukraine, and leading the
+            organisation&apos;s efforts to engage and empower young people in
+            the country. Her role also involves representing JCI Ukraine at the
             international level and collaborating with other JCI chapters around
             the world.
           </p>
@@ -77,7 +77,6 @@ export const OurPresident = () => {
               <Image
                 src={imgD}
                 alt='President photo'
-
                 priority
                 className={s.photo}
               />
@@ -87,11 +86,11 @@ export const OurPresident = () => {
               <p className={s.position}>JCI Ukraine President</p>
               <p className={s.description}>
                 As National President, Kuznetsova is responsible for overseeing
-                JCI's operations and initiatives in Ukraine, and leading the
-                organisation's efforts to engage and empower young people in the
-                country. Her role also involves representing JCI Ukraine at the
-                international level and collaborating with other JCI chapters
-                around the world.
+                JCI&apos;s operations and initiatives in Ukraine, and leading
+                the organisation&apos;s efforts to engage and empower young
+                people in the country. Her role also involves representing JCI
+                Ukraine at the international level and collaborating with other
+                JCI chapters around the world.
               </p>
             </div>
           </div>
