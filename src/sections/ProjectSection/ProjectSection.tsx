@@ -4,7 +4,7 @@ import Arrow from 'public/icons/arrow-right.svg';
 
 import { ProjectCard } from '@/components/ProjectCard';
 
-import css from './ProjectSection.module.css';
+import s from './ProjectSection.module.css';
 
 const projects = [
   {
@@ -49,12 +49,12 @@ const projects = [
 
 export const ProjectSection: NextPage = () => {
   return (
-    <section className={css.project_section}>
-      <h3 className={css.project_title}>
-        <span className={css.project_title_span}>Humanitarian projects</span> we
+    <section className={s.project_section}>
+      <h3 className={s.project_title}>
+        <span className={s.project_title_span}>Humanitarian projects</span> we
         work on
       </h3>
-      <div className={css.projects_wrapper}>
+      <div className={s.projects_wrapper}>
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -68,11 +68,11 @@ export const ProjectSection: NextPage = () => {
           />
         ))}
       </div>
-      <div className={css.button_wrapper}>
-        <a href='#' className={css.projects_link}>
+      <div className={s.button_wrapper}>
+        <a href='#' className={s.projects_link}>
           Go to all projects
         </a>
-        <Arrow className={css.button_icon} />
+        <Arrow className={s.button_icon} />
       </div>
     </section>
   );
