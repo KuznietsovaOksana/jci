@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
 import { Header } from '../Header';
-import { Footer } from '../Footer/Footer';
+import { Footer } from '../Footer';
 
 export interface ILayout {
   setShowModal: (show: boolean) => void;
