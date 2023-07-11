@@ -5,7 +5,7 @@ import Flag from 'public/icons/icon.svg';
 
 import { ProjectCardPP } from '@/components/ProjectPage/Project_card/Project_card_pp';
 
-import css from './ProjectSectionPP.module.css';
+import s from './ProjectSectionPP.module.css';
 
 const projects = [
   {
@@ -52,14 +52,14 @@ const projects = [
 
 export const ProjectSectionPP: NextPage = () => {
   return (
-    <section className={css.project_section}>
-      <h3 className={css.project_title}>
+    <section className={s.project_section}>
+      <h3 className={s.project_title}>
         Our
-        <span className={css.project_title_span}> projects</span>
-        <Flag className={css.projects_flag} />
+        <span className={s.project_title_span}> projects</span>
+        <Flag className={s.projects_flag} />
       </h3>
 
-      <div className={css.projects_wrapper}>
+      <div className={s.projects_wrapper}>
         {projects.map((project, index) => (
           <ProjectCardPP
             key={index}
@@ -74,11 +74,11 @@ export const ProjectSectionPP: NextPage = () => {
           />
         ))}
       </div>
-      <div className={css.button_wrapper}>
-        <a href='#' className={css.projects_link}>
+      <div className={s.button_wrapper}>
+        <a href='#' className={s.projects_link}>
           More projects
         </a>
-        <Arrow className={css.button_icon} />
+        <Arrow className={s.button_icon} />
       </div>
     </section>
   );

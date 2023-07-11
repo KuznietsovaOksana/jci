@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 
 import { CharacteristicCard } from '@/components/CharacteristicCard';
 
-import css from './CharacteristicSection.module.css';
+import s from './CharacteristicSection.module.css';
 
 const Care = dynamic(() => import('public/icons/caring_graphic.svg'));
 const Help = dynamic(() => import('public/icons/helping_graphic.svg'));
@@ -28,7 +28,7 @@ const characteristicData: Characteristic[] = [
 
 export const CharacteristicSection: NextPage = () => {
   return (
-    <section className={css.characteristic_section}>
+    <section className={s.characteristic_section}>
       {characteristicData.map((characteristic, index) => (
         <CharacteristicCard
           key={index}

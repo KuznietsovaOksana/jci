@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
-import styles from './Portal.module.css';
+import s from './Portal.module.css';
 
 interface PortalProps {
   children: ReactNode;
@@ -18,7 +18,7 @@ export const Portal = (props: PortalProps) => {
 
   return mounted && ref.current
     ? createPortal(
-        <div className={styles.overlay}>{props.children}</div>,
+        <div className={s.overlay}>{props.children}</div>,
         ref.current
       )
     : null;
