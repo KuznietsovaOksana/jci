@@ -5,6 +5,8 @@ import { Portal } from '@/components/Portal';
 import { ModalMenu } from '@/components/ModalMenu';
 import { Layout } from '@/components/Layout';
 import { ProjectSectionPP } from '@/sections/ProjectPage/ProjectSection';
+import { QuoteSection } from '@/sections/QuoteSection';
+import { CompleteProjectSection } from '@/sections/CompletedProjectSection';
 
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -24,6 +26,8 @@ export default function Projects() {
       <Layout setShowModal={setShowModal}>
         <main>
           <ProjectSectionPP />
+          <QuoteSection />
+          <CompleteProjectSection />
         </main>
       </Layout>
     </>
