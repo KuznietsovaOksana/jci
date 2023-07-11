@@ -10,7 +10,7 @@ import { ILayout } from '../Layout';
 import { nav } from '../Header';
 import NavLink from '../NavLink';
 
-import css from './ModalMenu.module.css';
+import s from './ModalMenu.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -20,16 +20,14 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
   const [language, setLanguage] = useState(true);
 
   return (
-    <div className={css.modal}>
-      <div className={css.top_modal}>
-        <CloseMenu className={css.close} onClick={() => setShowModal(false)} />
+    <div className={s.modal}>
+      <div className={s.top_modal}>
+        <CloseMenu className={s.close} onClick={() => setShowModal(false)} />
         <MediaQuery maxWidth={767}>
-          <button className={`${css.button} ${css.button_media}`}>
-            Join us
-          </button>
+          <button className={`${s.button} ${s.button_media}`}>Join us</button>
         </MediaQuery>
         <div
-          className={css.language}
+          className={s.language}
           onClick={() => setLanguage(prevState => !prevState)}
         >
           {language ? <En /> : <Ua />}
@@ -40,12 +38,12 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
           {nav.map(({ number, name, path }, ind) => (
             <li
               key={ind}
-              className={`${css.item} ${css.item_plus}  ${css.item_minus} `}
+              className={`${s.item} ${s.item_plus}  ${s.item_minus} `}
             >
-              <span className={css.numbers}>{number}</span>
-              <NavLink className={css.link} exact href={path}>
+              <span className={s.numbers}>{number}</span>
+              <NavLink className={s.link} exact href={path}>
                 <p> {name}</p>
-                <Arrow className={css.chevron} />
+                <Arrow className={s.chevron} />
               </NavLink>
             </li>
           ))}
