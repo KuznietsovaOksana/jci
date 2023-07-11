@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-
 import { quoteData } from './data';
 
 import s from './QuoteSection.module.css';

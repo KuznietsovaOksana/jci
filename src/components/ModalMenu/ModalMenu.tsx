@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic';
 import { FC, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import CloseMenu from 'public/icons/remove.svg';
 import En from 'public/icons/language_switch_Eng.svg';
@@ -20,37 +20,42 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
   const [language, setLanguage] = useState(true);
 
   return (
-    <div className={css.modal}>
-      <div className={css.top_modal}>
-        <CloseMenu className={css.close} onClick={() => setShowModal(false)} />
-        <MediaQuery maxWidth={767}>
-          <button className={`${css.button} ${css.button_media}`}>
-            Join us
-          </button>
-        </MediaQuery>
-        <div
-          className={css.language}
-          onClick={() => setLanguage(prevState => !prevState)}
-        >
-          {language ? <En /> : <Ua />}
+    <div className={css.container_modal_tablet}>
+      <div className={css.modal}>
+        <div className={css.top_modal}>
+          <CloseMenu
+            className={css.close}
+            onClick={() => setShowModal(false)}
+          />
+          <MediaQuery maxWidth={767}>
+            <button className={`${css.button} ${css.button_media}`}>
+              Join us
+            </button>
+          </MediaQuery>
+          <div
+            className={css.language}
+            onClick={() => setLanguage(prevState => !prevState)}
+          >
+            {language ? <En /> : <Ua />}
+          </div>
         </div>
+        <nav>
+          <ul>
+            {nav.map(({ number, name, path }, ind) => (
+              <li
+                key={ind}
+                className={`${css.item} ${css.item_plus}  ${css.item_minus} `}
+              >
+                <span className={css.numbers}>{number}</span>
+                <NavLink className={css.link} exact href={path}>
+                  <p> {name}</p>
+                  <Arrow className={css.chevron} />
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          {nav.map(({ number, name, path }, ind) => (
-            <li
-              key={ind}
-              className={`${css.item} ${css.item_plus}  ${css.item_minus} `}
-            >
-              <span className={css.numbers}>{number}</span>
-              <NavLink className={css.link} exact href={path}>
-                <p> {name}</p>
-                <Arrow className={css.chevron} />
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </div>
   );
 };

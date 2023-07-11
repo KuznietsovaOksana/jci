@@ -1,9 +1,10 @@
 import { FC } from 'react';
+import Image from 'next/image';
+
 import ArrowRight from 'public/icons/arrow-right.svg';
+import { useScreen } from '@/hooks/use_screen';
 
 import s from './CompletedCard.module.css';
-import Image from 'next/image';
-import { useScreen } from '@/hooks/use_screen';
 
 type CardCompletedProjectProps = {
   card: {
@@ -21,6 +22,7 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
   card: { picture, text, title },
 }) => {
   const { isMobile, isTablet } = useScreen();
+
   let width: number;
   if (isMobile) {
     width = 251;
@@ -33,8 +35,7 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
   let height: number;
   if (isMobile) {
     height = 234;
-  }
-  else height = 310;
+  } else height = 310;
 
   return (
     <>

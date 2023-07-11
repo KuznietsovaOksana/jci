@@ -1,25 +1,20 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-// import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-
-import LeftArrow from 'public/icons/chevron_Left.svg';
-import RightArrow from 'public/icons/chevron_Right.svg';
-import Arrow from 'public/icons/arrow-right.svg';
-
-import { cards } from './cards';
-
-import s from './CopmpletedProjectSection.module.css';
-import { CompletedCard } from '@/components/CompletedCard';
 import dynamic from 'next/dynamic';
-
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
+
+import LeftArrow from 'public/icons/chevron_Left.svg';
+import RightArrow from 'public/icons/chevron_Right.svg';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
+import { cards } from './cards';
+import { CompletedCard } from '@/components/CompletedCard';
+
+import s from './CopmpletedProjectSection.module.css';
 
 export const CompleteProjectSection = () => {
   return (
@@ -38,9 +33,7 @@ export const CompleteProjectSection = () => {
             {cards.map((card, index) => (
               <SwiperSlide key={index}>
                 <CompletedCard card={card} />
-                {/* <MediaQuery minWidth={768}> */}
                 <div className={s.div_tablet}></div>
-                {/* </MediaQuery> */}
               </SwiperSlide>
             ))}
           </div>
