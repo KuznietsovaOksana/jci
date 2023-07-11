@@ -10,7 +10,7 @@ import NavLink from '../NavLink';
 import { ILayout } from '../Layout';
 import { Container } from '../Container';
 
-import css from './Header.module.css';
+import s from './Header.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -29,19 +29,19 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
 
   return (
     <Container>
-      <header className={css.header}>
+      <header className={s.header}>
         <MediaQuery maxWidth={1439}>
-          <Menu className={css.menu} onClick={() => setShowModal(true)} />
+          <Menu className={s.menu} onClick={() => setShowModal(true)} />
         </MediaQuery>
-        <a href='/'>
-          <Logo className={css.logo} />
+        <a href='/' className={s.link}>
+          <Logo className={s.logo} />
         </a>
         <MediaQuery minWidth={1440}>
-          <nav className={css.nav}>
-            <ul className={css.nav_list}>
+          <nav className={s.nav}>
+            <ul className={s.nav_list}>
               {nav.map(({ name, path }, ind) => (
                 <li key={ind}>
-                  <NavLink exact className={css.nav_link} href={path}>
+                  <NavLink exact className={s.nav_link} href={path}>
                     {name}
                   </NavLink>
                 </li>
@@ -49,7 +49,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
             </ul>
           </nav>
           <div
-            className={css.language}
+            className={s.language}
             onClick={() => setLanguage(prevState => !prevState)}
           >
             {language ? <En /> : <Ua />}
@@ -59,7 +59,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
         <MediaQuery minWidth={768}>
           <button
             // onClick={() => alert('HI!')}
-            className={`${css.button} ${css.button_media}`}
+            className={`${s.button} ${s.button_media}`}
           >
             Join us
           </button>

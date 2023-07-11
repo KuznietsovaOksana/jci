@@ -1,6 +1,6 @@
 import React from 'react';
 
-import css from './CharacteristicCard.module.css';
+import s from './CharacteristicCard.module.css';
 
 interface CharacteristicCardProps {
   icon: React.ReactNode;
@@ -13,13 +13,13 @@ export const CharacteristicCard: React.FC<CharacteristicCardProps> = ({
   text,
 }) => {
   const iconWithClass = React.cloneElement(icon as React.ReactElement, {
-    className: `${css.characteristic_icon}`,
+    className: `${s.characteristic_icon}`,
   });
 
   return (
-    <div className={css.characteristic_card}>
+    <div className={s.characteristic_card}>
       {iconWithClass}
-      <p className={css.characteristic_title}>{text}</p>
+      <p className={s.characteristic_title}>{text}</p>
     </div>
   );
 };

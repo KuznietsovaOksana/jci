@@ -10,6 +10,16 @@
   }
 }
 
+@media (min-width: 768px) {
+  .container_modal_tablet {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 108px;
+    padding-right: 108px;
+    width: 768px;
+  }
+}
+
 .close {
   width: 24px;
   height: 24px;
