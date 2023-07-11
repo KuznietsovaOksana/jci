@@ -26,6 +26,8 @@ export default function Projects() {
       <Layout setShowModal={setShowModal}>
         <main>
           <ProjectSectionPP />
+          <QuoteSection />
+          <CompleteProjectSection />
         </main>
       </Layout>
     </>

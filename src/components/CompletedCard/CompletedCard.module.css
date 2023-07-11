@@ -55,7 +55,9 @@
   .card {
     display: flex;
     width: 552px;
-    height: 312px;
+    height: 310px;
+    /* height: 306px; */
+
     border-radius: 25px;
   }
   .picture {
@@ -73,34 +75,27 @@
     display: block;
     font-size: 16px;
   }
-}
-
-@media screen and (min-width: 1440px) {
-  .card:hover {
-    border-color: #89a4d0;
-    box-shadow: 0px 4px 20px rgba(14, 17, 28, 0.1);
-  }
-  .card:hover .datePrimary {
-    color: var(--blue-primary-color);
-  }
-  .card:hover .title {
-    color: var(--blue-primary-color);
-  }
   .text_picture {
     font-size: 40px;
   }
+}
 
-  /* .textblock {
-    width: 358px;
-    padding: 24px;
-    padding-top: 32px;
-  } */
-  /* .data {
-    font-size: 14px;
+@media screen and (min-width: 1440px) {
+  .card {
+    transition: box-shadow var(--animation);
   }
-  .info {
-    margin-top: 32px;
-  } */
+  .card:hover {
+    /* border-color: #89a4d0; */
+    box-shadow: 0px 4px 20px rgba(14, 17, 28, 0.1);
+  }
+  .card .title {
+    transition: color var(--animation);
+  }
+
+  .card:hover .title {
+    color: var(--blue-primary-color);
+  }
+
   .title {
     font-size: 24px;
   }
@@ -141,36 +136,3 @@
   width: 24px;
   height: 24px;
 }
-
-/* .war_button {
-  display: flex;
-  align-items: center;
-  color: var(--blue-navy-color);
-  background-color: transparent;
-  border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 39px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .war_button {
-    margin-top: 40px;
-    font-size: 16px;
-  }
-}
-@media (min-width: 1440px) {
-  .war_button {
-    margin-top: 85px;
-    font-size: 18px;
-  }
-}
-
-.war_icon {
-  margin-left: 4px;
-  width: 24px;
-  height: 24px;
-} */

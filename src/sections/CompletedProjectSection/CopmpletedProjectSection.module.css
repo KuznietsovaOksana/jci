@@ -1,61 +1,35 @@
-.news_title {
+.completed_project_title {
   font-family: 'NAMU';
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
   line-height: 140%;
   color: var(--black-color);
-  max-width: 288px;
   margin-bottom: 32px;
 }
-.news_title_span {
+.completed_project_title_span {
   color: var(--blue-primary-color);
-}
-
-.button_wrapper {
-  margin-top: 32px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.button_icon {
-  width: 24px;
-}
-.news_link {
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
-  color: var(--blue-primary-color);
+  display: block;
 }
 
 @media (min-width: 768px) {
-  .news_title {
+  .completed_project_title {
     font-size: 30px;
     max-width: 552px;
     margin-bottom: 40px;
   }
-  .news_link {
-    font-size: 16px;
-  }
-  .button_wrapper {
-    margin-top: 48px;
+  .completed_project_title_span {
+    display: inline;
   }
 }
 @media (min-width: 1440px) {
-  .news_title {
+  .completed_project_title {
     font-size: 40px;
     max-width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
-  .news_link {
-    font-size: 18px;
-  }
-  .button_wrapper {
-    margin-top: 62px;
-  }
+}
+
+.div_tablet {
+  height: 5px;
 }

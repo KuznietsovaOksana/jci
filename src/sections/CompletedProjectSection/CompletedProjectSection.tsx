@@ -15,79 +15,82 @@ import { cards } from './cards';
 
 import s from './CopmpletedProjectSection.module.css';
 import { CompletedCard } from '@/components/CompletedCard';
+import dynamic from 'next/dynamic';
+
+const MediaQuery = dynamic(() => import('react-responsive'), {
+  ssr: false,
+});
 
 export const CompleteProjectSection = () => {
   return (
     <Section>
-      <Container>
-        <h3 className={s.news_title}>
-          <span className={s.news_title_span}>Successful projects: </span>
-          building a better future together
-        </h3>
-        <div className='newsSliderContainer'>
-          <Swiper
-            slidesPerView={3}
-            slidesPerGroup={3}
-            spaceBetween={24}
-            // pagination={{
-            // type: "fraction",
-            // }}
-            navigation={{
-              prevEl: '.newsSliderBtnPrev',
-              nextEl: '.newsSliderBtnNext',
-            }}
-            modules={[Navigation]}
-            className='newsSlider'
-            breakpoints={{
-              320: {
-                // effect: 'coverflow',
-                // coverflowEffect: {
-                //   rotate: 0,
-                //   stretch: 0,
-                //   depth: 100,
-                //   modifier: 1,
-                // },
-                slidesPerView: 1,
-                spaceBetween: 16,
-                slidesPerGroup: 1,
-              },
-              768: {
-                // slidesPerView: 2,
-                slidesPerView: 1,
-                spaceBetween: 24,
-
-                // slidesPerGroup: 2,
-                slidesPerGroup: 1,
-              },
-              1440: {
-                // slidesPerView: 3,
-                slidesPerView: 2,
-                spaceBetween: 24,
-                // slidesPerGroup: 3,
-                slidesPerGroup: 2,
-              },
-            }}
-          >
+      <MediaQuery maxWidth={1439.9}>
+        <Container>
+          <h3 className={s.completed_project_title}>
+            <span className={s.completed_project_title_span}>
+              Successful projects:{' '}
+            </span>
+            building a better future together
+          </h3>
+        </Container>
+        <div className='projectSliderContainer sliderContainerTablet'>
+          <div className='projectSliderCards sliderCardsTablet'>
             {cards.map((card, index) => (
               <SwiperSlide key={index}>
                 <CompletedCard card={card} />
+                {/* <MediaQuery minWidth={768}> */}
+                <div className={s.div_tablet}></div>
+                {/* </MediaQuery> */}
               </SwiperSlide>
             ))}
-          </Swiper>
-          <div className='newsSliderNavBtns'>
-            <div className='newsSliderBtnPrev'>
-              <LeftArrow />
-            </div>
-            <div className='newsSliderBtnNext'>
-              <RightArrow />
-            </div>
           </div>
         </div>
-      </Container>
-      {/* <div className='navigateBtns'>
-        <div className='newsSliderBtnPrev'><LeftArrow /></div>
-        <div className='newsSliderBtnNext'><RightArrow /></div>
-      </div>         */}
+      </MediaQuery>
+
+      <MediaQuery minWidth={1440}>
+        <Container>
+          <h3 className={s.completed_project_title}>
+            <span className={s.completed_project_title_span}>
+              Successful projects:{' '}
+            </span>
+            building a better future together
+          </h3>
+          <div className='newsSliderContainer '>
+            <Swiper
+              slidesPerView={3}
+              slidesPerGroup={3}
+              spaceBetween={24}
+              navigation={{
+                prevEl: '.newsSliderBtnPrev',
+                nextEl: '.newsSliderBtnNext',
+              }}
+              modules={[Navigation]}
+              className='newsSlider'
+              breakpoints={{
+                1440: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                  slidesPerGroup: 2,
+                },
+              }}
+            >
+              {cards.map((card, index) => (
+                <SwiperSlide key={index}>
+                  <CompletedCard card={card} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className='newsSliderNavBtns'>
+              <div className='newsSliderBtnPrev'>
+                <LeftArrow />
+              </div>
+              <div className='newsSliderBtnNext'>
+                <RightArrow />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </MediaQuery>
     </Section>
   );
 };

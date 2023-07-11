@@ -33,7 +33,8 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
   let height: number;
   if (isMobile) {
     height = 234;
-  } else height = 310;
+  }
+  else height = 310;
 
   return (
     <>
