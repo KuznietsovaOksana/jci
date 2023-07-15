@@ -233,3 +233,55 @@ a {
 }
 
 /* completed project */
+
+/* photo gallery */
+.gallerySliderContainer {
+  position: relative;
+  display: flex;
+  justify-content: start;
+
+  width: 100%;
+  overflow-x: scroll !important;
+}
+
+.gallerySliderImages {
+  display: flex !important;
+  gap: 16px !important;
+}
+
+.gallerySliderImages .swiper-slide {
+  width: 252px !important;
+}
+
+@media (max-width: 480px) {
+  .gallerySliderImages .swiper-slide:first-child {
+    margin-left: 16px;
+  }
+  .gallerySliderImages .swiper-slide:last-child {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767.9px) {
+  .gallerySliderImages .swiper-slide:first-child {
+    margin-left: calc((100vw - 480px) / 2 + 16px);
+  }
+  .gallerySliderImages .swiper-slide:last-child {
+    margin-right: calc((100vw - 480px) / 2 + 16px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439.9px) {
+  .gallerySliderImages .swiper-slide {
+    width: 288px !important;
+  }
+
+  .gallerySliderImages .swiper-slide:first-child {
+    margin-left: calc((100vw - 480px) / 2 - 34px);
+  }
+  .gallerySliderImages .swiper-slide:last-child {
+    margin-right: calc((100vw - 480px) / 2 - 34px);
+  }
+}
+
+/* photo gallery */

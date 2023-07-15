@@ -7,6 +7,7 @@ import { Layout } from '@/components/Layout';
 import { ProjectSectionPP } from '@/sections/ProjectPage/ProjectSection';
 import { QuoteSection } from '@/sections/QuoteSection';
 import { CompleteProjectSection } from '@/sections/CompletedProjectSection';
+import { PhotoGallerySection } from '@/sections/PhotoGallerySection';
 
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -28,6 +29,7 @@ export default function Projects() {
           <ProjectSectionPP />
           <QuoteSection />
           <CompleteProjectSection />
+          <PhotoGallerySection />
         </main>
       </Layout>
     </>
