@@ -43,7 +43,7 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
               >
                 <span className={s.numbers}>{number}</span>
                 <NavLink className={s.link} exact href={path}>
-                  <p> {name}</p>
+                  <p className={s.name}> {name}</p>
                   <Arrow className={s.chevron} />
                 </NavLink>
               </li>

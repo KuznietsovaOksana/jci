@@ -23,6 +23,7 @@
 .close {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .close {
@@ -43,6 +44,12 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 100%;
+  cursor: pointer;
+  transition: background-color var(--animation);
+}
+.button:focus,
+.button:hover {
+  background-color: var(--blue-60-color);
 }
 
 .top_modal {
