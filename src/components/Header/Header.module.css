@@ -70,6 +70,7 @@
   padding-top: 41px;
   padding-bottom: 41px;
 }
+
 @media (min-width: 1440px) {
   .nav_link_active {
     border-bottom: 2px solid black;
@@ -87,6 +88,11 @@
   border-radius: 30px;
   border: none;
   cursor: pointer;
+  transition: background-color var(--animation);
+}
+
+.button:hover {
+  background-color: var(--blue-60-color);
 }
 
 @media (min-width: 768px) {

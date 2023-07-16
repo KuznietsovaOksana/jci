@@ -17,7 +17,6 @@ import { useScreen } from '@/hooks/use_screen';
 export const PhotoGallerySection = () => {
   const { isMobile } = useScreen();
   const width = isMobile ? 252 : 288;
-  // const
 
   return (
     <section className={s.section_photo_gallery}>

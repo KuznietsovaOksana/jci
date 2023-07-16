@@ -51,6 +51,7 @@ a {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .newsSliderBtnPrev svg {
@@ -68,6 +69,7 @@ a {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .newsSliderBtnNext svg {
