@@ -3,13 +3,15 @@ import { MainButton } from '@/components/ui-kit/buttons/MainButton';
 
 import s from './DonateSaction.module.css';
 
-export const DonateSection = () => {
+export interface Text {
+  text: string;
+}
+
+export const DonateSection = (props: Text) => {
   return (
     <section className={s.donate_section}>
       <Container>
-        <p className={s.donate_text}>
-          Opportunity to help: donate to sustainable projects!
-        </p>
+        <p className={s.donate_text}>{props.text}</p>
         <MainButton
           className={s.donate_btn}
           onClick={() => {

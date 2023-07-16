@@ -4,10 +4,11 @@ import Arrow from 'public/icons/chevron_Down.svg';
 import Flag from 'public/icons/icon.svg';
 
 import { ProjectCardPP } from '@/components/ProjectPage/Project_card/Project_card_pp';
+import { DonateSection, donateText } from '@/sections/DonateSection';
 
 import s from './ProjectSectionPP.module.css';
 
-const projects = [
+const projectsTop = [
   {
     image_main_dt: '/images/projects/project_1.png',
     image_main_t: '/images/projects/project_01dt.jpg',
@@ -28,6 +29,9 @@ const projects = [
     subtitle: 'CF “Tooth Fairy”   ',
     text: 'Project works to educate children about the importance of dental health while also collecting and  essential dental supplies',
   },
+];
+
+const projectsLow = [
   {
     image_main_dt: '/images/projects/project_3.png',
     image_main_t: '/images/projects/project_03dt.jpg',
@@ -52,34 +56,54 @@ const projects = [
 
 export const ProjectSectionPP: NextPage = () => {
   return (
-    <section className={s.project_section}>
-      <h3 className={s.project_title}>
-        Our
-        <span className={s.project_title_span}> projects</span>
-        <Flag className={s.projects_flag} />
-      </h3>
+    <>
+      <section className={`${s.project_section} ${s.top_section}`}>
+        <h3 className={s.project_title}>
+          Our
+          <span className={s.project_title_span}> projects</span>
+          <Flag className={s.projects_flag} />
+        </h3>
 
-      <div className={s.projects_wrapper}>
-        {projects.map((project, index) => (
-          <ProjectCardPP
-            key={index}
-            image_dt={project.image_main_dt}
-            image_t={project.image_main_t}
-            image_m={project.image_main_m}
-            hover_dt={project.image_hover_dt}
-            hover_m={project.image_hover_m}
-            title={project.title}
-            subtitle={project.subtitle}
-            text={project.text}
-          />
-        ))}
-      </div>
-      <div className={s.button_wrapper}>
-        <a href='#' className={s.projects_link}>
-          More projects
-        </a>
-        <Arrow className={s.button_icon} />
-      </div>
-    </section>
+        <div className={s.projects_wrapper}>
+          {projectsTop.map((project, index) => (
+            <ProjectCardPP
+              key={index}
+              image_dt={project.image_main_dt}
+              image_t={project.image_main_t}
+              image_m={project.image_main_m}
+              hover_dt={project.image_hover_dt}
+              hover_m={project.image_hover_m}
+              title={project.title}
+              subtitle={project.subtitle}
+              text={project.text}
+            />
+          ))}
+        </div>
+      </section>
+      <DonateSection text={donateText.appeal} />
+      <section className={`${s.project_section} ${s.low_section}`}>
+        <div className={s.projects_wrapper}>
+          {projectsLow.map((project, index) => (
+            <ProjectCardPP
+              key={index}
+              image_dt={project.image_main_dt}
+              image_t={project.image_main_t}
+              image_m={project.image_main_m}
+              hover_dt={project.image_hover_dt}
+              hover_m={project.image_hover_m}
+              title={project.title}
+              subtitle={project.subtitle}
+              text={project.text}
+            />
+          ))}
+        </div>
+        <div className={s.button_wrapper}>
+          <a href='#' className={s.projects_link}>
+            More projects
+          </a>
+          <Arrow className={s.button_icon} />
+        </div>
+      </section>
+    </>
   );
 };

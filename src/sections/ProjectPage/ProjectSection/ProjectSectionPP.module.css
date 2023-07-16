@@ -5,6 +5,7 @@
   padding: 40px 16px;
   align-items: center;
 }
+
 .project_title {
   font-family: 'NAMU';
   font-style: normal;
@@ -24,8 +25,12 @@
   align-items: center;
   gap: 32px;
   justify-content: center;
+}
+
+.low_section > .projects_wrapper {
   margin-bottom: 32px;
 }
+
 .button_wrapper {
   display: flex;
   flex-direction: row;
@@ -61,8 +66,12 @@
   }
   .projects_wrapper {
     gap: 24px;
+  }
+
+  .low_section > .projects_wrapper {
     margin-bottom: 24px;
   }
+
   .projects_link {
     font-size: 16px;
   }
@@ -84,8 +93,12 @@
   .projects_wrapper {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .low_section > .projects_wrapper {
     margin-bottom: 40px;
   }
+
   .projects_link {
     font-size: 18px;
   }
