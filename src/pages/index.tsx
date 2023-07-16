@@ -9,6 +9,8 @@ import { FAQSection } from '@/sections/FAQSection';
 import { NewsSection } from '@/sections/NewsSection';
 import { HeroSection } from '@/sections/HeroSection';
 import { ProjectSection } from '@/sections/ProjectSection';
+import { DonateSection } from '@/sections/DonateSection';
+import { donateText } from '@/sections/DonateSection';
 import { TogetherSection } from '@/sections/TogetherSection';
 import { CharacteristicSection } from '@/sections/CharacteristicSection';
 import { OurPresident } from '@/sections/OurPresident';
@@ -35,6 +37,7 @@ export default function Home() {
           <WarSection />
           <TogetherSection />
           <ProjectSection />
+          <DonateSection text={donateText.donate} />
           <NewsSection />
           <OurPresident />
           <FAQSection />
