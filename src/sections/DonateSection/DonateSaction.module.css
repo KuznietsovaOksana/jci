@@ -1,0 +1,57 @@
+.donate_section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: var(--blue-navy-color);
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding-bottom: 36px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.donate_text {
+  margin-bottom: 32px;
+  text-align: center;
+
+  font-family: 'NAMU';
+  font-size: 24px;
+  color: var(--white-color);
+
+  @media (min-width: 480px) {
+    margin: auto;
+
+    max-width: 456px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 36px;
+
+    font-size: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 60px;
+
+    font-size: 40px;
+    max-width: 744px;
+  }
+}
+
+.donate_btn {
+  margin: auto;
+
+  background-color: var(--white-color);
+  color: var(--blue-navy-color);
+  border-color: var(--white-color);
+  font-size: 16px;
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
+}
