@@ -6,8 +6,8 @@ import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 
 import imgD from 'public/images/president/president_01d.jpg';
-import imgT from 'public/images/president/president_01t.jpg';
-import imgM from 'public/images/president/president_01m.jpg';
+// import imgT from 'public/images/president/president_01t.jpg';
+// import imgM from 'public/images/president/president_01m.jpg';
 
 import s from './OurPresident.module.css';
 
@@ -32,7 +32,7 @@ export const OurPresident = () => {
           <p className={s.position}>JCI Ukraine President</p>
           <div className={s.photoBlock}>
             <Image
-              src={imgM}
+              src={imgD}
               alt='President photo'
               priority
               className={s.photo}
@@ -54,7 +54,7 @@ export const OurPresident = () => {
           <p className={s.position}>JCI Ukraine President</p>
           <div className={s.photoBlock}>
             <Image
-              src={imgT}
+              src={imgD}
               alt='President photo'
               priority
               className={s.photo}
