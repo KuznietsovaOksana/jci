@@ -7,7 +7,7 @@ import s from './FAQSection.module.css';
 
 export const FAQSection = () => {
   return (
-    <Section>
+    <Section className={s.section}>
       <Container>
         <div className={s.box}>
           <h2 className={s.title}>
