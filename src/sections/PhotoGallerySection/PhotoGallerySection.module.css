@@ -16,6 +16,7 @@
 
 .picture {
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .photo_gallery_title {
@@ -86,3 +87,25 @@
   top: -115px;
 }
 /* gallery desk */
+
+.light_box img {
+  border-radius: 60px;
+}
+.arrow {
+  width: 24px;
+  height: 24px;
+}
+
+.box_arrow {
+  background-color: white;
+  border-radius: 50%;
+  width: 48px !important;
+  height: 48px !important;
+  display: flex;
+
+  border: 1px solid #d8e1ef;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
