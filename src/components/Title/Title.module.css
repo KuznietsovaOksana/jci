@@ -2,7 +2,6 @@
 .title {
   font-family: 'NAMU';
   font-weight: 800;
-  line-height: 1.4;
   color: var(--black-color);
 }
 .black {
@@ -15,6 +14,7 @@
 /* Styles for h1 */
 .title.h1 {
   font-size: 30px;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   .title.h1 {
@@ -30,6 +30,7 @@
 /* Styles for h2 */
 .title.h2 {
   font-size: 24px;
+  line-height: 1.4;
 }
 @media screen and (min-width: 768px) {
   .title.h2 {
@@ -45,6 +46,7 @@
 /* Styles for h3 */
 .title.h3 {
   font-size: 18px;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   .title.h3 {
