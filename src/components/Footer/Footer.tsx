@@ -37,16 +37,16 @@ export const Footer = () => {
               <div className={css.btn_wrapper}>
                 <MainButton
                   className={css.footer_primary_btn}
-                  type='button'
+                  // type='button'
                   text='Join us'
-                  paddings={119}
+                  // paddings={119}
                   style='primary'
                 />
                 <MainButton
                   className={css.footer_secondary_btn}
-                  type='button'
+                  // type='button'
                   text='Donate'
-                  paddings={113}
+                  // paddings={113}
                   style='secondary'
                 />
               </div>
@@ -100,16 +100,16 @@ export const Footer = () => {
               <div className={css.btn_wrapper}>
                 <MainButton
                   className={css.footer_primary_btn}
-                  type='button'
+                  // type='button'
                   text='Join us'
-                  paddings={100}
+                  // paddings={100}
                   style='primary'
                 />
                 <MainButton
                   className={css.footer_secondary_btn}
-                  type='button'
+                  // type='button'
                   text='Donate'
-                  paddings={101}
+                  // paddings={101}
                   style='secondary'
                 />
               </div>
@@ -198,16 +198,16 @@ export const Footer = () => {
               <div className={css.btn_wrapper}>
                 <MainButton
                   className={css.footer_primary_btn}
-                  type='button'
+                  // type='button'
                   text='Join us'
-                  paddings={100}
+                  // paddings={100}
                   style='primary'
                 />
                 <MainButton
                   className={css.footer_secondary_btn}
-                  type='button'
+                  // type='button'
                   text='Donate'
-                  paddings={101}
+                  // paddings={101}
                   style='secondary'
                 />
               </div>

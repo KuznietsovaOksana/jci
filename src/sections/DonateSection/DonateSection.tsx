@@ -14,10 +14,10 @@ export const DonateSection = (props: Text) => {
         <p className={s.donate_text}>{props.text}</p>
         <MainButton
           className={s.donate_btn}
-          onClick={() => {
-            console.log('donate click');
-          }}
-          type='button'
+          // onClick={() => {
+          //   console.log('donate click');
+          // }}
+          // type='button'
           text='Donate'
           // paddings={117}
           style='primary'
