@@ -7,13 +7,13 @@ import Flag from 'public/icons/Icon.svg';
 
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
+import { Title } from '@/components/Title';
 
 import { images } from './images';
 
 import s from './HeroSection.module.css';
-import { Title } from '@/components/Title';
 
-export const data = {
+const data = {
   text: 'We are a non-profit organization within a global network of Junior Chamber International (JCI) and are currently focusing on mitigating the effects of the russian invasion countrywide',
 };
 
