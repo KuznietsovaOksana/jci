@@ -12,9 +12,10 @@
   color: var(--blue-navy-color);
   font-weight: 400;
   font-size: 12px;
-  line-height: 120%;
+  line-height: 1.2;
   text-transform: uppercase;
 }
+
 @media (min-width: 768px) {
   .characteristic-card {
     gap: 16px;
@@ -24,15 +25,16 @@
     height: 48px;
   }
   .characteristic_title {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
+
 @media (min-width: 1440px) {
   .characteristic_icon {
     width: 72px;
     height: 72px;
   }
   .characteristic_title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
