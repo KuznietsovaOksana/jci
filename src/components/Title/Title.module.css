@@ -1,0 +1,58 @@
+/* Basic styles */
+.title {
+  font-family: 'NAMU';
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--black-color);
+}
+.black {
+  color: var(--black-color);
+}
+.blue {
+  color: var(--blue-primary-color);
+}
+
+/* Styles for h1 */
+.title.h1 {
+  font-size: 30px;
+}
+@media screen and (min-width: 768px) {
+  .title.h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title.h1 {
+    font-size: 48px;
+  }
+}
+
+/* Styles for h2 */
+.title.h2 {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .title.h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title.h2 {
+    font-size: 40px;
+  }
+}
+
+/* Styles for h3 */
+.title.h3 {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .title.h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title.h3 {
+    font-size: 24px;
+  }
+}
