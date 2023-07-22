@@ -6,8 +6,8 @@ import En from 'public/icons/language_switch_Eng.svg';
 import Ua from 'public/icons/language_switch_Ua.svg';
 import Arrow from 'public/icons/chevron_Right.svg';
 
-import { ILayout } from '../Layout';
-import { nav } from '../Header';
+import { ILayout } from '@/layout/Layout';
+import { nav } from '@/layout/Header';
 import NavLink from '../NavLink';
 
 import s from './ModalMenu.module.css';

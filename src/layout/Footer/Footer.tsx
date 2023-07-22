@@ -5,10 +5,10 @@ import Logo from 'public/icons/logo-white.svg';
 import FbLogo from 'public/icons/footer-fb-nrml.svg';
 import InstLogo from 'public/icons/footer-inst-nrml.svg';
 
-import { MainButton } from '../ui-kit/buttons/MainButton';
-import { Container } from '../Container';
+import { MainButton } from '../../components/ui-kit/buttons/MainButton';
+import { Container } from '../../components/Container';
 import { nav } from '../Header';
-import NavLink from '../NavLink';
+import NavLink from '../../components/NavLink';
 
 import css from './Footer.module.css';
 

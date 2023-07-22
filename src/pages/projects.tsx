@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { Portal } from '@/components/Portal';
 import { ModalMenu } from '@/components/ModalMenu';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/layout/Layout';
 import { ProjectSectionPP } from '@/sections/ProjectPage/ProjectSection';
 import { QuoteSection } from '@/sections/QuoteSection';
 import { CompleteProjectSection } from '@/sections/CompletedProjectSection';

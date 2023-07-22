@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/layout/Layout';
 import { Portal } from '@/components/Portal';
 import { ModalMenu } from '@/components/ModalMenu';
 import { WarSection } from '@/sections/WarSection';

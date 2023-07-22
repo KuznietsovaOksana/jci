@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-import css from './Header/Header.module.css';
+import s from '@/layout/Header/Header.module.css';
 
 export interface IPropsNavLink {
   href: string;
@@ -23,7 +23,7 @@ export default function NavLink({
   const { pathname } = useRouter();
   const isActive = exact ? pathname === href : pathname.startsWith(href);
   if (isActive) {
-    props.className += ` ${css.nav_link_active}`;
+    props.className += ` ${s.nav_link_active}`;
   }
 
   return (
