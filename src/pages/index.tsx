@@ -4,16 +4,16 @@ import { useState } from 'react';
 import { Layout } from '@/layout/Layout';
 import { Portal } from '@/components/Portal';
 import { ModalMenu } from '@/components/ModalMenu';
-import { WarSection } from '@/sections/WarSection';
-import { FAQSection } from '@/sections/FAQSection';
-import { NewsSection } from '@/sections/NewsSection';
-import { HeroSection } from '@/sections/HeroSection';
-import { ProjectSection } from '@/sections/ProjectSection';
-import { DonateSection } from '@/sections/DonateSection';
-import { donateText } from '@/sections/DonateSection';
-import { TogetherSection } from '@/sections/TogetherSection';
-import { CharacteristicSection } from '@/sections/CharacteristicSection';
-import { OurPresident } from '@/sections/OurPresident';
+import { WarSection } from '@/sections/MainPage/WarSection';
+import { FAQSection } from '@/sections/MainPage/FAQSection';
+import { NewsSection } from '@/sections/MainPage/NewsSection';
+import { HeroSection } from '@/sections/MainPage/HeroSection';
+import { ProjectSection } from '@/sections/MainPage/ProjectSection';
+import { DonateSection } from '@/sections/MainPage/DonateSection';
+import { donateText } from '@/sections/MainPage/DonateSection';
+import { TogetherSection } from '@/sections/MainPage/TogetherSection';
+import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
+import { OurPresident } from '@/sections/MainPage/OurPresident';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);

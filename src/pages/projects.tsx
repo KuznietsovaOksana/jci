@@ -4,10 +4,10 @@ import Head from 'next/head';
 import { Portal } from '@/components/Portal';
 import { ModalMenu } from '@/components/ModalMenu';
 import { Layout } from '@/layout/Layout';
-import { ProjectSectionPP } from '@/sections/ProjectPage/ProjectSection';
-import { QuoteSection } from '@/sections/QuoteSection';
-import { CompleteProjectSection } from '@/sections/CompletedProjectSection';
-import { PhotoGallerySection } from '@/sections/PhotoGallerySection';
+import { ProjectSectionPP } from '@/sections/ProjectsPage/ProjectSection';
+import { QuoteSection } from '@/sections/ProjectsPage/QuoteSection';
+import { CompleteProjectSection } from '@/sections/ProjectsPage/CompletedProjectSection';
+import { PhotoGallerySection } from '@/sections/ProjectsPage/PhotoGallerySection';
 
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);

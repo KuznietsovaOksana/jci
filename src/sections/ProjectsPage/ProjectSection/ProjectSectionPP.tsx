@@ -4,7 +4,7 @@ import Arrow from 'public/icons/chevron_Down.svg';
 import Flag from 'public/icons/icon.svg';
 
 import { ProjectCardPP } from '@/components/ProjectPage/Project_card/Project_card_pp';
-import { DonateSection, donateText } from '@/sections/DonateSection';
+import { DonateSection, donateText } from '@/sections/MainPage/DonateSection';
 
 import s from './ProjectSectionPP.module.css';
 
