@@ -7,22 +7,18 @@ interface TitleProps
     HTMLHeadingElement
   > {
   tag?: 'h1' | 'h2' | 'h3';
-  children: React.ReactNode;
   isBlue?: boolean;
   className?: string;
+  children: React.ReactNode;
 }
 
 export const Title: FC<TitleProps> = ({
   tag = 'h2',
-  children,
   isBlue = false,
   className,
+  children,
 }) => {
   const Tag = tag;
-
-  // const combinedClassName = `${s.title} ${
-  //   isBlue ? s.blue : s.black
-  // } ${className}`;
 
   const headingClassName = isBlue ? s.blue : s.black;
   const combinedClassName = `${s.title} ${s[tag]} ${headingClassName} ${className}`;
