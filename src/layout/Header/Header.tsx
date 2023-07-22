@@ -6,9 +6,9 @@ import Logo from 'public/icons/logo_JCI_Ukraine.svg';
 import En from 'public/icons/language_switch_Eng.svg';
 import Ua from 'public/icons/language_switch_Ua.svg';
 
-import NavLink from '../NavLink';
+import NavLink from '@/components/NavLink';
 import { ILayout } from '../Layout';
-import { Container } from '../Container';
+import { Container } from '@/components/Container';
 
 import s from './Header.module.css';
 
