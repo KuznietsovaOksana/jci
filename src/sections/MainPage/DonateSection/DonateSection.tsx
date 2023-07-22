@@ -1,28 +1,11 @@
-import { Container } from '@/components/Container';
-import { MainButton } from '@/components/ui-kit/buttons/MainButton';
+import React from 'react';
 
-import s from './DonateSaction.module.css';
+import { DonateSectionComponent } from '@/components/Section/DonateSectionComponent';
 
-export interface Text {
-  text: string;
+export interface TextProps {
+  heading: string;
 }
 
-export const DonateSection = (props: Text) => {
-  return (
-    <section className={s.donate_section}>
-      <Container>
-        <p className={s.donate_text}>{props.text}</p>
-        <MainButton
-          className={s.donate_btn}
-          // onClick={() => {
-          //   console.log('donate click');
-          // }}
-          // type='button'
-          text='Donate'
-          // paddings={117}
-          style='primary'
-        />
-      </Container>
-    </section>
-  );
+export const DonateSection: React.FC<TextProps> = ({ heading }) => {
+  return <DonateSectionComponent heading={heading} />;
 };

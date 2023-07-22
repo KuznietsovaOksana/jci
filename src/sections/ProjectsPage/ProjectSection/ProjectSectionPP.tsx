@@ -4,7 +4,8 @@ import Arrow from 'public/icons/chevron_Down.svg';
 import Flag from 'public/icons/icon.svg';
 
 import { ProjectCardPP } from '@/components/ProjectPage/Project_card/Project_card_pp';
-import { DonateSection, donateText } from '@/sections/MainPage/DonateSection';
+import { DonateSection } from '@/sections/MainPage/DonateSection';
+import { donateText } from '@/components/Section/DonateSectionComponent';
 
 import s from './ProjectSectionPP.module.css';
 
@@ -80,7 +81,7 @@ export const ProjectSectionPP: NextPage = () => {
           ))}
         </div>
       </section>
-      <DonateSection text={donateText.appeal} />
+      <DonateSection heading={donateText.appeal} />
       <section className={`${s.project_section} ${s.low_section}`}>
         <div className={s.projects_wrapper}>
           {projectsLow.map((project, index) => (

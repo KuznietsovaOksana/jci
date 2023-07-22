@@ -6,7 +6,7 @@
   border: none;
   color: var(--white-color);
   background-color: var(--blue-primary-color);
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
@@ -27,12 +27,13 @@
   padding-top: 14px;
   padding-bottom: 14px;
   color: var(--blue-primary-color);
-  background: none;
+  background-color: transparent;
   border: 1px solid var(--blue-primary-color);
 }
 
 @media (min-width: 767px) {
   .mainBtn {
     max-width: 264px;
+    font-size: 18px;
   }
 }

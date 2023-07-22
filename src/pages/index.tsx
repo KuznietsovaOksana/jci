@@ -10,7 +10,7 @@ import { NewsSection } from '@/sections/MainPage/NewsSection';
 import { HeroSection } from '@/sections/MainPage/HeroSection';
 import { ProjectSection } from '@/sections/MainPage/ProjectSection';
 import { DonateSection } from '@/sections/MainPage/DonateSection';
-import { donateText } from '@/sections/MainPage/DonateSection';
+import { donateText } from '@/components/Section/DonateSectionComponent';
 import { TogetherSection } from '@/sections/MainPage/TogetherSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 import { OurPresident } from '@/sections/MainPage/OurPresident';
@@ -37,7 +37,7 @@ export default function Home() {
           <WarSection />
           <TogetherSection />
           <ProjectSection />
-          <DonateSection text={donateText.donate} />
+          <DonateSection heading={donateText.donate} />
           <NewsSection />
           <OurPresident />
           <FAQSection />
