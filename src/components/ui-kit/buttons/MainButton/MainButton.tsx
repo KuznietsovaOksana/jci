@@ -3,37 +3,40 @@ import s from './MainButton.module.css';
 
 interface ButtonProps {
   className?: string;
-  type: 'button' | 'submit';
+  // type: 'button' | 'submit';
   text: string;
   icon?: JSX.Element;
-  onClick?: () => void;
+  // onClick?: () => void;
   style?: 'primary' | 'secondary';
-  paddings?: number;
+  // paddings?: number;
+  href?: string;
 }
 
 export const MainButton: React.FC<ButtonProps> = ({
-  type = 'button',
+  // type = 'button',
   text,
   icon,
-  onClick,
+  // onClick,
   style = 'primary',
-  paddings,
+  // paddings,
   className,
+  href,
 }) => {
-  const styles = {
-    paddingLeft: `${paddings}px`,
-    paddingRight: `${paddings}px`,
-  };
+  // const styles = {
+  //   paddingLeft: `${paddings}px`,
+  //   paddingRight: `${paddings}px`,
+  // };
   return (
-    <button
-      style={styles}
-      onClick={onClick}
-      type={type}
+    <a
+      href={href}
+      // style={styles}
+      // onClick={onClick}
+      // type={type}
       className={`${s.mainBtn} ${s[style]} ${className}`}
     >
       {icon}
       {text}
-    </button>
+    </a>
   );
 };
 
