@@ -8,7 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
-import { NewsCard } from '@/components/ui-kit/cards/NewsCard';
+import { NewsCard } from '@/components/NewsCard';
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
