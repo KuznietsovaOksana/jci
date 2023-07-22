@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
 
+import { Container } from '@/components/Container';
 import { CharacteristicCard } from '@/components/CharacteristicCard';
 
 import s from './CharacteristicSection.module.css';
@@ -19,23 +20,27 @@ interface Characteristic {
 }
 
 const characteristicData: Characteristic[] = [
+  { icon: <Reliable />, text: 'Reliable' },
+  { icon: <Trusted />, text: 'Trusted' },
   { icon: <Care />, text: 'Caring' },
   { icon: <Help />, text: 'Helping' },
-  { icon: <Reliable />, text: 'Reliable' },
   { icon: <Sustainable />, text: 'Sustainable' },
-  { icon: <Trusted />, text: 'Trusted' },
 ];
 
 export const CharacteristicSection: NextPage = () => {
   return (
     <section className={s.characteristic_section}>
-      {characteristicData.map((characteristic, index) => (
-        <CharacteristicCard
-          key={index}
-          icon={characteristic.icon}
-          text={characteristic.text}
-        />
-      ))}
+      <Container>
+        <div className={s.characteristic_box}>
+          {characteristicData.map((characteristic, index) => (
+            <CharacteristicCard
+              key={index}
+              icon={characteristic.icon}
+              text={characteristic.text}
+            />
+          ))}
+        </div>
+      </Container>
     </section>
   );
 };
