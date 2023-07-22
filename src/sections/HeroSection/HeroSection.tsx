@@ -47,14 +47,14 @@ export const HeroSection = () => {
                   type='button'
                   text='Join us'
                   style='primary'
-                  paddings={76}
+                  // paddings={76}
                   onClick={() => console.log('Join us')}
                 />
                 <MainButton
                   type='button'
                   text='Donate'
                   style='secondary'
-                  paddings={76}
+                  // paddings={76}
                   onClick={() => console.log('Donate')}
                 />
               </div>
@@ -80,14 +80,14 @@ export const HeroSection = () => {
                 type='button'
                 text='Join us'
                 style='primary'
-                paddings={112}
+                // paddings={112}
                 onClick={() => console.log('Join us')}
               />
               <MainButton
                 type='button'
                 text='Donate'
                 style='secondary'
-                paddings={112}
+                // paddings={112}
                 onClick={() => console.log('Donate')}
               />
             </div>
@@ -98,14 +98,14 @@ export const HeroSection = () => {
                 type='button'
                 text='Join us'
                 style='primary'
-                paddings={100}
+                // paddings={100}
                 onClick={() => console.log('Join us')}
               />
               <MainButton
                 type='button'
                 text='Donate'
                 style='secondary'
-                paddings={100}
+                // paddings={100}
                 onClick={() => console.log('Donate')}
               />
             </div>

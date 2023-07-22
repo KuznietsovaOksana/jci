@@ -19,7 +19,7 @@ export const DonateSection = (props: Text) => {
           }}
           type='button'
           text='Donate'
-          paddings={117}
+          // paddings={117}
           style='primary'
         />
       </Container>
