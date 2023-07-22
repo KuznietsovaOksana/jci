@@ -1,0 +1,32 @@
+.donate_section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--blue-navy-color);
+  text-align: center;
+}
+
+.donate_text {
+  color: var(--white-color);
+  margin: 0 auto 32px;
+}
+
+.donate_btn {
+  background-color: var(--white-color);
+}
+
+@media (min-width: 768px) {
+  .donate_text {
+    max-width: 456px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .donate_section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .donate_text {
+    margin: 0 auto 60px;
+    max-width: 744px;
+  }
+}
