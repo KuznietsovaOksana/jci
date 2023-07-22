@@ -19,8 +19,6 @@ const data = {
 
 export const HeroSection = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
   const isDesktop = useMediaQuery({ minWidth: 1440 });
 
   useEffect(() => {
@@ -47,14 +45,12 @@ export const HeroSection = () => {
                   type='button'
                   text='Join us'
                   style='primary'
-                  // paddings={76}
                   onClick={() => console.log('Join us')}
                 />
                 <MainButton
                   type='button'
                   text='Donate'
                   style='secondary'
-                  // paddings={76}
                   onClick={() => console.log('Donate')}
                 />
               </div>
@@ -74,42 +70,20 @@ export const HeroSection = () => {
             <HeroSlider images={images} />
           </div>
           <p className={s.description}>{data.text}</p>
-          {isMobile && (
-            <div className={s.cta}>
-              <MainButton
-                type='button'
-                text='Join us'
-                style='primary'
-                // paddings={112}
-                onClick={() => console.log('Join us')}
-              />
-              <MainButton
-                type='button'
-                text='Donate'
-                style='secondary'
-                // paddings={112}
-                onClick={() => console.log('Donate')}
-              />
-            </div>
-          )}
-          {isTablet && (
-            <div className={s.cta}>
-              <MainButton
-                type='button'
-                text='Join us'
-                style='primary'
-                // paddings={100}
-                onClick={() => console.log('Join us')}
-              />
-              <MainButton
-                type='button'
-                text='Donate'
-                style='secondary'
-                // paddings={100}
-                onClick={() => console.log('Donate')}
-              />
-            </div>
-          )}
+          <div className={s.cta}>
+            <MainButton
+              type='button'
+              text='Join us'
+              style='primary'
+              onClick={() => console.log('Join us')}
+            />
+            <MainButton
+              type='button'
+              text='Donate'
+              style='secondary'
+              onClick={() => console.log('Donate')}
+            />
+          </div>
         </Container>
       )}
     </Section>
