@@ -36,7 +36,7 @@ export const HeroSection = () => {
       {isDesktop ? (
         <Container>
           <div className={s.desktopVersion}>
-            <div className={s.infoblock}>
+            <div>
               <Title className={s.title} tag='h1'>
                 JCI Ukraine <Flag className={s.flag} /> is a global network of
                 <span className={s.accentTitle}> young leaders</span>

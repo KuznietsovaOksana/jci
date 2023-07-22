@@ -1,108 +1,67 @@
 .title {
-  font-family: 'NAMU';
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--black-color);
+  margin-bottom: 24px;
 }
-
 .description {
   font-family: 'Arial';
   font-weight: 400;
   line-height: 1.4;
   color: var(--black-90-color);
+  font-size: 14px;
+  margin-bottom: 24px;
 }
-
 .accentTitle {
   color: var(--blue-primary-color);
 }
+.flag {
+  margin-left: 12px;
+  margin-right: 12px;
+  width: 44px;
+  height: 24px;
+}
+.sliderblock {
+  margin-bottom: 24px;
+}
+.cta {
+  display: flex;
+  gap: 20px;
+}
 
 @media (max-width: 767px) {
-  .title {
-    font-size: 30px;
-  }
-
-  .flag {
-    margin-left: 12px;
-    width: 44px;
-    height: 24px;
-  }
-  .description {
-    margin-top: 24px;
-    font-size: 14px;
-  }
   .cta {
-    margin-top: 32px;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-  .sliderblock {
-    margin-top: 24px;
-    /* position: relative; */
-    /* left: -16px; */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-  .title {
-    width: 551px;
-    font-size: 34px;
-  }
   .flag {
     margin-left: 14px;
     margin-right: 14px;
-    width: 44px;
-    height: 24px;
   }
   .description {
-    margin-top: 25px;
-    width: 551px;
     font-size: 18px;
+    margin-bottom: 32px;
   }
   .cta {
-    margin-top: 24px;
-    display: flex;
-    /* flex-direction: column; */
     gap: 24px;
-  }
-  .infoblock {
-    display: flex;
-    margin-top: 24px;
-    gap: 24px;
-  }
-  .sliderblock {
-    margin-top: 24px;
-    /* position: relative; */
   }
 }
 
 @media (min-width: 1440px) {
   .desktopVersion {
     display: flex;
-    gap: 24px;
-  }
-  .title {
-    width: 456px;
-    font-size: 48px;
+    gap: 120px;
   }
   .flag {
     margin-left: 24px;
-    width: 90px;
-    height: 45px;
     margin-right: 24px;
+    width: 95px;
+    height: 45px;
   }
   .description {
-    margin-top: 24px;
-    margin-bottom: 40px;
-    width: 456px;
     font-size: 20px;
+    margin-bottom: 40px;
   }
-  .cta {
-    margin-top: 40px;
-    display: flex;
-    gap: 24px;
-  }
-  .infoblock {
-    width: 552px;
+  .sliderblock {
+    margin-bottom: 0px;
   }
 }
