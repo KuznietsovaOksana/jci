@@ -5,7 +5,7 @@ import { MainButton } from '@/components/ui-kit/buttons/MainButton';
 import { HeroSlider } from '@/components/ui-kit/sliders/HeroSlider';
 import Flag from 'public/icons/Icon.svg';
 
-import { Section } from '@/components/Section';
+import { Section } from '@/components/Section/Section';
 import { Container } from '@/components/Container';
 import { Title } from '@/components/Title';
 

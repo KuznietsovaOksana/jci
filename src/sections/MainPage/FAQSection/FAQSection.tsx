@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container';
 import { Accordion } from '@/components/Accordion';
-import { Section } from '@/components/Section';
+import { Section } from '@/components/Section/Section';
 import { faqs } from '@/components/Accordion/data';
 import { Title } from '@/components/Title';
 

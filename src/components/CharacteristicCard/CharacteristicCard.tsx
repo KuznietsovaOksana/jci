@@ -17,9 +17,9 @@ export const CharacteristicCard: React.FC<CharacteristicCardProps> = ({
   });
 
   return (
-    <div className={s.characteristic_card}>
+    <li className={s.characteristic_card}>
       {iconWithClass}
       <p className={s.characteristic_title}>{text}</p>
-    </div>
+    </li>
   );
 };

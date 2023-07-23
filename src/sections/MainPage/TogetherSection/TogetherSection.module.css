@@ -1,66 +1,15 @@
 .together_section {
   color: var(--black-color);
   background-color: var(--aqua-10-color);
-  padding: 40px 0;
-  border-radius: 32px;
 }
-@media (min-width: 768px) {
-  .together_section {
-    padding: 40px 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  .together_section {
-    padding: 120px 0;
-  }
-}
-
 .together_title {
-  font-family: 'NAMU';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 140%;
   margin-bottom: 24px;
-  max-width: 395px;
+  max-width: 648px;
 }
-
-@media (min-width: 768px) {
-  .together_title {
-    font-size: 30px;
-    max-width: 552px;
-  }
-}
-@media (min-width: 1440px) {
-  .together_title {
-    font-size: 40px;
-    max-width: 648px;
-    margin-bottom: 80px;
-  }
-}
-
 .together_list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 24px;
 }
-
-@media (min-width: 768px) {
-  .together_list {
-    display: grid;
-    gap: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-/* @media (min-width: 1440px) {
-  .together_list {
-    display: grid;
-    gap: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-} */
-
 .together_item {
   text-align: center;
 }
@@ -68,43 +17,47 @@
   font-family: 'NAMU';
   font-style: normal;
   font-weight: 800;
-  font-size: 32px;
-  line-height: 120%;
+  font-size: 30px;
+  line-height: 1.2;
   margin-bottom: 24px;
 }
-
-@media (min-width: 768px) {
-  .together_item_title {
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .together_item_title {
-    font-size: 58px;
-  }
-}
-
 .together_item_text {
-  width: 263px;
+  color: var(--black-90-color);
+  max-width: 262px;
   margin: 0 auto;
   font-weight: 700;
   font-size: 14px;
-  line-height: 120%;
+  line-height: 1.2;
   padding: 0 18px;
 }
 
 @media (min-width: 768px) {
+  .together_list {
+    gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .together_item_title {
+    font-size: 34px;
+  }
   .together_item_text {
     padding: 0;
     font-size: 16px;
-    width: 184px;
+    max-width: 184px;
   }
 }
 
 @media (min-width: 1440px) {
+  .together_title {
+    margin-bottom: 40px;
+  }
+  .together_list {
+    gap: 24px;
+  }
+  .together_item_title {
+    font-size: 48px;
+  }
   .together_item_text {
     font-size: 18px;
-    width: 263px;
+    max-width: 262px;
   }
 }

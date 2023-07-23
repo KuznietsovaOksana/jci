@@ -31,7 +31,7 @@ export const CharacteristicSection: NextPage = () => {
   return (
     <section className={s.characteristic_section}>
       <Container>
-        <div className={s.characteristic_box}>
+        <ul className={s.characteristic_box}>
           {characteristicData.map((characteristic, index) => (
             <CharacteristicCard
               key={index}
@@ -39,7 +39,7 @@ export const CharacteristicSection: NextPage = () => {
               text={characteristic.text}
             />
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

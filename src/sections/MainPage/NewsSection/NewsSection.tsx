@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
+import { Section } from '@/components/Section/Section';
 import { NewsCard } from '@/components/NewsCard';
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
