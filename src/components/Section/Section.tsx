@@ -15,12 +15,14 @@ export interface SectionProps
   children: ReactNode;
 }
 
-export const Section = forwardRef<HTMLElement, SectionProps>(function Search(
-  { children, ...props },
-  ref
-) {
+export const Section = forwardRef<HTMLElement, SectionProps>(function Search({
+  children,
+  className,
+  ref,
+}) {
+  const combinedClassName = `${s.section} ${className}`;
   return (
-    <section ref={ref} className={s.section} {...props}>
+    <section ref={ref} className={combinedClassName}>
       {children}
     </section>
   );

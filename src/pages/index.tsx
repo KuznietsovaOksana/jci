@@ -14,6 +14,7 @@ import { donateText } from '@/components/Section/DonateSectionComponent';
 import { TogetherSection } from '@/sections/MainPage/TogetherSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 import { OurPresident } from '@/sections/MainPage/OurPresident';
+import { ImpactSection } from '@/sections/MainPage/ImpactSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -34,6 +35,7 @@ export default function Home() {
         <main>
           <HeroSection />
           <CharacteristicSection />
+          <ImpactSection />
           <WarSection />
           <TogetherSection />
           <ProjectSection />
