@@ -1,5 +1,5 @@
 .section {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -28,6 +28,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 30px;
+  }
   .title {
     margin-bottom: 40px;
     max-width: 264px;
@@ -43,6 +46,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .section {
+    padding-bottom: 40px;
+  }
   .box {
     display: flex;
     align-items: center;
