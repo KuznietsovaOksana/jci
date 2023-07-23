@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <div
+    <li
       className={s.project_card}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -70,6 +70,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           </a>
         </MediaQuery>
       </div>
-    </div>
+    </li>
   );
 };

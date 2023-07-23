@@ -1,8 +1,10 @@
 import { NextPage } from 'next';
 
-import Arrow from 'public/icons/arrow-right.svg';
-
+import { Title } from '@/components/Title';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section/Section';
 import { ProjectCard } from '@/components/ProjectCard';
+import { IconButton } from '@/components/ui-kit/buttons/IconButton';
 
 import s from './ProjectSection.module.css';
 
@@ -49,31 +51,30 @@ const projects = [
 
 export const ProjectSection: NextPage = () => {
   return (
-    <section className={s.project_section}>
-      <h3 className={s.project_title}>
-        <span className={s.project_title_span}>Humanitarian projects</span> we
-        work on
-      </h3>
-      <div className={s.projects_wrapper}>
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            image_dt={project.image_main_dt}
-            image_m={project.image_main_m}
-            hover_dt={project.image_hover_dt}
-            hover_m={project.image_hover_m}
-            title={project.title}
-            subtitle={project.subtitle}
-            text={project.text}
-          />
-        ))}
-      </div>
-      <div className={s.button_wrapper}>
-        <a href='#' className={s.projects_link}>
-          Go to all projects
-        </a>
-        <Arrow className={s.button_icon} />
-      </div>
-    </section>
+    <Section>
+      <Container>
+        <Title className={s.project_title}>
+          <span className={s.project_title_span}>Humanitarian projects</span> we
+          work on
+        </Title>
+        <ul className={s.projects_wrapper}>
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              image_dt={project.image_main_dt}
+              image_m={project.image_main_m}
+              hover_dt={project.image_hover_dt}
+              hover_m={project.image_hover_m}
+              title={project.title}
+              subtitle={project.subtitle}
+              text={project.text}
+            />
+          ))}
+        </ul>
+        <div className={s.button_wrapper}>
+          <IconButton text='Go to all projects' />
+        </div>
+      </Container>
+    </Section>
   );
 };
