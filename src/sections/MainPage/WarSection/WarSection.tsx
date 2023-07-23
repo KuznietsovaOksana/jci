@@ -1,9 +1,8 @@
-import ArrowRight from 'public/icons/arrow-right.svg';
-
 import { Title } from '@/components/Title';
 import { Section } from '@/components/Section';
 import { WarCard } from '@/components/WarCard';
 import { Container } from '@/components/Container';
+import { IconButton } from '@/components/ui-kit/buttons/IconButton';
 
 import { warData } from './data';
 
@@ -24,10 +23,7 @@ export const WarSection = () => {
             </li>
           ))}
         </ul>
-        <a href='' className={s.war_button}>
-          Read more
-          <ArrowRight className={s.war_icon} />
-        </a>
+        <IconButton text='Read more' />
       </Container>
     </Section>
   );
