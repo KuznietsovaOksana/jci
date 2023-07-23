@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 
 import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
+import { Section } from '@/components/Section/Section';
 
 import imgD from 'public/images/president/president_01d.jpg';
 // import imgT from 'public/images/president/president_01t.jpg';

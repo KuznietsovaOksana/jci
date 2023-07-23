@@ -1,5 +1,5 @@
 import { Title } from '@/components/Title';
-import { Section } from '@/components/Section';
+import { Section } from '@/components/Section/Section';
 import { WarCard } from '@/components/WarCard';
 import { Container } from '@/components/Container';
 import { IconButton } from '@/components/ui-kit/buttons/IconButton';
