@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 import s from './ProjectCard.module.css';
 
@@ -9,22 +10,18 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 
 interface ProjectCardProps {
   image_dt: string;
-  image_m: string;
   title: string;
   subtitle: string;
   text: string;
   hover_dt: string;
-  hover_m: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   image_dt,
-  image_m,
   title,
   subtitle,
   text,
   hover_dt,
-  hover_m,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -42,13 +39,52 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <picture className={s.project_img}>
-        <source
-          srcSet={isHovered ? hover_dt : image_dt}
-          media='(min-width: 768px)'
+      <MediaQuery maxWidth={767}>
+        <Image
+          src={image_dt}
+          alt='Project photo'
+          priority
+          className={s.project_img}
+          width={252}
+          height={234}
+          style={{ objectFit: 'cover' }}
         />
-        <img src={isHovered ? hover_m : image_m} alt={title} />
-      </picture>
+      </MediaQuery>
+      <MediaQuery minWidth={768} maxWidth={1439}>
+        <Image
+          src={image_dt}
+          alt='Project photo'
+          priority
+          className={s.project_img}
+          width={552}
+          height={435}
+          style={{ objectFit: 'cover' }}
+        />
+      </MediaQuery>
+      <MediaQuery minWidth={1440}>
+        {isHovered ? (
+          <Image
+            src={hover_dt}
+            alt='Project photo'
+            priority
+            className={s.project_img}
+            width={264}
+            height={312}
+            style={{ objectFit: 'cover' }}
+          />
+        ) : (
+          <Image
+            src={image_dt}
+            alt='Project photo'
+            priority
+            className={s.project_img}
+            width={264}
+            height={312}
+            style={{ objectFit: 'cover' }}
+          />
+        )}
+      </MediaQuery>
+
       <div className={s.project_wrapper}>
         <div className={s.project_text_wrapper}>
           <h2 className={s.project_title}>{title}</h2>
