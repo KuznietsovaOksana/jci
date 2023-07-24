@@ -1,0 +1,114 @@
+.section_ways {
+  background-color: var(--aqua-10-color);
+}
+.picture {
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.title {
+  font-family: 'NAMU';
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.title_span {
+  display: block;
+}
+.exclamation {
+  font-family: 'Arial';
+  line-height: 1.4;
+  color: var(--black-90-color);
+  font-size: 16px;
+}
+
+.title_card {
+  margin-top: 40px;
+}
+
+.accentTitle {
+  color: var(--blue-primary-color);
+}
+
+.title_card {
+  font-family: 'NAMU';
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.button_donate {
+  background-color: var(--white-color);
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .title_span {
+    display: inline;
+  }
+  .exclamation {
+    font-size: 18px;
+  }
+  .title_card {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+  .picture {
+    border-radius: 25px;
+    margin-top: 32px;
+  }
+  .picture {
+    border-radius: 25px;
+    margin-top: 32px;
+  }
+  .picture_one {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  .exclamation {
+    font-size: 20px;
+  }
+  .desk_block_one {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+
+    align-items: center;
+    gap: 24px;
+    margin-top: 80px;
+  }
+  .desk_join {
+    margin-left: 84px;
+    direction: ltr;
+  }
+  .title_card {
+    font-size: 32px;
+  }
+  .desk_block_two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 120px;
+    gap: 24px;
+  }
+  .desk_donate {
+    margin-right: 84px;
+  }
+  .picture_one {
+    margin: 0;
+  }
+  .picture {
+    margin: 0;
+  }
+}
