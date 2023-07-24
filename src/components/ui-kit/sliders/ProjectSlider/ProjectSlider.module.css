@@ -1,0 +1,23 @@
+.projectSlider {
+  display: block;
+
+  min-width: 252px;
+  width: 100%;
+
+  min-height: 234px;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .projectSlider {
+    width: 552px;
+    height: 435px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projectSlider {
+    width: 552px;
+    height: 488px;
+  }
+}
