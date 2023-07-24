@@ -12,46 +12,38 @@ import s from './ProjectSectionPP.module.css';
 const projectsTop = [
   {
     image_main_dt: '/images/projects/project_1.png',
-    image_main_t: '/images/projects/project_01dt.jpg',
     image_hover_dt: '/images/projects/project_01dt_hover.jpg',
-    image_main_m: '/images/projects/project_01m.jpg',
-    image_hover_m: '/images/projects/project_01m_hover.jpg',
+    image_add: '/images/projects/project_01dt_add.jpg',
     title: 'Housing for IDPs',
     subtitle: 'JCI “Olimp”',
-    text: 'Reconstruction of a dormitory in Irpin for 20 families provides safe and sustainable housing solutions to support the  of IDP',
+    text: 'Our goal today is to provide housing for people, who lost it due to the invasion, by gathering qualified professionals to implement housing projects: from 0 to ready-to-live housing. Target audience - IDP',
   },
   {
     image_main_dt: '/images/projects/project_2.png',
-    image_main_t: '/images/projects/project_02dt.jpg',
+    image_add: '/images/projects/project_02dt_add.jpg',
     image_hover_dt: '/images/projects/project_02dt_hover.jpg',
-    image_main_m: '/images/projects/project_02m.jpg',
-    image_hover_m: '/images/projects/project_02m_hover.jpg',
     title: 'Tooth Fairy',
     subtitle: 'CF “Tooth Fairy”   ',
-    text: 'Project works to educate children about the importance of dental health while also collecting and  essential dental supplies',
+    text: 'Project  is dedicated to promoting good dental health among children. Our volunteers work with local schools and community organisations to provide dental care education and resources to children',
   },
 ];
 
 const projectsLow = [
   {
     image_main_dt: '/images/projects/project_3.png',
-    image_main_t: '/images/projects/project_03dt.jpg',
+    image_add: '/images/projects/project_03dt_add.jpg',
     image_hover_dt: '/images/projects/project_03dt_hover.jpg',
-    image_main_m: '/images/projects/project_03m.jpg',
-    image_hover_m: '/images/projects/project_03m_hover.jpg',
     title: 'Shelters Network',
     subtitle: 'JCI Ukraine',
-    text: 'Project is dedicated to supporting vulnerable populations by providing safe and secure shelters',
+    text: 'Project  is a compassionate initiative dedicated to tackling homelessness and supporting vulnerable individuals. By establishing a network of shelters across Ukraine, the project offers safe accommodations, essential services, and social support to those in need.',
   },
   {
     image_main_dt: '/images/projects/project.png',
-    image_main_t: '/images/projects/project_01dt.jpg',
     image_hover_dt: '/images/projects/project_01dt_hover.jpg',
-    image_main_m: '/images/projects/project_01m.jpg',
-    image_hover_m: '/images/projects/project_01m_hover.jpg',
+    image_add: '/images/projects/project_01dt_add.jpg',
     title: 'Association of Humanitarian Centres',
     subtitle: 'Jci Ukraine',
-    text: 'Our volunteers work with local centres to provide support to those that are in need of any kind of help',
+    text: 'Our volunteers work with local centers to provide support, including supplies and equipment, fundraising assistance, and educational resources.',
   },
 ];
 
@@ -70,10 +62,8 @@ export const ProjectSectionPP: NextPage = () => {
             <ProjectCardPP
               key={index}
               image_dt={project.image_main_dt}
-              image_t={project.image_main_t}
-              image_m={project.image_main_m}
+              image_add={project.image_add}
               hover_dt={project.image_hover_dt}
-              hover_m={project.image_hover_m}
               title={project.title}
               subtitle={project.subtitle}
               text={project.text}
@@ -88,10 +78,8 @@ export const ProjectSectionPP: NextPage = () => {
             <ProjectCardPP
               key={index}
               image_dt={project.image_main_dt}
-              image_t={project.image_main_t}
-              image_m={project.image_main_m}
+              image_add={project.image_add}
               hover_dt={project.image_hover_dt}
-              hover_m={project.image_hover_m}
               title={project.title}
               subtitle={project.subtitle}
               text={project.text}
