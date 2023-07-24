@@ -5,7 +5,7 @@
   border: 1px solid var(--blue-10-color);
   border-radius: 25px;
   overflow: hidden;
-  max-width: 288px;
+  max-width: 252px;
   font-family: 'Arial';
 }
 .project_card:hover {
@@ -16,13 +16,12 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 16px;
 }
 .project_text_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 .project_button {
   display: flex;
@@ -36,7 +35,6 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
-  display: flex;
   align-items: center;
   color: var(--blue-primary-color);
 }
@@ -78,14 +76,17 @@
 @media (min-width: 768px) {
   .project_card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 552px;
+    gap: 16px;
   }
-  .project_card:nth-child(even) {
-    flex-direction: row-reverse;
-  }
+
   .project_wrapper {
     padding: 32px 24px;
+    gap: 16px;
+  }
+  .project_text_wrapper {
+    gap: 16px;
   }
   .project_title {
     font-size: 28px;
@@ -93,13 +94,19 @@
   .project_card:hover .project_title {
     color: #3a67b1;
   }
-  .project_text,
-  .project_button,
+  .project_button {
+    max-width: 504px;
+  }
   .project_subTitle {
+    font-size: 14px;
+  }
+
+  .project_text,
+  .project_button {
     font-size: 16px;
   }
   .project_goal {
-    font-size: 16px;
+    font-size: 14px;
   }
   .project_collection {
     font-size: 28px;
@@ -107,11 +114,17 @@
 }
 @media (min-width: 1440px) {
   .project_card {
+    flex-direction: row;
     max-width: 1128px;
+    height: 488px;
+  }
+  .project_card:nth-child(even) {
+    flex-direction: row-reverse;
   }
   .project_wrapper {
     max-width: 576px;
   }
+
   .project_card:nth-child(even) .project_wrapper {
     padding: 48px 96px 48px 72px;
   }
@@ -120,13 +133,32 @@
   }
 
   .project_title {
-    font-size: 24px;
+    font-size: 32px;
   }
-  .project_subTitle,
+  .project_text {
+    height: 123px;
+  }
+  .project_subTitle {
+    font-size: 16px;
+  }
+
   .project_button {
     font-size: 18px;
   }
   .project_button {
     max-width: 408px;
+    height: 60px;
+  }
+  .project_goal {
+    font-size: 16px;
+  }
+  .project_collection {
+    font-size: 32px;
+  }
+  .project_goal_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 16px;
   }
 }
