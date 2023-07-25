@@ -53,6 +53,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   );
 };
 
+
 //              <picture>
 //               <source
 //                 srcSet={image.resolutions.large}
