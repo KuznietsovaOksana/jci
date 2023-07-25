@@ -42,16 +42,12 @@ export const HeroSection = () => {
               <p className={s.description}>{data.text}</p>
               <div className={s.cta}>
                 <MainButton
-                  // type='button'
                   text='Join us'
-                  style='primary'
-                  // onClick={() => console.log('Join us')}
+                  style='primaryNavy'
                 />
                 <MainButton
-                  // type='button'
                   text='Donate'
-                  style='secondary'
-                  // onClick={() => console.log('Donate')}
+                  style='secondaryNavy'
                 />
               </div>
             </div>
@@ -72,16 +68,12 @@ export const HeroSection = () => {
           <p className={s.description}>{data.text}</p>
           <div className={s.cta}>
             <MainButton
-              // type='button'
               text='Join us'
-              style='primary'
-              // onClick={() => console.log('Join us')}
+              style='primaryNavy'
             />
             <MainButton
-              // type='button'
               text='Donate'
-              style='secondary'
-              // onClick={() => console.log('Donate')}
+              style='secondaryNavy'
             />
           </div>
         </Container>

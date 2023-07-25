@@ -7,7 +7,7 @@ interface ButtonProps {
   text: string;
   icon?: JSX.Element;
   // onClick?: () => void;
-  style?: 'primary' | 'secondary';
+  style?: 'primaryNavy' | 'secondaryNavy' | 'tertiaryNavy' | 'primaryBlue' | 'secondaryBlue';
   // paddings?: number;
   href?: string;
 }
@@ -17,7 +17,7 @@ export const MainButton: React.FC<ButtonProps> = ({
   text,
   icon,
   // onClick,
-  style = 'primary',
+  style = 'primaryNavy',
   // paddings,
   className,
   href,
