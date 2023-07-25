@@ -5,6 +5,7 @@ import { MainButton } from '@/components/ui-kit/buttons/MainButton';
 import { Section } from '@/components/Section/Section';
 import { Container } from '@/components/Container';
 import { useScreen } from '@/hooks/use_screen';
+import { Title } from '@/components/Title';
 
 import { images } from './images';
 
@@ -34,19 +35,19 @@ export const WaysToHelpSection = () => {
   return (
     <Section className={s.section_ways}>
       <Container>
-        <h1 className={s.title}>
+        <Title className={s.title} tag='h2'>
           <span className={s.title_span}> Ways to help: </span>
           <span className={s.accentTitle}> Donate </span>
           or
           <span className={s.accentTitle}> Volunteer</span>
-        </h1>
+        </Title>
         <p className={s.exclamation}>Join people who form our community!</p>
         <div className={s.desk_block_one}>
           <div className={s.desk_join}>
-            <h2 className={s.title_card}>
+            <h3 className={s.title_card}>
               Join us and make a difference by dedicating your time and
               experience
-            </h2>
+            </h3>
             <MainButton text='Join us' style='primary' />
           </div>
           <Image
@@ -61,10 +62,10 @@ export const WaysToHelpSection = () => {
         </div>
         <div className={s.desk_block_two}>
           <div className={s.desk_donate}>
-            <h2 className={s.title_card}>
+            <h3 className={s.title_card}>
               Or become one of those who support us financially by making a
               donation
-            </h2>
+            </h3>
             <MainButton
               text='Donate'
               style='secondary'

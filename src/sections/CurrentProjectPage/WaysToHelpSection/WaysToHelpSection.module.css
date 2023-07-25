@@ -7,10 +7,7 @@
 }
 
 .title {
-  font-family: 'NAMU';
   margin-bottom: 14px;
-  font-size: 24px;
-  line-height: 1.4;
 }
 
 .title_span {
@@ -45,7 +42,6 @@
 @media (min-width: 768px) {
   .title {
     margin-bottom: 10px;
-    font-size: 30px;
   }
   .title_span {
     display: inline;
@@ -73,7 +69,6 @@
 @media (min-width: 1440px) {
   .title {
     margin-bottom: 10px;
-    font-size: 40px;
   }
   .exclamation {
     font-size: 20px;
