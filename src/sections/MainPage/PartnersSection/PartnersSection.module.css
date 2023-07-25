@@ -1,0 +1,72 @@
+.partners_section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.partners_text {
+  padding-bottom: 32px;
+  max-width: 240px;
+
+  font-family: 'NAMU';
+  font-size: 24px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 40px;
+
+    max-width: 552px;
+    font-size: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 648px;
+    font-size: 40px;
+  }
+}
+
+.blue_text {
+  color: var(--blue-primary-color);
+}
+
+.partners_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+
+  @media (min-width: 768px) {
+    gap: 16px 24px;
+  }
+
+  @media (min-width: 768px) {
+    gap: 0px 24.5px;
+  }
+}
+
+.partners_item {
+  border: 1px solid var(--blue-10-color);
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - 16px) / 2);
+  height: 136px;
+
+  @media (min-width: 768px) {
+    border-radius: 8px;
+
+    width: calc((100% - 48px) / 3);
+    height: 126px;
+  }
+
+  @media (min-width: 1440px) {
+    border-radius: 15px;
+
+    width: calc((100% - 98px) / 5);
+    height: 166px;
+  }
+}
