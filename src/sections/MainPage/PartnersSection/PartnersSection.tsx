@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 
 import { Container } from '@/components/Container';
+import { Title } from '@/components/Title';
 
 import { partnersImages } from './partnersImages';
 import s from './PartnersSection.module.css';
@@ -24,10 +25,10 @@ export const PartnersSection = () => {
   return (
     <section className={s.partners_section}>
       <Container>
-        <p className={s.partners_text}>
-          We are grateful to our partners for their{' '}
+        <Title tag='h2' className={s.partners_text}>
+          We are grateful to our partners for their&nbsp;
           <span className={s.blue_text}>support.</span>
-        </p>
+        </Title>
         <ul className={s.partners_list}>
           {isMobile &&
             partnersImages.map(imgData => (

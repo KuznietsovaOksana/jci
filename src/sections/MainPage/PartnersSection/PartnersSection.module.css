@@ -12,19 +12,14 @@
   padding-bottom: 32px;
   max-width: 240px;
 
-  font-family: 'NAMU';
-  font-size: 24px;
-
   @media (min-width: 768px) {
     padding-bottom: 40px;
 
     max-width: 552px;
-    font-size: 30px;
   }
 
   @media (min-width: 1440px) {
     max-width: 648px;
-    font-size: 40px;
   }
 }
 
@@ -41,7 +36,7 @@
     gap: 16px 24px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     gap: 0px 24.5px;
   }
 }
