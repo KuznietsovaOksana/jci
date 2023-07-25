@@ -129,7 +129,7 @@ a {
   .newsSliderContainer {
     width: 100%;
     overflow-x: scroll !important;
-    justify-content: start;
+    justify-content: flex-start;
     /* display: none !important;  */
     /* gap: 10px; */
   }
@@ -184,7 +184,7 @@ a {
   position: relative;
   display: flex;
   /* justify-content: center; */
-  justify-content: start;
+  justify-content: flex-start;
 
   width: 100%;
   overflow-x: scroll !important;
@@ -240,7 +240,7 @@ a {
 .gallerySliderContainer {
   position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 
   width: 100%;
   overflow-x: scroll !important;
