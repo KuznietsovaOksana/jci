@@ -15,6 +15,7 @@ import { TogetherSection } from '@/sections/MainPage/TogetherSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 import { OurPresident } from '@/sections/MainPage/OurPresident';
 import { ImpactSection } from '@/sections/MainPage/ImpactSection';
+import { PartnersSection } from '@/sections/MainPage/PartnersSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -41,6 +42,7 @@ export default function Home() {
           <ProjectSection />
           <DonateSection heading={donateText.donate} />
           <NewsSection />
+          <PartnersSection />
           <OurPresident />
           <FAQSection />
         </main>
