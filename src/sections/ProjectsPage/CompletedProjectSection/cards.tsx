@@ -6,6 +6,7 @@ export const cards = [
     },
 
     title: 'Title 1',
+    chamber: 'CHAMBER',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure consequuntur, molestiae quaerat accusantium voluptas tenetur sequi quod? Dolorum perspiciatis, corporis dolorem.',
   },
   {
@@ -15,6 +16,7 @@ export const cards = [
     },
 
     title: 'Title 2',
+    chamber: 'CHAMBER',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure consequuntur, molestiae quaerat accusantium voluptas tenetur sequi quod? Dolorum perspiciatis, corporis dolorem.',
   },
   {
@@ -24,6 +26,7 @@ export const cards = [
     },
 
     title: 'Title 3',
+    chamber: 'CHAMBER',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure consequuntur, molestiae quaerat accusantium voluptas tenetur sequi quod? Dolorum perspiciatis, corporis dolorem.',
   },
   {
@@ -33,6 +36,7 @@ export const cards = [
     },
 
     title: 'Title 4',
+    chamber: 'CHAMBER',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure consequuntur, molestiae quaerat accusantium voluptas tenetur sequi quod? Dolorum perspiciatis, corporis dolorem.',
   },
 ];
