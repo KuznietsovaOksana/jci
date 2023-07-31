@@ -15,11 +15,12 @@ type CardCompletedProjectProps = {
 
     title: string;
     text: string;
+    chamber: string;
   };
 };
 
 export const CompletedCard: FC<CardCompletedProjectProps> = ({
-  card: { picture, text, title },
+  card: { picture, text, title, chamber },
 }) => {
   const { isMobile, isTablet } = useScreen();
 
@@ -27,7 +28,7 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
   if (isMobile) {
     width = 251;
   } else if (isTablet) {
-    width = 265;
+    width = 551;
   } else {
     width = 264;
   }
@@ -54,9 +55,12 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
             Completed <span className={s.span_picture}>Project</span>
           </p>
         </div>
-        <div className={s.textblock}>
-          <h3 className={s.title}>{title}</h3>
-          <p className={s.text}>{text}</p>
+        <div className={s.text_block}>
+          <div>
+            <h3 className={s.title}>{title}</h3>
+            <p className={s.chamber}>{chamber}</p>
+            <p className={s.text}>{text}</p>
+          </div>
           <button className={s.completed_button}>
             More details
             <ArrowRight className={s.completed_icon} />
