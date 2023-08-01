@@ -35,10 +35,6 @@
   margin-bottom: 20px;
 }
 
-.button_donate {
-  background-color: var(--white-color);
-}
-
 @media (min-width: 768px) {
   .title {
     margin-bottom: 10px;

@@ -52,7 +52,7 @@ export const ProjectCardPP: React.FC<ProjectCardProps> = ({
 
         <MainButton
           text='Donate'
-          style='secondary'
+          style='secondaryNavy'
           className={s.project_button}
         />
       </div>

@@ -1,18 +1,18 @@
 import React from 'react';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 import styles from './HeroSlider.module.css';
-import Image from 'next/image';
 
-import imgD from 'public/images/hero/hero_01d.jpg';
+// import imgD from 'public/images/hero/hero_01d.jpg';
 
 interface Image {
   src: string;
   alt: string;
-    width: string;
+  width: string;
   height: string;
   // resolutions: {
   //   small: string;
@@ -21,38 +21,37 @@ interface Image {
   // };
 }
 
+import { ImageProps } from '@/sections/MainPage/HeroSection/images';
+
 interface HeroSliderProps {
-  images: Image[];
+  images: ImageProps[];
 }
 
 export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   return (
-    <>
-      <Swiper
-        autoplay={{
-          delay: 3000,
-        }}
-        pagination={{
-          dynamicBullets: false,
-        }}
-        modules={[Autoplay, Pagination]}
-        className={styles.heroSlider}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index} className={styles.heroSlide}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              layout="fill" 
-              objectFit="cover"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+    <Swiper
+      autoplay={{
+        delay: 3000,
+      }}
+      pagination={{
+        dynamicBullets: false,
+      }}
+      modules={[Autoplay, Pagination]}
+      className={styles.heroSlider}
+    >
+      {images.map((image, index) => (
+        <SwiperSlide key={index} className={styles.heroSlide}>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            layout='fill'
+            objectFit='cover'
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
-
 
 //              <picture>
 //               <source

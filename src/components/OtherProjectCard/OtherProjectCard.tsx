@@ -6,7 +6,7 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
-import ArrowRight from 'public/icons/arrow-right.svg';
+// import ArrowRight from 'public/icons/arrow-right.svg';
 import { useScreen } from '@/hooks/use_screen';
 
 import s from './OtherProjectCard.module.css';

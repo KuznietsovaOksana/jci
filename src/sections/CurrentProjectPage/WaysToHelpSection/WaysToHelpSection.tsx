@@ -66,11 +66,7 @@ export const WaysToHelpSection = () => {
               Or become one of those who support us financially by making a
               donation
             </h3>
-            <MainButton
-              text='Donate'
-              style='secondaryNavy'
-              className={s.button_donate}
-            />
+            <MainButton text='Donate' style='primaryBlue' />
           </div>
           <Image
             className={s.picture}

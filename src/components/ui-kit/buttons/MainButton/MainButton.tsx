@@ -7,7 +7,12 @@ interface ButtonProps {
   text: string;
   icon?: JSX.Element;
   // onClick?: () => void;
-  style?: 'primaryNavy' | 'secondaryNavy' | 'tertiaryNavy' | 'primaryBlue' | 'secondaryBlue';
+  style?:
+    | 'primaryNavy'
+    | 'secondaryNavy'
+    | 'tertiaryNavy'
+    | 'primaryBlue'
+    | 'secondaryBlue';
   // paddings?: number;
   href?: string;
 }
