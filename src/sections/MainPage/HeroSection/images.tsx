@@ -1,4 +1,6 @@
-interface Image {
+// import { Image } from "next/image";
+
+export interface ImageProps {
   src: string;
   alt: string;
   // resolutions: {
@@ -9,21 +11,18 @@ interface Image {
 }
 // import imgD from 'public/images/hero/hero_01d.jpg';
 
-export const images: Image[] = [
+export const images: ImageProps[] = [
   {
     src: '/images/hero/hero_01d.jpg',
     alt: 'Image 1',
-
   },
   {
     src: '/images/hero/hero_02d.jpg',
     alt: 'Image 2',
-
   },
   {
     src: '/images/hero/hero_03d.jpg',
     alt: 'Image 3',
-
   },
 ];
 

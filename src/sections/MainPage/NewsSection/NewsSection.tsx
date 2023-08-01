@@ -109,7 +109,6 @@ export const NewsSection = () => {
   );
 };
 
-
 //  return (
 //     <Section>
 //       {isMobile && (

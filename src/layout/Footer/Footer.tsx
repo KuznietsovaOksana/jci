@@ -40,14 +40,14 @@ export const Footer = () => {
                   // type='button'
                   text='Join us'
                   // paddings={119}
-                  style='primary'
+                  style='primaryNavy'
                 />
                 <MainButton
                   className={css.footer_secondary_btn}
                   // type='button'
                   text='Donate'
                   // paddings={113}
-                  style='secondary'
+                  style='secondaryNavy'
                 />
               </div>
             </div>
@@ -103,14 +103,14 @@ export const Footer = () => {
                   // type='button'
                   text='Join us'
                   // paddings={100}
-                  style='primary'
+                  style='primaryNavy'
                 />
                 <MainButton
                   className={css.footer_secondary_btn}
                   // type='button'
                   text='Donate'
                   // paddings={101}
-                  style='secondary'
+                  style='secondaryNavy'
                 />
               </div>
             </div>
@@ -201,14 +201,14 @@ export const Footer = () => {
                   // type='button'
                   text='Join us'
                   // paddings={100}
-                  style='primary'
+                  style='primaryNavy'
                 />
                 <MainButton
                   className={css.footer_secondary_btn}
                   // type='button'
                   text='Donate'
                   // paddings={101}
-                  style='secondary'
+                  style='secondaryNavy'
                 />
               </div>
             </div>

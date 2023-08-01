@@ -1,13 +1,10 @@
-import {
-  DetailedHTMLProps,
-  HtmlHTMLAttributes,
-  ReactNode,
-  forwardRef,
-} from 'react';
+import { FC } from 'react';
+
+import { DetailedHTMLProps, HtmlHTMLAttributes, ReactNode } from 'react';
 
 import s from './Section.module.css';
 
-export interface SectionProps
+interface SectionProps
   extends DetailedHTMLProps<
     HtmlHTMLAttributes<HTMLDivElement>,
     HTMLDivElement
@@ -15,15 +12,11 @@ export interface SectionProps
   children: ReactNode;
 }
 
-export const Section = forwardRef<HTMLElement, SectionProps>(function Search({
-  children,
-  className,
-  ref,
-}) {
+export const Section: FC<SectionProps> = ({ children, className, ref }) => {
   const combinedClassName = `${s.section} ${className}`;
   return (
     <section ref={ref} className={combinedClassName}>
       {children}
     </section>
   );
-});
+};

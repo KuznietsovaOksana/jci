@@ -13,22 +13,20 @@
   text-align: center;
 }
 
-
-
 .primaryNavy {
   background-color: var(--blue-primary-color);
 }
 
 .primaryNavy:hover {
-  background-color: #2E528E;
+  background-color: #2e528e;
 }
 
 .primaryNavy:focus {
-  background-color: #233E6A;
+  background-color: #233e6a;
 }
 
 .primaryNavy:disabled {
-  background-color: #8C9096;
+  background-color: #8c9096;
 }
 
 .secondaryNavy {
@@ -40,67 +38,66 @@
 }
 
 .secondaryNavy:hover {
-  background-color: #D8E1EF;
-  border: 1px solid #6185C1;
+  background-color: #d8e1ef;
+  border: 1px solid #6185c1;
 }
 
 .secondaryNavy:focus {
-  color: #3A67B1;
-  background-color: #B0C2E0;
-  border: 1px solid #3A67B1;
+  color: #3a67b1;
+  background-color: #b0c2e0;
+  border: 1px solid #3a67b1;
 }
 
 .secondaryNavy:disabled {
-  color: #8C9096;
+  color: #8c9096;
   background-color: none;
-  border: 1px solid #8C9096;
+  border: 1px solid #8c9096;
 }
 
 .primaryBlue {
-  background-color: #FFF;
-  color: #3A67B1;
+  background-color: #fff;
+  color: #3a67b1;
 }
 
 .primaryBlue:hover {
- background-color: #3A67B1;
-  color: #FFF;
+  background-color: #3a67b1;
+  color: #fff;
 }
 
 .primaryBlue:focus {
- background-color: #B0C2E0;
-  color: #3A67B1;
+  background-color: #b0c2e0;
+  color: #3a67b1;
 }
 
 .primaryBlue:disabled {
-   background-color: #8C9096;
-  color: #FFF;
+  background-color: #8c9096;
+  color: #fff;
 }
-
 
 .secondaryBlue {
   padding-top: 14px;
   padding-bottom: 14px;
-  color: #FFF;
+  color: #fff;
   background-color: white;
   border: 1px solid var(--blue-primary-color);
 }
 
 .secondaryBlue:hover {
   color: none;
-  background-color: #D8E1EF;
-  border: 1px solid #FFF;
+  background-color: #d8e1ef;
+  border: 1px solid #fff;
 }
 
 .secondaryBlue:focus {
-  color: #FFF;
-  background-color: #B0C2E0;
-  border: 1px solid #FFF;
+  color: #fff;
+  background-color: #b0c2e0;
+  border: 1px solid #fff;
 }
 
 .secondaryBlue:disabled {
-  color: #8C9096;
+  color: #8c9096;
   background-color: none;
-  border: 1px solid #8C9096;
+  border: 1px solid #8c9096;
 }
 
 @media (min-width: 767px) {

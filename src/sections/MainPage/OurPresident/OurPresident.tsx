@@ -80,10 +80,6 @@ export const OurPresident = () => {
   );
 };
 
-
-
-
-
 // return (
 //     <Section>
 //       {isMobile && (

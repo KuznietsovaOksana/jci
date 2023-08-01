@@ -41,14 +41,8 @@ export const HeroSection = () => {
               </Title>
               <p className={s.description}>{data.text}</p>
               <div className={s.cta}>
-                <MainButton
-                  text='Join us'
-                  style='primaryNavy'
-                />
-                <MainButton
-                  text='Donate'
-                  style='secondaryNavy'
-                />
+                <MainButton text='Join us' style='primaryNavy' />
+                <MainButton text='Donate' style='secondaryNavy' />
               </div>
             </div>
             <div className={s.sliderblock}>
@@ -67,14 +61,8 @@ export const HeroSection = () => {
           </div>
           <p className={s.description}>{data.text}</p>
           <div className={s.cta}>
-            <MainButton
-              text='Join us'
-              style='primaryNavy'
-            />
-            <MainButton
-              text='Donate'
-              style='secondaryNavy'
-            />
+            <MainButton text='Join us' style='primaryNavy' />
+            <MainButton text='Donate' style='secondaryNavy' />
           </div>
         </Container>
       )}
