@@ -77,19 +77,19 @@
 .secondaryBlue {
   padding-top: 14px;
   padding-bottom: 14px;
-  color: #fff;
-  background-color: white;
-  border: 1px solid var(--blue-primary-color);
+  /* color: #fff; */
+  background-color: transparent;
+  border: 1px solid white;
 }
 
 .secondaryBlue:hover {
-  color: none;
+  color: #414042;
   background-color: #d8e1ef;
   border: 1px solid #fff;
 }
 
 .secondaryBlue:focus {
-  color: #fff;
+  color: #414042;
   background-color: #b0c2e0;
   border: 1px solid #fff;
 }

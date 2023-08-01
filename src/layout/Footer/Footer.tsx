@@ -47,7 +47,7 @@ export const Footer = () => {
                   // type='button'
                   text='Donate'
                   // paddings={113}
-                  style='secondaryNavy'
+                  style='secondaryBlue'
                 />
               </div>
             </div>
@@ -110,7 +110,7 @@ export const Footer = () => {
                   // type='button'
                   text='Donate'
                   // paddings={101}
-                  style='secondaryNavy'
+                  style='secondaryBlue'
                 />
               </div>
             </div>
@@ -208,7 +208,7 @@ export const Footer = () => {
                   // type='button'
                   text='Donate'
                   // paddings={101}
-                  style='secondaryNavy'
+                  style='secondaryBlue'
                 />
               </div>
             </div>
