@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 
 import Arrow from 'public/icons/chevron_Down.svg';
-import Flag from 'public/icons/icon.svg';
+import Flag from 'public/icons/flag.svg';
 
 import { ProjectCardPP } from '@/components/ProjectPage/Project_card/Project_card_pp';
 import { DonateSection } from '@/sections/MainPage/DonateSection';
