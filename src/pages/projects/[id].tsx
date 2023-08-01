@@ -6,6 +6,7 @@ import { ModalMenu } from '@/components/ModalMenu';
 import { Layout } from '@/layout/Layout';
 
 import { WaysToHelpSection } from '@/sections/CurrentProjectPage/WaysToHelpSection';
+import { OtherProjectsSection } from '@/sections/CurrentProjectPage/OtherProjectsSection';
 
 export default function CurrentProject() {
   const [showModal, setShowModal] = useState(false);
@@ -25,6 +26,7 @@ export default function CurrentProject() {
       <Layout setShowModal={setShowModal}>
         <main>
           <WaysToHelpSection />
+          <OtherProjectsSection />
         </main>
       </Layout>
     </>

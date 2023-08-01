@@ -1,0 +1,44 @@
+.other_project_title {
+  font-family: 'NAMU';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--black-color);
+  margin-bottom: 12px;
+}
+.other_project_title_span {
+  color: var(--blue-primary-color);
+}
+
+.other_project_paragraph {
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .other_project_title {
+    font-size: 30px;
+    max-width: 552px;
+    margin-bottom: 24px;
+  }
+  .other_project_title_span {
+    display: inline;
+  }
+  .other_project_paragraph {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .other_project_title {
+    font-size: 40px;
+  }
+  .other_project_paragraph {
+    max-width: 551px;
+    font-size: 20px;
+  }
+}
+
+.div_tablet {
+  height: 5px;
+}
