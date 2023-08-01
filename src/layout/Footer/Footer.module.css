@@ -62,24 +62,26 @@
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    width: 264px;
   }
 }
 
 .footer_primary_btn {
-  font-size: 14px;
+  /* font-size: 14px; */
 
   @media (max-width: 767px) {
-    font-size: inherit;
+    /* font-size: inherit; */
   }
 
   @media (min-width: 1440px) {
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 }
 
 .footer_secondary_btn {
-  color: var(--white-color);
+  /* color: var(--white-color);
   border-color: var(--white-color);
+  background-color: transparent; */
 
   @media (min-width: 1440px) {
     font-size: 18px;
