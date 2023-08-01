@@ -48,7 +48,7 @@ export const WaysToHelpSection = () => {
               Join us and make a difference by dedicating your time and
               experience
             </h3>
-            <MainButton text='Join us' style='primary' />
+            <MainButton text='Join us' style='primaryNavy' />
           </div>
           <Image
             className={`${s.picture} ${s.picture_one}`}
@@ -57,7 +57,7 @@ export const WaysToHelpSection = () => {
             height={height}
             alt={images[0].alt}
             style={{ objectFit: 'cover' }}
-            loading='lazy'
+            priority
           />
         </div>
         <div className={s.desk_block_two}>
@@ -68,7 +68,7 @@ export const WaysToHelpSection = () => {
             </h3>
             <MainButton
               text='Donate'
-              style='secondary'
+              style='secondaryNavy'
               className={s.button_donate}
             />
           </div>
@@ -79,7 +79,7 @@ export const WaysToHelpSection = () => {
             height={height}
             alt={images[1].alt}
             style={{ objectFit: 'cover' }}
-            loading='lazy'
+            priority
           />
         </div>
       </Container>
