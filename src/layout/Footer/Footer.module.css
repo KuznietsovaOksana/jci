@@ -66,23 +66,7 @@
   }
 }
 
-.footer_primary_btn {
-  /* font-size: 14px; */
-
-  @media (max-width: 767px) {
-    /* font-size: inherit; */
-  }
-
-  @media (min-width: 1440px) {
-    /* font-size: 18px; */
-  }
-}
-
 .footer_secondary_btn {
-  /* color: var(--white-color);
-  border-color: var(--white-color);
-  background-color: transparent; */
-
   @media (min-width: 1440px) {
     font-size: 18px;
   }
@@ -134,9 +118,53 @@
   height: 36px;
 }
 
-.inst_logo {
+.logo_icon {
   width: 36px;
   height: 36px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_icon:focus,
+.logo_icon:hover {
+  background-color: var(--blue-10-color);
+
+  .fb_logo {
+    stroke: var(--black-90-color);
+  }
+
+  .inst_logo {
+    stroke: var(--black-90-color);
+  }
+}
+
+.logo_icon:active {
+  background-color: var(--blue-20-color);
+
+  .fb_logo {
+    stroke: var(--white-color);
+  }
+
+  .inst_logo {
+    stroke: var(--black-90-color);
+  }
+}
+
+.fb_logo {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--white-color);
+}
+
+.inst_logo {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--white-color);
 }
 
 /* Інфо-посилання */
