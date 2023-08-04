@@ -11,6 +11,7 @@ import { nav } from '../Header';
 import NavLink from '../../components/NavLink';
 
 import css from './Footer.module.css';
+import { footerContactsInfo } from './footerContactsInfo';
 
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -63,24 +64,13 @@ export const Footer = () => {
                 ))}
               </ul>
               <ul className={css.footer_contacts}>
-                <li className={css.footer_contacts_item}>
-                  <NavLink
-                    className={css.footer_email}
-                    exact
-                    href={'mailto:ukraine@jci.cc'}
-                  >
-                    ukraine@jci.cc
-                  </NavLink>
-                </li>
-                <li className={css.footer_contacts_item}>
-                  <NavLink
-                    className={css.footer_email}
-                    exact
-                    href={'mailto:+380994449834'}
-                  >
-                    +38 (099) 444-98-34
-                  </NavLink>
-                </li>
+                {footerContactsInfo.map(item => (
+                  <li key={item.id} className={css.footer_contacts_item}>
+                    <NavLink className={css.item} exact href={item.href}>
+                      {item.content}
+                    </NavLink>
+                  </li>
+                ))}
                 <li className={css.footer_contacts_item}>
                   <FbLogo className={css.fb_logo} />
                   <InstLogo className={css.inst_logo} />
@@ -125,24 +115,13 @@ export const Footer = () => {
                 ))}
               </ul>
               <ul className={css.footer_contacts}>
-                <li className={css.footer_contacts_item}>
-                  <NavLink
-                    className={css.footer_email}
-                    exact
-                    href={'mailto:ukraine@jci.cc'}
-                  >
-                    ukraine@jci.cc
-                  </NavLink>
-                </li>
-                <li className={css.footer_contacts_item}>
-                  <NavLink
-                    className={css.footer_email}
-                    exact
-                    href={'mailto:+380994449834'}
-                  >
-                    +38 (099) 444-98-34
-                  </NavLink>
-                </li>
+                {footerContactsInfo.map(item => (
+                  <li key={item.id} className={css.footer_contacts_item}>
+                    <NavLink className={css.item} exact href={item.href}>
+                      {item.content}
+                    </NavLink>
+                  </li>
+                ))}
                 <li className={css.footer_contacts_item}>
                   <FbLogo className={css.fb_logo} />
                   <InstLogo className={css.inst_logo} />
@@ -172,24 +151,13 @@ export const Footer = () => {
                 ))}
               </ul>
               <ul className={css.footer_contacts}>
-                <li className={css.footer_contacts_item}>
-                  <NavLink
-                    className={css.footer_email}
-                    exact
-                    href={'mailto:ukraine@jci.cc'}
-                  >
-                    ukraine@jci.cc
-                  </NavLink>
-                </li>
-                <li className={css.footer_contacts_item}>
-                  <NavLink
-                    className={css.footer_email}
-                    exact
-                    href={'mailto:+380994449834'}
-                  >
-                    +38 (099) 444-98-34
-                  </NavLink>
-                </li>
+                {footerContactsInfo.map(item => (
+                  <li key={item.id} className={css.footer_contacts_item}>
+                    <NavLink className={css.item} exact href={item.href}>
+                      {item.content}
+                    </NavLink>
+                  </li>
+                ))}
                 <li className={css.footer_contacts_item}>
                   <FbLogo className={css.fb_logo} />
                   <InstLogo className={css.inst_logo} />
