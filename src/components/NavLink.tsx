@@ -17,7 +17,6 @@ NavLink.defaultProps = {
 export default function NavLink({
   href,
   exact,
-  children,
   ...props
 }: PropsWithChildren<IPropsNavLink>) {
   const { pathname } = useRouter();
@@ -26,9 +25,5 @@ export default function NavLink({
     props.className += ` ${s.nav_link_active}`;
   }
 
-  return (
-    <Link {...props} href={href}>
-      {children}
-    </Link>
-  );
+  return <Link {...props} href={href}></Link>;
 }

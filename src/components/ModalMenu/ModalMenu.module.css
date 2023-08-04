@@ -2,22 +2,7 @@
   background-color: white;
   color: black;
   width: 100%;
-  height: 100%;
-}
-@media (min-width: 768px) {
-  .modal {
-    width: 372px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container_modal_tablet {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 108px;
-    padding-right: 108px;
-    width: 768px;
-  }
+  height: 100vh;
 }
 
 .close {
@@ -25,10 +10,10 @@
   height: 24px;
   cursor: pointer;
 }
+
 @media (min-width: 768px) {
   .close {
-    margin-left: 108px;
-    margin-right: 183px;
+    margin-left: 92px;
   }
 }
 
@@ -56,16 +41,25 @@
   display: grid;
   grid-template-columns: 1fr 124px 24px;
   align-items: center;
+  padding: 15px 0;
+}
 
-  padding: 15px 16px;
+.top_border {
   border-bottom: 1px solid var(--blue-10-color);
 }
+
+.name {
+  margin-left: 38px;
+}
+
 @media (min-width: 768px) {
   .top_modal {
     padding-top: 38px;
     padding-bottom: 38px;
-    padding-right: 33px;
-    padding-left: 0;
+    grid-template-columns: 1fr 24px;
+  }
+  .name {
+    margin-left: 12px;
   }
 }
 
@@ -77,85 +71,50 @@
 .chevron {
   width: 24px;
   height: 24px;
-}
-
-@media (min-width: 768px) {
-  .chevron {
-    position: absolute;
-    right: -15px;
-  }
+  stroke: var(--black-90-color);
 }
 
 .item {
-  display: grid;
-  grid-template-columns: 35px 1fr;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-@media (min-width: 768px) {
-  .item {
-    position: relative;
-    display: flex;
-    margin-left: 36px;
-    margin-right: 36px;
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 1px solid var(--black-color);
-  }
-}
-.item_minus:not(:first-child) {
-  padding-top: 15px;
-}
-
-@media (min-width: 768px) {
-  .item_minus:not(:first-child) {
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .item_plus:not(:last-child) {
-    border-bottom: 1px solid var(--black-color);
-  }
+  border-bottom: 1px solid var(--black-color);
 }
 
 .numbers {
-  color: var(--black-90-color);
   font-size: 12px;
   line-height: 120%;
-  margin-top: 27px;
-  margin-bottom: 41px;
+  margin-top: 32px;
+  margin-bottom: 46px;
 }
+
 @media (min-width: 768px) {
   .numbers {
-    margin-left: 72px;
-    margin-top: 39px;
-    margin-bottom: 60px;
+    margin-left: 92px;
+
     margin-right: 12px;
+
+    margin-top: 30px;
+    margin-bottom: 51px;
   }
 }
 
 .link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   color: var(--black-90-color);
   font-family: 'NAMU';
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
   line-height: 140%;
-  padding-top: 24px;
-  padding-bottom: 23px;
 }
 
-@media (min-width: 768px) {
-  .link {
-    width: 100%;
-    padding-top: 33px;
-    padding-bottom: 38px;
-    font-size: 30px;
-  }
+.link_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link_content_one {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: block;
 }

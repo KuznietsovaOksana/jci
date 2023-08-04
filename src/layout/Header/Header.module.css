@@ -71,6 +71,21 @@
   padding-bottom: 41px;
 }
 
+@media (max-width: 1339.9px) {
+  .nav_link {
+    background-color: none;
+    display: block;
+  }
+  .nav_link_active {
+    background-color: var(--blue-primary-color);
+    display: block;
+  }
+  .nav_link_active * {
+    color: var(--white-color);
+    stroke: var(--white-color);
+  }
+}
+
 @media (min-width: 1440px) {
   .nav_link_active {
     border-bottom: 2px solid black;
