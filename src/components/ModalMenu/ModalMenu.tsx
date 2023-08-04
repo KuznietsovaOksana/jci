@@ -11,6 +11,7 @@ import { nav } from '@/layout/Header';
 import NavLink from '../NavLink';
 
 import s from './ModalMenu.module.css';
+import { Container } from '../Container';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -20,37 +21,50 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
   const [language, setLanguage] = useState(true);
 
   return (
-    <div className={s.container_modal_tablet}>
-      <div className={s.modal}>
-        <div className={s.top_modal}>
-          <CloseMenu className={s.close} onClick={() => setShowModal(false)} />
-          <MediaQuery maxWidth={767}>
-            <button className={`${s.button} ${s.button_media}`}>Join us</button>
-          </MediaQuery>
-          <div
-            className={s.language}
-            onClick={() => setLanguage(prevState => !prevState)}
-          >
-            {language ? <En /> : <Ua />}
+    <div className={s.modal}>
+      <div className={s.top_border}>
+        <Container>
+          <div className={s.top_modal}>
+            <CloseMenu
+              className={s.close}
+              onClick={() => setShowModal(false)}
+            />
+            <MediaQuery maxWidth={767}>
+              <button className={`${s.button} ${s.button_media}`}>
+                Join us
+              </button>
+            </MediaQuery>
+            <div
+              className={s.language}
+              onClick={() => setLanguage(prevState => !prevState)}
+            >
+              {language ? <En /> : <Ua />}
+            </div>
           </div>
-        </div>
-        <nav>
-          <ul>
-            {nav.map(({ number, name, path }, ind) => (
-              <li
-                key={ind}
-                className={`${s.item} ${s.item_plus}  ${s.item_minus} `}
-              >
-                <span className={s.numbers}>{number}</span>
-                <NavLink className={s.link} exact href={path}>
-                  <p className={s.name}> {name}</p>
-                  <Arrow className={s.chevron} />
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        </Container>
       </div>
+      <nav>
+        <ul>
+          {nav.map(({ number, name, path }, ind) => (
+            <li
+              key={ind}
+              className={`${s.item} ${s.item_plus}  ${s.item_minus} `}
+            >
+              <NavLink className={s.link} exact href={path}>
+                <Container>
+                  <div className={s.link_content}>
+                    <div className={s.link_content_one}>
+                      <span className={s.numbers}>{number}</span>
+                      <p className={s.name}> {name}</p>
+                    </div>
+                    <Arrow className={s.chevron} />
+                  </div>
+                </Container>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 };
