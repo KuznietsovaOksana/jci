@@ -159,7 +159,6 @@ a {
   .newsSliderCards .swiper-slide:last-child {
     /* margin-right: calc((100vw - 480px) / 2 + 16px); */
     margin-right: 16px;
-    
   }
 }
 
