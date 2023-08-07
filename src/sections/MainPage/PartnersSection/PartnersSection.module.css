@@ -1,19 +1,28 @@
 .partners_section {
   padding-top: 20px;
   padding-bottom: 20px;
+}
 
-  @media (min-width: 768px) {
-    padding-top: 0;
-    padding-bottom: 0;
+@media (min-width: 768px) {
+  .partners_section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .partners_section {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
 .partners_text {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   max-width: 240px;
 
   @media (min-width: 768px) {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 
     max-width: 552px;
   }

@@ -31,7 +31,7 @@ export const NewsSection = () => {
   }
 
   return (
-    <Section>
+    <Section className={s.section}>
       <Container>
         <h3 className={s.news_title}>
           <span className={s.news_title_span}>News</span>: Learn about our
