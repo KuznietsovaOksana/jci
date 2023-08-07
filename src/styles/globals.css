@@ -153,10 +153,13 @@ a {
 
 @media (min-width: 481px) and (max-width: 767px) {
   .newsSliderCards .swiper-slide:first-child {
-    margin-left: calc((100vw - 480px) / 2 + 16px);
+    /* margin-left: calc((100vw - 480px) / 2 + 16px); */
+    margin-left: 16px;
   }
   .newsSliderCards .swiper-slide:last-child {
-    margin-right: calc((100vw - 480px) / 2 + 16px);
+    /* margin-right: calc((100vw - 480px) / 2 + 16px); */
+    margin-right: 16px;
+    
   }
 }
 
