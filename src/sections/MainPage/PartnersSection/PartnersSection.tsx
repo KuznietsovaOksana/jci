@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { Container } from '@/components/Container';
 import { Title } from '@/components/Title';
+import { Section } from '@/components/Section/Section';
 
 import { partnersImages } from './partnersImages';
 import s from './PartnersSection.module.css';
@@ -23,9 +24,9 @@ export const PartnersSection = () => {
   }
 
   return (
-    <section className={s.partners_section}>
+    <Section className={s.partners_section}>
       <Container>
-        <Title tag='h2' className={s.partners_text}>
+        <Title className={s.partners_text}>
           We are grateful to our partners for their&nbsp;
           <span className={s.blue_text}>support.</span>
         </Title>
@@ -68,6 +69,6 @@ export const PartnersSection = () => {
             ))}
         </ul>
       </Container>
-    </section>
+    </Section>
   );
 };
