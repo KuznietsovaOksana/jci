@@ -66,12 +66,6 @@
   }
 }
 
-.footer_secondary_btn {
-  @media (min-width: 1440px) {
-    font-size: 18px;
-  }
-}
-
 .footer_nav_wrapper {
   display: flex;
   gap: 16px;
@@ -167,6 +161,10 @@
   stroke: var(--white-color);
 }
 
+.link {
+  display: inline-block;
+}
+
 /* Інфо-посилання */
 .footer_info {
   padding-top: 16px;
@@ -202,7 +200,19 @@
   gap: 12px;
 }
 
-.desktop_info_item:nth-child(1) {
-  display: flex;
-  gap: 24px;
+@media (min-width: 768px) {
+  .info_item {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .info_item:nth-child(1) {
+    flex-direction: row;
+  }
+  .info_item:nth-child(2) {
+    flex-direction: row;
+    gap: 236px;
+  }
 }
