@@ -10,10 +10,10 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .partners_section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
