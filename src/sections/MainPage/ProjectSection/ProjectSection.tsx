@@ -35,7 +35,7 @@ const projects = [
     image_hover_dt: '/images/projects/project_01dt_hover.jpg',
     title: 'Association of Humanitarian Centres',
     subtitle: 'Jci Ukraine',
-    text: 'Our volunteers work with local centres to provide support to those that are in need of any kind of help',
+    text: 'Our volunteers work with local centres to provide support',
   },
 ];
 

@@ -11,12 +11,6 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .close {
-    margin-left: 92px;
-  }
-}
-
 .button {
   color: var(--white-color);
   background-color: var(--blue-navy-color);
@@ -87,10 +81,7 @@
 
 @media (min-width: 768px) {
   .numbers {
-    margin-left: 92px;
-
     margin-right: 12px;
-
     margin-top: 30px;
     margin-bottom: 51px;
   }
