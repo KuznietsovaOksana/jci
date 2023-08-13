@@ -53,6 +53,14 @@
   color: #414042;
 }
 
+.project_subTitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #414042;
+}
+
 @media (min-width: 768px) {
   .project_card {
     display: flex;
@@ -68,9 +76,6 @@
   .project_subTitle {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: #414042;
   }
   .project_card:hover .project_title {
     color: #3a67b1;
@@ -95,5 +100,12 @@
   .project_card {
     flex-direction: row;
     max-width: 552px;
+  }
+  .project_img {
+    transition: transform 0.3s ease;
+  }
+
+  .project_img:hover {
+    transform: scale(1.1);
   }
 }
