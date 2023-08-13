@@ -21,7 +21,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   subtitle,
   text,
-  hover_dt,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
