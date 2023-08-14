@@ -21,7 +21,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   subtitle,
   text,
-  hover_dt,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -62,35 +61,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       </MediaQuery>
       <MediaQuery minWidth={1440}>
-        {isHovered ? (
-          <Image
-            src={hover_dt}
-            alt='Project photo'
-            priority
-            className={s.project_img}
-            width={264}
-            height={312}
-            style={{ objectFit: 'cover' }}
-          />
-        ) : (
-          <Image
-            src={image_dt}
-            alt='Project photo'
-            priority
-            className={s.project_img}
-            width={264}
-            height={312}
-            style={{ objectFit: 'cover' }}
-          />
-        )}
+        <Image
+          src={image_dt}
+          alt='Project photo'
+          priority
+          className={s.project_img}
+          width={264}
+          height={312}
+          style={{ objectFit: 'cover' }}
+        />
       </MediaQuery>
 
       <div className={s.project_wrapper}>
         <div className={s.project_text_wrapper}>
           <h2 className={s.project_title}>{title}</h2>
-          <MediaQuery minWidth={768}>
-            <h3 className={s.project_subTitle}>{subtitle}</h3>
-          </MediaQuery>
+
+          <h3 className={s.project_subTitle}>{subtitle}</h3>
           <p className={s.project_text}>{text}</p>
         </div>
         <MediaQuery minWidth={1440}>
