@@ -1,14 +1,14 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'next-i18next';
 
 import Menu from 'public/icons/menu.svg';
 import Logo from 'public/icons/logo_JCI_Ukraine.svg';
-import En from 'public/icons/language_switch_Eng.svg';
-import Ua from 'public/icons/language_switch_Ua.svg';
 
 import NavLink from '@/components/NavLink';
 import { ILayout } from '../Layout';
 import { Container } from '@/components/Container';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 import s from './Header.module.css';
 
@@ -25,7 +25,7 @@ export const nav = [
 ];
 
 export const Header: FC<ILayout> = ({ setShowModal }) => {
-  const [language, setLanguage] = useState(true);
+  const { t } = useTranslation(['common']);
 
   return (
     <Container>
@@ -34,7 +34,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
           <Menu className={s.menu} onClick={() => setShowModal(true)} />
         </MediaQuery>
         <a href='/' className={s.link}>
-          <Logo className={s.logo} />
+          <Logo className={s.logo} aria-label={t('logo.aria')} />
         </a>
         <MediaQuery minWidth={1440}>
           <nav className={s.nav}>
@@ -48,12 +48,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
               ))}
             </ul>
           </nav>
-          <div
-            className={s.language}
-            onClick={() => setLanguage(prevState => !prevState)}
-          >
-            {language ? <En /> : <Ua />}
-          </div>
+          <LanguageSwitcher />
         </MediaQuery>
 
         <MediaQuery minWidth={768}>

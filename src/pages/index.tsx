@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { Layout } from '@/layout/Layout';
 import { Portal } from '@/components/Portal';
 import { ModalMenu } from '@/components/ModalMenu';
@@ -19,6 +22,7 @@ import { PartnersSection } from '@/sections/MainPage/PartnersSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Head>
@@ -49,4 +53,12 @@ export default function Home() {
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

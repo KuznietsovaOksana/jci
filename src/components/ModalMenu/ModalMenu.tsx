@@ -1,25 +1,22 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import dynamic from 'next/dynamic';
 
 import CloseMenu from 'public/icons/remove.svg';
-import En from 'public/icons/language_switch_Eng.svg';
-import Ua from 'public/icons/language_switch_Ua.svg';
 import Arrow from 'public/icons/chevron_Right.svg';
 
 import { ILayout } from '@/layout/Layout';
 import { nav } from '@/layout/Header';
 import NavLink from '../NavLink';
+import { Container } from '../Container';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import s from './ModalMenu.module.css';
-import { Container } from '../Container';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
 export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
-  const [language, setLanguage] = useState(true);
-
   return (
     <div className={s.modal}>
       <div className={s.top_border}>
@@ -34,12 +31,7 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
                 Join us
               </button>
             </MediaQuery>
-            <div
-              className={s.language}
-              onClick={() => setLanguage(prevState => !prevState)}
-            >
-              {language ? <En /> : <Ua />}
-            </div>
+            <LanguageSwitcher />
           </div>
         </Container>
       </div>
