@@ -21,6 +21,8 @@
   --black-30-color: #d3d9e3;
   --white-color: #ffffff;
 
+  --border-color: #74777d;
+
   /* анімація */
   --animation: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }

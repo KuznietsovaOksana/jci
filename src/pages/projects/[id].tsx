@@ -7,6 +7,7 @@ import { Layout } from '@/layout/Layout';
 
 import { WaysToHelpSection } from '@/sections/CurrentProjectPage/WaysToHelpSection';
 import { OtherProjectsSection } from '@/sections/CurrentProjectPage/OtherProjectsSection';
+import { TabsSection } from '@/sections/CurrentProjectPage/TabsSection';
 
 export default function CurrentProject() {
   const [showModal, setShowModal] = useState(false);
@@ -25,6 +26,7 @@ export default function CurrentProject() {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
+          <TabsSection />
           <WaysToHelpSection />
           <OtherProjectsSection />
         </main>
