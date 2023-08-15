@@ -1,16 +1,19 @@
 import { FC, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+// import { useTranslation } from 'next-i18next';
 
 import Menu from 'public/icons/menu.svg';
 import Logo from 'public/icons/logo_JCI_Ukraine.svg';
-import En from 'public/icons/language_switch_Eng.svg';
-import Ua from 'public/icons/language_switch_Ua.svg';
+// import En from 'public/icons/language_switch_Eng.svg';
+// import Ua from 'public/icons/language_switch_Ua.svg';
 
 import NavLink from '@/components/NavLink';
 import { ILayout } from '../Layout';
 import { Container } from '@/components/Container';
 
 import s from './Header.module.css';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -25,7 +28,17 @@ export const nav = [
 ];
 
 export const Header: FC<ILayout> = ({ setShowModal }) => {
-  const [language, setLanguage] = useState(true);
+  // const [language, setLanguage] = useState(true);
+  const router = useRouter();
+  // const { t } = useTranslation();
+  const [locale, setLocale] = useState<string | undefined>(router.locale);
+
+  const handleLanguageToggle = () => {
+    const currentLocale = locale;
+    const newLocale = currentLocale === 'en' ? 'uk' : 'en';
+    router.push(router.pathname, router.asPath, { locale: newLocale });
+    setLocale(newLocale);
+  };
 
   return (
     <Container>
@@ -48,12 +61,16 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
               ))}
             </ul>
           </nav>
-          <div
+          {/* <div
             className={s.language}
             onClick={() => setLanguage(prevState => !prevState)}
           >
             {language ? <En /> : <Ua />}
-          </div>
+          </div> */}
+          <LanguageSwitcher
+            locale={locale || 'en'}
+            onToggle={handleLanguageToggle}
+          />
         </MediaQuery>
 
         <MediaQuery minWidth={768}>

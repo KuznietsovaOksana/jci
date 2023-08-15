@@ -91,11 +91,11 @@
     border-bottom: 2px solid black;
   }
 }
-.language {
+/* .language {
   width: 24px;
   height: 24px;
   cursor: pointer;
-}
+} */
 
 .button {
   color: var(--white-color);
