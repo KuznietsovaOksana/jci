@@ -1,17 +1,10 @@
-import { FC } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 import s from './LanguageSwitcher.module.css';
 
-interface LanguageSwitcherProps {
-  locale: string;
-  onToggle: () => void;
-}
-
-export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({
-  locale,
-  onToggle,
-}) => {
+export const LanguageSwitcher = () => {
   const LanguageIcon = dynamic(
     () =>
       import(
@@ -19,6 +12,17 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({
       ),
     { ssr: false }
   );
+
+  const router = useRouter();
+
+  const [locale, setLocale] = useState<string | undefined>(router.locale);
+
+  const onToggle = () => {
+    const currentLocale = locale;
+    const newLocale = currentLocale === 'en' ? 'uk' : 'en';
+    router.push(router.pathname, router.asPath, { locale: newLocale });
+    setLocale(newLocale);
+  };
 
   return (
     <button type='button' onClick={onToggle} className={s.button}>
