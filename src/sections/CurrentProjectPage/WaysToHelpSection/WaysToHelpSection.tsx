@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-import { MainButton } from '@/components/ui-kit/buttons/MainButton';
-import { Section } from '@/components/Section/Section';
-import { Container } from '@/components/Container';
+import { MainButton } from '@/components/buttons/MainButton';
+import { Section } from '@/components/sections/Section';
+import { Container } from '@/components/common/Container';
 import { useScreen } from '@/hooks/use_screen';
-import { Title } from '@/components/Title';
+import { Title } from '@/components/typography/Title';
 
 import { images } from './images';
 

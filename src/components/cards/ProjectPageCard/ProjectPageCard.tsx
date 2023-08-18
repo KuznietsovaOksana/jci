@@ -1,8 +1,9 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { MainButton } from '@/components/ui-kit/buttons/MainButton';
-import s from './ProjectCardPP.module.css';
-import { ProjectSlider } from '@/components/ui-kit/sliders/ProjectSlider/ProjectSlider';
+import { MainButton } from '@/components/buttons/MainButton';
+import { ProjectSlider } from '@/components/sliders/ProjectSlider/ProjectSlider';
+import s from './ProjectPageCard.module.css';
+
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
@@ -16,7 +17,7 @@ interface ProjectCardProps {
   hover_dt: string;
 }
 
-export const ProjectCardPP: React.FC<ProjectCardProps> = ({
+export const ProjectPageCard: React.FC<ProjectCardProps> = ({
   image_dt,
   image_add,
   title,

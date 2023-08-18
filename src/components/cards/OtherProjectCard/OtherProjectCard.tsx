@@ -8,9 +8,9 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 
 // import ArrowRight from 'public/icons/arrow-right.svg';
 import { useScreen } from '@/hooks/use_screen';
+import { MainButton } from '@/components/buttons/MainButton';
 
 import s from './OtherProjectCard.module.css';
-import { MainButton } from '../ui-kit/buttons/MainButton';
 
 type CardOtherProjectProps = {
   card: {

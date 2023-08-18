@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-import { Portal } from '@/components/Portal';
-import { ModalMenu } from '@/components/ModalMenu';
+import { Portal } from '@/components/common/Portal';
+import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
 
 import { WaysToHelpSection } from '@/sections/CurrentProjectPage/WaysToHelpSection';

@@ -6,8 +6,8 @@ import Arrow from 'public/icons/chevron_Right.svg';
 
 import { ILayout } from '@/layout/Layout';
 import { nav } from '@/layout/Header';
-import NavLink from '../NavLink';
-import { Container } from '../Container';
+import NavLink from '../../NavLink';
+import { Container } from '@/components/common/Container';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import s from './ModalMenu.module.css';

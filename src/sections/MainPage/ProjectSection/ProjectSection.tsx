@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
 
-import { Title } from '@/components/Title';
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section/Section';
-import { ProjectCard } from '@/components/ProjectCard';
-import { IconButton } from '@/components/ui-kit/buttons/IconButton';
+import { Title } from '@/components/typography/Title';
+import { Container } from '@/components/common/Container';
+import { Section } from '@/components/sections/Section';
+import { ProjectCard } from '@/components/cards/ProjectCard';
+import { IconButton } from '@/components/buttons/IconButton';
 
 import s from './ProjectSection.module.css';
 

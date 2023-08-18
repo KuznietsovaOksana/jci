@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Container } from '@/components/Container';
-import { MainButton } from '@/components/ui-kit/buttons/MainButton';
-import { Title } from '@/components/Title';
+import { Container } from '@/components/common/Container';
+import { MainButton } from '@/components/buttons/MainButton';
+import { Title } from '@/components/typography/Title';
 
 import s from './DonateSectionComponent.module.css';
 

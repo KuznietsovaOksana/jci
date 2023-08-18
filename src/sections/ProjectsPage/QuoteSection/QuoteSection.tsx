@@ -1,4 +1,4 @@
-import { Container } from '@/components/Container';
+import { Container } from '@/components/common/Container';
 import { quoteData } from './data';
 
 import s from './QuoteSection.module.css';

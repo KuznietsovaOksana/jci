@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
 
-import { Container } from '@/components/Container';
-import { CharacteristicCard } from '@/components/CharacteristicCard';
+import { Container } from '@/components/common/Container';
+import { CharacteristicCard } from '@/components/cards/CharacteristicCard';
 
 import s from './CharacteristicSection.module.css';
 

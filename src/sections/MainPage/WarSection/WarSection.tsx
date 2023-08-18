@@ -1,8 +1,8 @@
-import { Title } from '@/components/Title';
-import { Section } from '@/components/Section/Section';
-import { WarCard } from '@/components/WarCard';
-import { Container } from '@/components/Container';
-import { IconButton } from '@/components/ui-kit/buttons/IconButton';
+import { Title } from '@/components/typography/Title';
+import { Section } from '@/components/sections/Section';
+import { WarCard } from '@/components/cards/WarCard';
+import { Container } from '@/components/common/Container';
+import { IconButton } from '@/components/buttons/IconButton';
 
 import { warData } from './data';
 

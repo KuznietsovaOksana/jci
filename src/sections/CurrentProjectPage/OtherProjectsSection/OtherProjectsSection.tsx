@@ -9,10 +9,10 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section/Section';
+import { Container } from '@/components/common/Container';
+import { Section } from '@/components/sections/Section';
 import { cards } from './cards';
-import { OtherProjectCard } from '@/components/OtherProjectCard';
+import { OtherProjectCard } from '@/components/cards/OtherProjectCard';
 
 import s from './OtherProjectsSection.module.css';
 
