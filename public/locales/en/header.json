@@ -1,0 +1,24 @@
+{
+    "nav": [
+        {
+            "name": "Who we are",
+            "url": "/about"
+        },
+        {
+            "name": "Projects",
+            "url": "/projects"
+        },
+        {
+            "name": "Donation",
+            "url": "/donation"
+        },
+        {
+            "name": "News",
+            "url": "/news"
+        },
+        {
+            "name": "Contacts",
+            "url": "/contacts"
+        }
+    ]
+}

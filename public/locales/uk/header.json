@@ -1,0 +1,24 @@
+{
+    "nav": [
+        {
+            "name": "Про нас",
+            "url": "/about"
+        },
+        {
+            "name": "Проекти",
+            "url": "/projects"
+        },
+        {
+            "name": "Задонатити",
+            "url": "/donation"
+        },
+        {
+            "name": "Новини",
+            "url": "/news"
+        },
+        {
+            "name": "Контакти",
+            "url": "/contacts"
+        }
+    ]
+}
