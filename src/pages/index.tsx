@@ -5,15 +5,15 @@ import { useState } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { Layout } from '@/layout/Layout';
-import { Portal } from '@/components/Portal';
-import { ModalMenu } from '@/components/ModalMenu';
+import { Portal } from '@/components/common/Portal';
+import { ModalMenu } from '@/components/header/ModalMenu';
 import { WarSection } from '@/sections/MainPage/WarSection';
 import { FAQSection } from '@/sections/MainPage/FAQSection';
 import { NewsSection } from '@/sections/MainPage/NewsSection';
 import { HeroSection } from '@/sections/MainPage/HeroSection';
 import { ProjectSection } from '@/sections/MainPage/ProjectSection';
 import { DonateSection } from '@/sections/MainPage/DonateSection';
-import { donateText } from '@/components/Section/DonateSectionComponent';
+import { donateText } from '@/components/sections/DonateSectionComponent';
 import { TogetherSection } from '@/sections/MainPage/TogetherSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 import { OurPresident } from '@/sections/MainPage/OurPresident';

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section/Section';
-import { Title } from '@/components/Title';
+import { Container } from '@/components/common/Container';
+import { Section } from '@/components/sections/Section';
+import { Title } from '@/components/typography/Title';
 
 import impact from 'public/images/impact/impact_01.jpg';
 

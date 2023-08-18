@@ -2,9 +2,9 @@ import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 
-import { Container } from '@/components/Container';
-import { Title } from '@/components/Title';
-import { Section } from '@/components/Section/Section';
+import { Container } from '@/components/common/Container';
+import { Title } from '@/components/typography/Title';
+import { Section } from '@/components/sections/Section';
 
 import { partnersImages } from './partnersImages';
 import s from './PartnersSection.module.css';

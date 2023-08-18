@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section/Section';
+import { Container } from '@/components/common/Container';
+import { Section } from '@/components/sections/Section';
 
 import imgD from 'public/images/president/president_01d.jpg';
 

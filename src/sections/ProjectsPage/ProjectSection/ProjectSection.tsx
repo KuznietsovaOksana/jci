@@ -3,11 +3,11 @@ import { NextPage } from 'next';
 import Arrow from 'public/icons/chevron_Down.svg';
 import Flag from 'public/icons/flag.svg';
 
-import { ProjectCardPP } from '@/components/ProjectPage/Project_card/Project_card_pp';
+import { ProjectPageCard } from '@/components/cards/ProjectPageCard';
 import { DonateSection } from '@/sections/MainPage/DonateSection';
-import { donateText } from '@/components/Section/DonateSectionComponent';
+import { donateText } from '@/components/sections/DonateSectionComponent';
 
-import s from './ProjectSectionPP.module.css';
+import s from './ProjectSection.module.css';
 
 const projectsTop = [
   {
@@ -59,7 +59,7 @@ export const ProjectSectionPP: NextPage = () => {
 
         <div className={s.projects_wrapper}>
           {projectsTop.map((project, index) => (
-            <ProjectCardPP
+            <ProjectPageCard
               key={index}
               image_dt={project.image_main_dt}
               image_add={project.image_add}
@@ -75,7 +75,7 @@ export const ProjectSectionPP: NextPage = () => {
       <section className={`${s.project_section} ${s.low_section}`}>
         <div className={s.projects_wrapper}>
           {projectsLow.map((project, index) => (
-            <ProjectCardPP
+            <ProjectPageCard
               key={index}
               image_dt={project.image_main_dt}
               image_add={project.image_add}

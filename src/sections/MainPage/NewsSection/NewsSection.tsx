@@ -6,9 +6,9 @@ import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section/Section';
-import { NewsCard } from '@/components/NewsCard';
+import { Container } from '@/components/common/Container';
+import { Section } from '@/components/sections/Section';
+import { NewsCard } from '@/components/cards/NewsCard';
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';

@@ -14,7 +14,7 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 
 import s from './PhotoGallerySection.module.css';
 
-import { Container } from '@/components/Container';
+import { Container } from '@/components/common/Container';
 import { images, imagesForDesk } from './images';
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';

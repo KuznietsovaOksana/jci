@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
-import { Section } from '@/components/Section/Section';
-import { Container } from '@/components/Container';
+import { Section } from '@/components/sections/Section';
+import { Container } from '@/components/common/Container';
 import { useScreen } from '@/hooks/use_screen';
 
 import { data } from './data';

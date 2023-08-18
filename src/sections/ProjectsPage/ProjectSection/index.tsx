@@ -1,1 +1,1 @@
-export * from './ProjectSectionPP';
+export * from './ProjectSection';

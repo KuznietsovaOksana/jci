@@ -7,8 +7,8 @@ import Logo from 'public/icons/logo_JCI_Ukraine.svg';
 
 import NavLink from '@/components/NavLink';
 import { ILayout } from '../Layout';
-import { Container } from '@/components/Container';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { Container } from '@/components/common/Container';
+import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
 
 import s from './Header.module.css';
 

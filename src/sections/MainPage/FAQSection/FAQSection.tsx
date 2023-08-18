@@ -1,8 +1,8 @@
-import { Container } from '@/components/Container';
-import { Accordion } from '@/components/Accordion';
-import { Section } from '@/components/Section/Section';
-import { faqs } from '@/components/Accordion/data';
-import { Title } from '@/components/Title';
+import { Container } from '@/components/common/Container';
+import { Accordion } from '@/components/common/Accordion';
+import { Section } from '@/components/sections/Section';
+import { faqs } from '@/components/common/Accordion/data';
+import { Title } from '@/components/typography/Title';
 
 import s from './FAQSection.module.css';
 

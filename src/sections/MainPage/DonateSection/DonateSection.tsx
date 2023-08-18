@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DonateSectionComponent } from '@/components/Section/DonateSectionComponent';
+import { DonateSectionComponent } from '@/components/sections/DonateSectionComponent';
 
 export interface TextProps {
   heading: string;

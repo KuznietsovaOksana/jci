@@ -6,8 +6,8 @@ import Logo from 'public/icons/logo-white.svg';
 import InstLogo from 'public/icons/instagram.svg';
 import FbLogo from 'public/icons/facebook.svg';
 
-import { MainButton } from '@/components/ui-kit/buttons/MainButton';
-import { Container } from '@/components/Container';
+import { MainButton } from '@/components/buttons/MainButton';
+import { Container } from '@/components/common/Container';
 import { footerContactsInfo } from './footerContactsInfo';
 import { nav } from '../Header';
 
