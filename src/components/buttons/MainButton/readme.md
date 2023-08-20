@@ -1,26 +1,18 @@
-Назва компонента
+# Name
 
 MainButton
 
-Опис компонента
+# Description
 
-Компонент MainButton містить кнопку з переданим текстом. При кліку на кнопку виконується функція, передана через властивість onClick. Розмір кнопки визначається властивістю paddings (одне значення для відстані зліва і зправа). Тип кнопки (button або submit) задається властивістю type.
+The MainButton component is a reusable button component that allows you to create buttons with customizable styles, text, and optional navigation links. It's designed to provide flexibility in creating buttons with different visual variations.
 
-Властивості
+# Props
 
-type: Тип кнопки, який може бути 'button' або 'submit'.
-text: Текст, який міститься на кнопці.
-style: Стиль кнопки, який може бути 'primary' - залита синім кольором або 'secondary' - прозора з обведенням.
-onClick: Функція, яка буде виконана при натисканні на кнопку.
-paddings: Розмір кнопки, який може бути {45} (padding-left: 45px та padding-right: 45px) .
-className - оприділяє користувацький клас CSS для кнопки.
+text: The text to be displayed on the button.
+style (optional): The style variation of the button. Default is 'primaryNavy'.
+className (optional): Additional class name to apply custom styles to the button.
+href (optional): The URL the button should navigate to.
 
-Приклад використання
+# Examples
 
-<MainButton className={s.custom} - задавання додаткового стилю для прикладу з вашого компонента s - назва файлу; custom- назва класу
-type="button"
-text="Натисніть мене"
-onClick={...}
-paddings={100}
-style='primary'
-/>
+<MainButton text="Learn More" href="/learn-more" style="secondaryNavy" />
