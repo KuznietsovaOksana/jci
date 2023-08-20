@@ -29,6 +29,7 @@ export const ImpactSection = () => {
           src={impact}
           alt='Members of the organization'
           className={s.photo}
+          priority
         />
       </Container>
     </Section>

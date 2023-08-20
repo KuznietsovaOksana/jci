@@ -7,18 +7,11 @@ import 'swiper/css/pagination';
 
 import styles from './HeroSlider.module.css';
 
-// import imgD from 'public/images/hero/hero_01d.jpg';
-
 interface Image {
   src: string;
   alt: string;
   width: string;
   height: string;
-  // resolutions: {
-  //   small: string;
-  //   medium: string;
-  //   large: string;
-  // };
 }
 
 import { ImageProps } from '@/sections/MainPage/HeroSection/images';
@@ -38,29 +31,20 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
       }}
       modules={[Autoplay, Pagination]}
       className={styles.heroSlider}
+      spaceBetween={20}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index} className={styles.heroSlide}>
           <Image
             src={image.src}
             alt={image.alt}
-            layout='fill'
-            objectFit='cover'
+            width='288'
+            height='216'
+            className={styles.photo}
+            priority
           />
         </SwiperSlide>
       ))}
     </Swiper>
   );
 };
-
-//              <picture>
-//               <source
-//                 srcSet={image.resolutions.large}
-//                 media='(min-width: 1440px)'
-//               />
-//               <source
-//                 srcSet={image.resolutions.medium}
-//                 media='(min-width: 768px)'
-//               />
-//               <img src={image.resolutions.small} alt={image.alt} />
-//             </picture>
