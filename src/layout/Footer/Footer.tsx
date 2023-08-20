@@ -5,13 +5,14 @@ import Link from 'next/link';
 import InstLogo from 'public/icons/instagram.svg';
 import FbLogo from 'public/icons/facebook.svg';
 
+import { Logo } from '@/components/typography/Logo';
 import { MainButton } from '@/components/buttons/MainButton';
 import { Container } from '@/components/common/Container';
 import { footerContactsInfo } from './footerContactsInfo';
+
 import { nav } from '../Header';
 
 import s from './Footer.module.css';
-import { Logo } from '@/components/typography/Logo';
 
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);

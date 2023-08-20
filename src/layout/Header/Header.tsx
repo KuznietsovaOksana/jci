@@ -6,6 +6,7 @@ import Menu from 'public/icons/menu.svg';
 import NavLink from '@/components/NavLink';
 import { Logo } from '@/components/typography/Logo';
 import { Container } from '@/components/common/Container';
+import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
 
 import { ILayout } from '../Layout';
@@ -31,7 +32,9 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
         <MediaQuery maxWidth={1439}>
           <Menu className={s.menu} onClick={() => setShowModal(true)} />
         </MediaQuery>
+
         <Logo className={s.link} />
+
         <MediaQuery minWidth={1440}>
           <nav className={s.nav}>
             <ul className={s.nav_list}>
@@ -48,7 +51,9 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
         </MediaQuery>
 
         <MediaQuery minWidth={768}>
-          <button className={`${s.button} ${s.button_media}`}>Join us</button>
+          <div className={s.button_media}>
+            <MainButton text='Join us' />
+          </div>
         </MediaQuery>
       </header>
     </Container>

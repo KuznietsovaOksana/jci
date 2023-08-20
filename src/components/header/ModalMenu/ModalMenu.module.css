@@ -12,24 +12,23 @@
 }
 
 .button {
-  color: var(--white-color);
+  /* color: var(--white-color);
   background-color: var(--blue-navy-color);
-  border-radius: 30px;
-  border: none;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  border-radius: 30px; */
+  /* border: none; */
+  padding: 8px 16px;
   width: 100px;
-  text-align: center;
+  /* text-align: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 100%;
   cursor: pointer;
-  transition: background-color var(--animation);
+  transition: background-color var(--animation); */
 }
-.button:focus,
+/* .button:focus,
 .button:hover {
   background-color: var(--blue-60-color);
-}
+} */
 
 .top_modal {
   display: grid;

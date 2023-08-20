@@ -77,34 +77,15 @@
   }
 }
 
-.button {
-  color: var(--white-color);
-  background-color: var(--blue-navy-color);
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: background-color var(--animation);
-}
-
-.button:hover {
-  background-color: var(--blue-60-color);
-}
-
 @media (min-width: 768px) {
   .button_media {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 168px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 100%;
+    min-width: 168px;
   }
 }
 
 @media (min-width: 1440px) {
   .button_media {
-    width: 208px;
+    min-width: 208px;
     margin-left: 32px;
   }
 }

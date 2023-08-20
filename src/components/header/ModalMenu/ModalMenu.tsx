@@ -4,10 +4,12 @@ import dynamic from 'next/dynamic';
 import CloseMenu from 'public/icons/remove.svg';
 import Arrow from 'public/icons/chevron_Right.svg';
 
-import { ILayout } from '@/layout/Layout';
 import { nav } from '@/layout/Header';
-import NavLink from '../../NavLink';
+
+import { ILayout } from '@/layout/Layout';
+import NavLink from '@/components/NavLink';
 import { Container } from '@/components/common/Container';
+import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import s from './ModalMenu.module.css';
@@ -27,9 +29,7 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
               onClick={() => setShowModal(false)}
             />
             <MediaQuery maxWidth={767}>
-              <button className={`${s.button} ${s.button_media}`}>
-                Join us
-              </button>
+              <MainButton text='Join us' className={s.button} />
             </MediaQuery>
             <LanguageSwitcher />
           </div>
