@@ -90,6 +90,10 @@
   .btn {
     margin-top: 24px;
   }
+
+  .noMaxWidth {
+    max-width: none;
+  }
 }
 
 @media screen and (min-width: 1440px) {

@@ -24,7 +24,7 @@ export const IntroSection = () => {
                 <MainButton
                   text='Donate'
                   style='secondaryNavy'
-                  className='noMaxWidth'
+                  className={s.noMaxWidth}
                 />
               </div>
             </div>
