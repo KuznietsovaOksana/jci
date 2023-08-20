@@ -1,3 +1,5 @@
+'use client';
+
 import Head from 'next/head';
 import { useState } from 'react';
 
@@ -58,7 +60,7 @@ export default function Home() {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common, header'])),
+      ...(await serverSideTranslations(locale ?? 'en', ['common, header'])),
     },
   };
 }

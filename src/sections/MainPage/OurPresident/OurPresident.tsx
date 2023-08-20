@@ -39,6 +39,8 @@ export const OurPresident = () => {
               alt='President photo'
               priority
               className={s.photo}
+              width='288'
+              height='207'
             />
           </div>
           <p className={s.description}>{data.description}</p>
@@ -54,6 +56,8 @@ export const OurPresident = () => {
                 alt='President photo'
                 priority
                 className={s.photo}
+                width='552'
+                height='508'
               />
             </div>
             <div className={s.textBlock}>
