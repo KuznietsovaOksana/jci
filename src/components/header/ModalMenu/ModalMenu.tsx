@@ -11,6 +11,7 @@ import { Container } from '@/components/common/Container';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import s from './ModalMenu.module.css';
+import { MainButton } from '@/components/buttons/MainButton';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -27,9 +28,10 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
               onClick={() => setShowModal(false)}
             />
             <MediaQuery maxWidth={767}>
-              <button className={`${s.button} ${s.button_media}`}>
+              {/* <button className={`${s.button} ${s.button_media}`}>
                 Join us
-              </button>
+              </button> */}
+              <MainButton text='Join us' className={s.button} />
             </MediaQuery>
             <LanguageSwitcher />
           </div>

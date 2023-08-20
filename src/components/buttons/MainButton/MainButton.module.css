@@ -6,11 +6,24 @@
   border: none;
   color: var(--white-color);
   background-color: var(--blue-primary-color);
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mainBtn {
+    max-width: 264px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainBtn {
+    font-size: 18px;
+  }
 }
 
 .primaryNavy {
@@ -77,7 +90,6 @@
 .secondaryBlue {
   padding-top: 14px;
   padding-bottom: 14px;
-  /* color: #fff; */
   background-color: transparent;
   border: 1px solid white;
 }
@@ -98,11 +110,4 @@
   color: #8c9096;
   background-color: none;
   border: 1px solid #8c9096;
-}
-
-@media (min-width: 767px) {
-  .mainBtn {
-    max-width: 264px;
-    font-size: 18px;
-  }
 }
