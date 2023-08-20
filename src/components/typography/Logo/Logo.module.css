@@ -1,0 +1,24 @@
+.logo {
+  width: 74px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 148px;
+    height: 72px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo {
+    width: 168px;
+    height: 88px;
+  }
+}
+
+.white {
+  width: 168px;
+  height: 80px;
+  color: var(--white-color);
+}

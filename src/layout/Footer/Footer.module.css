@@ -44,12 +44,10 @@
 
 .logo {
   margin-bottom: 44px;
+}
 
-  width: 168px;
-  height: 80px;
-  color: var(--white-color);
-
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .logo {
     margin-bottom: 0;
   }
 }
