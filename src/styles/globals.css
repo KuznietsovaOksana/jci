@@ -289,3 +289,11 @@ a {
 }
 
 /* photo gallery */
+
+/* CurrentProjectPage - Intro */
+
+@media screen and (min-width: 768px) {
+  .noMaxWidth {
+    max-width: none !important;
+  }
+}
