@@ -25,5 +25,3 @@ export const Title: FC<TitleProps> = ({
 
   return <Tag className={combinedClassName}>{children}</Tag>;
 };
-
-export default Title;
