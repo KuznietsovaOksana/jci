@@ -52,12 +52,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
         </MediaQuery>
 
         <MediaQuery minWidth={768}>
-          <button
-            // onClick={() => alert('HI!')}
-            className={`${s.button} ${s.button_media}`}
-          >
-            Join us
-          </button>
+          <button className={`${s.button} ${s.button_media}`}>Join us</button>
         </MediaQuery>
       </header>
     </Container>
