@@ -2,7 +2,6 @@ import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import Logo from 'public/icons/logo-white.svg';
 import InstLogo from 'public/icons/instagram.svg';
 import FbLogo from 'public/icons/facebook.svg';
 
@@ -12,6 +11,7 @@ import { footerContactsInfo } from './footerContactsInfo';
 import { nav } from '../Header';
 
 import s from './Footer.module.css';
+import { Logo } from '@/components/typography/Logo';
 
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -32,7 +32,7 @@ export const Footer = () => {
         <div className={s.footer_wrapper}>
           <Container>
             <div className={s.logo_btn}>
-              <Logo className={s.logo} />
+              <Logo isWhite className={s.logo} />
               <div className={s.btn_wrapper}>
                 <MainButton text='Join us' style='primaryNavy' />
                 <MainButton text='Donate' style='secondaryBlue' />
@@ -76,7 +76,7 @@ export const Footer = () => {
           <Container>
             <div className={s.desktop_wrapper}>
               <div className={s.desktop_logo_wrapper}>
-                <Logo className={s.logo} />
+                <Logo isWhite className={s.logo} />
               </div>
               <ul className={s.footer_nav}>
                 {nav.map(({ name, path }, ind) => (
