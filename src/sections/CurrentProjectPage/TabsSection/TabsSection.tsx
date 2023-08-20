@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { Section } from '@/components/sections/Section';
@@ -20,7 +20,7 @@ const tabsDeskMobile = [
 const tabsTab = ['Overview', 'Details', 'Impact', 'Partners', 'Contacts'];
 
 export const TabsSection = () => {
-  // const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   const [numberTab, setNumberTab] = useState(0);
 
@@ -28,12 +28,12 @@ export const TabsSection = () => {
 
   const { isMobile, isTablet } = useScreen();
 
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
-  // if (!isMounted) {
-  //   return null;
-  // }
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  if (!isMounted) {
+    return null;
+  }
   return (
     <Section>
       <Container>

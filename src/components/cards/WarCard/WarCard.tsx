@@ -1,11 +1,7 @@
 import { FC } from 'react';
 
+import { IWarPropsCard } from './WarCard.props';
 import s from './WarCard.module.css';
-
-interface IWarPropsCard {
-  icon: JSX.Element;
-  text: string;
-}
 
 export const WarCard: FC<IWarPropsCard> = ({ icon, text }) => {
   return (
