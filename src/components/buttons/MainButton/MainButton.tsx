@@ -1,15 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 
+import { ButtonProps } from './MainButton.props';
 import s from './MainButton.module.css';
 
-interface ButtonProps {
-  className?: string;
-  text: string;
-  style?: 'primaryNavy' | 'secondaryNavy' | 'primaryBlue' | 'secondaryBlue';
-  href?: string;
-}
-
-export const MainButton: React.FC<ButtonProps> = ({
+export const MainButton: FC<ButtonProps> = ({
   text,
   style = 'primaryNavy',
   className,
