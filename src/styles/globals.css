@@ -25,11 +25,6 @@ a {
   text-decoration: none;
 }
 
-.swiper-pagination {
-  /* left: 53.5% !important; */
-  /* width: max-content !important; */
-}
-
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
@@ -108,12 +103,6 @@ a {
   overflow: hidden !important;
   visibility: hidden !important;
   pointer-events: none !important;
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .newsSlider .swiper-slide {
-    /* flex-shrink: 1 !important; */
-  }
 }
 
 @media (max-width: 480px) {
