@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, FC } from 'react';
+
 import s from './Title.module.css';
 
 interface TitleProps

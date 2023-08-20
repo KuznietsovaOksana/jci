@@ -6,12 +6,12 @@ import Menu from 'public/icons/menu.svg';
 import NavLink from '@/components/NavLink';
 import { Logo } from '@/components/typography/Logo';
 import { Container } from '@/components/common/Container';
+import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
 
 import { ILayout } from '../Layout';
 
 import s from './Header.module.css';
-import { MainButton } from '@/components/buttons/MainButton';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
