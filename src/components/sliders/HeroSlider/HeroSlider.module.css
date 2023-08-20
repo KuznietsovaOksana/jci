@@ -1,13 +1,22 @@
+.photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .heroSlider {
   display: block;
-  width: 100%;
-  /* width: 288px; */
-  /* height: 100%; */
+  width: auto;
   height: 216px;
   border-radius: 8px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
+  .photo {
+    border-radius: 16px;
+  }
   .heroSlider {
     width: 552px;
     height: 428px;
@@ -16,6 +25,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .photo {
+    border-radius: 24px;
+  }
   .heroSlider {
     width: 552px;
     height: 428px;
