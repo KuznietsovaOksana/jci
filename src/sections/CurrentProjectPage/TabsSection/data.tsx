@@ -24,7 +24,7 @@ export const data = {
     },
   ],
   contact: {
-    name: "'National President JCI Ukraine / Yuliia Kuznetsova",
+    name: 'National President JCI Ukraine / Yuliia Kuznetsova',
     email: 'ukraine@jci.cc',
   },
 };

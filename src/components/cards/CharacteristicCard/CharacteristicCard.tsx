@@ -1,12 +1,7 @@
 import React from 'react';
 
+import { CharacteristicCardProps } from './CharacteristicCard.props';
 import s from './CharacteristicCard.module.css';
-
-interface CharacteristicCardProps {
-  icon: React.ReactNode;
-  text: string;
-  iconClassName?: string;
-}
 
 export const CharacteristicCard: React.FC<CharacteristicCardProps> = ({
   icon,

@@ -27,47 +27,50 @@ export const OurPresident = () => {
   if (!isMounted) {
     return null; // Render nothing on the server side until the component is mounted on the client side
   }
+
   return (
     <Section className={s.section}>
-      {!isDesktop && (
-        <Container>
-          <h2 className={s.title}>{data.title}</h2>
-          <p className={s.position}>{data.position}</p>
-          <div className={s.photoBlock}>
-            <Image
-              src={imgD}
-              alt='President photo'
-              priority
-              className={s.photo}
-              width='288'
-              height='207'
-            />
-          </div>
-          <p className={s.description}>{data.description}</p>
-        </Container>
-      )}
-
-      {isDesktop && (
-        <Container>
-          <div className={s.presidentSection}>
+      <Container>
+        {!isDesktop && (
+          <>
+            <h2 className={s.title}>{data.title}</h2>
+            <p className={s.position}>{data.position}</p>
             <div className={s.photoBlock}>
               <Image
                 src={imgD}
                 alt='President photo'
                 priority
                 className={s.photo}
-                width='552'
-                height='508'
+                width='288'
+                height='207'
               />
             </div>
-            <div className={s.textBlock}>
-              <h2 className={s.title}>{data.title}</h2>
-              <p className={s.position}>{data.position}</p>
-              <p className={s.description}>{data.description}</p>
+            <p className={s.description}>{data.description}</p>
+          </>
+        )}
+
+        {isDesktop && (
+          <>
+            <div className={s.presidentSection}>
+              <div className={s.photoBlock}>
+                <Image
+                  src={imgD}
+                  alt='President photo'
+                  priority
+                  className={s.photo}
+                  width='552'
+                  height='508'
+                />
+              </div>
+              <div className={s.textBlock}>
+                <h2 className={s.title}>{data.title}</h2>
+                <p className={s.position}>{data.position}</p>
+                <p className={s.description}>{data.description}</p>
+              </div>
             </div>
-          </div>
-        </Container>
-      )}
+          </>
+        )}
+      </Container>
     </Section>
   );
 };
