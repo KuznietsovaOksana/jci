@@ -60,7 +60,27 @@
   text-transform: uppercase;
   color: #414042;
 }
+.project_button:hover {
+  background-color: var(--blue-10-color);
+  border-color: var(--blue-40-color);
+}
+@media (max-width: 480px) {
+  .project_card {
+    max-width: 79%;
+  }
+  .project_img {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .project_card {
+    max-width: 353px;
+  }
 
+  .project_img {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .project_card {
     display: flex;
@@ -104,8 +124,9 @@
   .project_img {
     transition: transform 0.3s ease;
   }
-
-  .project_img:hover {
-    transform: scale(1.1);
+  .project_card:hover {
+    .project_img {
+      transform: scale(1.1);
+    }
   }
 }
