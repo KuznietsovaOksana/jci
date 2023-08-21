@@ -4,11 +4,8 @@ import { Container } from '@/components/common/Container';
 import { MainButton } from '@/components/buttons/MainButton';
 import { Title } from '@/components/typography/Title';
 
+import { TextProps } from './DonateSectionComponent.props';
 import s from './DonateSectionComponent.module.css';
-
-interface TextProps {
-  heading: string;
-}
 
 export const DonateSectionComponent: React.FC<TextProps> = ({ heading }) => {
   return (

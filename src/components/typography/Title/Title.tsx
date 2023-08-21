@@ -1,17 +1,7 @@
-import { DetailedHTMLProps, FC } from 'react';
+import { FC } from 'react';
 
+import { TitleProps } from './Title.props';
 import s from './Title.module.css';
-
-interface TitleProps
-  extends DetailedHTMLProps<
-    React.HTMLAttributes<HTMLHeadingElement>,
-    HTMLHeadingElement
-  > {
-  tag?: 'h1' | 'h2' | 'h3';
-  isBlue?: boolean;
-  className?: string;
-  children: React.ReactNode;
-}
 
 export const Title: FC<TitleProps> = ({
   tag = 'h2',
