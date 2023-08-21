@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'next-i18next';
 
 import Menu from 'public/icons/menu.svg';
 
@@ -25,7 +26,17 @@ export const nav = [
   { number: '05', name: 'Contacts', path: 'contacts' },
 ];
 
+export interface ItemProps {
+  url: string;
+  name: string;
+}
+
 export const Header: FC<ILayout> = ({ setShowModal }) => {
+  const { t } = useTranslation('header');
+  const items = t('nav', {
+    returnObjects: true,
+    defaultValue: '',
+  }) as ItemProps[];
   return (
     <Container>
       <header className={s.header}>
@@ -38,9 +49,9 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
         <MediaQuery minWidth={1440}>
           <nav className={s.nav}>
             <ul className={s.nav_list}>
-              {nav.map(({ name, path }, ind) => (
+              {items.map(({ name, url }, ind) => (
                 <li key={ind}>
-                  <NavLink exact className={s.nav_link} href={path}>
+                  <NavLink exact className={s.nav_link} href={url}>
                     {name}
                   </NavLink>
                 </li>
