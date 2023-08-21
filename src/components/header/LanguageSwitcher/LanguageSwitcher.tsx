@@ -18,8 +18,7 @@ export const LanguageSwitcher = () => {
   const [locale, setLocale] = useState<string | undefined>(router.locale);
 
   const onToggle = () => {
-    const currentLocale = locale;
-    const newLocale = currentLocale === 'en' ? 'uk' : 'en';
+    const newLocale = locale === 'en' ? 'uk' : 'en';
     router.push(router.pathname, router.asPath, { locale: newLocale });
     setLocale(newLocale);
   };
