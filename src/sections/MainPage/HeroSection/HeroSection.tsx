@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { MainButton } from '@/components/buttons/MainButton';
-import { HeroSlider } from '@/components/sliders/HeroSlider';
 import Flag from 'public/icons/flag.svg';
 
+import { Title } from '@/components/typography/Title';
 import { Section } from '@/components/sections/Section';
 import { Container } from '@/components/common/Container';
-import { Title } from '@/components/typography/Title';
+import { HeroSlider } from '@/components/sliders/HeroSlider';
+import { MainButton } from '@/components/buttons/MainButton';
 
 import { images } from './images';
 
