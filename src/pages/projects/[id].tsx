@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
@@ -35,4 +36,31 @@ export default function CurrentProject() {
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header'])),
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const paths = [{ params: { id: '1' } }, { params: { id: '2' } }];
+
+  const enPaths = paths.map(path => ({
+    ...path,
+    locale: 'en',
+  }));
+
+  const ukPaths = paths.map(path => ({
+    ...path,
+    locale: 'uk',
+  }));
+
+  return {
+    paths: [...enPaths, ...ukPaths],
+    fallback: false,
+  };
 }
