@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import dynamic from 'next/dynamic';
 
 import styles from './ProjectSlider.module.css';
+
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });

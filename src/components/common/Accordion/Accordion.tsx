@@ -2,16 +2,8 @@ import React, { useState } from 'react';
 
 import ArrowUp from 'public/icons/chevron_Up.svg';
 
+import { AccordionProps } from './Accordion.props';
 import s from './Accordion.module.css';
-
-interface AccordionItem {
-  question: string;
-  answer: string;
-}
-
-interface AccordionProps {
-  faqs: AccordionItem[];
-}
 
 export const Accordion: React.FC<AccordionProps> = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
