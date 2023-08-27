@@ -17,7 +17,11 @@ export const Logo: FC<LogoProps> = ({ className, isWhite }) => {
   const LogoIcon = isWhite ? LogoWhite : LogoMain;
 
   return (
-    <Link href={router.HOME} className={className}>
+    <Link
+      href={router.HOME}
+      className={className}
+      aria-label={t('logo.destination') as string}
+    >
       <LogoIcon className={logoClassName} aria-label={t('logo.aria')} />
     </Link>
   );

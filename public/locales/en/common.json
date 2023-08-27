@@ -1,5 +1,14 @@
 {
   "logo": {
-		"aria": "Logo"
+		"aria": "Logo",
+		"destination": "Logo that leads to the homepage"
+	},
+	"language": {
+		"aria": "Language switcher"
+	},
+	"open": "Open",
+	"close": "Close",
+	"buttons": {
+		"join": "Join us"
 	}
 }

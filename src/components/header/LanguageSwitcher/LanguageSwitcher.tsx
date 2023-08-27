@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import s from './LanguageSwitcher.module.css';
 
 export const LanguageSwitcher = () => {
+  const { t } = useTranslation('common');
   const LanguageIcon = dynamic(
     () =>
       import(
@@ -24,8 +26,13 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <button type='button' onClick={onToggle} className={s.button}>
-      <LanguageIcon />
+    <button
+      type='button'
+      onClick={onToggle}
+      className={s.button}
+      aria-label={t('language.aria') as string}
+    >
+      <LanguageIcon aria-label={t('language.aria')} />
     </button>
   );
 };

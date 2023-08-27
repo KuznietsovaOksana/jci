@@ -9,30 +9,17 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .button {
-  /* color: var(--white-color);
-  background-color: var(--blue-navy-color);
-  border-radius: 30px; */
-  /* border: none; */
   padding: 8px 16px;
-  width: 100px;
-  /* text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 100%;
-  cursor: pointer;
-  transition: background-color var(--animation); */
 }
-/* .button:focus,
-.button:hover {
-  background-color: var(--blue-60-color);
-} */
 
 .top_modal {
   display: grid;
   grid-template-columns: 1fr 124px 24px;
+  gap: 24px;
   align-items: center;
   padding: 15px 0;
 }
