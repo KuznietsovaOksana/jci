@@ -9,6 +9,7 @@
 	"open": "Open",
 	"close": "Close",
 	"buttons": {
-		"join": "Join us"
+		"join": "Join us",
+		"donate": "Donate"
 	}
 }
