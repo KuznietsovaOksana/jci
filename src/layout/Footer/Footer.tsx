@@ -1,6 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 import InstLogo from 'public/icons/instagram.svg';
 import FbLogo from 'public/icons/facebook.svg';
@@ -9,14 +10,18 @@ import { Logo } from '@/components/typography/Logo';
 import { MainButton } from '@/components/buttons/MainButton';
 import { Container } from '@/components/common/Container';
 import { footerContactsInfo } from './footerContactsInfo';
-
-import { nav } from '../Header';
+import { ItemProps } from '../Layout/Layout.props';
 
 import s from './Footer.module.css';
 
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const { t } = useTranslation('navigation');
+  const items = t('nav', {
+    returnObjects: true,
+    defaultValue: '',
+  }) as ItemProps[];
 
   useEffect(() => {
     setIsMounted(true);
@@ -40,15 +45,17 @@ export const Footer = () => {
               </div>
             </div>
             <div className={s.footer_nav_wrapper}>
-              <ul className={s.footer_nav}>
-                {nav.map(({ name, path }, ind) => (
-                  <li key={ind} className={`${s.footer_nav_item} `}>
-                    <Link className={s.link} href={path}>
-                      <p> {name}</p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <nav>
+                <ul className={s.footer_nav}>
+                  {items.map(({ name, url }, ind) => (
+                    <li key={ind} className={`${s.footer_nav_item} `}>
+                      <Link className={s.link} href={url}>
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
               <ul className={s.footer_contacts}>
                 {footerContactsInfo.map(item => (
                   <li key={item.id} className={s.footer_contacts_item}>
@@ -79,15 +86,17 @@ export const Footer = () => {
               <div className={s.desktop_logo_wrapper}>
                 <Logo isWhite className={s.logo} />
               </div>
-              <ul className={s.footer_nav}>
-                {nav.map(({ name, path }, ind) => (
-                  <li key={ind} className={`${s.footer_nav_item} `}>
-                    <Link className={s.link} href={path}>
-                      <p> {name}</p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <nav className={s.footer_nav}>
+                <ul>
+                  {items.map(({ name, url }, ind) => (
+                    <li key={ind} className={`${s.footer_nav_item} `}>
+                      <Link className={s.link} href={url}>
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
               <ul className={s.footer_contacts}>
                 {footerContactsInfo.map(item => (
                   <li key={item.id} className={s.footer_contacts_item}>

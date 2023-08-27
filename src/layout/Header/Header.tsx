@@ -11,6 +11,7 @@ import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
 
 import { ILayout } from '../Layout';
+import { ItemProps } from '../Layout/Layout.props';
 
 import s from './Header.module.css';
 
@@ -18,30 +19,25 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
-export const nav = [
-  { number: '01', name: 'Who we are', path: '/' },
-  { number: '02', name: 'Projects', path: '/projects' },
-  { number: '03', name: 'Donation', path: '/donation' },
-  { number: '04', name: 'News', path: '/news' },
-  { number: '05', name: 'Contacts', path: 'contacts' },
-];
-
-export interface ItemProps {
-  url: string;
-  name: string;
-}
-
 export const Header: FC<ILayout> = ({ setShowModal }) => {
-  const { t } = useTranslation('header');
-  const items = t('nav', {
+  const { t: navigationT } = useTranslation('navigation');
+  const { t: commonT } = useTranslation('common');
+  const items = navigationT('nav', {
     returnObjects: true,
     defaultValue: '',
   }) as ItemProps[];
+
   return (
     <Container>
       <header className={s.header}>
         <MediaQuery maxWidth={1439}>
-          <Menu className={s.menu} onClick={() => setShowModal(true)} />
+          <button
+            type='button'
+            className={s.open}
+            aria-label={commonT('open') as string}
+          >
+            <Menu className={s.menu} onClick={() => setShowModal(true)} />
+          </button>
         </MediaQuery>
 
         <Logo className={s.link} />
@@ -63,7 +59,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
 
         <MediaQuery minWidth={768}>
           <div className={s.button_media}>
-            <MainButton text='Join us' />
+            <MainButton text={commonT('buttons.join')} />
           </div>
         </MediaQuery>
       </header>
