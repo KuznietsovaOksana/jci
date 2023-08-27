@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'next-i18next';
 
 import Flag from 'public/icons/flag.svg';
 
@@ -20,6 +21,7 @@ const data = {
 export const HeroSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     setIsMounted(true);
@@ -41,8 +43,8 @@ export const HeroSection = () => {
               </Title>
               <p className={s.description}>{data.text}</p>
               <div className={s.cta}>
-                <MainButton text='Join us' style='primaryNavy' />
-                <MainButton text='Donate' style='secondaryNavy' />
+                <MainButton text={t('buttons.join')} style='primaryNavy' />
+                <MainButton text={t('buttons.donate')} style='secondaryNavy' />
               </div>
             </div>
             <div className={s.sliderblock}>
@@ -61,8 +63,8 @@ export const HeroSection = () => {
           </div>
           <p className={s.description}>{data.text}</p>
           <div className={s.cta}>
-            <MainButton text='Join us' style='primaryNavy' />
-            <MainButton text='Donate' style='secondaryNavy' />
+            <MainButton text={t('buttons.join')} style='primaryNavy' />
+            <MainButton text={t('buttons.donate')} style='secondaryNavy' />
           </div>
         </Container>
       )}
