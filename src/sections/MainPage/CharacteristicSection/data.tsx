@@ -10,14 +10,13 @@ const Trusted = dynamic(() => import('public/icons/trusted_graphic.svg'));
 
 interface Characteristic {
   icon: React.ReactNode;
-  text: string;
   key: string;
 }
 
 export const characteristicData: Characteristic[] = [
-  { key: 'reliable', icon: <Reliable />, text: 'Reliable' },
-  { key: 'trusted', icon: <Trusted />, text: 'Trusted' },
-  { key: 'caring', icon: <Care />, text: 'Caring' },
-  { key: 'helping', icon: <Help />, text: 'Helping' },
-  { key: 'sustainable', icon: <Sustainable />, text: 'Sustainable' },
+  { key: 'reliable', icon: <Reliable /> },
+  { key: 'trusted', icon: <Trusted /> },
+  { key: 'caring', icon: <Care /> },
+  { key: 'helping', icon: <Help /> },
+  { key: 'sustainable', icon: <Sustainable /> },
 ];

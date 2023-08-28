@@ -10,5 +10,15 @@
 		"title": "More people More ",
 		"span": "impact",
 		"description": "JCI Ukraine is a chapter of Junior Chamber International, a global organisation that empowers young people to create positive change in their communities through personal and professional development programs, social responsibility initiatives, and international networking opportunities. JCI Ukraine focuses on developing young leaders who can make a positive impact on society and the world."
+	},
+	"war": {
+		"span": "War ",
+		"title": "in Ukraine"
+	},
+	"warcards": {
+		"ukraine": "Since the beginning of the full-scale war in Ukraine JCI Ukraine has been taking an active role in helping those directly affected by the russian invasion.",
+		"network": "One of the major initiatives was the creation of a network of shelters to provide safe housing for internally displaced persons (IDPs).",
+		"house": "JCI Ukraine was able to provide temporary housing and international support for those forced to flee their homes due to the war.",
+		"team": "This effort also brought together the members of JCI Ukraine to work towards a common goal of helping those in need of aid or support."
 	}
 }

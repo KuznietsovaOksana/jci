@@ -10,7 +10,8 @@
 	"close": "Close",
 	"buttons": {
 		"join": "Join us",
-		"donate": "Donate"
+		"donate": "Donate",
+		"readMore": "Read more"
 	},
 	"footer": {
 		"policy": "Privacy Policy",
