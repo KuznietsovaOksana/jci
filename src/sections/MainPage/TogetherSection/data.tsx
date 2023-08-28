@@ -1,14 +1,14 @@
 export const togetherData = [
   {
+    key: 'support',
     title: '1.5m+',
-    text: 'UAH JCI Ukraine spent on aid in 2022',
   },
   {
+    key: 'helped',
     title: '9k+',
-    text: 'Ukrainians received help from JCI Ukraine in 2022',
   },
   {
+    key: 'partner',
     title: '25+',
-    text: 'Partner countries worldwide',
   },
 ];

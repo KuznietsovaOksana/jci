@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
 
 import { Title } from '@/components/typography/Title';
 import { Container } from '@/components/common/Container';
@@ -39,15 +40,18 @@ const projects = [
   },
 ];
 
-// const ArrowWithClass = () => <Arrow className={css.button_icon} />;
-
 export const ProjectSection: NextPage = () => {
+  const { t: mainPageT } = useTranslation('mainPage');
+  const { t: commonT } = useTranslation('common');
+
   return (
     <Section>
       <Container>
         <Title className={s.project_title}>
-          <span className={s.project_title_span}>Humanitarian projects</span> we
-          work on
+          <span className={s.project_title_span}>
+            {mainPageT('projects.span')}
+          </span>
+          {mainPageT('projects.title')}
         </Title>
         <ul className={s.projects_wrapper}>
           {projects.map((project, index) => (
@@ -62,7 +66,7 @@ export const ProjectSection: NextPage = () => {
           ))}
         </ul>
         <div className={s.button_wrapper}>
-          <IconButton text='Go to all projects' />
+          <IconButton text={commonT('buttons.allProjects')} />
         </div>
       </Container>
     </Section>

@@ -10,6 +10,14 @@
 	"close": "Close",
 	"buttons": {
 		"join": "Join us",
-		"donate": "Donate"
+		"donate": "Donate",
+		"readMore": "Read more",
+		"allProjects": "Go to all projects"
+	},
+	"footer": {
+		"policy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"rights": " JCI Ukraine. All rights reserved.",
+		"team": "Made by Beetroot Academy students"
 	}
 }

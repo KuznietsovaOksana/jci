@@ -1,3 +1,5 @@
+import { useTranslation } from 'next-i18next';
+
 import { Title } from '@/components/typography/Title';
 import { Section } from '@/components/sections/Section';
 import { WarCard } from '@/components/cards/WarCard';
@@ -9,21 +11,23 @@ import { warData } from './data';
 import s from './WarSection.module.css';
 
 export const WarSection = () => {
+  const { t: mainPageT } = useTranslation('mainPage');
+  const { t: commonT } = useTranslation('common');
   return (
     <Section className={s.war_section}>
       <Container>
         <Title className={s.war_title}>
-          <span className={s.war_title__span}>War </span>
-          in Ukraine
+          <span className={s.war_title__span}>{mainPageT('war.span')}</span>
+          {mainPageT('war.title')}
         </Title>
         <ul className={s.war_list}>
-          {warData.map(({ icon, text }, index) => (
+          {warData.map(({ icon, key }, index) => (
             <li key={index}>
-              <WarCard icon={icon} text={text} />
+              <WarCard icon={icon} text={mainPageT(`warCards.${key}`)} />
             </li>
           ))}
         </ul>
-        <IconButton text='Read more' />
+        <IconButton text={commonT('buttons.readMore')} />
       </Container>
     </Section>
   );
