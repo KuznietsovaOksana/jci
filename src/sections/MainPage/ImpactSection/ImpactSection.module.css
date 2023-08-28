@@ -33,7 +33,7 @@
   }
   .title {
     margin-bottom: 40px;
-    max-width: 264px;
+    max-width: 268px;
   }
   .description {
     margin-bottom: 60px;
@@ -52,11 +52,12 @@
   .box {
     display: flex;
     align-items: center;
-    gap: 216px;
+    justify-content: space-between;
     margin-bottom: 80px;
   }
   .title {
     margin-bottom: 0px;
+    max-width: 300px;
   }
   .description {
     margin-bottom: 0px;
