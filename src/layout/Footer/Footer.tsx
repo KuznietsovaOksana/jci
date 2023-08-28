@@ -9,16 +9,18 @@ import FbLogo from 'public/icons/facebook.svg';
 import { Logo } from '@/components/typography/Logo';
 import { MainButton } from '@/components/buttons/MainButton';
 import { Container } from '@/components/common/Container';
-import { footerContactsInfo } from './footerContactsInfo';
+
 import { ItemProps } from '../Layout/Layout.props';
 
+import { footerContactsInfo } from './footerContactsInfo';
 import s from './Footer.module.css';
 
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
-  const { t } = useTranslation('navigation');
-  const items = t('nav', {
+  const { t: navigationT } = useTranslation('navigation');
+  const { t: commonT } = useTranslation('common');
+  const items = navigationT('nav', {
     returnObjects: true,
     defaultValue: '',
   }) as ItemProps[];
@@ -40,8 +42,14 @@ export const Footer = () => {
             <div className={s.logo_btn}>
               <Logo isWhite className={s.logo} />
               <div className={s.btn_wrapper}>
-                <MainButton text='Join us' style='primaryNavy' />
-                <MainButton text='Donate' style='secondaryBlue' />
+                <MainButton
+                  text={commonT('buttons.join')}
+                  style='primaryNavy'
+                />
+                <MainButton
+                  text={commonT('buttons.donate')}
+                  style='secondaryBlue'
+                />
               </div>
             </div>
             <div className={s.footer_nav_wrapper}>
@@ -65,10 +73,20 @@ export const Footer = () => {
                   </li>
                 ))}
                 <li className={s.footer_contacts_item}>
-                  <a className={s.logo_icon} href='#'>
+                  <a
+                    className={s.logo_icon}
+                    href='#'
+                    target='_blank'
+                    rel='noopener noreferrer nofollow'
+                  >
                     <FbLogo className={s.fb_logo} />
                   </a>
-                  <a className={s.logo_icon} href='#'>
+                  <a
+                    className={s.logo_icon}
+                    href='#'
+                    target='_blank'
+                    rel='noopener noreferrer nofollow'
+                  >
                     <InstLogo className={s.inst_logo} />
                   </a>
                 </li>
@@ -106,17 +124,33 @@ export const Footer = () => {
                   </li>
                 ))}
                 <li className={s.footer_contacts_item}>
-                  <a className={s.logo_icon} href='#'>
+                  <a
+                    className={s.logo_icon}
+                    href='#'
+                    target='_blank'
+                    rel='noopener noreferrer nofollow'
+                  >
                     <FbLogo className={s.fb_logo} />
                   </a>
-                  <a className={s.logo_icon} href='#'>
+                  <a
+                    className={s.logo_icon}
+                    href='#'
+                    target='_blank'
+                    rel='noopener noreferrer nofollow'
+                  >
                     <InstLogo className={s.inst_logo} />
                   </a>
                 </li>
               </ul>
               <div className={s.btn_wrapper}>
-                <MainButton text='Join us' style='primaryNavy' />
-                <MainButton text='Donate' style='secondaryBlue' />
+                <MainButton
+                  text={commonT('buttons.join')}
+                  style='primaryNavy'
+                />
+                <MainButton
+                  text={commonT('buttons.donate')}
+                  style='secondaryBlue'
+                />
               </div>
             </div>
           </Container>
@@ -128,12 +162,12 @@ export const Footer = () => {
         <Container>
           <div className={s.info_wrapper}>
             <div className={s.info_item}>
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
+              <p>{commonT('footer.policy')}</p>
+              <p>{commonT('footer.terms')}</p>
             </div>
             <div className={s.info_item}>
-              <p>&#169; JCI Ukraine. All rights reserved.</p>
-              <p>Made by Beetroot Academy students</p>
+              <p>&#169;{commonT('footer.rights')}</p>
+              <p>{commonT('footer.team')}</p>
             </div>
           </div>
         </Container>

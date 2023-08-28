@@ -11,5 +11,11 @@
 	"buttons": {
 		"join": "Join us",
 		"donate": "Donate"
+	},
+	"footer": {
+		"policy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"rights": " JCI Ukraine. All rights reserved.",
+		"team": "Made by Beetroot Academy students"
 	}
 }
