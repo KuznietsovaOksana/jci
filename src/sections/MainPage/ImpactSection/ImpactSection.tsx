@@ -23,7 +23,7 @@ export const ImpactSection = () => {
         </div>
         <Image
           src={impact}
-          alt={t('impact.alt')}
+          alt='Members of the organization'
           className={s.photo}
           priority
         />
