@@ -40,7 +40,10 @@ export default function Projects() {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'header'])),
+      ...(await serverSideTranslations(locale ?? 'en', [
+        'common',
+        'navigation',
+      ])),
     },
   };
 }
