@@ -11,7 +11,8 @@
 	"buttons": {
 		"join": "Join us",
 		"donate": "Donate",
-		"readMore": "Read more"
+		"readMore": "Read more",
+		"allProjects": "Go to all projects"
 	},
 	"footer": {
 		"policy": "Privacy Policy",

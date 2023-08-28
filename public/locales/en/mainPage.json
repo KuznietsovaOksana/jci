@@ -15,10 +15,22 @@
 		"span": "War ",
 		"title": "in Ukraine"
 	},
-	"warcards": {
+	"warCards": {
 		"ukraine": "Since the beginning of the full-scale war in Ukraine JCI Ukraine has been taking an active role in helping those directly affected by the russian invasion.",
 		"network": "One of the major initiatives was the creation of a network of shelters to provide safe housing for internally displaced persons (IDPs).",
 		"house": "JCI Ukraine was able to provide temporary housing and international support for those forced to flee their homes due to the war.",
 		"team": "This effort also brought together the members of JCI Ukraine to work towards a common goal of helping those in need of aid or support."
+	},
+	"together" : {
+		"title": "Together, we can make a positive impact on the world"
+	},
+	"togetherCards": {
+		"support": "UAH JCI Ukraine spent on aid since 2022",
+		"helped": "Ukrainians received help from JCI Ukraine since 2022",
+		"partner": "Partner countries worldwide"
+	},
+	"projects": {
+		"span": "Humanitarian projects ",
+		"title": "we work on"
 	}
 }

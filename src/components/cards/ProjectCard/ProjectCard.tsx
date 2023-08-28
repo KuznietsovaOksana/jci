@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+
+import { MainButton } from '@/components/buttons/MainButton';
 
 import s from './ProjectCard.module.css';
 
@@ -23,6 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   text,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation('common');
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -81,15 +85,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <MediaQuery minWidth={1440}>
           {isHovered && (
-            <a href='#' className={s.project_button}>
-              Donate
-            </a>
+            <MainButton
+              text={t('buttons.donate')}
+              style='secondaryNavy'
+              className={s.project_button}
+            />
           )}
         </MediaQuery>
         <MediaQuery maxWidth={1439}>
-          <a href='#' className={s.project_button}>
-            Donate
-          </a>
+          <MainButton
+            text={t('buttons.donate')}
+            style='secondaryNavy'
+            className={s.project_button}
+          />
         </MediaQuery>
       </div>
     </li>

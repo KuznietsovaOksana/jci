@@ -23,7 +23,7 @@ export const WarSection = () => {
         <ul className={s.war_list}>
           {warData.map(({ icon, key }, index) => (
             <li key={index}>
-              <WarCard icon={icon} text={mainPageT(`warcards.${key}`)} />
+              <WarCard icon={icon} text={mainPageT(`warCards.${key}`)} />
             </li>
           ))}
         </ul>
