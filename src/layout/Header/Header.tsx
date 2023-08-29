@@ -28,41 +28,43 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
   }) as ItemProps[];
 
   return (
-    <Container>
-      <header className={s.header}>
-        <MediaQuery maxWidth={1439}>
-          <button
-            type='button'
-            className={s.open}
-            aria-label={commonT('open') as string}
-          >
-            <Menu className={s.menu} onClick={() => setShowModal(true)} />
-          </button>
-        </MediaQuery>
+    <header className={s.header}>
+      <Container>
+        <div className={s.header_block}>
+          <MediaQuery maxWidth={1439}>
+            <button
+              type='button'
+              className={s.open}
+              aria-label={commonT('open') as string}
+            >
+              <Menu className={s.menu} onClick={() => setShowModal(true)} />
+            </button>
+          </MediaQuery>
 
-        <Logo className={s.link} />
+          <Logo className={s.link} />
 
-        <MediaQuery minWidth={1440}>
-          <nav className={s.nav}>
-            <ul className={s.nav_list}>
-              {items.map(({ name, url }, ind) => (
-                <li key={ind}>
-                  <NavLink exact className={s.nav_link} href={url}>
-                    {name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <LanguageSwitcher />
-        </MediaQuery>
+          <MediaQuery minWidth={1440}>
+            <nav className={s.nav}>
+              <ul className={s.nav_list}>
+                {items.map(({ name, url }, ind) => (
+                  <li key={ind}>
+                    <NavLink exact className={s.nav_link} href={url}>
+                      {name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <LanguageSwitcher />
+          </MediaQuery>
 
-        <MediaQuery minWidth={768}>
-          <div className={s.button_media}>
-            <MainButton text={commonT('buttons.join')} />
-          </div>
-        </MediaQuery>
-      </header>
-    </Container>
+          <MediaQuery minWidth={768}>
+            <div className={s.button_media}>
+              <MainButton text={commonT('buttons.join')} />
+            </div>
+          </MediaQuery>
+        </div>
+      </Container>
+    </header>
   );
 };

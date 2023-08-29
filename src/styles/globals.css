@@ -195,21 +195,12 @@ button {
   width: 252px !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1439.9px) {
   .projectSliderCards .swiper-slide:first-child {
     margin-left: 16px;
   }
   .projectSliderCards .swiper-slide:last-child {
     margin-right: 16px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 767.9px) {
-  .projectSliderCards .swiper-slide:first-child {
-    margin-left: calc((100vw - 480px) / 2 + 16px);
-  }
-  .projectSliderCards .swiper-slide:last-child {
-    margin-right: calc((100vw - 480px) / 2 + 16px);
   }
 }
 
@@ -219,13 +210,6 @@ button {
   }
   .projectSliderCards .swiper-slide {
     width: 552px !important;
-  }
-
-  .projectSliderCards .swiper-slide:first-child {
-    margin-left: calc((100vw - 480px) / 2 - 34px);
-  }
-  .projectSliderCards .swiper-slide:last-child {
-    margin-right: calc((100vw - 480px) / 2 - 34px);
   }
 }
 
