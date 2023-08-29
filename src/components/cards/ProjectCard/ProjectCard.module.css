@@ -5,7 +5,6 @@
   border: 1px solid var(--blue-10-color);
   border-radius: 25px;
   overflow: hidden;
-  max-width: 252px;
   font-family: 'Arial';
 }
 .project_card:hover {
@@ -48,18 +47,11 @@
   color: #414042;
 }
 @media (max-width: 480px) {
-  .project_card {
-    max-width: 79%;
-  }
   .project_img {
     width: 100%;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  .project_card {
-    max-width: 353px;
-  }
-
   .project_img {
     width: 100%;
   }
@@ -100,7 +92,6 @@
   }
   .project_card {
     flex-direction: row;
-    max-width: 552px;
   }
   .project_img {
     transition: transform 0.3s ease;
