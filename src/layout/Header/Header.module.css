@@ -81,8 +81,15 @@
 }
 
 @media (min-width: 1440px) {
-  .nav_link_active {
+  .header .nav_link_active {
     border-bottom: 2px solid black;
+  }
+  .nav_link {
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--animation);
+  }
+  .nav_link:hover {
+    border-bottom: 2px solid var(--border-color);
   }
 }
 
