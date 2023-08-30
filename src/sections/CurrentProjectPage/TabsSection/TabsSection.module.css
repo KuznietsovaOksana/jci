@@ -75,6 +75,7 @@
 
 .tab_button {
   border-bottom: 2px solid transparent;
+  transition: border-color var(--animation);
   color: var(--border-color);
 }
 
