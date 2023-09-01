@@ -15,6 +15,10 @@
   }
 }
 
+.tab_list::-webkit-scrollbar {
+  width: 0px;
+}
+
 .partners_list {
   display: flex;
   flex-wrap: wrap;
