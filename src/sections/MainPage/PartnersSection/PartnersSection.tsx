@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
 import { Container } from '@/components/common/Container';
 import { Title } from '@/components/typography/Title';
@@ -14,6 +15,7 @@ export const PartnersSection = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const { t } = useTranslation('mainPage');
 
   useEffect(() => {
     setIsMounted(true);
@@ -27,8 +29,8 @@ export const PartnersSection = () => {
     <Section className={s.partners_section}>
       <Container>
         <Title className={s.partners_text}>
-          We are grateful to our partners for their&nbsp;
-          <span className={s.blue_text}>support.</span>
+          {t('partners.title')}
+          <span className={s.blue_text}>{t('partners.span')}</span>
         </Title>
         <ul className={s.partners_list}>
           {isMobile &&
