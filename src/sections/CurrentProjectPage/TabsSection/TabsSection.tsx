@@ -9,7 +9,7 @@ import { data } from './data';
 
 import s from './TabsSection.module.css';
 
-const tabsDeskMobile = [
+const tabsDesk = [
   'Project Overview',
   'Project Details',
   'Impact',
@@ -26,7 +26,7 @@ export const TabsSection = () => {
 
   const onClickTab = (index: number) => setNumberTab(index);
 
-  const { isMobile, isTablet } = useScreen();
+  const { isMobile, isDesk } = useScreen();
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,8 +38,8 @@ export const TabsSection = () => {
     <Section>
       <Container>
         <ul className={s.tab_list}>
-          {!isTablet
-            ? tabsDeskMobile.map((el, ind) => (
+          {isDesk
+            ? tabsDesk.map((el, ind) => (
                 <li className={s.tab_item} key={ind}>
                   <button
                     className={
