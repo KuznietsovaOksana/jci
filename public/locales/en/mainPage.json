@@ -32,5 +32,12 @@
 	"projects": {
 		"span": "Humanitarian projects ",
 		"title": "we work on"
+	},
+	"donate": {
+		"text": "Opportunity to help: donate to sustainable projects!"
+	},
+	"news": {
+		"span": "News: ",
+		"title": "Learn about our activities"
 	}
 }
