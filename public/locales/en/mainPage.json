@@ -39,5 +39,9 @@
 	"news": {
 		"span": "News: ",
 		"title": "Learn about our activities"
+	},
+	"partners": {
+		"title": "We are grateful to our partners for their ",
+		"span": "support."
 	}
 }
