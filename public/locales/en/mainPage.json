@@ -43,5 +43,9 @@
 	"partners": {
 		"title": "We are grateful to our partners for their ",
 		"span": "support."
+	},
+	"faq": {
+		"title": "Frequently asked ",
+		"span": "questions"
 	}
 }
