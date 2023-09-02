@@ -12,6 +12,7 @@ import { PhotoGallerySection } from '@/sections/ProjectsPage/PhotoGallerySection
 
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Head>
@@ -43,6 +44,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
+        'projectsPage',
       ])),
     },
   };

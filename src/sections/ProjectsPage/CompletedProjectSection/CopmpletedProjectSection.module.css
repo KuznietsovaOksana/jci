@@ -1,3 +1,7 @@
+.section {
+  padding-bottom: 20px;
+}
+
 .completed_project_title {
   font-family: 'NAMU';
   font-style: normal;
@@ -13,6 +17,9 @@
 }
 
 @media (min-width: 768px) {
+  .section {
+    padding-bottom: 30px;
+  }
   .completed_project_title {
     font-size: 30px;
     max-width: 552px;
@@ -23,6 +30,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .section {
+    padding-bottom: 40px;
+  }
   .completed_project_title {
     font-size: 40px;
     max-width: 100%;

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { SwiperSlide } from 'swiper/react';
 import Lightbox from 'yet-another-react-lightbox';
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'next-i18next';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,6 +16,9 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 import s from './PhotoGallerySection.module.css';
 
 import { Container } from '@/components/common/Container';
+import { Title } from '@/components/typography/Title';
+import { Section } from '@/components/sections/Section';
+
 import { images, imagesForDesk } from './images';
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
@@ -26,16 +30,18 @@ export const PhotoGallerySection = () => {
 
   const width = isMobile ? 252 : 288;
 
+  const { t } = useTranslation('projectsPage');
+
   return (
-    <section className={s.section_photo_gallery}>
+    <Section className={s.section_photo_gallery}>
       <MediaQuery maxWidth={1439.9}>
         <Container>
-          <h3 className={s.photo_gallery_title}>
+          <Title className={s.photo_gallery_title}>
+            {t('gallery.title')}
             <span className={s.photo_gallery_title_span}>
-              A photo gallery of{' '}
+              {t('gallery.span')}
             </span>
-            Humanitarian projects
-          </h3>
+          </Title>
         </Container>
         <div className='gallerySliderContainer '>
           <div className='gallerySliderImages '>
@@ -88,12 +94,12 @@ export const PhotoGallerySection = () => {
 
       <MediaQuery minWidth={1440}>
         <Container>
-          <h3 className={s.photo_gallery_title}>
+          <Title className={s.photo_gallery_title}>
+            {t('gallery.title')}
             <span className={s.photo_gallery_title_span}>
-              A photo gallery of{' '}
+              {t('gallery.span')}
             </span>
-            Humanitarian projects
-          </h3>
+          </Title>
           <ul className={s.gallery__grides}>
             {imagesForDesk.map(({ src, alt, heightDeck }, index) => (
               <li className={s.gallery__grid__item} key={index}>
@@ -144,6 +150,6 @@ export const PhotoGallerySection = () => {
           }}
         />
       </MediaQuery>
-    </section>
+    </Section>
   );
 };
