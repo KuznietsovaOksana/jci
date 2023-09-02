@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
-import ArrowRight from 'public/icons/arrow-right.svg';
 import { useScreen } from '@/hooks/use_screen';
 
 import s from './CompletedCard.module.css';
+import { IconButton } from '@/components/buttons/IconButton';
 
 type CardCompletedProjectProps = {
   card: {
@@ -23,6 +24,7 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
   card: { picture, text, title, chamber },
 }) => {
   const { isMobile, isTablet } = useScreen();
+  const { t } = useTranslation('common');
 
   let width: number;
   if (isMobile) {
@@ -52,7 +54,7 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
             loading='lazy'
           />
           <p className={s.text_picture}>
-            Completed <span className={s.span_picture}>Project</span>
+            <span className={s.span_picture}>{t('card.completed')}</span>
           </p>
         </div>
         <div className={s.text_block}>
@@ -61,10 +63,9 @@ export const CompletedCard: FC<CardCompletedProjectProps> = ({
             <p className={s.chamber}>{chamber}</p>
             <p className={s.text}>{text}</p>
           </div>
-          <button className={s.completed_button}>
-            More details
-            <ArrowRight className={s.completed_icon} />
-          </button>
+          <div>
+            <IconButton text={t('buttons.moreDetails')} />
+          </div>
         </div>
       </div>
     </>
