@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 import { Section } from '@/components/sections/Section';
 import { Container } from '@/components/common/Container';
@@ -9,16 +10,6 @@ import { data } from './data';
 
 import s from './TabsSection.module.css';
 
-const tabsDesk = [
-  'Project Overview',
-  'Project Details',
-  'Impact',
-  'Partners & Collaborators',
-  'Contact Information',
-];
-
-const tabsTab = ['Overview', 'Details', 'Impact', 'Partners', 'Contacts'];
-
 export const TabsSection = () => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -27,6 +18,16 @@ export const TabsSection = () => {
   const onClickTab = (index: number) => setNumberTab(index);
 
   const { isMobile, isDesk } = useScreen();
+
+  const { t } = useTranslation('projectPage');
+  const tabsDesk: string[] = t('tabs.tabsDesk', {
+    returnObjects: true,
+    defaultValue: [],
+  });
+  const tabsTab: string[] = t('tabs.tabsTab', {
+    returnObjects: true,
+    defaultValue: [],
+  });
 
   useEffect(() => {
     setIsMounted(true);
