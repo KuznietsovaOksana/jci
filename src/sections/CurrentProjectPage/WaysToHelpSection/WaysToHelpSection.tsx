@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 import { MainButton } from '@/components/buttons/MainButton';
 import { Section } from '@/components/sections/Section';
@@ -15,6 +16,8 @@ export const WaysToHelpSection = () => {
   const { isMobile, isTablet, isDesk } = useScreen();
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  const { t: projectPageT } = useTranslation('projectPage');
+  const { t: commonT } = useTranslation('common');
 
   useEffect(() => {
     const screenWidth = window.screen.width;
@@ -36,19 +39,20 @@ export const WaysToHelpSection = () => {
     <Section className={s.section_ways}>
       <Container>
         <Title className={s.title} tag='h2'>
-          <span className={s.title_span}> Ways to help: </span>
-          <span className={s.accentTitle}> Donate </span>
-          or
-          <span className={s.accentTitle}> Volunteer</span>
+          <span className={s.title_span}>
+            {projectPageT('ways.titleStart')}
+          </span>
+          <span className={s.accentTitle}>
+            {projectPageT('ways.spanStart')}
+          </span>
+          {projectPageT('ways.titleEnd')}
+          <span className={s.accentTitle}>{projectPageT('ways.spanEnd')}</span>
         </Title>
-        <p className={s.exclamation}>Join people who form our community!</p>
+        <p className={s.exclamation}>{projectPageT('ways.description')}</p>
         <div className={s.desk_block_one}>
           <div className={s.desk_join}>
-            <h3 className={s.title_card}>
-              Join us and make a difference by dedicating your time and
-              experience
-            </h3>
-            <MainButton text='Join us' style='primaryNavy' />
+            <h3 className={s.title_card}>{projectPageT('ways.textFirst')}</h3>
+            <MainButton text={commonT('buttons.join')} style='primaryNavy' />
           </div>
           <Image
             className={`${s.picture} ${s.picture_one}`}
@@ -62,11 +66,8 @@ export const WaysToHelpSection = () => {
         </div>
         <div className={s.desk_block_two}>
           <div className={s.desk_donate}>
-            <h3 className={s.title_card}>
-              Or become one of those who support us financially by making a
-              donation
-            </h3>
-            <MainButton text='Donate' style='primaryBlue' />
+            <h3 className={s.title_card}>{projectPageT('ways.textSecond')}</h3>
+            <MainButton text={commonT('buttons.donate')} style='primaryBlue' />
           </div>
           <Image
             className={s.picture}
