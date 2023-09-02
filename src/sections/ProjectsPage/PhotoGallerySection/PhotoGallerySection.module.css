@@ -1,16 +1,16 @@
 .section_photo_gallery {
-  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .section_photo_gallery {
-    padding-bottom: 80px;
+    padding-top: 30px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .section_photo_gallery {
-    padding-bottom: 120px;
+    padding-top: 40px;
   }
 }
 
@@ -20,35 +20,19 @@
 }
 
 .photo_gallery_title {
-  font-family: 'NAMU';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 140%;
-  color: var(--blue-primary-color);
-
   margin-bottom: 32px;
 }
 .photo_gallery_title_span {
-  color: var(--black-color);
-
-  display: block;
+  color: var(--blue-primary-color);
 }
 
 @media (min-width: 768px) {
   .photo_gallery_title {
-    font-size: 30px;
-    max-width: 552px;
     margin-bottom: 40px;
-  }
-  .photo_gallery_title_span {
-    display: inline;
   }
 }
 @media (min-width: 1440px) {
   .photo_gallery_title {
-    font-size: 40px;
-    max-width: 100%;
     margin-bottom: 40px;
   }
 }

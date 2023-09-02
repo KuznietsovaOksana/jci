@@ -1,0 +1,20 @@
+{"hero": {
+		"title": "Our ",
+		"span": "projects"
+	},
+	"donate": {
+		"text": "Your donation can provide shelter and hope to displaced communities in Ukraine"
+	},
+	"quote": {
+		"text": "We make a living by what we get, but we make a life by what we give.",
+		"author": "Winston Churchill"
+	},
+	"completed": {
+		"span": "Successful projects: ",
+		"title": "building a better future together"
+	},
+	"gallery": {
+		"title": "A photo gallery of ",
+		"span": "Humanitarian projects "
+	}
+}

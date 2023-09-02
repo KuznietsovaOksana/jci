@@ -11,10 +11,12 @@ The IconButton component is a reusable component that allows you to create butto
 text
 href (optional)
 className (optional)
+isDown (optional)
 
 text: The text to be displayed on the button.
 href: The URL the button should navigate to.
 className: Additional class name to apply custom styles to the button.
+isDown: Different icon with ArrowDown.
 
 # Examples
 

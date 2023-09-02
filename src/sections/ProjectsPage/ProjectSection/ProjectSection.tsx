@@ -1,11 +1,15 @@
 import { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
 
-import Arrow from 'public/icons/chevron_Down.svg';
 import Flag from 'public/icons/flag.svg';
 
+import { Title } from '@/components/typography/Title';
+import { Section } from '@/components/sections/Section';
+import { Container } from '@/components/common/Container';
+import { IconButton } from '@/components/buttons/IconButton';
 import { ProjectPageCard } from '@/components/cards/ProjectPageCard';
+
 import { DonateSection } from '@/sections/MainPage/DonateSection';
-import { donateText } from '@/components/sections/DonateSectionComponent';
 
 import s from './ProjectSection.module.css';
 
@@ -48,51 +52,59 @@ const projectsLow = [
 ];
 
 export const ProjectSectionPP: NextPage = () => {
+  const { t: projectsPageT } = useTranslation('projectsPage');
+  const { t: commonT } = useTranslation('common');
+
   return (
     <>
-      <section className={`${s.project_section} ${s.top_section}`}>
-        <h3 className={s.project_title}>
-          Our
-          <span className={s.project_title_span}> projects</span>
-          <Flag className={s.projects_flag} />
-        </h3>
+      <Section className={`${s.project_section} ${s.top_section}`}>
+        <Container>
+          <Title tag='h1' className={s.project_title}>
+            {projectsPageT('hero.title')}
+            <span className={s.project_title_span}>
+              {projectsPageT('hero.span')}
+            </span>
+            <Flag className={s.projects_flag} />
+          </Title>
 
-        <div className={s.projects_wrapper}>
-          {projectsTop.map((project, index) => (
-            <ProjectPageCard
-              key={index}
-              image_dt={project.image_main_dt}
-              image_add={project.image_add}
-              hover_dt={project.image_hover_dt}
-              title={project.title}
-              subtitle={project.subtitle}
-              text={project.text}
-            />
-          ))}
-        </div>
-      </section>
-      <DonateSection heading={donateText.appeal} />
-      <section className={`${s.project_section} ${s.low_section}`}>
-        <div className={s.projects_wrapper}>
-          {projectsLow.map((project, index) => (
-            <ProjectPageCard
-              key={index}
-              image_dt={project.image_main_dt}
-              image_add={project.image_add}
-              hover_dt={project.image_hover_dt}
-              title={project.title}
-              subtitle={project.subtitle}
-              text={project.text}
-            />
-          ))}
-        </div>
-        <div className={s.button_wrapper}>
-          <a href='#' className={s.projects_link}>
-            More projects
-          </a>
-          <Arrow className={s.button_icon} />
-        </div>
-      </section>
+          <div className={s.projects_wrapper}>
+            {projectsTop.map((project, index) => (
+              <ProjectPageCard
+                key={index}
+                image_dt={project.image_main_dt}
+                image_add={project.image_add}
+                hover_dt={project.image_hover_dt}
+                title={project.title}
+                subtitle={project.subtitle}
+                text={project.text}
+              />
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <DonateSection heading={projectsPageT('donate.text')} />
+
+      <Section className={`${s.project_section} ${s.low_section}`}>
+        <Container>
+          <div className={`${s.projects_wrapper} ${s.projects_low}`}>
+            {projectsLow.map((project, index) => (
+              <ProjectPageCard
+                key={index}
+                image_dt={project.image_main_dt}
+                image_add={project.image_add}
+                hover_dt={project.image_hover_dt}
+                title={project.title}
+                subtitle={project.subtitle}
+                text={project.text}
+              />
+            ))}
+          </div>
+          <div className={s.button_wrapper}>
+            <IconButton isDown text={commonT('buttons.moreProjects')} />
+          </div>
+        </Container>
+      </Section>
     </>
   );
 };
