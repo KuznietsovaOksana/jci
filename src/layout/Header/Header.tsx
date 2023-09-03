@@ -46,7 +46,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
           <MediaQuery minWidth={1440}>
             <nav className={s.nav}>
               <ul className={s.nav_list}>
-                {items.map(({ name, url }, ind) => (
+                {items?.map(({ name, url }, ind) => (
                   <li key={ind}>
                     <NavLink exact className={s.nav_link} href={url}>
                       {name}

@@ -15,7 +15,8 @@
 		"allProjects": "Go to all projects",
 		"allNews": "Go to all news",
 		"moreProjects": "More projects",
-		"moreDetails": "More details"
+		"moreDetails": "More details",
+		"page_error": "Go back"
 	},
 	"footer": {
 		"policy": "Privacy Policy",
