@@ -30,39 +30,43 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div className={s.project_card}>
-      <MediaQuery maxWidth={767}>
-        <Image
-          src={image_dt}
-          alt='Project photo'
-          priority
-          className={s.project_img}
-          width={252}
-          height={234}
-          style={{ objectFit: 'cover' }}
-        />
-      </MediaQuery>
-      <MediaQuery minWidth={768} maxWidth={1439}>
-        <Image
-          src={image_dt}
-          alt='Project photo'
-          priority
-          className={s.project_img}
-          width={552}
-          height={435}
-          style={{ objectFit: 'cover' }}
-        />
-      </MediaQuery>
-      <MediaQuery minWidth={1440}>
-        <Image
-          src={image_dt}
-          alt='Project photo'
-          priority
-          className={s.project_img}
-          width={552}
-          height={488}
-          style={{ objectFit: 'cover' }}
-        />
-      </MediaQuery>
+      <a href='#' className={s.project_link}>
+        <div className={s.img_wrapper}>
+          <MediaQuery maxWidth={767}>
+            <Image
+              src={image_dt}
+              alt='Project photo'
+              priority
+              className={s.project_img}
+              width={252}
+              height={234}
+              style={{ objectFit: 'cover' }}
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={768} maxWidth={1439}>
+            <Image
+              src={image_dt}
+              alt='Project photo'
+              priority
+              className={s.project_img}
+              width={552}
+              height={435}
+              style={{ objectFit: 'cover' }}
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={1440}>
+            <Image
+              src={image_dt}
+              alt='Project photo'
+              priority
+              className={s.project_img}
+              width={552}
+              height={488}
+              style={{ objectFit: 'cover' }}
+            />
+          </MediaQuery>
+        </div>
+      </a>
       <div className={s.project_wrapper}>
         <div className={s.project_text_wrapper}>
           <div className={s.project_title_wrapper}>

@@ -24,6 +24,8 @@
 }
 .project_img {
   width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
 .project_button {
   display: flex;
@@ -78,8 +80,23 @@
   background-color: var(--blue-10-color);
   border-color: var(--blue-40-color);
 }
+.project_link:active .project_img {
+  transform: scale(1.1);
+}
+.img_wrapper {
+  max-width: 446px;
+  max-height: 234px;
+  overflow: hidden;
+}
 
 @media (min-width: 768px) {
+  .img_wrapper {
+    max-width: none;
+    max-height: none;
+    width: 550px;
+    height: 435px;
+    overflow: hidden;
+  }
   .project_card {
     display: flex;
     flex-direction: column;
@@ -118,6 +135,11 @@
   }
 }
 @media (min-width: 1440px) {
+  .img_wrapper {
+    width: 552px;
+    height: 488px;
+    overflow: hidden;
+  }
   .project_card {
     flex-direction: row;
     max-height: 488px;
@@ -165,9 +187,7 @@
     margin-top: 15px;
     gap: 16px;
   }
-}
-.project_card:hover {
-  .project_img {
+  .project_card:hover .project_img {
     transform: scale(1.1);
   }
 }
