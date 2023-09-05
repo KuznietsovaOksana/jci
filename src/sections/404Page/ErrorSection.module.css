@@ -1,8 +1,7 @@
 .section_404 {
-  background-color: var(--aqua-10-color);
-  height: 100vh;
   padding-top: 113.5px;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .list_number {
@@ -36,6 +35,7 @@
 @media (min-width: 768px) {
   .section_404 {
     padding-top: 68.5px;
+    padding-bottom: 60px;
   }
 
   .number {
@@ -68,6 +68,7 @@
 @media (min-width: 1440px) {
   .section_404 {
     padding-top: 214px;
+    padding-bottom: 80px;
   }
 
   .number {
