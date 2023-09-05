@@ -265,4 +265,7 @@ button {
   }
 }
 
-/* photo gallery */
+.error_page {
+  height: 100vh;
+  background-color: var(--aqua-10-color);
+}
