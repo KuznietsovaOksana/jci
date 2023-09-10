@@ -264,8 +264,3 @@ button {
     margin-right: calc((100vw - 480px) / 2 - 34px);
   }
 }
-
-.error_page {
-  height: 100vh;
-  background-color: var(--aqua-10-color);
-}

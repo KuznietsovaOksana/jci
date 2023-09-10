@@ -6,6 +6,7 @@
   height: 100%;
   border-radius: 24px;
   background: var(--primary-navy-3-a-67-b-1, #3a67b1);
+  margin-bottom: 40px;
 }
 
 .projectInfoBlock {
@@ -63,6 +64,7 @@
     width: 552px;
     height: 591px;
     border-radius: 20px;
+    margin-bottom: 60px;
   }
 
   .projectInfoBlock {
@@ -102,6 +104,7 @@
     width: 1128px;
     height: 487px;
     border-radius: 24px;
+    margin-bottom: 80px;
   }
 
   .projectInfoBlock {
