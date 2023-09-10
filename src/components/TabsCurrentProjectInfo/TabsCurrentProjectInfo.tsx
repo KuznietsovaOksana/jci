@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 import { FC } from 'react';
 import { useScreen } from '@/hooks/use_screen';
-import s from './tabsCurrentProjectInfo.module.css';
+
+import s from './TabsCurrentProjectInfo.module.css';
 import data from '@/data/tabsForCurrentPage.json';
 
 interface ITabInfoProps {
