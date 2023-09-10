@@ -32,12 +32,10 @@ export default function ErrorPage() {
           <ModalMenu setShowModal={setShowModal} />
         </Portal>
       )}
-      <div className='error_page'>
-        <Header setShowModal={setShowModal} />
-        <main>
-          <ErrorSection />
-        </main>
-      </div>
+      <Header setShowModal={setShowModal} />
+      <main>
+        <ErrorSection />
+      </main>
     </>
   );
 }

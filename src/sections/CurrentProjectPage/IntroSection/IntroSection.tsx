@@ -5,7 +5,7 @@ import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
 import { CurrentProjectSlider } from '@/components/sliders/CurrentProjectSlider';
 import { Title } from '@/components/typography/Title';
-
+import { Tabs } from '@/components/common/Tabs';
 import { projectName, organization, moneyAmount, images } from './data';
 
 import s from './IntroSection.module.css';
@@ -13,6 +13,16 @@ import s from './IntroSection.module.css';
 export const IntroSection = () => {
   const { t: projectPageT } = useTranslation('projectPage');
   const { t: commonT } = useTranslation('common');
+
+  // const { t } = useTranslation('projectPage');
+  const tabsDesk: string[] = projectPageT('tabs.tabsDesk', {
+    returnObjects: true,
+    defaultValue: [],
+  });
+  const tabsTab: string[] = projectPageT('tabs.tabsTab', {
+    returnObjects: true,
+    defaultValue: [],
+  });
 
   return (
     <Section>
@@ -35,6 +45,7 @@ export const IntroSection = () => {
             </div>
           </div>
         </div>
+        <Tabs type='project' tabs={{ tabsDesk, tabsTab }} />
       </Container>
     </Section>
   );
