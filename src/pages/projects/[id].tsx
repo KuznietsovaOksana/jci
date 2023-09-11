@@ -40,8 +40,8 @@ export default function CurrentProject() {
           ) : (
             <IntroSection />
           )}
-          <button onClick={() => setIsProjectCompleted(!isProjectCompleted)}>
-            Змінити стан
+          <button onClick={() => setIsProjectCompleted(!isProjectCompleted)} style={{display: 'block', margin: '0 auto', padding: '24px'}}>
+            Змінити стан проекту
           </button>
           <TabsSection />
           <WaysToHelpSection />

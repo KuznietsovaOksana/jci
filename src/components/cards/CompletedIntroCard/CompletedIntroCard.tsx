@@ -12,11 +12,15 @@ import styles from './CompletedIntroCard.module.css';
 // interface CompletedIntroCard {
 //   images: ImageProps[];
 // }
-
+interface CompletedIntroCardProps {
+  imgSrc: string;
+  imgAlt: string;
+}
 // export const CompletedIntroCard: React.FC<CompletedIntroCard> = ({
 //   imageSrc, imageAlt
 // }) => {
-  export const CompletedIntroCard = (imgSrc, imgAlt) => {
+  // export const CompletedIntroCard = (imgSrc, imgAlt) => {
+  export const CompletedIntroCard: React.FC<CompletedIntroCardProps> = ({ imgSrc, imgAlt }) => {
   return (
     <div className={styles.currentProjectSlider}>
       <Image
