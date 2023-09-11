@@ -19,8 +19,11 @@ interface CompletedIntroCardProps {
 // export const CompletedIntroCard: React.FC<CompletedIntroCard> = ({
 //   imageSrc, imageAlt
 // }) => {
-  // export const CompletedIntroCard = (imgSrc, imgAlt) => {
-  export const CompletedIntroCard: React.FC<CompletedIntroCardProps> = ({ imgSrc, imgAlt }) => {
+// export const CompletedIntroCard = (imgSrc, imgAlt) => {
+export const CompletedIntroCard: React.FC<CompletedIntroCardProps> = ({
+  imgSrc,
+  imgAlt,
+}) => {
   return (
     <div className={styles.currentProjectSlider}>
       <Image
@@ -32,9 +35,7 @@ interface CompletedIntroCardProps {
         style={{ objectFit: 'cover', filter: 'contrast(50%)' }}
         priority
       />
-        <p className={styles.text_picture}>
-          Completed Project
-        </p>
+      <p className={styles.text_picture}>Completed Project</p>
     </div>
   );
 };

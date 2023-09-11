@@ -10,7 +10,6 @@ import styles from './CurrentProjectSlider.module.css';
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 
-
 import { ImageProps } from '@/sections/CurrentProjectPage/IntroSection/data';
 
 interface CurrentProjectSliderProps {
@@ -50,13 +49,13 @@ export const CurrentProjectSlider: React.FC<CurrentProjectSliderProps> = ({
         </SwiperSlide>
       ))}
       <div className='currProjSliderNavBtns'>
-            <div className='currProjSliderBtnPrev'>
-              <LeftArrow />
-            </div>
-            <div className='currProjSliderBtnNext'>
-              <RightArrow />
-            </div>
-          </div>
+        <div className='currProjSliderBtnPrev'>
+          <LeftArrow />
+        </div>
+        <div className='currProjSliderBtnNext'>
+          <RightArrow />
+        </div>
+      </div>
     </Swiper>
   );
 };

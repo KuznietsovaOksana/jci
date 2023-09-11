@@ -230,14 +230,10 @@ button {
   .projectSliderCards .swiper-slide:last-child {
     /* margin-right: calc((100vw - 480px) / 2 - 34px); */
     margin-right: 16px;
-
   }
 }
 
-
 /* completed project */
-
-
 
 /* photo gallery */
 .gallerySliderContainer {
@@ -295,13 +291,9 @@ button {
 
 /* photo gallery */
 
-
-
-
 /* CurrentProjectSlider (IntroSection) */
 
 @media screen and (min-width: 1440px) {
-
   /* HERE IS VISIBILITY NAV SLDIER */
   .currProjSliderNavBtns {
     position: absolute;
@@ -316,7 +308,7 @@ button {
     margin-left: 22px;
   }
 
-    .omgBtn:hover + .currProjSliderNavBtns {
+  .omgBtn:hover + .currProjSliderNavBtns {
     visibility: visible !important;
     display: flex !important;
     display: block !important;
@@ -328,7 +320,7 @@ button {
        display: block !important;
   } */
 
-    /* HERE IS VISIBILITY NAV SLDIER */
+  /* HERE IS VISIBILITY NAV SLDIER */
 
   .currProjSliderBtnPrev {
     z-index: 1;
@@ -348,7 +340,7 @@ button {
     height: 24px !important;
   }
 
-    .currProjSliderBtnNext {
+  .currProjSliderBtnNext {
     z-index: 1;
     display: flex !important;
     width: 36px !important;

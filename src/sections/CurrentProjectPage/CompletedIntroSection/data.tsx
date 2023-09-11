@@ -1,12 +1,9 @@
-
-
 interface Data {
   projectName: string;
   organization: string;
   moneyAmount: string;
   imageSrc: string;
   imageAlt: string;
-
 }
 
 export const data: Data = {
@@ -22,4 +19,3 @@ export const organization = data.organization;
 export const moneyAmount = data.moneyAmount;
 export const imgSrc = data.imageSrc;
 export const imgAlt = data.imageAlt;
-

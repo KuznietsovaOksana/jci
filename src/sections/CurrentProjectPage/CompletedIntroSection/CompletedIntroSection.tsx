@@ -15,7 +15,7 @@ export const CompletedIntroSection = () => {
           <div className={s.projectHeaderBlock}>
             <div className={s.projectPictureBlock}>
               {/* <CurrentProjectSlider  /> */}
-              <CompletedIntroCard imgSrc={imgSrc} imgAlt={imgAlt}/>
+              <CompletedIntroCard imgSrc={imgSrc} imgAlt={imgAlt} />
             </div>
             <div className={s.projectInfoBlock}>
               <Title className={s.projectName}>{projectName}</Title>

@@ -35,12 +35,12 @@ export default function CurrentProject() {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
-          {isProjectCompleted ? (
-            <CompletedIntroSection />    
-          ) : (
-            <IntroSection />
-          )}
-          <button className='omgBtn' onClick={() => setIsProjectCompleted(!isProjectCompleted)} style={{display: 'block', margin: '0 auto', padding: '24px'}}>
+          {isProjectCompleted ? <CompletedIntroSection /> : <IntroSection />}
+          <button
+            className='omgBtn'
+            onClick={() => setIsProjectCompleted(!isProjectCompleted)}
+            style={{ display: 'block', margin: '0 auto', padding: '24px' }}
+          >
             Змінити стан проекту
           </button>
           <TabsSection />

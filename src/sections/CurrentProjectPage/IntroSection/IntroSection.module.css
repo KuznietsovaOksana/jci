@@ -104,8 +104,8 @@
     border-radius: 24px;
   }
   .projectHeaderBlock:hover + .currProjSliderNavBtns {
-  display: absolute !important;
-}
+    display: absolute !important;
+  }
 
   .projectInfoBlock {
     padding: 107px 24px 67px;

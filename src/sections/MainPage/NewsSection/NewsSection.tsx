@@ -23,7 +23,7 @@ export const NewsSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isNotMobile = useMediaQuery({ minWidth: 768 });
-    const { t: commonT } = useTranslation('common');
+  const { t: commonT } = useTranslation('common');
 
   useEffect(() => {
     setIsMounted(true);
