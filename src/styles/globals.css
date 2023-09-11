@@ -294,3 +294,77 @@ button {
 }
 
 /* photo gallery */
+
+
+
+
+/* CurrentProjectSlider (IntroSection) */
+
+@media screen and (min-width: 1440px) {
+
+  /* HERE IS VISIBILITY NAV SLDIER */
+  .currProjSliderNavBtns {
+    position: absolute;
+    display: flex;
+    /* display: none; */
+    /* visibility: hidden; */
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 650px;
+    justify-content: center;
+    margin-left: 22px;
+  }
+
+    .omgBtn:hover + .currProjSliderNavBtns {
+    visibility: visible !important;
+    display: flex !important;
+    display: block !important;
+  }
+
+  /* .currProjSliderNavBtns:hover {
+       visibility: visible !important;
+       display: flex !important;
+       display: block !important;
+  } */
+
+    /* HERE IS VISIBILITY NAV SLDIER */
+
+  .currProjSliderBtnPrev {
+    z-index: 1;
+    display: flex !important;
+    width: 36px !important;
+    height: 36px !important;
+    border: 1px solid #d8e1ef;
+    background-color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .currProjSliderBtnPrev svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+    .currProjSliderBtnNext {
+    z-index: 1;
+    display: flex !important;
+    width: 36px !important;
+    height: 36px !important;
+    border: 1px solid #d8e1ef;
+    background-color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .currProjSliderBtnNext svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* CurrentProjectSlider (IntroSection) */

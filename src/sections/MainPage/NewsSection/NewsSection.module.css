@@ -17,6 +17,11 @@
 }
 
 .button_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* .button_wrapper {
   margin-top: 32px;
   display: flex;
   flex-direction: row;
@@ -24,10 +29,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-.button_icon {
+} */
+/* .button_icon {
   width: 24px;
-}
+} */
 .news_link {
   font-family: 'Arial';
   font-style: normal;

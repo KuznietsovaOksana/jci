@@ -16,11 +16,14 @@ import Arrow from 'public/icons/arrow-right.svg';
 
 import { cards } from './cards';
 import s from './NewsSection.module.css';
+import { IconButton } from '@/components/buttons/IconButton';
+import { useTranslation } from 'react-i18next';
 
 export const NewsSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isNotMobile = useMediaQuery({ minWidth: 768 });
+    const { t: commonT } = useTranslation('common');
 
   useEffect(() => {
     setIsMounted(true);
@@ -98,11 +101,14 @@ export const NewsSection = () => {
       )}
 
       <Container>
-        <div className={s.button_wrapper}>
+        {/* <div className={s.button_wrapper}>
           <a href='#' className={s.news_link}>
             Go to all news
           </a>
           <Arrow className={s.button_icon} />
+        </div> */}
+        <div className={s.button_wrapper}>
+          <IconButton text={commonT('buttons.allProjects')} />
         </div>
       </Container>
     </Section>
