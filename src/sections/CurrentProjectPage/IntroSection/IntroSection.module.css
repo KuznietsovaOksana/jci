@@ -6,6 +6,7 @@
   height: 100%;
   border-radius: 24px;
   background: var(--primary-navy-3-a-67-b-1, #3a67b1);
+  margin-bottom: 40px;
 }
 
 .projectInfoBlock {
@@ -18,7 +19,7 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
-  line-height: 140%; /* 33.6px */
+  line-height: 1.4; /* 33.6px */
 }
 
 .organization {
@@ -28,7 +29,7 @@
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 14.4px */
+  line-height: 1.2; /* 14.4px */
   text-transform: uppercase;
 }
 
@@ -40,7 +41,7 @@
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 14.4px */
+  line-height: 1.2; /* 14.4px */
   text-transform: uppercase;
 }
 
@@ -51,7 +52,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
-  line-height: 120%; /* 24px */
+  line-height: 1.2; /* 24px */
 }
 
 .btn {
@@ -63,6 +64,7 @@
     width: 552px;
     height: 591px;
     border-radius: 20px;
+    margin-bottom: 60px;
   }
 
   .projectInfoBlock {
@@ -102,6 +104,7 @@
     width: 1128px;
     height: 487px;
     border-radius: 24px;
+    margin-bottom: 80px;
   }
   .projectHeaderBlock:hover + .currProjSliderNavBtns {
     display: absolute !important;

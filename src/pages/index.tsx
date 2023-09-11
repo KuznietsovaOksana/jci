@@ -3,7 +3,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-// import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { Layout } from '@/layout/Layout';
@@ -15,7 +15,6 @@ import { NewsSection } from '@/sections/MainPage/NewsSection';
 import { HeroSection } from '@/sections/MainPage/HeroSection';
 import { ProjectSection } from '@/sections/MainPage/ProjectSection';
 import { DonateSection } from '@/sections/MainPage/DonateSection';
-import { donateText } from '@/components/sections/DonateSectionComponent';
 import { TogetherSection } from '@/sections/MainPage/TogetherSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 import { OurPresident } from '@/sections/MainPage/OurPresident';
@@ -24,6 +23,7 @@ import { PartnersSection } from '@/sections/MainPage/PartnersSection';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const { t } = useTranslation('mainPage');
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function Home() {
           <WarSection />
           <TogetherSection />
           <ProjectSection />
-          <DonateSection heading={donateText.donate} />
+          <DonateSection heading={t('donate.text')} />
           <NewsSection />
           <PartnersSection />
           <OurPresident />

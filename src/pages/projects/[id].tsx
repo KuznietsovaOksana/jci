@@ -8,7 +8,6 @@ import { Layout } from '@/layout/Layout';
 
 import { WaysToHelpSection } from '@/sections/CurrentProjectPage/WaysToHelpSection';
 import { OtherProjectsSection } from '@/sections/CurrentProjectPage/OtherProjectsSection';
-import { TabsSection } from '@/sections/CurrentProjectPage/TabsSection';
 import { IntroSection } from '@/sections/CurrentProjectPage/IntroSection';
 import { CompletedIntroSection } from '@/sections/CurrentProjectPage/CompletedIntroSection';
 
@@ -58,6 +57,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
+        'projectPage',
       ])),
     },
   };

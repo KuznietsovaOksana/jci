@@ -1,8 +1,11 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { MainButton } from '@/components/buttons/MainButton';
-import s from './ProjectPageCard.module.css';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+
+import { MainButton } from '@/components/buttons/MainButton';
+
+import s from './ProjectPageCard.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -23,41 +26,47 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
   subtitle,
   text,
 }) => {
+  const { t } = useTranslation('common');
+
   return (
     <div className={s.project_card}>
-      <MediaQuery maxWidth={767}>
-        <Image
-          src={image_dt}
-          alt='Project photo'
-          priority
-          className={s.project_img}
-          width={252}
-          height={234}
-          style={{ objectFit: 'cover' }}
-        />
-      </MediaQuery>
-      <MediaQuery minWidth={768} maxWidth={1439}>
-        <Image
-          src={image_dt}
-          alt='Project photo'
-          priority
-          className={s.project_img}
-          width={552}
-          height={435}
-          style={{ objectFit: 'cover' }}
-        />
-      </MediaQuery>
-      <MediaQuery minWidth={1440}>
-        <Image
-          src={image_dt}
-          alt='Project photo'
-          priority
-          className={s.project_img}
-          width={552}
-          height={488}
-          style={{ objectFit: 'cover' }}
-        />
-      </MediaQuery>
+      <a href='#' className={s.project_link}>
+        <div className={s.img_wrapper}>
+          <MediaQuery maxWidth={767}>
+            <Image
+              src={image_dt}
+              alt='Project photo'
+              priority
+              className={s.project_img}
+              width={252}
+              height={234}
+              style={{ objectFit: 'cover' }}
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={768} maxWidth={1439}>
+            <Image
+              src={image_dt}
+              alt='Project photo'
+              priority
+              className={s.project_img}
+              width={552}
+              height={435}
+              style={{ objectFit: 'cover' }}
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={1440}>
+            <Image
+              src={image_dt}
+              alt='Project photo'
+              priority
+              className={s.project_img}
+              width={552}
+              height={488}
+              style={{ objectFit: 'cover' }}
+            />
+          </MediaQuery>
+        </div>
+      </a>
       <div className={s.project_wrapper}>
         <div className={s.project_text_wrapper}>
           <div className={s.project_title_wrapper}>
@@ -66,7 +75,7 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
           </div>
           <p className={s.project_text}>{text}</p>
           <div className={s.project_goal_wrapper}>
-            <p className={s.project_goal}>Our goal</p>
+            <p className={s.project_goal}>{t('card.goal')}</p>
             <MediaQuery maxWidth={767}>
               <p className={s.project_collection}>Collection amount</p>
             </MediaQuery>
@@ -80,7 +89,7 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
         </div>
 
         <MainButton
-          text='Donate'
+          text={t('buttons.donate')}
           style='secondaryNavy'
           className={s.project_button}
         />

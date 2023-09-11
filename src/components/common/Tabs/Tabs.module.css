@@ -1,0 +1,54 @@
+.tab_list_project {
+  display: flex;
+  overflow-x: auto;
+  gap: 32px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--blue-10-color);
+
+  @media (min-width: 768px) {
+    gap: 12px;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 16px;
+  }
+}
+
+.tab_list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.button_common_project {
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
+}
+
+.tab_button {
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--animation);
+  color: var(--border-color);
+}
+
+.tab_button:hover {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab_active {
+  border-bottom: 2px solid var(--black-90-color);
+  color: var(--black-90-color);
+}

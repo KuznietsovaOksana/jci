@@ -5,14 +5,17 @@ import 'swiper/css/pagination';
 
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'next-i18next';
 
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
 import { NewsCard } from '@/components/cards/NewsCard';
+import { Title } from '@/components/typography/Title';
+import { IconButton } from '@/components/buttons/IconButton';
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
-import Arrow from 'public/icons/arrow-right.svg';
+// import Arrow from 'public/icons/arrow-right.svg';
 
 import { cards } from './cards';
 import s from './NewsSection.module.css';
@@ -22,8 +25,11 @@ import { useTranslation } from 'react-i18next';
 export const NewsSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isNotMobile = useMediaQuery({ minWidth: 768 });
+
+  const { t: mainPageT } = useTranslation('mainPage');
   const { t: commonT } = useTranslation('common');
+  // const isNotMobile = useMediaQuery({ minWidth: 768 });
+
 
   useEffect(() => {
     setIsMounted(true);
@@ -36,10 +42,10 @@ export const NewsSection = () => {
   return (
     <Section className={s.section}>
       <Container>
-        <h3 className={s.news_title}>
-          <span className={s.news_title_span}>News</span>: Learn about our
-          activities
-        </h3>
+        <Title className={s.news_title}>
+          <span className={s.news_title_span}>{mainPageT('news.span')}</span>
+          {mainPageT('news.title')}
+        </Title>
       </Container>
 
       {isMobile && (
@@ -56,7 +62,7 @@ export const NewsSection = () => {
         </>
       )}
 
-      {isNotMobile && (
+      {!isMobile && (
         <Container>
           <div className='newsSliderContainer'>
             <Swiper
@@ -101,14 +107,14 @@ export const NewsSection = () => {
       )}
 
       <Container>
-        {/* <div className={s.button_wrapper}>
-          <a href='#' className={s.news_link}>
+
+        <div className={s.button_wrapper}>
+          {/* <a href='#' className={s.news_link}>
             Go to all news
           </a>
-          <Arrow className={s.button_icon} />
-        </div> */}
-        <div className={s.button_wrapper}>
-          <IconButton text={commonT('buttons.allProjects')} />
+          <Arrow className={s.button_icon} /> */}
+          <IconButton text={commonT('buttons.allNews')} />
+
         </div>
       </Container>
     </Section>

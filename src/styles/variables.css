@@ -25,4 +25,19 @@
 
   /* анімація */
   --animation: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* адмін-панель */
+  --admin-white: #ffffff;
+  --admin-dark: #0a0f29;
+  --admin-grey: #74777d;
+  --admin-blue: #0097d7;
+  --admin-yellow: #edbe38;
+  --admin-green: #4caf50;
+  --admin-red: #f44336;
+
+  --admin-green-light: #d7ece7;
+  --admin-green-10: #bbe5da;
+  --admin-green-middle: #78cab5;
+  --admin-green-90: #56bda3;
+  --admin-green-dark: #459782;
 }

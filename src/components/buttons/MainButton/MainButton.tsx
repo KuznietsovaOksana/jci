@@ -8,9 +8,14 @@ export const MainButton: FC<ButtonProps> = ({
   style = 'primaryNavy',
   className,
   href,
+  onClick,
 }) => {
   return (
-    <a href={href} className={`${s.mainBtn} ${s[style]} ${className}`}>
+    <a
+      href={href}
+      onClick={onClick}
+      className={`${s.mainBtn} ${s[style]} ${className}`}
+    >
       {text}
     </a>
   );
