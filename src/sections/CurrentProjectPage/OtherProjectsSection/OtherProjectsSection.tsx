@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
+import { useTranslation } from 'next-i18next';
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
@@ -17,18 +18,19 @@ import { OtherProjectCard } from '@/components/cards/OtherProjectCard';
 import s from './OtherProjectsSection.module.css';
 
 export const OtherProjectsSection = () => {
+  const { t } = useTranslation('projectPage');
+
   return (
     <Section>
       <MediaQuery maxWidth={1439.9}>
         <Container>
           <h3 className={s.other_project_title}>
-            <span className={s.other_project_title_span}>Other </span>
-            projects
+            <span className={s.other_project_title_span}>
+              {t('other.span')}
+            </span>
+            {t('other.title')}
           </h3>
-          <p className={s.other_project_paragraph}>
-            Discover more of our exciting projects! Contact us today to learn
-            more and see how you can get involved.
-          </p>
+          <p className={s.other_project_paragraph}>{t('other.text')}</p>
         </Container>
         <div className='projectSliderContainer sliderContainerTablet'>
           <div className='projectSliderCards sliderCardsTablet'>
@@ -45,13 +47,12 @@ export const OtherProjectsSection = () => {
       <MediaQuery minWidth={1440}>
         <Container>
           <h3 className={s.other_project_title}>
-            <span className={s.other_project_title_span}>Other </span>
-            projects
+            <span className={s.other_project_title_span}>
+              {t('other.span')}
+            </span>
+            {t('other.title')}
           </h3>
-          <p className={s.other_project_paragraph}>
-            Discover more of our exciting projects! Contact us today to learn
-            more and see how you can get involved.
-          </p>
+          <p className={s.other_project_paragraph}>{t('other.text')}</p>
           <div className='newsSliderContainer '>
             <Swiper
               slidesPerView={3}

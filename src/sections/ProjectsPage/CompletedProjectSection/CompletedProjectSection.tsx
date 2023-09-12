@@ -6,9 +6,12 @@ import dynamic from 'next/dynamic';
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
+import { useTranslation } from 'next-i18next';
 
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
+
+import { Title } from '@/components/typography/Title';
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
 import { cards } from './cards';
@@ -17,16 +20,18 @@ import { CompletedCard } from '@/components/cards/CompletedCard';
 import s from './CopmpletedProjectSection.module.css';
 
 export const CompleteProjectSection = () => {
+  const { t } = useTranslation('projectsPage');
+
   return (
-    <Section>
+    <Section className={s.section}>
       <MediaQuery maxWidth={1439.9}>
         <Container>
-          <h3 className={s.completed_project_title}>
+          <Title className={s.completed_project_title}>
             <span className={s.completed_project_title_span}>
-              Successful projects:{' '}
+              {t('completed.span')}
             </span>
-            building a better future together
-          </h3>
+            {t('completed.title')}
+          </Title>
         </Container>
         <div className='projectSliderContainer sliderContainerTablet'>
           <div className='projectSliderCards sliderCardsTablet'>
@@ -44,9 +49,9 @@ export const CompleteProjectSection = () => {
         <Container>
           <h3 className={s.completed_project_title}>
             <span className={s.completed_project_title_span}>
-              Successful projects:{' '}
+              {t('completed.span')}
             </span>
-            building a better future together
+            {t('completed.title')}
           </h3>
           <div className='newsSliderContainer '>
             <Swiper

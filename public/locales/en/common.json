@@ -12,12 +12,20 @@
 		"join": "Join us",
 		"donate": "Donate",
 		"readMore": "Read more",
-		"allProjects": "Go to all projects"
+		"allProjects": "Go to all projects",
+		"allNews": "Go to all news",
+		"moreProjects": "More projects",
+		"moreDetails": "More details",
+		"page_error": "Go back"
 	},
 	"footer": {
 		"policy": "Privacy Policy",
 		"terms": "Terms of Service",
 		"rights": " JCI Ukraine. All rights reserved.",
 		"team": "Made by Beetroot Academy students"
+	},
+	"card": {
+		"goal": "Our goal",
+		"completed": "Completed Project"
 	}
 }

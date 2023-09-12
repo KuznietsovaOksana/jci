@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'next-i18next';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -29,6 +30,8 @@ export const OtherProjectCard: FC<CardOtherProjectProps> = ({
   card: { picture, text, title, subtitle },
 }) => {
   const { isMobile, isTablet } = useScreen();
+
+  const { t } = useTranslation('common');
 
   let width: number;
   if (isMobile) {
@@ -70,7 +73,7 @@ export const OtherProjectCard: FC<CardOtherProjectProps> = ({
           </MediaQuery>
           <MainButton
             className={s.tablet_button}
-            text='Donate'
+            text={t('buttons.donate')}
             style='secondaryNavy'
           />
         </div>

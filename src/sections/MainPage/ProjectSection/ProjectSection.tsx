@@ -25,7 +25,7 @@ const projects = [
     text: 'Project works to educate children about the importance of dental health while also collecting and  essential dental supplies',
   },
   {
-    image_main_dt: '/images/projects/project_03dt.jpg',
+    image_main_dt: '/images/projects/project_3.png',
     image_hover_dt: '/images/projects/project_03dt_hover.jpg',
     title: 'Shelters Network',
     subtitle: 'JCI Ukraine',

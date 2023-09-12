@@ -5,7 +5,6 @@
   border: 1px solid var(--blue-10-color);
   border-radius: 25px;
   overflow: hidden;
-  max-width: 252px;
   font-family: 'Arial';
 }
 .project_card:hover {
@@ -22,6 +21,11 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.project_img {
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
 .project_button {
   display: flex;
@@ -76,29 +80,26 @@
   background-color: var(--blue-10-color);
   border-color: var(--blue-40-color);
 }
-@media (max-width: 480px) {
-  .project_card {
-    max-width: 79%;
-  }
-  .project_img {
-    width: 100%;
-  }
+.project_link:active .project_img {
+  transform: scale(1.1);
 }
-@media (min-width: 481px) and (max-width: 767px) {
-  .project_card {
-    max-width: 353px;
-  }
-
-  .project_img {
-    width: 100%;
-  }
+.img_wrapper {
+  max-width: 446px;
+  max-height: 234px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
+  .img_wrapper {
+    max-width: none;
+    max-height: none;
+    width: 550px;
+    height: 435px;
+    overflow: hidden;
+  }
   .project_card {
     display: flex;
     flex-direction: column;
-    max-width: 552px;
     gap: 16px;
   }
 
@@ -134,10 +135,14 @@
   }
 }
 @media (min-width: 1440px) {
+  .img_wrapper {
+    width: 552px;
+    height: 488px;
+    overflow: hidden;
+  }
   .project_card {
     flex-direction: row;
-    max-width: 1128px;
-    height: 488px;
+    max-height: 488px;
   }
   .project_card:nth-child(even) {
     flex-direction: row-reverse;
@@ -182,9 +187,7 @@
     margin-top: 15px;
     gap: 16px;
   }
-}
-.project_card:hover {
-  .project_img {
+  .project_card:hover .project_img {
     transform: scale(1.1);
   }
 }

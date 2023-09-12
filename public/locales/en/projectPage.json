@@ -1,0 +1,35 @@
+{
+	"hero": {
+		"goal": "Our goal"
+	},
+	"tabs": {
+		"tabsDesk": [
+			"Project Overview",
+  		"Project Details",
+  		"Impact",
+  		"Partners & Collaborators",
+  		"Contact Information"
+		],
+		"tabsTab": [
+			"Overview",
+  		"Details",
+  		"Impact",
+  		"Partners",
+  		"Contacts"
+		]
+	},
+	"ways": {
+		"titleStart": "Ways to help: ",
+		"spanStart": "Donate ",
+		"titleEnd": "or ",
+		"spanEnd": "Volunteer",
+		"description": "Join people who form the JCI Ukraine community!",
+		"textFirst": "Join us and make a difference by dedicating your time and experience",
+		"textSecond": "Or become one of those who support us financially by making a donation"
+	},
+	"other": {
+		"span": "Other ",
+		"title": "projects",
+		"text": "Discover more of our exciting projects! Contact us today to learn more and see how you can get involved."
+	}
+}
