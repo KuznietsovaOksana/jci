@@ -17,14 +17,20 @@
 }
 
 .button_wrapper {
-  margin-top: 32px;
   display: flex;
+  justify-content: center;
+}
+
+ /* .button_wrapper {
+  margin-top: 32px;
+  display: flex; */
   /* flex-direction: row;
   gap: 8px;
   align-items: center; */
-  justify-content: center;
+  /* justify-content: center; */
   /* width: 100%; */
-}
+/* }  */
+
 /* .button_icon {
   width: 24px;
 } */

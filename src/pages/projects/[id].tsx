@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -9,9 +9,16 @@ import { Layout } from '@/layout/Layout';
 import { WaysToHelpSection } from '@/sections/CurrentProjectPage/WaysToHelpSection';
 import { OtherProjectsSection } from '@/sections/CurrentProjectPage/OtherProjectsSection';
 import { IntroSection } from '@/sections/CurrentProjectPage/IntroSection';
+import { CompletedIntroSection } from '@/sections/CurrentProjectPage/CompletedIntroSection';
 
 export default function CurrentProject() {
   const [showModal, setShowModal] = useState(false);
+  const [isProjectCompleted, setIsProjectCompleted] = useState(false);
+
+  useEffect(() => {
+    // Цей код виконується кожного разу, коли змінюється isProjectCompleted
+  }, [isProjectCompleted]);
+
   return (
     <>
       <Head>
@@ -27,7 +34,15 @@ export default function CurrentProject() {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
-          <IntroSection />
+          {isProjectCompleted ? <CompletedIntroSection /> : <IntroSection />}
+          <button
+            className='omgBtn'
+            onClick={() => setIsProjectCompleted(!isProjectCompleted)}
+            style={{ display: 'block', margin: '0 auto', padding: '24px' }}
+          >
+            Змінити стан проекту
+          </button>
+          {/* <TabsSection /> */}
           <WaysToHelpSection />
           <OtherProjectsSection />
         </main>
