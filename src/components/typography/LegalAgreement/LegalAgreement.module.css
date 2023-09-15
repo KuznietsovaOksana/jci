@@ -1,0 +1,9 @@
+.margin {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .margin {
+    margin-bottom: 16px;
+  }
+}

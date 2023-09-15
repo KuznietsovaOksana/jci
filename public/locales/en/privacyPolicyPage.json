@@ -1,0 +1,28 @@
+{
+	"title": "Privacy Policy",
+    "sections": [
+      {
+        "content": [
+          { "type": "paragraph", "text": "Junior Chamber International (JCI) is a worldwide community of young active citizens ages 18-40 who share the belief that in order to create positive change, we must take collective action to improve ourselves and the world around us. Engaging in activities ranging from community development to international projects, members demonstrate their social responsibility and improve themselves through participation, leadership, and action. The global citizens of JCI are committed to becoming better leaders to build better societies." },
+          { "type": "paragraph", "text": "The Jaycees International (JCI) Foundation is a not-for-profit corporation that is supported solely by voluntary contributions from JCI members and friends of the foundation who share a vision for a better world." },
+          { "type": "paragraph", "text": "Together, these two entities are collectively referred to as JCI in this privacy statement. In the course of fulfilling its mission of supporting JCI members, National Organizations, and Local Organizations, JCI collects personal information regarding the individuals it serves. JCI is committed to maintaining the privacy of these individuals." },
+					{ "type": "paragraph", "text": "JCI has adopted this privacy statement to affirm this commitment and to assure transparency in how it collects, retains, and uses personal information." }
+				]
+      },
+      {
+        "title": "Section 1",
+        "content": [
+          { "type": "paragraph", "text": "Lorem" },
+          { "type": "paragraph", "text": "Lorem" }
+        ]
+      },
+      {
+        "title": "Section 2",
+        "content": [
+          { "type": "paragraph", "text": "Lorem" },
+          { "type": "list", "items": ["Item 1", "Item 2"] },
+          { "type": "paragraph", "text": "Lorem" }
+        ]
+      }
+    ]
+}
