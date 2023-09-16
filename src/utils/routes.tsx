@@ -5,6 +5,7 @@ export const router = {
   DONATION: '/donation',
   NEWS: '/news',
   CONTACTS: '/contacts',
-  // POLICY: '/privacy-policy',
+  POLICY: '/privacy-policy',
+  TERMS: '/terms',
   // NOT_FOUND: '/404',
 };
