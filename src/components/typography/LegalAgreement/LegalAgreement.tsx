@@ -13,7 +13,7 @@ export const LegalAgreement: FC<LegalAgreementProps> = ({
 
   return (
     <div className={s.component}>
-      <TitleTag>{title}</TitleTag>
+      <TitleTag className={s.title}>{title}</TitleTag>
       {content.map((item, index) => {
         if (item.type === 'paragraph') {
           const isLastParagraph = index === content.length - 1;
