@@ -1,7 +1,7 @@
-import { MainButton } from '@/components/buttons/MainButton';
+// import { MainButton } from '@/components/buttons/MainButton';
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
-import { CurrentProjectSlider } from '@/components/sliders/CurrentProjectSlider';
+// import { CurrentProjectSlider } from '@/components/sliders/CurrentProjectSlider';
 import { Title } from '@/components/typography/Title';
 import { projectName, organization, moneyAmount, imgSrc, imgAlt } from './data';
 import s from './CompletedIntroSection.module.css';

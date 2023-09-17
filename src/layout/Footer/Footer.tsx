@@ -10,6 +10,8 @@ import { Logo } from '@/components/typography/Logo';
 import { MainButton } from '@/components/buttons/MainButton';
 import { Container } from '@/components/common/Container';
 
+import { router } from '@/utils/routes';
+
 import { ItemProps } from '../Layout/Layout.props';
 
 import { footerContactsInfo } from './footerContactsInfo';
@@ -162,8 +164,8 @@ export const Footer = () => {
         <Container>
           <div className={s.info_wrapper}>
             <div className={s.info_item}>
-              <p>{commonT('footer.policy')}</p>
-              <p>{commonT('footer.terms')}</p>
+              <Link href={router.POLICY}>{commonT('footer.policy')}</Link>
+              <Link href={router.TERMS}>{commonT('footer.terms')}</Link>
             </div>
             <div className={s.info_item}>
               <p>&#169;{commonT('footer.rights')}</p>

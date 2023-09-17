@@ -1,0 +1,61 @@
+.component:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.component h3 {
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.margin {
+  margin-bottom: 12px;
+}
+
+.noMargin {
+  margin-bottom: 0;
+}
+
+.text {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.component p + ul {
+  margin-top: -12px;
+}
+
+.component ul {
+  list-style: circle;
+  padding-left: 16px;
+}
+
+@media (min-width: 768px) {
+  .component h3 {
+    margin-bottom: 20px;
+  }
+  .margin {
+    margin-bottom: 16px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .component p + ul {
+    margin-top: -16px;
+  }
+  .title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 18px;
+  }
+}
