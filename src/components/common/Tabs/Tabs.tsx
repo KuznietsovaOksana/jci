@@ -1,14 +1,16 @@
 import { useEffect, useState, FC } from 'react';
 
 import { useScreen } from '@/hooks/use_screen';
+
 import { TabsCurrentProjectInfo } from '@/components/TabsCurrentProjectInfo';
+import { TabsDonationInfo } from '@/components/TabsDonationtInfo';
 
 import s from './Tabs.module.css';
 
 interface ITAb {
   tabsDesk?: string[];
   tabsTab?: string[];
-  tab?: string[];
+  tabs?: string[];
 }
 
 interface ITabProps {
@@ -23,7 +25,6 @@ export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
   const onClickTab = (index: number) => setNumberTab(index);
 
   const { isDesk } = useScreen();
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -33,7 +34,7 @@ export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
 
   return (
     <>
-      <ul className={s[`tab_list_${type}`]}>
+      <ul className={`${s.tab_list} ${s['tab_list_' + type]}`}>
         {isDesk &&
           tabs.tabsDesk &&
           tabs.tabsDesk.map((el, ind) => (
@@ -41,8 +42,12 @@ export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
               <button
                 className={
                   ind !== numberTab
-                    ? `${s.tab_button} ${s['button_common_' + type]} `
-                    : `${s.tab_active} ${s['button_common_' + type]} `
+                    ? `${s.tab_button} ${s['button_common_' + type]} ${
+                        s.button_common
+                      }`
+                    : `${s.tab_active} ${s['button_common_' + type]} ${
+                        s.button_common
+                      }`
                 }
                 onClick={() => onClickTab(ind)}
               >
@@ -57,8 +62,12 @@ export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
               <button
                 className={
                   ind !== numberTab
-                    ? `${s.tab_button} ${s['button_common_' + type]} `
-                    : `${s.tab_active} ${s['button_common_' + type]} `
+                    ? `${s.tab_button} ${s['button_common_' + type]} ${
+                        s.button_common
+                      } `
+                    : `${s.tab_active} ${s['button_common_' + type]} ${
+                        s.button_common
+                      }`
                 }
                 onClick={() => onClickTab(ind)}
               >
@@ -67,14 +76,18 @@ export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
             </li>
           ))}
         {/* for donation section */}
-        {tabs.tab &&
-          tabs.tab.map((el, ind) => (
+        {tabs.tabs &&
+          tabs.tabs.map((el, ind) => (
             <li key={ind}>
               <button
                 className={
                   ind !== numberTab
-                    ? `${s.tab_button} ${s['button_common_' + type]} `
-                    : `${s.tab_active} ${s['button_common_' + type]} `
+                    ? `${s.tab_button} ${s['button_common_' + type]} ${
+                        s.button_common
+                      }`
+                    : `${s.tab_active} ${s['button_common_' + type]} ${
+                        s.button_common
+                      }`
                 }
                 onClick={() => onClickTab(ind)}
               >
@@ -82,13 +95,12 @@ export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
               </button>
             </li>
           ))}
-        {/* for donation section */}
       </ul>
       {type === 'project' && <TabsCurrentProjectInfo numberTab={numberTab} />}
-      {/* for donation section and news */}
-      {type === 'donation' && <div> donation render</div>}
+      {type === 'donation' && <TabsDonationInfo numberTab={numberTab} />}
+
+      {/* for  news */}
       {type === 'news' && <div> news render</div>}
-      {/* for donation section and news */}
     </>
   );
 };

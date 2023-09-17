@@ -1,9 +1,12 @@
-.tab_list_project {
+.tab_list {
   display: flex;
   overflow-x: auto;
-  gap: 32px;
-  margin-bottom: 40px;
   border-bottom: 1px solid var(--blue-10-color);
+  margin-bottom: 40px;
+}
+
+.tab_list_project {
+  gap: 32px;
 
   @media (min-width: 768px) {
     gap: 12px;
@@ -15,27 +18,40 @@
   }
 }
 
+.tab_list_donation {
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    justify-content: start;
+    gap: 16px;
+  }
+}
+
 .tab_list::-webkit-scrollbar {
   width: 0px;
 }
 
-.button_common_project {
+.button_common {
   white-space: nowrap;
   border: none;
   background-color: transparent;
-  padding: 10px 20px;
   cursor: pointer;
-
   font-size: 14px;
   font-weight: 700;
   line-height: 1;
   @media (min-width: 768px) {
     font-size: 16px;
   }
-
   @media (min-width: 1440px) {
     font-size: 18px;
   }
+}
+
+.button_common_project {
+  padding: 10px 20px;
+}
+.button_common_donation {
+  padding: 10px 20px;
 }
 
 .tab_button {

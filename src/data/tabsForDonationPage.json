@@ -1,0 +1,32 @@
+{
+  "uan": {
+    "company": "NGO Junior Chamber International Ukraine",
+    "iban_code": "UA773052990000026008026230644",
+    "id_code": "44201667",
+    "bank": "JSC CB “Privatbank”"
+  },
+
+  "usd": {
+    "company": "NGO Junior Chamber International Ukraine",
+    "iban_code": "UA953052990000026004036230768",
+    "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
+    "swift": "PBANUA2X",
+    "address": "UA 01001 Kyiv Turhenievska street, 38 apt. 102",
+    "correspondents": [
+      "JP Morgan Chase Bank, New York, USA Account in the correspondent bank: 001-1-000080 SWIFT Code of the correspondent bank: CHASUS33",
+      "The Bank of New York Mellon, New York, USA Account in the correspondent bank: 890-0085-754 SWIFT Code of the correspondent bank: IRVT US 3N",
+      "Citibank N.A., New York, USA Account in the correspondent bank: 36445343 SWIFT Code of the correspondent bank: CITI US 33"
+    ]
+  },
+  "euro": {
+    "company": "NGO Junior Chamber International Ukraine",
+    "iban_code": "UA753052990000026008006224818",
+    "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
+    "swift": "PBANUA2X",
+    "address": "UA 01001 Kyiv Turhenievska street, 38 apt. 102",
+    "correspondents": [
+      "Commerzbank AG, Frankfurt am Main, GermanyAccount in the correspondent bank: 400886700401 SWIFT Code of the correspondent bank: COBADEFF",
+      " J.P. Morgan AG, Frankfurt am Main, Germany Account in the correspondent bank: 6231605145 SWIFT Code of the correspondent bank: CHASDEFX"
+    ]
+  }
+}
