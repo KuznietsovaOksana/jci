@@ -14,7 +14,6 @@ export const IntroSection = () => {
   const { t: projectPageT } = useTranslation('projectPage');
   const { t: commonT } = useTranslation('common');
 
-  // const { t } = useTranslation('projectPage');
   const tabsDesk: string[] = projectPageT('tabs.tabsDesk', {
     returnObjects: true,
     defaultValue: [],

@@ -2,5 +2,18 @@
 	"donate": {
 		"title": "Bank transfer details",
 		"description": "We hope for financial contributions from both individuals and organizations to support our initiatives"
+	},
+	"tabs":{
+		"company":"Company name",
+		"iban":"IBAN Code",
+		"id-code":"ID Code",
+		"bank":"Name of the Bank",
+		
+		"swift":"Bank SWIFT Code",
+		"address":"Company Address",
+		"correspondent":"Correspondent Bank",
+		"or": "or",
+		"copy":"Copy",
+		"copied":"Copied"
 	}
 }
