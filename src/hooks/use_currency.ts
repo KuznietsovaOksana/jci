@@ -7,6 +7,12 @@ export const useCurrency = () => {
   const [usaNumber, setUsaNumber] = useState(-1);
   const [euroNumber, setEuroNumber] = useState(-1);
 
+  const onCopyClickSetTimeOut = (kind: string) => {
+    if (kind === 'uan') setUanNumber(-1);
+    if (kind === 'usa') setUsaNumber(-1);
+    if (kind === 'euro') setEuroNumber(-1);
+  };
+
   const onCopy = (ind: number, kind: currency) => {
     if (kind === 'uan') {
       setUanNumber(ind);
@@ -23,6 +29,8 @@ export const useCurrency = () => {
       setUanNumber(-1);
       setUsaNumber(-1);
     }
+    setTimeout(() => onCopyClickSetTimeOut(kind), 500);
   };
+
   return { uanNumber, usaNumber, euroNumber, onCopy };
 };
