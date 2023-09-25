@@ -20,8 +20,6 @@ import RightArrow from 'public/icons/chevron_Right.svg';
 import { cards } from './cards';
 import s from './NewsSection.module.css';
 
-
-
 export const NewsSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });

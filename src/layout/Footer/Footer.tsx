@@ -75,7 +75,7 @@ export const Footer = () => {
                 <li className={s.footer_contacts_item}>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href=''
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
@@ -83,7 +83,7 @@ export const Footer = () => {
                   </a>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href='https://www.instagram.com/jciukraine_official/'
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
@@ -126,7 +126,7 @@ export const Footer = () => {
                 <li className={s.footer_contacts_item}>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href='https://www.facebook.com/jci.ukraine.official'
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
@@ -134,7 +134,7 @@ export const Footer = () => {
                   </a>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href='https://www.instagram.com/jciukraine_official/'
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
