@@ -41,7 +41,9 @@ export const Footer = () => {
         <div className={s.footer_wrapper}>
           <Container>
             <div className={s.logo_btn}>
-              <Logo isWhite className={s.logo} />
+              <div className={s.logo_wparrer}>
+                <Logo isWhite className={s.logo} />
+              </div>
               <div className={s.btn_wrapper}>
                 <MainButton
                   text={commonT('buttons.join')}

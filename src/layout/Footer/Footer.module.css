@@ -42,12 +42,10 @@
   }
 }
 
-.logo {
+.logo_wparrer {
   margin-bottom: 44px;
-}
 
-@media (min-width: 768px) {
-  .logo {
+  @media (min-width: 768px) {
     margin-bottom: 0;
   }
 }
