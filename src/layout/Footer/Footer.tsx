@@ -18,6 +18,7 @@ import s from './Footer.module.css';
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   const { t: navigationT } = useTranslation('navigation');
   const { t: commonT } = useTranslation('common');
   const items = navigationT('nav', {
@@ -65,13 +66,29 @@ export const Footer = () => {
                 </ul>
               </nav>
               <ul className={s.footer_contacts}>
-                {footerContactsInfo.map(item => (
-                  <li key={item.id} className={s.footer_contacts_item}>
-                    <Link className={s.item} href={item.href}>
-                      {item.content}
-                    </Link>
-                  </li>
-                ))}
+                {!isMobile ? (
+                  footerContactsInfo.map(item => (
+                    <li key={item.id} className={s.footer_contacts_item}>
+                      <Link className={s.item} href={item.href}>
+                        {item.content}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <>
+                    <li className={s.footer_contacts_item}>
+                      <p className={s.item}>{footerContactsInfo[0].content}</p>
+                    </li>
+                    <li className={s.footer_contacts_item}>
+                      <Link
+                        className={s.item}
+                        href={footerContactsInfo[1].href}
+                      >
+                        {footerContactsInfo[1].content}
+                      </Link>
+                    </li>
+                  </>
+                )}
                 <li className={s.footer_contacts_item}>
                   <a
                     className={s.logo_icon}
