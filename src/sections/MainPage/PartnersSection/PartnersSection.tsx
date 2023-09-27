@@ -36,22 +36,26 @@ export const PartnersSection = () => {
           {isMobile &&
             partnersImages.map(imgData => (
               <li className={s.partners_item} key={imgData.id}>
-                <Image
-                  src={imgData.srcM}
-                  width={imgData.wM}
-                  height={imgData.hM}
-                  alt={'partner logo'}
-                  loading='lazy'
-                />
+                <div className={s.image_wrapper}>
+                  <Image
+                    className={s.partner_img}
+                    src={imgData.srcM}
+                    width={98}
+                    height={92}
+                    alt={'partner logo'}
+                    loading='lazy'
+                  />
+                </div>
               </li>
             ))}
           {isTablet &&
             partnersImages.map(imgData => (
               <li className={s.partners_item} key={imgData.id}>
                 <Image
+                  className={s.partner_img}
                   src={imgData.srcT}
-                  width={imgData.wT}
-                  height={imgData.hT}
+                  width={122}
+                  height={84}
                   alt={'partner logo'}
                   loading='lazy'
                 />
@@ -61,9 +65,10 @@ export const PartnersSection = () => {
             partnersImages.map(imgData => (
               <li className={s.partners_item} key={imgData.id}>
                 <Image
+                  className={s.partner_img}
                   src={imgData.srcD}
-                  width={imgData.wD}
-                  height={imgData.hD}
+                  width={150}
+                  height={112}
                   alt={'partner logo'}
                   loading='lazy'
                 />

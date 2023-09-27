@@ -5,7 +5,7 @@ export const footerContactsInfo = [
     id: 'contact01',
   },
   {
-    href: 'mailto:+380994449834',
+    href: 'tel:+380994449834',
     content: '+38 (099) 444-98-34',
     id: 'contact02',
   },

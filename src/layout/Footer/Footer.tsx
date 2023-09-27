@@ -20,6 +20,7 @@ import s from './Footer.module.css';
 export const Footer = () => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   const { t: navigationT } = useTranslation('navigation');
   const { t: commonT } = useTranslation('common');
   const items = navigationT('nav', {
@@ -42,7 +43,9 @@ export const Footer = () => {
         <div className={s.footer_wrapper}>
           <Container>
             <div className={s.logo_btn}>
-              <Logo isWhite className={s.logo} />
+              <div className={s.logo_wparrer}>
+                <Logo isWhite className={s.logo} />
+              </div>
               <div className={s.btn_wrapper}>
                 <MainButton
                   text={commonT('buttons.join')}
@@ -67,17 +70,33 @@ export const Footer = () => {
                 </ul>
               </nav>
               <ul className={s.footer_contacts}>
-                {footerContactsInfo.map(item => (
-                  <li key={item.id} className={s.footer_contacts_item}>
-                    <Link className={s.item} href={item.href}>
-                      {item.content}
-                    </Link>
-                  </li>
-                ))}
+                {!isMobile ? (
+                  footerContactsInfo.map(item => (
+                    <li key={item.id} className={s.footer_contacts_item}>
+                      <Link className={s.item} href={item.href}>
+                        {item.content}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <>
+                    <li className={s.footer_contacts_item}>
+                      <p className={s.item}>{footerContactsInfo[0].content}</p>
+                    </li>
+                    <li className={s.footer_contacts_item}>
+                      <Link
+                        className={s.item}
+                        href={footerContactsInfo[1].href}
+                      >
+                        {footerContactsInfo[1].content}
+                      </Link>
+                    </li>
+                  </>
+                )}
                 <li className={s.footer_contacts_item}>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href=''
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
@@ -85,7 +104,7 @@ export const Footer = () => {
                   </a>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href='https://www.instagram.com/jciukraine_official/'
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
@@ -128,7 +147,7 @@ export const Footer = () => {
                 <li className={s.footer_contacts_item}>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href='https://www.facebook.com/jci.ukraine.official'
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >
@@ -136,7 +155,7 @@ export const Footer = () => {
                   </a>
                   <a
                     className={s.logo_icon}
-                    href='#'
+                    href='https://www.instagram.com/jciukraine_official/'
                     target='_blank'
                     rel='noopener noreferrer nofollow'
                   >

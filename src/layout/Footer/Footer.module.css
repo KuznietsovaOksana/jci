@@ -42,12 +42,10 @@
   }
 }
 
-.logo {
+.logo_wparrer {
   margin-bottom: 44px;
-}
 
-@media (min-width: 768px) {
-  .logo {
+  @media (min-width: 768px) {
     margin-bottom: 0;
   }
 }
@@ -100,6 +98,11 @@
   }
 }
 
+.footer_nav_item:hover,
+.footer_nav_item:focus {
+  color: var(--blue-navy-color);
+}
+
 .footer_contacts_item {
   color: var(--white-color);
   font-weight: 600;
@@ -112,6 +115,11 @@
 .footer_contacts_item:last-child {
   display: flex;
   gap: 16px;
+}
+
+.footer_contacts_item:hover,
+.footer_contacts_item:focus {
+  color: var(--blue-navy-color);
 }
 
 .fb_logo {
