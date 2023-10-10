@@ -1,6 +1,6 @@
 # JCI Project
 
-[Жива сторінка](https://jci-ten.vercel.app/)
+[Live page](https://jci-ten.vercel.app/)
 
 ## 🛠️ Tech stack
 
