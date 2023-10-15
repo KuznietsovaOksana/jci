@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { fetchFAQ } from '@/lib/api';
+import { fetchMain } from '@/lib/api';
 import { Layout } from '@/layout/Layout';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
@@ -21,9 +21,14 @@ import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection
 import { OurPresident } from '@/sections/MainPage/OurPresident';
 import { ImpactSection } from '@/sections/MainPage/ImpactSection';
 import { PartnersSection } from '@/sections/MainPage/PartnersSection';
-import { AccordionProps } from '@/components/common/Accordion/Accordion.props';
 
-export default function Home({ faqData }: AccordionProps) {
+import { IMainApiProps } from '@/types/typesApiProps';
+
+export default function Home({
+  faqData,
+  achievementsData,
+  presidentData,
+}: IMainApiProps) {
   const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation('mainPage');
 
@@ -46,12 +51,12 @@ export default function Home({ faqData }: AccordionProps) {
           <CharacteristicSection />
           <ImpactSection />
           <WarSection />
-          <TogetherSection />
+          <TogetherSection achievementsData={achievementsData} />
           <ProjectSection />
           <DonateSection heading={t('donate.text')} />
           <NewsSection />
           <PartnersSection />
-          <OurPresident />
+          <OurPresident presidentData={presidentData} />
           <FAQSection faqData={faqData} />
         </main>
       </Layout>
@@ -60,11 +65,15 @@ export default function Home({ faqData }: AccordionProps) {
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
-  const faqData = await fetchFAQ();
+  const faqData = await fetchMain('faq');
+  const achievementsData = await fetchMain('achievements');
+  const presidentData = await fetchMain('jci-ukraine-president');
 
   return {
     props: {
       faqData,
+      achievementsData,
+      presidentData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
