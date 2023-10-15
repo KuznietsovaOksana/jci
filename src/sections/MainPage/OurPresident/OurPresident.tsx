@@ -7,6 +7,9 @@ import { Section } from '@/components/sections/Section';
 
 import imgD from 'public/images/president/president_01d.jpg';
 
+import { IPresidentProps } from './PresidentProps';
+import { useLocalization } from '@/contexts/LocalizationContext';
+
 import s from './OurPresident.module.css';
 
 const data = {
@@ -16,9 +19,12 @@ const data = {
     'As National President, Kuznetsova is responsible for overseeing JCI`s operations and initiatives in Ukraine, and leading the organisation`s efforts to engage and empower young people in the country. Her role also involves representing JCI Ukraine at the international level and collaborating with other JCI chapters around the world.',
 };
 
-export const OurPresident = () => {
+export const OurPresident = ({ presidentData = [] }: IPresidentProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
+
+  const { locale } = useLocalization();
+  const showNewData = presidentData.length > 0 ? true : false;
 
   useEffect(() => {
     setIsMounted(true);
@@ -33,19 +39,44 @@ export const OurPresident = () => {
       <Container>
         {!isDesktop && (
           <>
-            <h2 className={s.title}>{data.title}</h2>
-            <p className={s.position}>{data.position}</p>
+            <h2 className={s.title}>
+              {showNewData
+                ? locale === 'uk'
+                  ? presidentData[0].title_uk
+                  : presidentData[0].title_en
+                : data.title}
+            </h2>
+            <p className={s.position}>
+              {showNewData
+                ? locale === 'uk'
+                  ? presidentData[0].subtitle_uk
+                  : presidentData[0].subtitle_uk
+                : data.position}
+            </p>
             <div className={s.photoBlock}>
               <Image
-                src={imgD}
-                alt='President photo'
+                src={showNewData ? presidentData[0].photo_president : imgD}
+                // src={imgD}
+                alt={
+                  showNewData
+                    ? locale === 'uk'
+                      ? presidentData[0].alt_text_president_uk
+                      : presidentData[0].alt_text_president_en
+                    : 'President photo'
+                }
                 priority
                 className={s.photo}
                 width='288'
                 height='207'
               />
             </div>
-            <p className={s.description}>{data.description}</p>
+            <p className={s.description}>
+              {showNewData
+                ? locale === 'uk'
+                  ? presidentData[0].text_uk
+                  : presidentData[0].text_en
+                : data.description}
+            </p>
           </>
         )}
 
@@ -54,8 +85,15 @@ export const OurPresident = () => {
             <div className={s.presidentSection}>
               <div className={s.photoBlock}>
                 <Image
-                  src={imgD}
-                  alt='President photo'
+                  src={showNewData ? presidentData[0].photo_president : imgD}
+                  // src={imgD}
+                  alt={
+                    showNewData
+                      ? locale === 'uk'
+                        ? presidentData[0].alt_text_president_uk
+                        : presidentData[0].alt_text_president_en
+                      : 'President photo'
+                  }
                   priority
                   className={s.photo}
                   width='552'
@@ -63,9 +101,27 @@ export const OurPresident = () => {
                 />
               </div>
               <div className={s.textBlock}>
-                <h2 className={s.title}>{data.title}</h2>
-                <p className={s.position}>{data.position}</p>
-                <p className={s.description}>{data.description}</p>
+                <h2 className={s.title}>
+                  {showNewData
+                    ? locale === 'uk'
+                      ? presidentData[0].title_uk
+                      : presidentData[0].title_en
+                    : data.title}
+                </h2>
+                <p className={s.position}>
+                  {showNewData
+                    ? locale === 'uk'
+                      ? presidentData[0].subtitle_uk
+                      : presidentData[0].subtitle_uk
+                    : data.position}
+                </p>
+                <p className={s.description}>
+                  {showNewData
+                    ? locale === 'uk'
+                      ? presidentData[0].text_uk
+                      : presidentData[0].text_en
+                    : data.description}
+                </p>
               </div>
             </div>
           </>

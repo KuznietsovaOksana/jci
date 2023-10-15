@@ -6,7 +6,12 @@ const api = axios.create({
   baseURL,
 });
 
-export const fetchFAQ = async () => {
-  const response = await api.get('main-page/faq');
-  return response.data;
+export const fetchMain = async (path: string) => {
+  const mainPath = 'main-page/' + path;
+  try {
+    const response = await api.get(mainPath);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+  }
 };
