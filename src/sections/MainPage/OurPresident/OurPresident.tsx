@@ -50,7 +50,7 @@ export const OurPresident = ({ presidentData = [] }: IPresidentProps) => {
               {showNewData
                 ? locale === 'uk'
                   ? presidentData[0].subtitle_uk
-                  : presidentData[0].subtitle_uk
+                  : presidentData[0].subtitle_en
                 : data.position}
             </p>
             <div className={s.photoBlock}>
@@ -112,7 +112,7 @@ export const OurPresident = ({ presidentData = [] }: IPresidentProps) => {
                   {showNewData
                     ? locale === 'uk'
                       ? presidentData[0].subtitle_uk
-                      : presidentData[0].subtitle_uk
+                      : presidentData[0].subtitle_en
                     : data.position}
                 </p>
                 <p className={s.description}>
