@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+
+import { useLocalization } from '@/contexts/LocalizationContext';
 
 import s from './LanguageSwitcher.module.css';
 
@@ -17,7 +19,13 @@ export const LanguageSwitcher = () => {
 
   const router = useRouter();
 
-  const [locale, setLocale] = useState<string | undefined>(router.locale);
+  const { locale, setLocale } = useLocalization();
+
+  useEffect(() => {
+    if (router.locale) {
+      setLocale(router.locale);
+    }
+  }, [router.locale, setLocale]);
 
   const onToggle = () => {
     const newLocale = locale === 'en' ? 'uk' : 'en';

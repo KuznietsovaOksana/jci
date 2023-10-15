@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import { fetchFAQ } from '@/lib/api';
 import { Layout } from '@/layout/Layout';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
@@ -20,8 +21,9 @@ import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection
 import { OurPresident } from '@/sections/MainPage/OurPresident';
 import { ImpactSection } from '@/sections/MainPage/ImpactSection';
 import { PartnersSection } from '@/sections/MainPage/PartnersSection';
+import { AccordionProps } from '@/components/common/Accordion/Accordion.props';
 
-export default function Home() {
+export default function Home({ faqData }: AccordionProps) {
   const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation('mainPage');
 
@@ -50,7 +52,7 @@ export default function Home() {
           <NewsSection />
           <PartnersSection />
           <OurPresident />
-          <FAQSection />
+          <FAQSection faqData={faqData} />
         </main>
       </Layout>
     </>
@@ -58,8 +60,11 @@ export default function Home() {
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
+  const faqData = await fetchFAQ();
+
   return {
     props: {
+      faqData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
