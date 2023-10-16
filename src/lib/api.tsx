@@ -13,5 +13,6 @@ export const fetchMain = async (path: string) => {
     return response.data;
   } catch (err) {
     if (err instanceof Error) console.log(err.message);
+    return [];
   }
 };
