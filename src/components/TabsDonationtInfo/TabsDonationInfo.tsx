@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import data from '@/data/tabsForDonationPage.json';
 import CopyIcon from 'public/icons/copy.svg';
 import CopiedIcon from 'public/icons/copied.svg';
 
@@ -20,50 +19,56 @@ export const TabsDonationInfo: FC<ITabInfoProps> = ({ numberTab }) => {
   const { isDesk } = useScreen();
   const { uanNumber, usaNumber, euroNumber, onCopy } = useCurrency();
 
-  const { uan, usd, euro } = data;
   // uan
+
   const arrayUan = [
-    { title: t('tabs.company'), description: uan.company },
-    { title: t('tabs.iban'), description: uan.iban_code },
-    { title: t('tabs.id-code'), description: uan.id_code },
-    { title: t('tabs.bank'), description: uan.bank },
+    { title: t('tabs.company'), description: t('info.uan.company') },
+    { title: t('tabs.iban'), description: t('info.uan.iban_code') },
+    { title: t('tabs.id-code'), description: t('info.uan.id_code') },
+    { title: t('tabs.bank'), description: t('info.uan.bank') },
   ];
 
   // usd
   const arrayUsd = [
-    { title: t('tabs.company'), description: usd.company },
-    { title: t('tabs.iban'), description: usd.iban_code },
-    { title: t('tabs.bank'), description: usd.bank },
-    { title: t('tabs.swift'), description: usd.swift },
-    { title: t('tabs.address'), description: usd.address },
+    { title: t('tabs.company_euro_usa'), description: t('info.usd.company') },
+    { title: t('iban_euro_usa'), description: t('info.usd.iban_code') },
+    { title: t('tabs.bank'), description: t('info.usd.bank') },
+    { title: t('tabs.swift'), description: t('info.usd.swift') },
+    { title: t('tabs.address'), description: t('info.usd.address') },
   ];
 
-  const arrayUsdCorrespondent = usd.correspondents.map(el => {
-    const element = {
-      title: t('tabs.correspondent'),
-      description: el,
-    };
-
-    return element;
-  });
+  const elUsd1 = {
+    title: t('tabs.correspondent'),
+    description: t('info.usd.correspondent1'),
+  };
+  const elUsd2 = {
+    title: t('tabs.correspondent'),
+    description: t('info.usd.correspondent2'),
+  };
+  const elUsd3 = {
+    title: t('tabs.correspondent'),
+    description: t('info.usd.correspondent3'),
+  };
+  const arrayUsdCorrespondent = [elUsd1, elUsd2, elUsd3];
 
   // euro
   const arrayEuro = [
-    { title: t('tabs.company'), description: euro.company },
-    { title: t('tabs.iban'), description: euro.iban_code },
-    { title: t('tabs.bank'), description: euro.bank },
-    { title: t('tabs.swift'), description: euro.swift },
-    { title: t('tabs.address'), description: euro.address },
+    { title: t('tabs.company_euro_usa'), description: t('info.euro.company') },
+    { title: t('iban_euro_usa'), description: t('info.euro.iban_code') },
+    { title: t('tabs.bank'), description: t('info.euro.bank') },
+    { title: t('tabs.swift'), description: t('info.euro.swift') },
+    { title: t('tabs.address'), description: t('info.euro.address') },
   ];
 
-  const arrayEuroCorrespondent = euro.correspondents.map(el => {
-    const element = {
-      title: t('tabs.correspondent'),
-      description: el,
-    };
-
-    return element;
-  });
+  const elEuro1 = {
+    title: t('tabs.correspondent'),
+    description: t('info.euro.correspondent1'),
+  };
+  const elEuro2 = {
+    title: t('tabs.correspondent'),
+    description: t('info.euro.correspondent2'),
+  };
+  const arrayEuroCorrespondent = [elEuro1, elEuro2];
 
   return (
     <>

@@ -4,16 +4,50 @@
 		"description": "Ми сподіваємося на фінансові внески як від приватних осіб, так і від організацій для підтримки наших ініціатив"
 	},
 	"tabs":{
-		"company":"Найменування компанії",
-		"iban":"код IBAN",
-		"id-code":"код ЄДРПОУ",
+		"company":"Найменування отримувача",
+    "company_euro_usa":"Найменування організації",
+		"iban":"Рахунок отримувача",
+    "iban_euro_usa":"IBAN Code",
+		"id-code":"Код отримувача",
 		"bank":"Найменування банку",
 		
-		"swift":"SWIFT-код банку",
+		"swift":"SWIFT code банку",
 		"address":"Адреса компанії",
-		"correspondent":"Банк-кореспондент",
+		"correspondent":"Банк кореспондент",
 		"or": "або",
 		"copy":"Скопіювати",
 		"copied":"Скопійовано"
+	},
+	"info":{
+	 "uan": {
+    "company": "ГО ММП ДЖЕЙ СІ АЙ УКРАІНА",
+    "iban_code": "UA773052990000026008026230644",
+    "id_code": "44201667",
+    "bank": "АТ КБ “ПРИВАТБАНК”"
+  },
+
+  "usd": {
+    "company": "ММП ДЖЕЙ СI АЙ УКРАIНА ГО",
+    "iban_code": "UA953052990000026004036230768",
+    "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
+    "swift": "PBANUA2X",
+    "address": "UA 01001 м Київ вул Тургенєвська б.38 кв.102",
+    "correspondent1":
+      "JP Morgan Chase Bank, New York, USA Рахунок в банку кореспонденті: 001-1-000080 SWIFT Code банку-кореспондента: CHASUS33",
+    "correspondent2":  "The Bank of New York Mellon, New York, USA Рахунок в банку кореспонденті: 890-0085-754 SWIFT Code банку-кореспондента: IRVT US 3N",
+    "correspondent3":  "Citibank N.A., New York, USA Рахунок в банку кореспонденті: 36445343 SWIFT Code банку-кореспондента: CITI US 33"
+    
+  },
+  "euro": {
+    "company": "ММП ДЖЕЙ СI АЙ УКРАIНА ГО",
+    "iban_code": "UA753052990000026008006224818",
+    "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
+    "swift": "PBANUA2X",
+    "address": "UA 01001 м Київ вул Тургенєвська б.38 кв.102",
+     "correspondent1":
+      "Commerzbank AG, Frankfurt am Main, Germany Рахунок в банку кореспонденті: 400886700401 SWIFT Code банку-кореспондента: COBADEFF",
+     "correspondent2": "J.P. Morgan AG, Frankfurt am Main, Germany Рахунок в банку кореспонденті: 6231605145 SWIFT Code банку-кореспондента: CHASDEFX"
+   
+  }
 	}
 }

@@ -33,7 +33,7 @@ export default function CurrentProject() {
         </Portal>
       )}
       <Layout setShowModal={setShowModal}>
-        <main>
+        <main className='first_section'>
           {isProjectCompleted ? <CompletedIntroSection /> : <IntroSection />}
           <button
             className='omgBtn'

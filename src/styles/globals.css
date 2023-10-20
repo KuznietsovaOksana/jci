@@ -360,3 +360,18 @@ button {
 }
 
 /* CurrentProjectSlider (IntroSection) */
+
+.first_section {
+  margin-top: 64px;
+}
+@media screen and (min-width: 768px) {
+  .first_section {
+    margin-top: 96px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .first_section {
+    margin-top: 102px;
+  }
+}
