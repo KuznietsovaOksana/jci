@@ -14,7 +14,7 @@ export const DonateSection = () => {
   const { t: donatePageT } = useTranslation('donationPage');
   const { t: commonT } = useTranslation('common');
   return (
-    <Section>
+    <Section className='first_section'>
       <Container>
         <Title isBlue className={s.title}>
           {donatePageT('donate.title')}

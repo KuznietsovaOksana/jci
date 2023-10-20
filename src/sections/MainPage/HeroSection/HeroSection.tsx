@@ -32,7 +32,7 @@ export const HeroSection = () => {
   }
 
   return (
-    <Section>
+    <Section className='first_section'>
       {isDesktop ? (
         <Container>
           <div className={s.desktopVersion}>
