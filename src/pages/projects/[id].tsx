@@ -33,7 +33,7 @@ export default function CurrentProject() {
         </Portal>
       )}
       <Layout setShowModal={setShowModal}>
-        <main className='first_section'>
+        <main className='padding_top_current_page'>
           {isProjectCompleted ? <CompletedIntroSection /> : <IntroSection />}
           <button
             className='omgBtn'

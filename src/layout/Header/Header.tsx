@@ -13,6 +13,8 @@ import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
 import { ILayout } from '../Layout';
 import { ItemProps } from '../Layout/Layout.props';
 
+import { useRouter } from 'next/router';
+
 import s from './Header.module.css';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
@@ -27,8 +29,11 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
     defaultValue: '',
   }) as ItemProps[];
 
+  const router = useRouter();
+  const currentPath = router.pathname;
+
   return (
-    <header className={s.header}>
+    <header className={currentPath !== '/404' ? s.header : s.header_error}>
       <Container>
         <div className={s.header_block}>
           <MediaQuery maxWidth={1439}>
