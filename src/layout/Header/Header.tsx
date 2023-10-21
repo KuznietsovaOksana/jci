@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 import Menu from 'public/icons/menu.svg';
 
@@ -12,8 +13,6 @@ import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
 
 import { ILayout } from '../Layout';
 import { ItemProps } from '../Layout/Layout.props';
-
-import { useRouter } from 'next/router';
 
 import s from './Header.module.css';
 
