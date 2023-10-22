@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
@@ -7,16 +6,25 @@ import { Container } from '@/components/common/Container';
 import { Title } from '@/components/typography/Title';
 import { Section } from '@/components/sections/Section';
 
-import { partnersImages } from './partnersImages';
+// import { partnersImages } from './partnersImages';
+import { useScreen } from '@/hooks/use_screen';
+import { useLocalization } from '@/contexts/LocalizationContext';
+
+import { IPartnersProps } from './PartnersProps';
+
 import s from './PartnersSection.module.css';
 
-export const PartnersSection = () => {
+export const PartnersSection = ({ partnersData }: IPartnersProps) => {
   const [isMounted, setIsMounted] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
+
+  const { isMobile, isTablet } = useScreen();
+
+  const withImage = isMobile ? 98 : isTablet ? 122 : 150;
+  const heightImage = isMobile ? 92 : isTablet ? 84 : 112;
+
   const { t } = useTranslation('mainPage');
 
+  const { locale } = useLocalization();
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -33,47 +41,20 @@ export const PartnersSection = () => {
           <span className={s.blue_text}>{t('partners.span')}</span>
         </Title>
         <ul className={s.partners_list}>
-          {isMobile &&
-            partnersImages.map(imgData => (
-              <li className={s.partners_item} key={imgData.id}>
-                <div className={s.image_wrapper}>
-                  <Image
-                    className={s.partner_img}
-                    src={imgData.srcM}
-                    width={98}
-                    height={92}
-                    alt={'partner logo'}
-                    loading='lazy'
-                  />
-                </div>
-              </li>
-            ))}
-          {isTablet &&
-            partnersImages.map(imgData => (
-              <li className={s.partners_item} key={imgData.id}>
+          {partnersData.map(el => (
+            <li className={s.partners_item} key={el.id}>
+              <div className={s.image_wrapper}>
                 <Image
                   className={s.partner_img}
-                  src={imgData.srcT}
-                  width={122}
-                  height={84}
-                  alt={'partner logo'}
+                  src={el.logo}
+                  width={withImage}
+                  height={heightImage}
+                  alt={locale ? el.alt_text_partner_uk : el.alt_text_partner_en}
                   loading='lazy'
                 />
-              </li>
-            ))}
-          {isDesktop &&
-            partnersImages.map(imgData => (
-              <li className={s.partners_item} key={imgData.id}>
-                <Image
-                  className={s.partner_img}
-                  src={imgData.srcD}
-                  width={150}
-                  height={112}
-                  alt={'partner logo'}
-                  loading='lazy'
-                />
-              </li>
-            ))}
+              </div>
+            </li>
+          ))}
         </ul>
       </Container>
     </Section>

@@ -28,6 +28,8 @@ export default function Home({
   faqData,
   achievementsData,
   presidentData,
+  heroData,
+  partnersData,
 }: IMainApiProps) {
   const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation('mainPage');
@@ -47,7 +49,7 @@ export default function Home({
       )}
       <Layout setShowModal={setShowModal}>
         <main>
-          <HeroSection />
+          <HeroSection heroData={heroData} />
           <CharacteristicSection />
           <ImpactSection />
           <WarSection />
@@ -55,7 +57,7 @@ export default function Home({
           <ProjectSection />
           <DonateSection heading={t('donate.text')} />
           <NewsSection />
-          <PartnersSection />
+          <PartnersSection partnersData={partnersData} />
           <OurPresident presidentData={presidentData} />
           <FAQSection faqData={faqData} />
         </main>
@@ -68,12 +70,16 @@ export async function getStaticProps({ locale }: { locale: string }) {
   const faqData = await fetchMain('faq');
   const achievementsData = await fetchMain('achievements');
   const presidentData = await fetchMain('jci-ukraine-president');
+  const heroData = await fetchMain('main-banner');
+  const partnersData = await fetchMain('partners');
 
   return {
     props: {
       faqData,
       achievementsData,
       presidentData,
+      heroData,
+      partnersData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',

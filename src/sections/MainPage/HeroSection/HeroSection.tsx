@@ -10,18 +10,47 @@ import { Container } from '@/components/common/Container';
 import { HeroSlider } from '@/components/sliders/HeroSlider';
 import { MainButton } from '@/components/buttons/MainButton';
 
-import { images } from './images';
+import { useLocalization } from '@/contexts/LocalizationContext';
+
+import { IHeroProps } from './heroProps';
 
 import s from './HeroSection.module.css';
 
-const data = {
-  text: 'We are a non-profit organization within a global network of Junior Chamber International (JCI) and are currently focusing on mitigating the effects of the russian invasion countrywide',
-};
-
-export const HeroSection = () => {
+export const HeroSection = ({ heroData }: IHeroProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
   const { t } = useTranslation('common');
+  const { locale } = useLocalization();
+
+  const imagesUa = [
+    {
+      src: heroData[0].photo1,
+      alt: heroData[0].alt_text_1_uk,
+    },
+    {
+      src: heroData[0].photo2,
+      alt: heroData[0].alt_text_2_uk,
+    },
+    {
+      src: heroData[0].photo3,
+      alt: heroData[0].alt_text_3_uk,
+    },
+  ];
+
+  const imagesEn = [
+    {
+      src: heroData[0].photo1,
+      alt: heroData[0].alt_text_1_en,
+    },
+    {
+      src: heroData[0].photo2,
+      alt: heroData[0].alt_text_2_en,
+    },
+    {
+      src: heroData[0].photo3,
+      alt: heroData[0].alt_text_3_en,
+    },
+  ];
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,30 +67,54 @@ export const HeroSection = () => {
           <div className={s.desktopVersion}>
             <div>
               <Title className={s.title} tag='h1'>
-                JCI Ukraine <Flag className={s.flag} /> is a global network of
-                <span className={s.accentTitle}> young leaders</span>
+                {locale === 'uk'
+                  ? heroData[0].title_1_uk
+                  : heroData[0].title_1_en}
+                <Flag className={s.flag} />
+                {locale === 'uk'
+                  ? heroData[0].title_2_uk
+                  : heroData[0].title_2_en}
+                <span className={s.accentTitle}>
+                  {locale === 'uk'
+                    ? heroData[0].title_3_uk
+                    : heroData[0].title_3_en}
+                </span>
               </Title>
-              <p className={s.description}>{data.text}</p>
+              <p className={s.description}>
+                {locale === 'uk'
+                  ? heroData[0].subtitle_uk
+                  : heroData[0].subtitle_en}
+              </p>
               <div className={s.cta}>
                 <MainButton text={t('buttons.join')} style='primaryNavy' />
                 <MainButton text={t('buttons.donate')} style='secondaryNavy' />
               </div>
             </div>
             <div className={s.sliderblock}>
-              <HeroSlider images={images} />
+              <HeroSlider images={locale === 'uk' ? imagesUa : imagesEn} />
             </div>
           </div>
         </Container>
       ) : (
         <Container>
           <Title className={s.title} tag='h1'>
-            JCI Ukraine <Flag className={s.flag} /> is a global network of
-            <span className={s.accentTitle}> young leaders</span>
+            {locale === 'uk' ? heroData[0].title_1_uk : heroData[0].title_1_en}
+            <Flag className={s.flag} />
+            {locale === 'uk' ? heroData[0].title_2_uk : heroData[0].title_2_en}
+            <span className={s.accentTitle}>
+              {locale === 'uk'
+                ? heroData[0].title_3_uk
+                : heroData[0].title_3_en}
+            </span>
           </Title>
           <div className={s.sliderblock}>
-            <HeroSlider images={images} />
+            <HeroSlider images={locale === 'uk' ? imagesUa : imagesEn} />
           </div>
-          <p className={s.description}>{data.text}</p>
+          <p className={s.description}>
+            {locale === 'uk'
+              ? heroData[0].subtitle_uk
+              : heroData[0].subtitle_en}
+          </p>
           <div className={s.cta}>
             <MainButton text={t('buttons.join')} style='primaryNavy' />
             <MainButton text={t('buttons.donate')} style='secondaryNavy' />
