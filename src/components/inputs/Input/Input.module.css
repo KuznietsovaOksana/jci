@@ -1,0 +1,83 @@
+.inputLabel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.input,
+.textarea {
+  width: 256px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--admin-grey);
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    width: 488px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 552px;
+  }
+}
+
+.input {
+  height: 48px;
+  padding: 0 16px;
+}
+
+.textarea {
+  resize: none;
+
+  height: 140px;
+  padding: 12px 16px;
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: var(--blue-navy-color);
+}
+
+.input:focus,
+.textarea:focus {
+  color: var(--black-90-color);
+  border-color: var(--blue-navy-color);
+  outline-color: var(--blue-navy-color);
+}
+
+.input:invalid,
+.textarea:invalid {
+  border-color: var(--admin-red);
+  outline: transparent;
+
+  .input_helperText {
+    display: block;
+  }
+}
+
+.input_captionText {
+  text-align: left;
+  color: var(--black-90-color);
+  font-size: 18px;
+
+  @media (min-width: 1440px) {
+    font-size: 20px;
+  }
+}
+
+.input_helperText {
+  display: none;
+
+  text-align: left;
+  color: var(--admin-red);
+  font-size: 14px;
+}
+
+.input_captionText::first-letter,
+.input_helperText::first-letter {
+  text-transform: capitalize;
+}
