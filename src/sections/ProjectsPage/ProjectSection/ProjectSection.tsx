@@ -58,7 +58,7 @@ export const ProjectSectionPP: NextPage = () => {
   return (
     <>
       <Section
-        className={`${s.project_section} ${s.top_section} first_section`}
+        className={`${s.project_section} ${s.top_section} ${s.first_section}`}
       >
         <Container>
           <Title tag='h1' className={s.project_title}>

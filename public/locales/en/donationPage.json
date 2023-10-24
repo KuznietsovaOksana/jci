@@ -1,52 +1,47 @@
 {
-	"donate": {
-		"title": "Bank transfer details",
-		"description": "We hope for financial contributions from both individuals and organizations to support our initiatives"
-	},
-	"tabs":{
-		"company":"Company name",
-       "company_euro_usa":"Company name",
-		"iban":"IBAN Code",
-    "iban_euro_usa":"IBAN Code",
-		"id-code":"ID Code",
-		"bank":"Name of the Bank",
-		
-		"swift":"Bank SWIFT Code",
-		"address":"Company Address",
-		"correspondent":"Correspondent Bank",
-		"or": "or",
-		"copy":"Copy",
-		"copied":"Copied"
-	},
-	"info":{
-		 "uan": {
-    "company": "NGO Junior Chamber International Ukraine",
-    "iban_code": "UA773052990000026008026230644",
-    "id_code": "44201667",
-    "bank": "JSC CB “Privatbank”"
+  "donate": {
+    "title": "Bank transfer details",
+    "description": "We hope for financial contributions from both individuals and organizations to support our initiatives"
   },
-
-  "usd": {
-    "company": "NGO Junior Chamber International Ukraine",
-    "iban_code": "UA953052990000026004036230768",
-    "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
-    "swift": "PBANUA2X",
-    "address": "UA 01001 Kyiv Turhenievska street, 38 apt. 102",
-    "correspondent1":  "JP Morgan Chase Bank, New York, USA Account in the correspondent bank: 001-1-000080 SWIFT Code of the correspondent bank: CHASUS33",
-     "correspondent2": "The Bank of New York Mellon, New York, USA Account in the correspondent bank: 890-0085-754 SWIFT Code of the correspondent bank: IRVT US 3N",
-      "correspondent3":  "Citibank N.A., New York, USA Account in the correspondent bank: 36445343 SWIFT Code of the correspondent bank: CITI US 33"
-    
+  "tabs": {
+    "company": "Company name",
+    "company_euro_usa": "Company name",
+    "iban": "IBAN Code",
+    "iban_euro_usa": "IBAN Code",
+    "id-code": "ID Code",
+    "bank": "Name of the Bank",
+    "swift": "Bank SWIFT Code",
+    "address": "Company Address",
+    "correspondent": "Correspondent Bank",
+    "or": "or",
+    "copy": "Copy",
+    "copied": "Copied"
   },
-  "euro": {
-    "company": "NGO Junior Chamber International Ukraine",
-    "iban_code": "UA753052990000026008006224818",
-    "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
-    "swift": "PBANUA2X",
-    "address": "UA 01001 Kyiv Turhenievska street, 38 apt. 102",
-    "correspondent1": "Commerzbank AG, Frankfurt am Main, GermanyAccount in the correspondent bank: 400886700401 SWIFT Code of the correspondent bank: COBADEFF",
-    "correspondent2":" J.P. Morgan AG, Frankfurt am Main, Germany Account in the correspondent bank: 6231605145 SWIFT Code of the correspondent bank: CHASDEFX"
-   
+  "info": {
+    "uan": {
+      "company": "NGO Junior Chamber International Ukraine",
+      "iban_code": "UA773052990000026008026230644",
+      "id_code": "44201667",
+      "bank": "JSC CB “Privatbank”"
+    },
+    "usd": {
+      "company": "NGO Junior Chamber International Ukraine",
+      "iban_code": "UA953052990000026004036230768",
+      "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
+      "swift": "PBANUA2X",
+      "address": "UA 01001 Kyiv Turhenievska street, 38 apt. 102",
+      "correspondent1": "JP Morgan Chase Bank, New York, USA Account in the correspondent bank: 001-1-000080 SWIFT Code of the correspondent bank: CHASUS33",
+      "correspondent2": "The Bank of New York Mellon, New York, USA Account in the correspondent bank: 890-0085-754 SWIFT Code of the correspondent bank: IRVT US 3N",
+      "correspondent3": "Citibank N.A., New York, USA Account in the correspondent bank: 36445343 SWIFT Code of the correspondent bank: CITI US 33"
+    },
+    "euro": {
+      "company": "NGO Junior Chamber International Ukraine",
+      "iban_code": "UA753052990000026008006224818",
+      "bank": "JSC CB “Privatbank”, 1d Hrushevskoho Str., Kyiv, 01001, Ukraine",
+      "swift": "PBANUA2X",
+      "address": "UA 01001 Kyiv Turhenievska street, 38 apt. 102",
+      "correspondent1": "Commerzbank AG, Frankfurt am Main, GermanyAccount in the correspondent bank: 400886700401 SWIFT Code of the correspondent bank: COBADEFF",
+      "correspondent2": " J.P. Morgan AG, Frankfurt am Main, Germany Account in the correspondent bank: 6231605145 SWIFT Code of the correspondent bank: CHASDEFX"
+    }
   }
-	}
-
 }

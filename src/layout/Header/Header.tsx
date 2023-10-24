@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 import Menu from 'public/icons/menu.svg';
 
@@ -27,8 +28,11 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
     defaultValue: '',
   }) as ItemProps[];
 
+  const router = useRouter();
+  const currentPath = router.pathname;
+
   return (
-    <header className={s.header}>
+    <header className={currentPath !== '/404' ? s.header : s.header_error}>
       <Container>
         <div className={s.header_block}>
           <MediaQuery maxWidth={1439}>
