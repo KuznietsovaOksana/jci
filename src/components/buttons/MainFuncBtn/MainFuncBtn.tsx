@@ -1,14 +1,13 @@
 import { FC } from 'react';
 
-import { ButtonProps } from './MainButton.props';
-import s from './MainButton.module.css';
+import { ButtonProps } from './MainFuncBtn.props';
+import s from './MainFuncBtn.module.css';
 import Link from 'next/link';
 
-export const MainButton: FC<ButtonProps> = ({
+export const MainFuncBtn: FC<ButtonProps> = ({
   text,
   style = 'primaryNavy',
   className,
-  href = '/',
   onClick,
 }) => {
   return (
@@ -19,14 +18,15 @@ export const MainButton: FC<ButtonProps> = ({
     // >
     //   {text}
     // </a>
-    <Link 
-      href={href}
+    <button
+      type='submit'
       onClick={onClick}
       className={`${s.mainBtn} ${s[style]} ${className}`}
-      >
+    >
       {text}
-    </Link>
+    </button>
+   
   );
 };
 
-MainButton.displayName = 'MainButton';
+MainFuncBtn.displayName = 'MainButton';

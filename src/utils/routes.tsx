@@ -7,5 +7,6 @@ export const router = {
   CONTACTS: '/contacts',
   POLICY: '/privacy-policy',
   TERMS: '/terms',
+  JOINUS: '/join-us',
   // NOT_FOUND: '/404',
 };
