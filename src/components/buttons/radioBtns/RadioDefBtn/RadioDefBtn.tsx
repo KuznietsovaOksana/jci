@@ -44,6 +44,7 @@ export const RadioDefBtn: FC<ButtonProps> = ({
             {/* {label} */}
             <p className={`${s.inputName}`}>{label}</p>
         </label>
+        
         // <>
         //     <input 
         //         type="radio" 
