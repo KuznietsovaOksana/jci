@@ -2,6 +2,7 @@ import { FC } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import Menu from 'public/icons/menu.svg';
 
@@ -10,6 +11,9 @@ import { Logo } from '@/components/typography/Logo';
 import { Container } from '@/components/common/Container';
 import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
+
+
+import { router } from '@/utils/routes';
 
 import { ILayout } from '../Layout';
 import { ItemProps } from '../Layout/Layout.props';
@@ -64,7 +68,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
 
           <MediaQuery minWidth={768}>
             <div className={s.button_media}>
-              <MainButton text={commonT('buttons.join')} />
+              <MainButton text={commonT('buttons.join')} href='/join-us'/>
             </div>
           </MediaQuery>
         </div>

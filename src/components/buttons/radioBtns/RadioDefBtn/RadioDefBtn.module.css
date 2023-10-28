@@ -1,0 +1,187 @@
+.radioInput {
+  display: none; /* Приховує стандартний кружечок радіокнопки */
+}
+
+.rradioInput {
+  display: none; /* Приховує стандартний кружечок радіокнопки */
+}
+
+.radioLabel {
+    margin-top: 10px;
+  /* display: block; */
+  position: relative;
+  /* padding-left: 30px; */
+  /* margin-left: 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputName {
+    margin-left: 30px;
+}
+
+
+.radioLabel {
+    margin-top: 10px;
+    margin-left: 200px;
+  /* display: block; */
+  position: relative;
+  /* padding-left: 30px; */
+  width: 20px;
+  height: 20px;
+  /* border: 1px solid #414042; */
+  /* background-color: #FFF; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+
+.radioLabel::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #414042;
+    /* border: 1px solid red; Outline */
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+
+.radioLabel:hover::before {
+  border: 1px solid #3A67B1;
+}
+.radioLabel:focus::before {
+  border: 1px solid #3A67B1;
+}
+
+
+.radioLabel .checkmark {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-40%);
+    /* width: 10px; */
+    /* height: 10px; */
+    background-color: #3A67B1;
+    border-radius: 50%;
+    /* display: inline-block; */
+    /* display: block; */
+    display: none;
+}
+
+.radioLabel input:checked + .checkmark {
+    display: inline-block;
+}
+
+/* .radioLabel input:checked + .radioLabel::before {
+    border: 1px solid #3A67B1;
+} */
+
+/* .radioLabel input:checked + .radioLabel:checked::before {
+    border: 1px solid #3A67B1;
+} */
+
+/* .radioLabel input:checked + .checkmark::before {
+    border: 1px solid #3A67B1;
+} */
+.radioInput:checked + .radioLabel::before {
+  display: none;
+    border: 2px solid red;
+}
+
+.radioLabel input:checked + .radioInput::before {
+  border: 1px solid red;
+}
+
+.radioInput:checked + .radioLabel::before {
+  border-color: red;
+}
+
+.radioLabel input:checked + .checkmark {
+    display: inline-block;
+}
+
+/* ------ */
+/* .llabel {
+    position: relative;
+    color: red;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.llabel::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 1px solid #414042;
+    background-color: #FFF;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.rradioInput:checked + .llabel {
+     
+}
+
+.rradioInput:checked + .llabel::before {
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border: 6px solid white;
+    outline: 1px solid #414042;
+    background-color: green;
+
+} */
+
+/* ---------------- */
+
+
+/* .radioLabel:checked::before {
+  border: 1px solid #3A67B1;
+} */
+
+
+
+/* .radioInput:hover + .radioLabel::before {
+  border: 1px solid #3A67B1;
+}
+
+.radioInput:focus + .radioLabel::before {
+  border: 1px solid #3A67B1;
+} */
+
+/* .radio-label {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #333;
+    border-radius: 50%;
+  }
+
+  input:checked + &::before {
+    border: 2px solid #007bff;
+    background-color: #007bff;
+  }
+
+  input:hover + &::before {
+    border: 2px solid #666;
+  }
+} */
