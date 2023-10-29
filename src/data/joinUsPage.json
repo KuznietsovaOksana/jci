@@ -1,0 +1,78 @@
+{
+  "title": "Membership Application",
+  "text": "JCI Ukraine is the Ukrainian branch of the International Chamber of Young Leaders and Entrepreneurs, a UN partner. If you would like to join us, please fill out the form below",
+  "inputs": [
+    {
+      "captionText": "Full name *",
+      "innerText": "Full name",
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "captionText": "Date of birth *",
+      "innerText": "dd/mm/yyyy",
+      "name": "date",
+      "type": "datetime"
+    },
+    {
+      "captionText": "Email *",
+      "innerText": "Example@gmail.com",
+      "name": "email",
+      "type": "email"
+    },
+    {
+      "captionText": "City *",
+      "innerText": "Please enter your city",
+      "name": "city",
+      "type": "text"
+    },
+    {
+      "captionText": "Phone number (Telegram) *",
+      "innerText": "+",
+      "name": "phone",
+      "type": "tel"
+    },
+    {
+      "captionText": "Occupation and role *",
+      "innerText": "Role",
+      "name": "role",
+      "type": "text"
+    },
+    {
+      "captionText": "A project or social direction that you wish to develop within JCI activities *",
+      "innerText": "Name of the project or social direction",
+      "name": "project",
+      "type": "text"
+    }
+  ],
+  "textarea": {
+    "captionText": "Expectations from membership in JCI Ukraine *",
+    "innerText": "Expectations",
+    "name": "expectations"
+  },
+  "radio": {
+    "title": "How did you learn about us? *",
+    "radio_buttons": [
+      {
+        "text": "Website/ Social media;",
+        "name": "info"
+      },
+      {
+        "text": "Friends / acquaintances;",
+        "name": "info"
+      },
+      {
+        "text": "Work;",
+        "name": "info"
+      },
+      {
+        "text": "Chambers in other countries;",
+        "name": "info"
+      },
+      {
+        "text": "Other:",
+        "name": "info"
+      }
+    ]
+  }
+}

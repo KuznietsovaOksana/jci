@@ -1,0 +1,33 @@
+.first_section {
+  padding-top: 104px;
+}
+@media screen and (min-width: 768px) {
+  .first_section {
+    padding-top: 156px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .first_section {
+    padding-top: 182px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .text {
+    margin-bottom: 64px;
+  }
+}

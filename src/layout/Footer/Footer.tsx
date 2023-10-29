@@ -48,6 +48,7 @@ export const Footer = () => {
               </div>
               <div className={s.btn_wrapper}>
                 <MainButton
+                  href={router.JOINUS}
                   text={commonT('buttons.join')}
                   style='primaryNavy'
                 />
@@ -165,6 +166,7 @@ export const Footer = () => {
               </ul>
               <div className={s.btn_wrapper}>
                 <MainButton
+                  href={router.JOINUS}
                   text={commonT('buttons.join')}
                   style='primaryNavy'
                 />

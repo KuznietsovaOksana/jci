@@ -14,6 +14,7 @@ import { useLocalization } from '@/contexts/LocalizationContext';
 
 import { IHeroProps } from './heroProps';
 
+import { router } from '@/utils/routes';
 import s from './HeroSection.module.css';
 
 export const HeroSection = ({ heroData }: IHeroProps) => {
@@ -86,7 +87,11 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
                   : heroData[0].subtitle_en}
               </p>
               <div className={s.cta}>
-                <MainButton text={t('buttons.join')} style='primaryNavy' />
+                <MainButton
+                  href={router.JOINUS}
+                  text={t('buttons.join')}
+                  style='primaryNavy'
+                />
                 <MainButton text={t('buttons.donate')} style='secondaryNavy' />
               </div>
             </div>
@@ -116,7 +121,11 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
               : heroData[0].subtitle_en}
           </p>
           <div className={s.cta}>
-            <MainButton text={t('buttons.join')} style='primaryNavy' />
+            <MainButton
+              href={router.JOINUS}
+              text={t('buttons.join')}
+              style='primaryNavy'
+            />
             <MainButton text={t('buttons.donate')} style='secondaryNavy' />
           </div>
         </Container>

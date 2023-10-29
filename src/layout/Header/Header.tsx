@@ -2,7 +2,6 @@ import { FC } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 import Menu from 'public/icons/menu.svg';
 
@@ -11,7 +10,6 @@ import { Logo } from '@/components/typography/Logo';
 import { Container } from '@/components/common/Container';
 import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '@/components/header/LanguageSwitcher';
-
 
 import { router } from '@/utils/routes';
 
@@ -27,13 +25,12 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 export const Header: FC<ILayout> = ({ setShowModal }) => {
   const { t: navigationT } = useTranslation('navigation');
   const { t: commonT } = useTranslation('common');
+  const nextRouter = useRouter();
+  const currentPath = nextRouter.pathname;
   const items = navigationT('nav', {
     returnObjects: true,
     defaultValue: '',
   }) as ItemProps[];
-
-  const router = useRouter();
-  const currentPath = router.pathname;
 
   return (
     <header className={currentPath !== '/404' ? s.header : s.header_error}>
@@ -68,7 +65,7 @@ export const Header: FC<ILayout> = ({ setShowModal }) => {
 
           <MediaQuery minWidth={768}>
             <div className={s.button_media}>
-              <MainButton text={commonT('buttons.join')} href='/join-us'/>
+              <MainButton text={commonT('buttons.join')} href={router.JOINUS} />
             </div>
           </MediaQuery>
         </div>
