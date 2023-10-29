@@ -5,22 +5,18 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
-import TermsSection from '@/sections/TermsPage/TermsSection/TermsSection';
+
 import { MainFuncBtn } from '@/components/buttons/MainFuncBtn';
 import { RadioDefBtn } from '@/components/buttons/radioBtns/RadioDefBtn';
+import { Section } from '@/components/sections/Section';
+import { JoinUsSection } from '@/sections/JoinUsPage';
 
 export default function JoinUs() {
   const [showModal, setShowModal] = useState(false);
 
-  const divStyle = {
-    
-    padding: '100px', // Задайте внутрішні відступи
-
-  };
-
   const [selectedOption, setSelectedOption] = useState('option1');
 
-  const handleOptionChange = (event:any) => {
+  const handleOptionChange = (event: any) => {
     setSelectedOption(event.target.id);
     console.log(event.target.id);
   };
@@ -40,24 +36,22 @@ export default function JoinUs() {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
-          {/* <TermsSection /> */}
-          <p style={divStyle}>asdfghsga</p>
-          <MainFuncBtn text='Send' onClick={()=>console.log("Click")} />
-          <RadioDefBtn 
-            id='option1' 
-            name='option1' 
+          <JoinUsSection />
+          {/* <MainFuncBtn text='Send' onClick={() => console.log('Click')} />
+          <RadioDefBtn
+            id='option1'
+            name='option1'
             checked={selectedOption === 'option1'}
             onChange={handleOptionChange}
-            label='option1'  
+            label='option1'
           />
-          <RadioDefBtn 
-            id='option2' 
-            name='option2' 
+          <RadioDefBtn
+            id='option2'
+            name='option2'
             checked={selectedOption === 'option2'}
             onChange={handleOptionChange}
-            label='option2'  
-          />
-          
+            label='option2'
+          /> */}
         </main>
       </Layout>
     </>
@@ -70,7 +64,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
-        'termsPage',
       ])),
     },
   };

@@ -1,8 +1,10 @@
+import { ChangeEventHandler } from 'react';
+
 export interface TextareaProps {
-  id: string;
+  id?: string;
   name: string;
   value?: string;
-  onChange?: any;
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
   captionText: string;
   innerText: string;
   helperText?: string;

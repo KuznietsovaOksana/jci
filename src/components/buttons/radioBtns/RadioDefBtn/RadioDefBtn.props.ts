@@ -1,8 +1,10 @@
+import { ChangeEventHandler } from 'react';
+
 export interface ButtonProps {
-    id: string;
-    name: string;
-    value?: string;
-    checked?: any;
-    onChange?: (event:any) => void;
-    label: string;
+  id: string;
+  name: string;
+  value?: string;
+  checked?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  label: string;
 }

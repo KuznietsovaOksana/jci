@@ -19,11 +19,11 @@ export const MainButton: FC<ButtonProps> = ({
     // >
     //   {text}
     // </a>
-    <Link 
+    <Link
       href={href}
       onClick={onClick}
       className={`${s.mainBtn} ${s[style]} ${className}`}
-      >
+    >
       {text}
     </Link>
   );

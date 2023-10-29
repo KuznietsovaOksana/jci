@@ -3,4 +3,5 @@ export interface ButtonProps {
   text: string;
   style?: 'primaryNavy' | 'secondaryNavy' | 'primaryBlue' | 'secondaryBlue';
   onClick?: () => void;
+  access?: boolean;
 }

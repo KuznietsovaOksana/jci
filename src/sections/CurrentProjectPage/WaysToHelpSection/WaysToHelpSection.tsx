@@ -9,6 +9,7 @@ import { useScreen } from '@/hooks/use_screen';
 import { Title } from '@/components/typography/Title';
 
 import { images } from './images';
+import { router } from '@/utils/routes';
 
 import s from './WaysToHelpSection.module.css';
 
@@ -52,7 +53,11 @@ export const WaysToHelpSection = () => {
         <div className={s.desk_block_one}>
           <div className={s.desk_join}>
             <h3 className={s.title_card}>{projectPageT('ways.textFirst')}</h3>
-            <MainButton text={commonT('buttons.join')} style='primaryNavy' />
+            <MainButton
+              href={router.JOINUS}
+              text={commonT('buttons.join')}
+              style='primaryNavy'
+            />
           </div>
           <Image
             className={`${s.picture} ${s.picture_one}`}

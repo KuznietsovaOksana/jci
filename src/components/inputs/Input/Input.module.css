@@ -8,8 +8,7 @@
 
 .input,
 .textarea {
-  width: 256px;
-
+  min-width: 100%;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   color: var(--admin-grey);
@@ -17,11 +16,6 @@
 
   @media (min-width: 768px) {
     font-size: 16px;
-    width: 488px;
-  }
-
-  @media (min-width: 1440px) {
-    width: 552px;
   }
 }
 

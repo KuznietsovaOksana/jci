@@ -13,6 +13,7 @@ import { MainButton } from '@/components/buttons/MainButton';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import s from './ModalMenu.module.css';
+import { router } from '@/utils/routes';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -25,7 +26,6 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
     returnObjects: true,
     defaultValue: '',
   }) as ItemProps[];
-
   return (
     <div className={s.modal}>
       <div className={s.top_border}>
@@ -42,7 +42,12 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
               />
             </button>
             <MediaQuery maxWidth={767}>
-              <MainButton text={commonT('buttons.join')} className={s.button} />
+              <MainButton
+                onClick={() => setShowModal(false)}
+                href={router.JOINUS}
+                text={commonT('buttons.join')}
+                className={s.button}
+              />
             </MediaQuery>
             <LanguageSwitcher />
           </div>

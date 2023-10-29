@@ -8,6 +8,7 @@ export const MainFuncBtn: FC<ButtonProps> = ({
   text,
   style = 'primaryNavy',
   className,
+  access = false,
   onClick,
 }) => {
   return (
@@ -22,10 +23,10 @@ export const MainFuncBtn: FC<ButtonProps> = ({
       type='submit'
       onClick={onClick}
       className={`${s.mainBtn} ${s[style]} ${className}`}
+      disabled={access ? true : false}
     >
       {text}
     </button>
-   
   );
 };
 
