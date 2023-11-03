@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { ErrorMessage, Field } from 'formik';
 
 import { InputProps } from './Input.props';
 import s from './Input.module.css';
@@ -7,26 +8,28 @@ export const Input: FC<InputProps> = ({
   id,
   name,
   type,
-  value,
-  onChange,
   captionText,
-  helperText,
   innerText,
   className,
+  errors,
+  touched,
+  minlength,
+  maxlength,
 }) => {
+  const redBorder = touched[name] && errors[name] ? s.invalid : '';
   return (
-    <label className={`${s.inputLabel} ${className}`}>
+    <label className={`${s.inputLabel}  ${className}`}>
       <p className={s.input_captionText}>{captionText}</p>
-      <input
+      <Field
         id={id}
-        className={s.input}
+        className={`${s.input} ${redBorder}`}
         type={type}
         name={name}
-        value={value}
-        onChange={onChange}
         placeholder={innerText}
+        minLength={minlength}
+        maxLength={maxlength}
       />
-      {helperText && <p className={s.input_helperText}>{helperText}</p>}
+      <ErrorMessage className={s.input_helperText} name={name} component='p' />
     </label>
   );
 };

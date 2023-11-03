@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { ErrorMessage, Field } from 'formik';
 
 import { TextareaProps } from './Textarea.props';
 import s from '../Input/Input.module.css';
@@ -6,25 +7,28 @@ import s from '../Input/Input.module.css';
 export const Textarea: FC<TextareaProps> = ({
   id,
   name,
-  value,
-  onChange,
   captionText,
-  helperText,
   innerText,
   className,
+  errors,
+  touched,
+  minlength,
+  maxlength,
 }) => {
+  const redBorder = touched[name] && errors[name] ? s.invalid : '';
   return (
     <label className={`${s.inputLabel} ${className}`}>
       <p className={s.input_captionText}>{captionText}</p>
-      <textarea
+      <Field
+        component='textarea'
         id={id}
         name={name}
-        value={value}
-        onChange={onChange}
         placeholder={innerText}
-        className={s.textarea}
+        className={`${s.textarea} ${redBorder}`}
+        minLength={minlength}
+        maxLength={maxlength}
       />
-      {helperText && <p className={s.input_helperText}>{helperText}</p>}
+      <ErrorMessage className={s.input_helperText} name={name} component='p' />
     </label>
   );
 };

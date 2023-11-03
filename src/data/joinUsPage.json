@@ -12,7 +12,7 @@
       "captionText": "Date of birth *",
       "innerText": "dd/mm/yyyy",
       "name": "date",
-      "type": "datetime"
+      "type": "text"
     },
     {
       "captionText": "Email *",

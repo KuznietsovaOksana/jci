@@ -4,6 +4,7 @@
   text-align: center;
   justify-content: center;
   gap: 4px;
+  position: relative;
 }
 
 .input,
@@ -43,14 +44,9 @@
   outline-color: var(--blue-navy-color);
 }
 
-.input:invalid,
-.textarea:invalid {
+.invalid {
   border-color: var(--admin-red);
   outline: transparent;
-
-  .input_helperText {
-    display: block;
-  }
 }
 
 .input_captionText {
@@ -64,8 +60,8 @@
 }
 
 .input_helperText {
-  display: none;
-
+  position: absolute;
+  bottom: -22px;
   text-align: left;
   color: var(--admin-red);
   font-size: 14px;
@@ -74,4 +70,9 @@
 .input_captionText::first-letter,
 .input_helperText::first-letter {
   text-transform: capitalize;
+}
+
+.invalid {
+  border-color: var(--admin-red);
+  outline: transparent;
 }
