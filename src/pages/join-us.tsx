@@ -37,21 +37,6 @@ export default function JoinUs() {
       <Layout setShowModal={setShowModal}>
         <main>
           <JoinUsSection />
-          {/* <MainFuncBtn text='Send' onClick={() => console.log('Click')} />
-          <RadioDefBtn
-            id='option1'
-            name='option1'
-            checked={selectedOption === 'option1'}
-            onChange={handleOptionChange}
-            label='option1'
-          />
-          <RadioDefBtn
-            id='option2'
-            name='option2'
-            checked={selectedOption === 'option2'}
-            onChange={handleOptionChange}
-            label='option2'
-          /> */}
         </main>
       </Layout>
     </>

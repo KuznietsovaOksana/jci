@@ -1,13 +1,48 @@
-import { ChangeEventHandler } from 'react';
+import { FormikErrors, FormikTouched } from 'formik';
 
+export type nameType =
+  | 'name'
+  | 'date'
+  | 'email'
+  | 'city'
+  | 'phone'
+  | 'role'
+  | 'project'
+  | 'expectations'
+  | 'info'
+  | 'other';
 export interface InputProps {
   id?: string;
-  name: string;
+  name: nameType;
+
   type: string;
-  value?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
   captionText: string;
   innerText: string;
-  helperText?: string;
   className?: string;
+  minlength?: string;
+  maxlength?: string;
+  errors: FormikErrors<{
+    name: string;
+    date: string;
+    email: string;
+    city: string;
+    phone: string;
+    role: string;
+    project: string;
+    expectations: string;
+    info: string;
+    other: string;
+  }>;
+  touched: FormikTouched<{
+    name: string;
+    date: string;
+    email: string;
+    city: string;
+    phone: string;
+    role: string;
+    project: string;
+    expectations: string;
+    info: string;
+    other: string;
+  }>;
 }

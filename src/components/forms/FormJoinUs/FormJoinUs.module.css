@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 40px;
 }
+
 .radio_title {
   margin-top: 40px;
   margin-bottom: 12px;
@@ -27,6 +28,7 @@
     padding: 64px 288px;
     border-radius: 32px;
   }
+
   .radio_title {
     font-size: 20px;
   }
@@ -48,19 +50,52 @@
   border-bottom: 1px solid var(--border-color);
   background-color: transparent;
   padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.div_border {
+  position: absolute;
+  bottom: 0;
+  margin-left: 85px;
+  width: 131px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.input_helperText {
+  position: absolute;
+  left: 85px;
+  bottom: -20px;
+  text-align: left;
+  color: var(--admin-red);
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .button_send {
     width: 264px;
   }
+
+  .div_border {
+    width: 145px;
+    margin-left: 95px;
+  }
+
   .underline_input {
     width: 145px;
     margin-left: 95px;
   }
+
+  .input_helperText {
+    left: 95px;
+  }
 }
 
 @media (min-width: 1440px) {
+  .div_border {
+    width: 168px;
+  }
+
   .underline_input {
     width: 168px;
   }
@@ -68,4 +103,12 @@
 
 .radio_item {
   position: relative;
+}
+
+.block_radio {
+  position: relative;
+}
+
+.underline_input_error {
+  border-bottom: 1px solid var(--admin-red);
 }
