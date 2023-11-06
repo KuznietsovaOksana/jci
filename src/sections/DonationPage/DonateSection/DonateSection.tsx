@@ -8,7 +8,7 @@ import { Tabs } from '@/components/common/Tabs';
 
 import s from './DonateSection.module.css';
 
-const tabs = ['UAN', 'USD', 'EUR'];
+const tabs = ['UAH', 'USD', 'EUR'];
 
 export const DonateSection = () => {
   const { t: donatePageT } = useTranslation('donationPage');

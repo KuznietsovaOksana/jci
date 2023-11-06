@@ -31,7 +31,7 @@ export const TabsDonationInfo: FC<ITabInfoProps> = ({ numberTab }) => {
   // usd
   const arrayUsd = [
     { title: t('tabs.company_euro_usa'), description: t('info.usd.company') },
-    { title: t('iban_euro_usa'), description: t('info.usd.iban_code') },
+    { title: t('tabs.iban_euro_usa'), description: t('info.usd.iban_code') },
     { title: t('tabs.bank'), description: t('info.usd.bank') },
     { title: t('tabs.swift'), description: t('info.usd.swift') },
     { title: t('tabs.address'), description: t('info.usd.address') },
@@ -39,22 +39,34 @@ export const TabsDonationInfo: FC<ITabInfoProps> = ({ numberTab }) => {
 
   const elUsd1 = {
     title: t('tabs.correspondent'),
-    description: t('info.usd.correspondent1'),
+    description: [
+      t('info.usd.correspondent1.name'),
+      t('info.usd.correspondent1.account'),
+      t('info.usd.correspondent1.swift'),
+    ],
   };
   const elUsd2 = {
     title: t('tabs.correspondent'),
-    description: t('info.usd.correspondent2'),
+    description: [
+      t('info.usd.correspondent2.name'),
+      t('info.usd.correspondent2.account'),
+      t('info.usd.correspondent2.swift'),
+    ],
   };
   const elUsd3 = {
     title: t('tabs.correspondent'),
-    description: t('info.usd.correspondent3'),
+    description: [
+      t('info.usd.correspondent3.name'),
+      t('info.usd.correspondent3.account'),
+      t('info.usd.correspondent3.swift'),
+    ],
   };
   const arrayUsdCorrespondent = [elUsd1, elUsd2, elUsd3];
 
   // euro
   const arrayEuro = [
     { title: t('tabs.company_euro_usa'), description: t('info.euro.company') },
-    { title: t('iban_euro_usa'), description: t('info.euro.iban_code') },
+    { title: t('tabs.iban_euro_usa'), description: t('info.euro.iban_code') },
     { title: t('tabs.bank'), description: t('info.euro.bank') },
     { title: t('tabs.swift'), description: t('info.euro.swift') },
     { title: t('tabs.address'), description: t('info.euro.address') },
@@ -62,11 +74,19 @@ export const TabsDonationInfo: FC<ITabInfoProps> = ({ numberTab }) => {
 
   const elEuro1 = {
     title: t('tabs.correspondent'),
-    description: t('info.euro.correspondent1'),
+    description: [
+      t('info.euro.correspondent1.name'),
+      t('info.euro.correspondent1.account'),
+      t('info.euro.correspondent1.swift'),
+    ],
   };
   const elEuro2 = {
     title: t('tabs.correspondent'),
-    description: t('info.euro.correspondent2'),
+    description: [
+      t('info.euro.correspondent2.name'),
+      t('info.euro.correspondent2.account'),
+      t('info.euro.correspondent2.swift'),
+    ],
   };
   const arrayEuroCorrespondent = [elEuro1, elEuro2];
 
@@ -128,10 +148,20 @@ export const TabsDonationInfo: FC<ITabInfoProps> = ({ numberTab }) => {
             <li key={ind} className={s.item_currency}>
               {ind !== 0 && <span className={s.or}>{t('tabs.or')}</span>}
               <h2 className={s.title}>{el.title}</h2>
-              <p className={`${s.text} ${s.text_correspondent}`}>
-                {el.description}
-              </p>
-              <CopyToClipboard text={el.description}>
+              {el.description.map((el, ind) => (
+                <p key={ind} className={`${s.text} ${s.text_correspondent}`}>
+                  {el}
+                </p>
+              ))}
+              <CopyToClipboard
+                text={
+                  el.description[0] +
+                  ' ' +
+                  el.description[1] +
+                  ' ' +
+                  el.description[2]
+                }
+              >
                 <button
                   type='button'
                   className={s.button_copy}
@@ -181,10 +211,20 @@ export const TabsDonationInfo: FC<ITabInfoProps> = ({ numberTab }) => {
             <li key={ind} className={s.item_currency}>
               {ind !== 0 && <span className={s.or}>{t('tabs.or')}</span>}
               <h2 className={s.title}>{el.title}</h2>
-              <p className={`${s.text} ${s.text_correspondent}`}>
-                {el.description}
-              </p>
-              <CopyToClipboard text={el.description}>
+              {el.description.map((el, ind) => (
+                <p key={ind} className={`${s.text} ${s.text_correspondent}`}>
+                  {el}
+                </p>
+              ))}
+              <CopyToClipboard
+                text={
+                  el.description[0] +
+                  ' ' +
+                  el.description[1] +
+                  ' ' +
+                  el.description[2]
+                }
+              >
                 <button
                   type='button'
                   className={s.button_copy}
