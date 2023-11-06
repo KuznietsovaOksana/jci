@@ -19,16 +19,22 @@ export const Textarea: FC<TextareaProps> = ({
   return (
     <label className={`${s.inputLabel} ${className}`}>
       <p className={s.input_captionText}>{captionText}</p>
-      <Field
-        component='textarea'
-        id={id}
-        name={name}
-        placeholder={innerText}
-        className={`${s.textarea} ${redBorder}`}
-        minLength={minlength}
-        maxLength={maxlength}
-      />
-      <ErrorMessage className={s.input_helperText} name={name} component='p' />
+      <div className={s.input_error}>
+        <Field
+          component='textarea'
+          id={id}
+          name={name}
+          placeholder={innerText}
+          className={`${s.textarea} ${redBorder}`}
+          minLength={minlength}
+          maxLength={maxlength}
+        />
+        <ErrorMessage
+          className={`${s.input_helperText}  ${s.textarea_helperText} `}
+          name={name}
+          component='p'
+        />
+      </div>
     </label>
   );
 };

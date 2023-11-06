@@ -1,5 +1,8 @@
 import * as yup from 'yup';
 import isValidDomain from 'is-valid-domain';
+import { FormikHelpers } from 'formik';
+
+import { valueType } from '@/components/inputs/Input/Input.props';
 
 interface Formatted {
   [key: string]: string;
@@ -54,8 +57,8 @@ export const schema = yup.object().shape({
       16,
       'Phone number must be in the format: +123456789 (between 9 and 15 digits)'
     )
-
     .required('This field is required'),
+
   role: yup
     .string()
     .matches(onlyLatinAndSpace, 'Invalid input, please use Latin letters')
@@ -82,7 +85,10 @@ export const schema = yup.object().shape({
     .required('This field is required'),
 });
 
-export const onSubmitValidation = async (values: any, actions: any) => {
+export const onSubmitValidation = async (
+  values: valueType,
+  actions: FormikHelpers<valueType>
+) => {
   if (values.info === 'Other:') {
     const dynamicSchema = schema.shape({
       other: yup

@@ -4,9 +4,13 @@
   text-align: center;
   justify-content: center;
   gap: 4px;
+}
+.input_error {
   position: relative;
 }
-
+.textarea_error {
+  position: relative;
+}
 .input,
 .textarea {
   min-width: 100%;
@@ -61,10 +65,14 @@
 
 .input_helperText {
   position: absolute;
-  top: 75px;
+  top: 51px;
   text-align: left;
   color: var(--admin-red);
   font-size: 14px;
+}
+
+.textarea_helperText {
+  top: 143px;
 }
 
 .input_captionText::first-letter,

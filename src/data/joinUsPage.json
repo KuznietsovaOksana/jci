@@ -10,7 +10,7 @@
     },
     {
       "captionText": "Date of birth *",
-      "innerText": "dd/mm/yyyy",
+      "innerText": "dd.mm.yyyy",
       "name": "date",
       "type": "text"
     },

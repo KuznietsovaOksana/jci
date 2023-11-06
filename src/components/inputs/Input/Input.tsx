@@ -20,16 +20,22 @@ export const Input: FC<InputProps> = ({
   return (
     <label className={`${s.inputLabel}  ${className}`}>
       <p className={s.input_captionText}>{captionText}</p>
-      <Field
-        id={id}
-        className={`${s.input} ${redBorder}`}
-        type={type}
-        name={name}
-        placeholder={innerText}
-        minLength={minlength}
-        maxLength={maxlength}
-      />
-      <ErrorMessage className={s.input_helperText} name={name} component='p' />
+      <div className={s.input_error}>
+        <Field
+          id={id}
+          className={`${s.input} ${redBorder}`}
+          type={type}
+          name={name}
+          placeholder={innerText}
+          minLength={minlength}
+          maxLength={maxlength}
+        />
+        <ErrorMessage
+          className={s.input_helperText}
+          name={name}
+          component='p'
+        />
+      </div>
     </label>
   );
 };
