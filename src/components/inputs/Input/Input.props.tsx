@@ -11,6 +11,20 @@ export type nameType =
   | 'expectations'
   | 'info'
   | 'other';
+
+export type valueType = {
+  name: string;
+  date: string;
+  email: string;
+  city: string;
+  phone: string;
+  role: string;
+  project: string;
+  expectations: string;
+  info: string;
+  other: string;
+};
+
 export interface InputProps {
   id?: string;
   name: nameType;
@@ -21,28 +35,6 @@ export interface InputProps {
   className?: string;
   minlength?: string;
   maxlength?: string;
-  errors: FormikErrors<{
-    name: string;
-    date: string;
-    email: string;
-    city: string;
-    phone: string;
-    role: string;
-    project: string;
-    expectations: string;
-    info: string;
-    other: string;
-  }>;
-  touched: FormikTouched<{
-    name: string;
-    date: string;
-    email: string;
-    city: string;
-    phone: string;
-    role: string;
-    project: string;
-    expectations: string;
-    info: string;
-    other: string;
-  }>;
+  errors: FormikErrors<valueType>;
+  touched: FormikTouched<valueType>;
 }

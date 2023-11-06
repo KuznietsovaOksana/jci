@@ -5,21 +5,10 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
-
-import { MainFuncBtn } from '@/components/buttons/MainFuncBtn';
-import { RadioDefBtn } from '@/components/buttons/radioBtns/RadioDefBtn';
-import { Section } from '@/components/sections/Section';
 import { JoinUsSection } from '@/sections/JoinUsPage';
 
 export default function JoinUs() {
   const [showModal, setShowModal] = useState(false);
-
-  const [selectedOption, setSelectedOption] = useState('option1');
-
-  const handleOptionChange = (event: any) => {
-    setSelectedOption(event.target.id);
-    console.log(event.target.id);
-  };
 
   return (
     <>
