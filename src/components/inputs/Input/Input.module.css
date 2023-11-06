@@ -61,7 +61,7 @@
 
 .input_helperText {
   position: absolute;
-  bottom: -22px;
+  top: 75px;
   text-align: left;
   color: var(--admin-red);
   font-size: 14px;

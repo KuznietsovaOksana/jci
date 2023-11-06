@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { PersistFormikValues } from 'formik-persist-values';
+import { ConnectedFocusError } from 'focus-formik-error';
 
 import { Input } from '@/components/inputs/Input';
 import { Textarea } from '@/components/inputs/Textarea';
@@ -54,6 +55,7 @@ export const FormJoinUs = () => {
 
         return (
           <Form className={s.form}>
+            <ConnectedFocusError />
             <ul className={s.list}>
               {inputs.map((el, ind) => (
                 <li key={ind}>

@@ -21,6 +21,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
+  display: block;
 }
 
 .or {
@@ -55,9 +56,11 @@
   .text {
     font-size: 16px;
   }
-  .text_correspondent {
+
+  /* .text_correspondent {
     width: 450px;
-  }
+  }  */
+
   .button_copy {
     top: auto;
     bottom: 16px;
