@@ -1,0 +1,32 @@
+{
+    "form": {
+        "title": "Let’s get in touch",
+        "inputs": [
+            {
+                "captionText": "Your name *",
+                "name": "name",
+                "placeholder": "Name",
+                "type": "text"
+            },
+            {
+                "captionText": "Your email *",
+                "name": "email",
+                "placeholder": "example@example.com",
+                "type": "email"
+            }
+        ],
+        "text_area": {
+            "captionText": "Your message *",
+            "name": "message",
+            "placeholder": "Message ",
+            "type": "text"
+        },
+        "button": "Send"
+    },
+    "errors": {
+        "required": "This field is required",
+        "format": "Invalid format",
+        "email_symbol": "Please include an '@' symbol in your email address.",
+        "domain": "Please include a valid domain extension such as .com or .net."
+    }
+}

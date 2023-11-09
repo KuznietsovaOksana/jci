@@ -1,0 +1,14 @@
+.first_section {
+  padding-top: 104px;
+}
+@media screen and (min-width: 768px) {
+  .first_section {
+    padding-top: 156px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .first_section {
+    padding-top: 182px;
+  }
+}

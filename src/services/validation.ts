@@ -8,8 +8,8 @@ interface Formatted {
   [key: string]: string;
 }
 
-const onlyLatinAndSpace = /^[a-zA-Z ]+$/u;
-const nameRegexPhone = /^\+\d+$/;
+export const onlyLatinAndSpace = /^[a-zA-Z ]+$/u;
+export const nameRegexPhone = /^\+\d+$/;
 
 export const schema = yup.object().shape({
   name: yup
@@ -116,3 +116,35 @@ export const onSubmitValidation = async (
     if (validate) return true;
   }
 };
+
+export const schemaContactsForm = yup.object().shape({
+  name: yup
+    .string()
+    .matches(onlyLatinAndSpace, 'Invalid input, please use Latin letters')
+    .test('format', 'Invalid format', (value: string | undefined) => {
+      if (value?.trim() === '') return false;
+      return true;
+    })
+    .required('This field is required'),
+
+  email: yup
+    .string()
+    .email('Invalid E-mail')
+    .test(
+      'validDomain',
+      'Please include a valid domain extension such as .com or .net.',
+      (value: string | undefined) => {
+        const array = value?.split('@');
+        return array && isValidDomain(array[1]);
+      }
+    )
+    .required('This field is required'),
+  message: yup
+    .string()
+    .matches(onlyLatinAndSpace, 'Invalid input, please use Latin letters')
+    .test('format', 'Invalid format', (value: string | undefined) => {
+      if (value?.trim() === '') return false;
+      return true;
+    })
+    .required('This field is required'),
+});
