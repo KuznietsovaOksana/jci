@@ -5,16 +5,16 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
-import { JoinUsSection } from '@/sections/JoinUsPage';
+import { ContactsSection } from '@/sections/ContactsPage/ContactsSection';
 
-export default function JoinUs() {
+export default function Contacts() {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
       <Head>
-        <title>JCI Join Us</title>
-        <meta name='description' content='Join Us' />
+        <title>JCI Contacts</title>
+        <meta name='description' content='JCI Contacts page' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -25,7 +25,7 @@ export default function JoinUs() {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
-          <JoinUsSection />
+          <ContactsSection />
         </main>
       </Layout>
     </>
@@ -38,6 +38,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
+        'contactsPage',
       ])),
     },
   };

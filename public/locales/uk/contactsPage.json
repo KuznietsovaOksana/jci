@@ -1,0 +1,32 @@
+{
+    "form": {
+        "title": "Зв'яжіться з нами",
+        "inputs": [
+            {
+                "captionText": "Ім'я *",
+                "name": "name",
+                "placeholder": "Ім'я",
+                "type": "text"
+            },
+            {
+                "captionText": "Електронна пошта *",
+                "name": "email",
+                "placeholder": "example@example.com",
+                "type": "email"
+            }
+        ],
+        "text_area": {
+            "captionText": "Повідомлення *",
+            "name": "message",
+            "placeholder": "Повідомлення ",
+            "type": "text"
+        },
+        "button": "Відправити"
+    },
+    "errors": {
+        "required": "Це поле є обов'язковим",
+        "format": "Невірний формат",
+        "email_symbol": "Введіть символ '@' у вашій адресі електронної пошти.",
+        "domain": "Вкажіть діюче доменне ім'я, наприклад, .com або .net."
+    }
+}

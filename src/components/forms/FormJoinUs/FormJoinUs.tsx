@@ -71,15 +71,17 @@ export const FormJoinUs = () => {
                   />
                 </li>
               ))}
-              <Textarea
-                captionText={textarea.captionText}
-                name={textarea.name as textAreaName}
-                innerText={textarea.innerText}
-                minlength='1'
-                maxlength='500'
-                errors={errors}
-                touched={touched}
-              />
+              <li>
+                <Textarea
+                  captionText={textarea.captionText}
+                  name={textarea.name as textAreaName}
+                  innerText={textarea.innerText}
+                  minlength='1'
+                  maxlength='500'
+                  errors={errors}
+                  touched={touched}
+                />
+              </li>
             </ul>
             <p className={s.radio_title}>{radio.title}</p>
             <ul className={s.radio_list}>
