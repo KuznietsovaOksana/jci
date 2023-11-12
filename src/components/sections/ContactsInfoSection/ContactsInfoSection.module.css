@@ -1,0 +1,109 @@
+.contactBlock {
+  display: block;
+}
+
+.block_title_span {
+  color: #3a67b1;
+}
+
+.contacts_list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item_title {
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #414042;
+}
+
+.item {
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  color: #0a0f29;
+}
+
+.item:focus,
+.item:hover,
+.item:active {
+    color: #2e528e;
+}
+
+.logos_list {
+  display: flex;
+  gap: 12px;
+}
+
+.logo_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #3a67b1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo_icon:focus,
+.logo_icon:hover,
+.logo_icon:active {
+  background-color: #2e528e;
+}
+
+.fb_logo {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--white-color);
+}
+
+.inst_logo {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--white-color);
+}
+
+
+@media (min-width: 768px) {
+    .contacts_list {
+        margin-top: 40px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .item_title {
+        font-size: 16px;
+    }
+    .item {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .contacts_list {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .list_item {
+        gap: 16px;
+    }
+    .item {
+        font-size: 24px;
+    }
+
+}
