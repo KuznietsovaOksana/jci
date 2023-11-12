@@ -104,6 +104,17 @@
   -webkit-box-orient: vertical;
 }
 
+.card:focus {
+  border-color: #89a4d0;
+  box-shadow: 0px 4px 20px rgba(14, 17, 28, 0.1);
+}
+.card:focus .datePrimary {
+  color: var(--blue-primary-color);
+}
+.card:focus .title {
+  color: var(--blue-primary-color);
+}
+
 @media screen and (min-width: 768px) {
   .newsCards {
     gap: 24px;
