@@ -40,7 +40,7 @@
 .item:focus,
 .item:hover,
 .item:active {
-    color: #2e528e;
+  color: #2e528e;
 }
 
 .logos_list {
@@ -57,7 +57,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .logo_icon:focus,
 .logo_icon:hover,
@@ -79,31 +78,29 @@
   stroke: var(--white-color);
 }
 
-
 @media (min-width: 768px) {
-    .contacts_list {
-        margin-top: 40px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .item_title {
-        font-size: 16px;
-    }
-    .item {
-        font-size: 20px;
-    }
+  .contacts_list {
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .item_title {
+    font-size: 16px;
+  }
+  .item {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1440px) {
-    .contacts_list {
-        flex-direction: column;
-        gap: 24px;
-    }
-    .list_item {
-        gap: 16px;
-    }
-    .item {
-        font-size: 24px;
-    }
-
+  .contacts_list {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .list_item {
+    gap: 16px;
+  }
+  .item {
+    font-size: 24px;
+  }
 }

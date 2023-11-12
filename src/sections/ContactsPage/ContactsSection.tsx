@@ -6,7 +6,6 @@ import s from './ContactsSection.module.css';
 import { ContactsInfoSection } from '@/components/sections/ContactsInfoSection';
 
 export const ContactsSection = () => {
-
   return (
     <Section className={s.first_section}>
       <Container>
