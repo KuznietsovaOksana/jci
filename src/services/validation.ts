@@ -8,7 +8,7 @@ interface Formatted {
   [key: string]: string;
 }
 
-export const onlyLatinAndSpace = /^[a-zA-Z ]+$/u;
+export const onlyLatinAndSpace = /^[a-zA-Z\s.,-|/]*$/;
 export const nameRegexPhone = /^\+\d+$/;
 
 export const schema = yup.object().shape({
