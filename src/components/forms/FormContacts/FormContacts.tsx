@@ -42,7 +42,7 @@ export const FormContacts = () => {
         }}
         validationSchema={schemaContactsForm}
       >
-        {({ values, errors, touched }) => {
+        {({ errors, touched }) => {
           return (
             <Form className={s.form}>
               <h2 className={s.title}>{items.title}</h2>
