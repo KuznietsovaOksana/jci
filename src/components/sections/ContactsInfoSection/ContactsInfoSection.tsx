@@ -6,58 +6,37 @@ import FbLogo from 'public/icons/facebook.svg';
 
 import s from './ContactsInfoSection.module.css';
 import { Title } from '@/components/typography/Title';
-import { ContactsInfoProps } from './ContactsInfoProps';
+import { ContactsInfo } from './ContactsInfoProps';
 
 export const ContactsInfoSection = () => {
-
-  // const { t } = useTranslation('privacyPolicyPage');
-  // const sections = t('sections', {
-  //   returnObjects: true,
-  //   defaultValue: '',
-  // }) as LegalAgreementProps[];
-
-
-  // const { t } = useTranslation('contactsPage');
-  // const items = t('form', {
-  //   returnObjects: true,
-  //   defaultValue: '',
-  // }) as IFormLocale;
-
   const { t } = useTranslation('contactsInfo');
   const items = t('contacts', {
     returnObjects: true,
     defaultValue: '',
-  }) as ContactsInfoProps;
-
-
-
+  }) as ContactsInfo;
 
   return (
     <>
       <div className={s.contactBlock}>
         <Title className={s.block_title}>
-          We are
-          <span className={s.block_title_span}> here </span>
-          for you
+          {items.title1}
+          <span className={s.block_title_span}>{items.title2}</span>
+          {items.title3}
         </Title>
 
         <ul className={s.contacts_list}>
-          <li className={s.list_item}>
-            <p className={s.item_title}>Email</p>
-            <Link className={s.item} href='mailto:ukraine@jci.cc'>
-              ukraine@jci.cc
-            </Link>
-          </li>
+          {items &&
+            items.info.map((el, id) => (
+              <li key={id} className={s.list_item}>
+                <p className={s.item_title}>{el.contactType}</p>
+                <Link className={s.item} href={el.href}>
+                  {el.content}
+                </Link>
+              </li>
+            ))}
 
           <li className={s.list_item}>
-            <p className={s.item_title}>Phone</p>
-            <Link className={s.item} href='tel:+380994449834'>
-              +38 (099) 444-98-34
-            </Link>
-          </li>
-
-          <li className={s.list_item}>
-            <p className={s.item_title}>Our Social Media</p>
+            <p className={s.item_title}>{items.socials}</p>
             <div className={s.logos_list}>
               <a
                 className={s.logo_icon}

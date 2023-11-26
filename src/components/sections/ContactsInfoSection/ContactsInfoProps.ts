@@ -1,25 +1,13 @@
-export interface ContactsInfoProps {
-  title: string;
-  inputs: [
+export interface ContactsInfo {
+  title1: string;
+  title2: string;
+  title3: string;
+  socials: string;
+  info: [
     {
-      captionText: string;
-      name: string;
-      placeholder: string;
-      type: string;
+      contactType: string;
+      href: string;
+      content: string;
     }
   ];
-  text_area: {
-    captionText: string;
-    name: string;
-    placeholder: string;
-    type: string;
-  };
-  button: string;
 }
-
-// export interface IErrorLocale {
-//   required: string;
-//   format: string;
-//   email_symbol: string;
-//   domain: string;
-// }
