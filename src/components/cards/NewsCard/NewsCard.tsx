@@ -1,6 +1,7 @@
 import React from 'react';
 
 import s from './NewsCard.module.css';
+import Link from 'next/link';
 
 interface Card {
   picture: {
@@ -27,7 +28,7 @@ interface NewsCardProps {
 export const NewsCard: React.FC<NewsCardProps> = ({ card }) => {
   return (
     <>
-      <a href='#' className={s.card}>
+      <Link href='#' className={s.card}>
         <div className={s.picture}>
           <picture>
             <source
@@ -56,7 +57,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({ card }) => {
             <p className={s.text}>{card.text}</p>
           </div>
         </div>
-      </a>
+      </Link>
     </>
   );
 };
