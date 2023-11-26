@@ -38,6 +38,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
+        'contactsInfo',
         'contactsPage',
       ])),
     },

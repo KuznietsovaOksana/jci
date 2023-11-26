@@ -1,0 +1,20 @@
+{
+    "contacts": {
+        "title1": "We are ",
+        "title2": "here ",
+        "title3": "for you!",
+        "socials": "Our Social Media",
+        "info": [
+            {
+                "contactType": "Email",
+                "href": "mailto:ukraine@jci.cc",
+                "content": "ukraine@jci.cc"
+            },
+            {
+                "contactType": "Phone",
+                "href": "tel:+380994449834",
+                "content": "+38 (099) 444-98-34"
+            }
+        ]
+    }
+}

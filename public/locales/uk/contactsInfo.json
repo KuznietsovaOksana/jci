@@ -1,0 +1,20 @@
+{
+    "contacts": {
+        "title1": "Ми ",
+        "title2": "тут ",
+        "title3": "для тебе!",
+        "socials": "Наші Соціальні Мережі",
+        "info": [
+            {
+                "contactType": "Електронна пошта",
+                "href": "mailto:ukraine@jci.cc",
+                "content": "ukraine@jci.cc"
+            },
+            {
+                "contactType": "Телефон",
+                "href": "tel:+380994449834",
+                "content": "+38 (099) 444-98-34"
+            }
+        ]
+    }
+}
