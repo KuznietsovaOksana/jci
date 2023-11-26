@@ -21,7 +21,6 @@ interface Card {
   text: string;
 }
 
-
 interface NewsCardProps {
   card: Card;
 }
@@ -58,7 +57,6 @@ export const NewsCard: React.FC<NewsCardProps> = ({ card }) => {
           </div>
         </div>
       </a>
-
     </>
   );
 };
