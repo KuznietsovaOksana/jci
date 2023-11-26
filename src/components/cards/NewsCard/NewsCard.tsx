@@ -31,7 +31,7 @@ interface NewsCardProps {
 export const NewsCard: React.FC<NewsCardProps> = ({ card }) => {
   return (
     <>
-      <a href='#' className={s.card} >
+      <a href='#' className={s.card}>
         <div className={s.picture}>
           <picture>
             <source
@@ -92,9 +92,6 @@ export const NewsCard: React.FC<NewsCardProps> = ({ card }) => {
           </div>
         </div>
       </div> */}
-
-
-
 
       {/* <div className={s.newsCards}>
         {cards.map((card, index) => (
