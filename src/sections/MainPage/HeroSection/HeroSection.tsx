@@ -10,11 +10,10 @@ import { Container } from '@/components/common/Container';
 import { HeroSlider } from '@/components/sliders/HeroSlider';
 import { MainButton } from '@/components/buttons/MainButton';
 
+import { router } from '@/utils/routes';
 import { useLocalization } from '@/contexts/LocalizationContext';
 
 import { IHeroProps } from './heroProps';
-
-import { router } from '@/utils/routes';
 import s from './HeroSection.module.css';
 
 export const HeroSection = ({ heroData }: IHeroProps) => {
@@ -74,7 +73,7 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
                 <Flag className={s.flag} />
                 {locale === 'uk'
                   ? heroData[0].title_2_uk
-                  : heroData[0].title_2_en}
+                  : heroData[0].title_2_en}{' '}
                 <span className={s.accentTitle}>
                   {locale === 'uk'
                     ? heroData[0].title_3_uk
@@ -105,7 +104,9 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
           <Title className={s.title} tag='h1'>
             {locale === 'uk' ? heroData[0].title_1_uk : heroData[0].title_1_en}
             <Flag className={s.flag} />
-            {locale === 'uk' ? heroData[0].title_2_uk : heroData[0].title_2_en}
+            {locale === 'uk'
+              ? heroData[0].title_2_uk
+              : heroData[0].title_2_en}{' '}
             <span className={s.accentTitle}>
               {locale === 'uk'
                 ? heroData[0].title_3_uk
