@@ -7,6 +7,7 @@ import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
 import { MemberCard } from '@/components/cards/MemberCard';
 import { Section } from '@/components/sections/Section';
+import { FollowUsSection } from '@/sections/AboutPage/FollowUsSection';
 
 interface Member {
   photo: string;
@@ -78,6 +79,7 @@ export default function Team() {
               <p>No members available.</p>
             )}
           </Section>
+          <FollowUsSection />
         </main>
       </Layout>
     </>
