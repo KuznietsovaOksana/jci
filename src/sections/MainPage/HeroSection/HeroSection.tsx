@@ -70,7 +70,19 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
                 {locale === 'uk'
                   ? heroData[0].title_1_uk
                   : heroData[0].title_1_en}
-                <Flag className={s.flag} />
+                <Flag
+                  className={s.flag}
+                  style={{
+                    display:
+                      (locale === 'uk' && heroData[0].show_flag_uk) ||
+                      (locale === 'en' && heroData[0].show_flag_en)
+                        ? 'inline'
+                        : 'none',
+                  }}
+                />
+                {((locale === 'uk' && !heroData[0].show_flag_uk) ||
+                  (locale === 'en' && !heroData[0].show_flag_en)) &&
+                  ' '}
                 {locale === 'uk'
                   ? heroData[0].title_2_uk
                   : heroData[0].title_2_en}{' '}
