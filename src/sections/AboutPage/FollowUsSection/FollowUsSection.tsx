@@ -37,6 +37,8 @@ export const FollowUsSection = () => {
           </Title>
           <a
             href='https://www.facebook.com/jci.ukraine.official'
+            target='_blank'
+            rel='noopener noreferrer nofollow'
             className={s.fbLink}
           >
             Go to Facebook
@@ -67,6 +69,8 @@ export const FollowUsSection = () => {
             </Title>
             <a
               href='https://www.facebook.com/jci.ukraine.official'
+              target='_blank'
+              rel='noopener noreferrer nofollow'
               className={s.fbLink}
             >
               Go to Facebook <Arrow />
