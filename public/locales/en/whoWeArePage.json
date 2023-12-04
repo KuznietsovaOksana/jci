@@ -1,0 +1,44 @@
+{
+    "change_world_section": {
+        "title": [
+            "We are",
+            " changing ",
+            "the world, here is how"
+        ],
+        "text": [
+            "JCI Ukraine is a non-profit organization that belongs to the global network of Junior Chamber International (JCI). We believe in empowering young people to take action and make a difference in their communities.",
+            "JCI Ukraine offers a wide range of training programs, projects, and events that help our members develop their personal and professional skills, expand their network, and contribute to society.",
+            "Whether you are an entrepreneur, or a professional, JCI Ukraine has something for you. Our members come from a variety of backgrounds and industries, and we welcome anyone who shares our values of an active citizen.",
+            "Our mission ",
+            "is to provide young professionals with the opportunity to develop leadership skills, create positive change, and connect with like-minded individuals from around the world.",
+            "Our vision ",
+            "is to be the foremost global network of young leaders.",
+            "Together, we can make a positive impact in our communities and in the world."
+        ],
+        
+        "alt" :"people with flags of Ukraine and Poland",
+        "button_more": "Show more",
+        "button_less": "Show less"
+    },
+    "join_teem_section": {
+        "title_1": [
+            "Why should you",
+            " join ",
+            "our team?"
+        ],
+        "text_1": [
+            "We offer opportunities to learn and develop leadership skills, as well as to expand professional contacts and networks. In addition, participation in JCI Ukraine allows you to work with other young people who share common values and strive for a better future for their communities.",
+            "We are also active in the field of social entrepreneurship and charity, enabling project participants to initiate and participate in projects aimed at solving social problems and improving the quality of life in society."
+        ],
+        "alt_1":"a man and a woman sit next to each other and smile",
+        "title_2": [
+            "Collaborate ",
+            "with young people from different countries."
+        ],
+        "text_2": [
+            "Furthermore, JCI Ukraine is part of the international organization JCI, which gives participants the opportunity to communicate and collaborate with young people from different countries and cultures.",
+            "Join our global family of over 200,000 alumni and members from over 100 countries and make lifelong friends from all over the world."
+        ],
+        "alt_2":"several people smile"
+    }
+}

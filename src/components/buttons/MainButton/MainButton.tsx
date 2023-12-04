@@ -1,24 +1,17 @@
 import { FC } from 'react';
+import Link from 'next/link';
 
 import { ButtonProps } from './MainButton.props';
 import s from './MainButton.module.css';
-import Link from 'next/link';
 
 export const MainButton: FC<ButtonProps> = ({
   text,
   style = 'primaryNavy',
-  className,
+  className = '',
   href = '/',
   onClick,
 }) => {
   return (
-    // <a
-    //   href={href}
-    //   onClick={onClick}
-    //   className={`${s.mainBtn} ${s[style]} ${className}`}
-    // >
-    //   {text}
-    // </a>
     <Link
       href={href}
       onClick={onClick}

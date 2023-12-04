@@ -7,7 +7,12 @@ import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
 import { MemberCard } from '@/components/cards/MemberCard';
 import { Section } from '@/components/sections/Section';
+
 import { FollowUsSection } from '@/sections/AboutPage/FollowUsSection';
+
+import { ChangeWorldSection } from '@/sections/AboutPage/ChangeWorldSection/ChangeWorldSection';
+import { JoinTeamSection } from '@/sections/AboutPage/JoinTeamSection/JoinTeamSection';
+
 
 interface Member {
   photo: string;
@@ -79,7 +84,9 @@ export default function Team() {
               <p>No members available.</p>
             )}
           </Section>
-          <FollowUsSection />
+          <ChangeWorldSection />
+          <JoinTeamSection />
+<FollowUsSection />
         </main>
       </Layout>
     </>
@@ -92,7 +99,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
-        'contactsPage',
+        'whoWeArePage',
       ])),
     },
   };

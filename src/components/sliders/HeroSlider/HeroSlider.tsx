@@ -38,8 +38,8 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
           <Image
             src={image.src}
             alt={image.alt}
-            width='288'
-            height='216'
+            width='552'
+            height='428'
             className={styles.photo}
             priority
           />
