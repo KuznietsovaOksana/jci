@@ -1,5 +1,4 @@
 .memberWrapper {
-  margin: 50px;
   display: flex;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@
   padding: 0;
 }
 .memberPhoto {
-  height: 217px;
+  /* height: 217px; */
   object-fit: cover;
 }
 .textWrapper {
@@ -74,9 +73,9 @@
     width: 264px;
     height: 451px;
   }
-  .memberPhoto {
+  /* .memberPhoto {
     height: 218px;
-  }
+  } */
   .memberName {
     max-width: 140px;
     font-size: 20px;
@@ -95,9 +94,9 @@
     width: 360px;
     height: 612px;
   }
-  .memberPhoto {
+  /* .memberPhoto {
     height: 360px;
-  }
+  } */
   .memberName {
     max-width: 236px;
     font-size: 24px;

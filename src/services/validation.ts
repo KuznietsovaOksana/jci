@@ -85,38 +85,6 @@ export const schema = yup.object().shape({
     .required('This field is required'),
 });
 
-// export const onSubmitValidation = async (
-//   values: valueType,
-//   actions: FormikHelpers<valueType>
-// ) => {
-//   if (values.info === 'Other:') {
-//     const dynamicSchema = schema.shape({
-//       other: yup
-//         .string()
-//         .matches(onlyLatinAndSpace, 'Invalid input, please use Latin letters')
-//         .test('format', 'Invalid format', (value: string | undefined) => {
-//           if (value?.trim() === '') return false;
-//           return true;
-//         })
-//         .required('This field is required for Other option'),
-//     });
-
-//     const validate = await dynamicSchema
-//       .validate(values, { abortEarly: false })
-//       .catch(errors => {
-//         const formattedErrors: Formatted = {};
-//         errors.inner.forEach((error: yup.ValidationError) => {
-//           if (error.path) {
-//             formattedErrors[error.path] = error.message;
-//           }
-//         });
-
-//         actions.setErrors(formattedErrors);
-//       });
-//     if (validate) return true;
-//   }
-// };
-
 export const onSubmitValidation = async (
   values: valueType,
   actions: FormikHelpers<valueType>

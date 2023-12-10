@@ -6,6 +6,7 @@ import { TabsCurrentProjectInfo } from '@/components/TabsCurrentProjectInfo';
 import { TabsDonationInfo } from '@/components/TabsDonationtInfo';
 
 import s from './Tabs.module.css';
+import { IMemberCardItem } from '@/types/typesApiProps';
 
 interface ITAb {
   tabsDesk?: string[];
@@ -14,15 +15,21 @@ interface ITAb {
 }
 
 interface ITabProps {
-  type: 'project' | 'donation' | 'news';
+  type: 'project' | 'donation' | 'news' | 'team';
   tabs: ITAb;
+  onClickTabTeam?: (index: number) => void;
 }
 
-export const Tabs: FC<ITabProps> = ({ type, tabs }) => {
+export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [numberTab, setNumberTab] = useState(0);
 
-  const onClickTab = (index: number) => setNumberTab(index);
+  const onClickTab = (index: number) => {
+    setNumberTab(index);
+    if (type === 'team' && onClickTabTeam) {
+      onClickTabTeam(index);
+    }
+  };
 
   const { isDesk } = useScreen();
   useEffect(() => {
