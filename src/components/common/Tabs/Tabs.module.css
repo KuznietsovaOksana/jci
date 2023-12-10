@@ -26,7 +26,15 @@
     gap: 16px;
   }
 }
-
+.tab_list_team {
+  margin-bottom: 24px;
+  gap: 8px;
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+    gap: 16px;
+    border-bottom: none;
+  }
+}
 .tab_list::-webkit-scrollbar {
   width: 0px;
 }
@@ -47,11 +55,15 @@
   }
 }
 
-.button_common_project {
+.button_common_project,
+.button_common_donation,
+.button_common_team {
   padding: 10px 20px;
 }
-.button_common_donation {
-  padding: 10px 20px;
+@media (min-width: 1440px) {
+  .button_common_team {
+    padding: 18px 20px;
+  }
 }
 
 .tab_button {

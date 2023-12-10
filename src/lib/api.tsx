@@ -16,3 +16,14 @@ export const fetchMain = async (path: string) => {
     return [];
   }
 };
+
+export const fetchMemberCard = async () => {
+  const memberCardPath = 'member-card/';
+  try {
+    const response = await api.get(memberCardPath);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+    return [];
+  }
+};
