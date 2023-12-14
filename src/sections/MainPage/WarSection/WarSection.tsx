@@ -6,6 +6,7 @@ import { WarCard } from '@/components/cards/WarCard';
 import { Container } from '@/components/common/Container';
 import { IconButton } from '@/components/buttons/IconButton';
 
+import { router } from '@/utils/routes';
 import { warData } from './data';
 
 import s from './WarSection.module.css';
@@ -27,7 +28,7 @@ export const WarSection = () => {
             </li>
           ))}
         </ul>
-        <IconButton text={commonT('buttons.readMore')} />
+        <IconButton text={commonT('buttons.readMore')} href={router.ABOUT} />
       </Container>
     </Section>
   );
