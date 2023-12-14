@@ -425,3 +425,60 @@ button {
 .highlighted-date {
   background-color: red !important;
 }
+
+/* FollowUs */
+
+.followSliderContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: scroll !important;
+  justify-content: flex-start;
+}
+
+.followSliderCards {
+  display: flex !important;
+  gap: 24px !important;
+  width: 264px;
+}
+
+.followSliderCards .swiper-slide:first-child {
+  margin-left: 20px;
+}
+.followSliderCards .swiper-slide:last-child {
+  margin-right: 20px;
+}
+.followSliderImages .swiper-slide {
+  width: 288px !important;
+}
+
+@media (max-width: 767px) {
+  .followSliderCards .swiper-slide {
+    width: 264px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .followSliderCards .swiper-slide:first-child {
+    margin-left: 108px;
+  }
+  .followSliderCards .swiper-slide:last-child {
+    margin-right: 108px;
+  }
+}
+@media (min-width: 1440px) {
+  .followSliderCards .swiper-slide {
+    width: 360px !important;
+  }
+
+  .followSliderCards {
+    width: 360px;
+  }
+  .followSliderCards .swiper-slide:first-child {
+    margin-left: 158;
+  }
+  .followSliderCards .swiper-slide:last-child {
+    margin-right: 158px;
+  }
+}

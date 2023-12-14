@@ -1,0 +1,34 @@
+.title {
+  margin-bottom: 24px;
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+.title_span {
+  color: var(--blue-primary-color);
+}
+
+@media (min-width: 768px) {
+  .block_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--blue-10-color);
+  }
+}
+
+@media (min-width: 768px) {
+  .team_list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .team_list {
+    row-gap: 40px;
+  }
+}

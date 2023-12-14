@@ -1,36 +1,52 @@
 import React from 'react';
-import s from './MemberCard.module.css';
+import Image from 'next/image';
 import FbLogo from 'public/icons/fb_member.svg';
+
+import s from './MemberCard.module.css';
+import { useScreen } from '@/hooks/use_screen';
 
 interface MemberCardProps {
   photo: string;
+  alt: string;
   nameSurname: string;
   position: string;
   experience1: string;
   experience2: string;
-  experience3: string;
-  experience4: string;
-  experience5: string;
+  experience3: string | null;
+  experience4: string | null;
+  experience5: string | null;
+  facebook_link: string | null;
 }
 
 export const MemberCard: React.FC<MemberCardProps> = ({
   photo,
   nameSurname,
+  alt,
   position,
   experience1,
   experience2,
   experience3,
   experience4,
   experience5,
+  facebook_link,
 }) => {
+  const { isMobile, isTablet } = useScreen();
   return (
     <>
       <div className={s.memberWrapper}>
-        <img src={photo} alt={nameSurname} className={s.memberPhoto} />
+        {photo && (
+          <Image
+            width={isMobile ? 252 : isTablet ? 264 : 360}
+            height={isMobile ? 217 : isTablet ? 218 : 360}
+            src={photo}
+            alt={alt}
+            className={s.memberPhoto}
+          />
+        )}
         <div className={s.textWrapper}>
           <a
             className={s.logo_icon}
-            href=''
+            href={facebook_link ?? ''}
             target='_blank'
             rel='noopener noreferrer nofollow'
           >
@@ -41,22 +57,23 @@ export const MemberCard: React.FC<MemberCardProps> = ({
             <h6 className={s.memberPosition}>{position} </h6>
           </div>
           <div className={s.experienceWrapper}>
-            <p>{experience1}</p>
-            <p>{experience2}</p>
-            <p>{experience3}</p>
-            <p>{experience4}</p>
-            <p>{experience5}</p>
-            <p className={s.memberText}>текст 1</p>
-            <p className={s.memberText}>текст 2</p>
-            <p className={s.memberText}>текст 3</p>
-            <p className={s.memberText}>текст 4</p>
-            <p className={s.memberText}>текст 5</p>
+            {experience1 && <p>{experience1}</p>}
+            {experience2 && <p>{experience2}</p>}
+            {experience3 && <p>{experience3}</p>}
+            {experience4 && <p>{experience4}</p>}
+            {experience5 && <p>{experience5}</p>}
           </div>
         </div>
       </div>
 
-      <div className={s.leaderWrapper}>
-        <img src={photo} alt={nameSurname} className={s.leaderPhoto} />
+      {/* <div className={s.leaderWrapper}>
+        <Image
+          width={252}
+          height={217}
+          src={photo}
+          alt={alt}
+          className={s.memberPhoto}
+        />
         <div className={s.leaderTextWrapper}>
           <a
             className={s.leader_logo_icon}
@@ -79,7 +96,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({
             <p className={s.leaderText}>текст 5</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
