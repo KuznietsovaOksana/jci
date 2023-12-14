@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
@@ -27,20 +28,16 @@ export const LanguageSwitcher = () => {
     }
   }, [router.locale, setLocale]);
 
-  const onToggle = () => {
-    const newLocale = locale === 'en' ? 'uk' : 'en';
-    router.push(router.pathname, router.asPath, { locale: newLocale });
-    setLocale(newLocale);
-  };
+  const newLocale = locale === 'en' ? 'uk' : 'en';
 
   return (
-    <button
-      type='button'
-      onClick={onToggle}
+    <Link
+      href={router.pathname}
+      locale={newLocale}
       className={s.button}
       aria-label={t('language.aria') as string}
     >
       <LanguageIcon aria-label={t('language.aria')} />
-    </button>
+    </Link>
   );
 };

@@ -10,10 +10,12 @@ import { ItemProps } from '@/layout/Layout/Layout.props';
 import NavLink from '@/components/NavLink';
 import { Container } from '@/components/common/Container';
 import { MainButton } from '@/components/buttons/MainButton';
+
+import { router } from '@/utils/routes';
+
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 import s from './ModalMenu.module.css';
-import { router } from '@/utils/routes';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -26,6 +28,7 @@ export const ModalMenu: FC<ILayout> = ({ setShowModal }) => {
     returnObjects: true,
     defaultValue: '',
   }) as ItemProps[];
+
   return (
     <div className={s.modal}>
       <div className={s.top_border}>

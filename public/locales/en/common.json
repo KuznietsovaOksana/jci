@@ -27,5 +27,8 @@
 	"card": {
 		"goal": "Our goal",
 		"completed": "Completed Project"
+	},
+	"flag": {
+		"aria": "Ukrainian flag"
 	}
 }
