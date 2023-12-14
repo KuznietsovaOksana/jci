@@ -72,6 +72,7 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
                   : heroData[0].title_1_en}
                 <Flag
                   className={s.flag}
+                  aria-label={t('flag.aria')}
                   style={{
                     display:
                       (locale === 'uk' && heroData[0].show_flag_uk) ||
