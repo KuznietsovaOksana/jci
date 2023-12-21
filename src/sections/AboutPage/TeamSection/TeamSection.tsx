@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
 import { MemberCard } from '@/components/cards/MemberCard';
-import { IMemberCardProps } from '@/types/typesApiProps';
 import { ITeamSection } from './sectionTypes';
 import { Title } from '@/components/typography/Title';
 import { Tabs } from '@/components/common/Tabs';
@@ -14,6 +13,7 @@ import { useLocalization } from '@/contexts/LocalizationContext';
 import { useScreen } from '@/hooks/use_screen';
 
 import s from './TeamSection.module.css';
+import { IMemberCardProps } from './type';
 
 export const TeamSection = ({ memberCardData }: IMemberCardProps) => {
   const { locale } = useLocalization();

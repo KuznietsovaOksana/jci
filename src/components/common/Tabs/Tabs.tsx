@@ -6,7 +6,6 @@ import { TabsCurrentProjectInfo } from '@/components/TabsCurrentProjectInfo';
 import { TabsDonationInfo } from '@/components/TabsDonationtInfo';
 
 import s from './Tabs.module.css';
-import { IMemberCardItem } from '@/types/typesApiProps';
 
 interface ITAb {
   tabsDesk?: string[];

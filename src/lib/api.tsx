@@ -27,3 +27,15 @@ export const fetchMemberCard = async () => {
     return [];
   }
 };
+
+export const fetchPhotoGallery = async (path: string) => {
+  const photoPath = 'photo_gallery/' + path;
+
+  try {
+    const response = await api.get(photoPath);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+    return [];
+  }
+};
