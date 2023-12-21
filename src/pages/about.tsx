@@ -8,11 +8,16 @@ import { Layout } from '@/layout/Layout';
 import { FollowUsSection } from '@/sections/AboutPage/FollowUsSection';
 import { ChangeWorldSection } from '@/sections/AboutPage/ChangeWorldSection/ChangeWorldSection';
 import { JoinTeamSection } from '@/sections/AboutPage/JoinTeamSection/JoinTeamSection';
-import { fetchMemberCard } from '@/lib/api';
-import { IMemberCardProps } from '@/types/typesApiProps';
+import { fetchMemberCard, fetchPhotoGallery } from '@/lib/api';
+import { IAboutApiProps } from '@/types/typesApiProps';
 import { TeamSection } from '@/sections/AboutPage/TeamSection/TeamSection';
+import { MainSection } from '@/sections/AboutPage/MainSection/MainSection';
+import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 
-export default function About({ memberCardData }: IMemberCardProps) {
+export default function About({
+  memberCardData,
+  photoMainBannerData,
+}: IAboutApiProps) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -30,6 +35,8 @@ export default function About({ memberCardData }: IMemberCardProps) {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
+          <MainSection photoMainBannerData={photoMainBannerData} />
+          <CharacteristicSection />
           <ChangeWorldSection />
           <JoinTeamSection />
           <TeamSection memberCardData={memberCardData} />
@@ -41,14 +48,17 @@ export default function About({ memberCardData }: IMemberCardProps) {
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
+  const photoMainBannerData = await fetchPhotoGallery('photo-main-banner');
   const memberCardData = await fetchMemberCard();
   return {
     props: {
+      photoMainBannerData,
       memberCardData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
         'whoWeArePage',
+        'mainPage',
       ])),
     },
   };
