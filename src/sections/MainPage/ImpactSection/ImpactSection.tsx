@@ -6,11 +6,16 @@ import { Section } from '@/components/sections/Section';
 import { Title } from '@/components/typography/Title';
 
 import impact from 'public/images/impact/impact_01.jpg';
+import { useLocalization } from '@/contexts/LocalizationContext';
+import { IMediaProps } from './mediaProps';
 
 import s from './ImpactSection.module.css';
 
-export const ImpactSection = () => {
+export const ImpactSection = ({ mediaData }: IMediaProps) => {
   const { t } = useTranslation('mainPage');
+  const { locale } = useLocalization();
+  const { alt_text_photo_uk, alt_text_photo_en, photo } = mediaData[0];
+
   return (
     <Section className={s.section}>
       <Container>
@@ -22,8 +27,14 @@ export const ImpactSection = () => {
           <p className={s.description}>{t('impact.description')}</p>
         </div>
         <Image
-          src={impact}
-          alt='Members of the organization'
+          src={photo ?? impact}
+          width={552}
+          height={368}
+          alt={
+            locale === 'uk'
+              ? alt_text_photo_uk ?? 'Міжнародна команда JCI'
+              : alt_text_photo_en ?? 'JCI international team'
+          }
           className={s.photo}
           priority
         />

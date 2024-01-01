@@ -3,6 +3,8 @@ import { IHeroProps } from '@/sections/MainPage/HeroSection/heroProps';
 import { IPresidentProps } from '@/sections/MainPage/OurPresident/PresidentProps';
 import { IPartnersProps } from '@/sections/MainPage/PartnersSection/PartnersProps';
 import { IAchievementsProps } from '@/sections/MainPage/TogetherSection/achievementsProps';
+import { IMediaProps } from '@/sections/MainPage/ImpactSection/mediaProps';
+
 import { IMemberCardProps } from '@/sections/AboutPage/TeamSection/type';
 import { IMainPhotoProps } from '@/sections/AboutPage/MainSection/type';
 
@@ -11,6 +13,7 @@ export interface IMainApiProps
     IAchievementsProps,
     IPresidentProps,
     IHeroProps,
-    IPartnersProps {}
+    IPartnersProps,
+    IMediaProps {}
 
 export interface IAboutApiProps extends IMemberCardProps, IMainPhotoProps {}
