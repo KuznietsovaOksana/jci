@@ -30,6 +30,7 @@ export default function Home({
   presidentData,
   heroData,
   partnersData,
+  mediaData,
 }: IMainApiProps) {
   const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation('mainPage');
@@ -51,7 +52,7 @@ export default function Home({
         <main>
           <HeroSection heroData={heroData} />
           <CharacteristicSection />
-          <ImpactSection />
+          <ImpactSection mediaData={mediaData} />
           <WarSection />
           <TogetherSection achievementsData={achievementsData} />
           <ProjectSection />
@@ -72,6 +73,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   const presidentData = await fetchMain('jci-ukraine-president');
   const heroData = await fetchMain('main-banner');
   const partnersData = await fetchMain('partners');
+  const mediaData = await fetchMain('media');
 
   return {
     props: {
@@ -80,6 +82,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       presidentData,
       heroData,
       partnersData,
+      mediaData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
