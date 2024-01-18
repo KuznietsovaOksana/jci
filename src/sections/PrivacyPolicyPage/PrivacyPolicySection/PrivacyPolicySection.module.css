@@ -1,13 +1,25 @@
+.first_section {
+  padding-top: 104px;
+}
+
 .title {
   margin-bottom: 32px;
 }
 
 @media (min-width: 768px) {
+  .first_section {
+    padding-top: 156px;
+  }
+
   .title {
     margin-bottom: 40px;
   }
 }
 @media (min-width: 1440px) {
+  .first_section {
+    padding-top: 182px;
+  }
+
   .title {
     margin-bottom: 80px;
   }
