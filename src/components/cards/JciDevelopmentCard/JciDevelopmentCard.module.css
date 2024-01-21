@@ -99,6 +99,11 @@
   height: 422px;
   border-radius: 16px;
 }
+.card:focus .overlay {
+  width: 212px;
+  height: 422px;
+  border-radius: 16px;
+}
 
 .card1:hover .overlay {
   border: 1px solid #56bda3;
@@ -117,11 +122,34 @@
   background-color: #edf0f8;
 }
 
+.card1:focus .overlay {
+  border: 1px solid #56bda3;
+  background-color: #eef9f6;
+}
+.card2:focus .overlay {
+  border: 1px solid #0196d8;
+  background-color: #e6f5fc;
+}
+.card3:focus .overlay {
+  border: 1px solid #edbd35;
+  background-color: #fef9eb;
+}
+.card4:focus .overlay {
+  border: 1px solid #3a67b1;
+  background-color: #edf0f8;
+}
+
 .card:hover .icon_overlay {
+  opacity: 0;
+}
+.card:focus .icon_overlay {
   opacity: 0;
 }
 
 .card:hover .card_info {
+  opacity: 1;
+}
+.card:focus .card_info {
   opacity: 1;
 }
 
@@ -145,6 +173,10 @@
   }
 
   .card:hover .overlay {
+    width: 264px;
+    height: 526px;
+  }
+  .card:focus .overlay {
     width: 264px;
     height: 526px;
   }
