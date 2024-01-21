@@ -16,7 +16,7 @@ const TermsSection = () => {
   }) as LegalAgreementProps[];
 
   return (
-    <Section>
+    <Section className={s.first_section}>
       <Container>
         <Title tag='h1' isBlue className={s.title}>
           {t('title')}
