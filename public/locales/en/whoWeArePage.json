@@ -53,5 +53,14 @@
         "span_title": " team",
         "type_one": "Board of directors",
         "type_two": "Local leaders"
-    }
+    },
+        "jci_dev_init": {
+            "title": [
+                "JCI development\u00A0",
+                "initiatives"
+            ],
+            "text": [
+                "There are four pillars or areas of opportunity within the organisation: Individual, Business, Community, and International."
+            ]
+        }
 }
