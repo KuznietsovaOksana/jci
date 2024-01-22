@@ -15,6 +15,7 @@ import { MainSection } from '@/sections/AboutPage/MainSection/MainSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
 import { JciDevInitSection } from '@/sections/AboutPage/JciDevInitSection';
 import { QuoteSection } from '@/sections/AboutPage/QuoteSection';
+import { BenefitsOfMembershipSection } from '@/sections/AboutPage/BenefitsOfMembershipSection';
 
 export default function About({
   memberCardData,
@@ -41,6 +42,7 @@ export default function About({
           <CharacteristicSection />
           <ChangeWorldSection />
           <JoinTeamSection />
+          <BenefitsOfMembershipSection />
           <JciDevInitSection />
           <QuoteSection />
           <TeamSection memberCardData={memberCardData} />
