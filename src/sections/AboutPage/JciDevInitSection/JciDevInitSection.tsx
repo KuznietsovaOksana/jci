@@ -1,13 +1,15 @@
+import { useScreen } from '@/hooks/use_screen';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import { JciDevelopmentCard } from '@/components/cards/JciDevelopmentCard';
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
 import { Title } from '@/components/typography/Title';
-import { useScreen } from '@/hooks/use_screen';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+
 import { cards } from './cards';
-import s from './JciDevInitSection.module.css';
 import { JciDevInitData } from './sectionTypes';
+import s from './JciDevInitSection.module.css';
 
 export const JciDevInitSection = () => {
   const { t, i18n } = useTranslation('whoWeArePage');
@@ -45,7 +47,6 @@ export const JciDevInitSection = () => {
   }
 
   return (
-    <>
       <Section>
         <Container>
           <div className={s.title}>
@@ -83,6 +84,5 @@ export const JciDevInitSection = () => {
           </>
         )}
       </Section>
-    </>
   );
 };

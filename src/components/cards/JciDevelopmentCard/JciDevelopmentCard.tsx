@@ -1,6 +1,6 @@
 import React from 'react';
-import InfoIcon from 'public/icons/info.svg';
 
+import InfoIcon from 'public/icons/info.svg';
 import s from './JciDevelopmentCard.module.css';
 
 interface JciDevCardProps {
