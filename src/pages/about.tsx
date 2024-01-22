@@ -13,6 +13,7 @@ import { IAboutApiProps } from '@/types/typesApiProps';
 import { TeamSection } from '@/sections/AboutPage/TeamSection/TeamSection';
 import { MainSection } from '@/sections/AboutPage/MainSection/MainSection';
 import { CharacteristicSection } from '@/sections/MainPage/CharacteristicSection';
+import { JciDevInitSection } from '@/sections/AboutPage/JciDevInitSection';
 import { QuoteSection } from '@/sections/AboutPage/QuoteSection';
 
 export default function About({
@@ -40,6 +41,7 @@ export default function About({
           <CharacteristicSection />
           <ChangeWorldSection />
           <JoinTeamSection />
+          <JciDevInitSection />
           <QuoteSection />
           <TeamSection memberCardData={memberCardData} />
           <FollowUsSection />

@@ -1,0 +1,212 @@
+.card {
+  position: relative;
+  width: 212px;
+  height: 422px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px 0px rgba(14, 17, 28, 0.1);
+
+  background-size: contain;
+  background-position: center;
+
+  flex-shrink: 0;
+}
+
+.card1 {
+  background-image: url('/images/about/cards/CYE.png');
+}
+.card2 {
+  background-image: url('/images/about/cards/TOYP.png');
+}
+.card3 {
+  background-image: url('/images/about/cards/GLM.png');
+}
+.card4 {
+  background-image: url('/images/about/cards/RISE.png');
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 82px;
+  height: 82px;
+  border-radius: 80px 0px 16px 0px;
+  background-color: #fff;
+  border: 1px solid transparent;
+
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+.card_info {
+  position: absolute;
+  opacity: 0;
+
+  padding-top: 24px;
+
+  margin-left: 16px;
+  width: 180px;
+
+  transition: opacity 0.3s ease-in-out;
+}
+.card_title {
+  color: #0a0f29;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2; /* 19.2px */
+
+  width: 180px;
+}
+.card_textblock {
+  padding-top: 24px;
+}
+.card_text {
+  color: #0a0f29;
+
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+
+  width: 180px;
+}
+
+.icon_overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+
+  bottom: 24px;
+  right: 24px;
+
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .overlay {
+  width: 212px;
+  height: 422px;
+  border-radius: 16px;
+}
+.card:focus .overlay {
+  width: 212px;
+  height: 422px;
+  border-radius: 16px;
+}
+
+.card1:hover .overlay {
+  border: 1px solid #56bda3;
+  background-color: #eef9f6;
+}
+.card2:hover .overlay {
+  border: 1px solid #0196d8;
+  background-color: #e6f5fc;
+}
+.card3:hover .overlay {
+  border: 1px solid #edbd35;
+  background-color: #fef9eb;
+}
+.card4:hover .overlay {
+  border: 1px solid #3a67b1;
+  background-color: #edf0f8;
+}
+
+.card1:focus .overlay {
+  border: 1px solid #56bda3;
+  background-color: #eef9f6;
+}
+.card2:focus .overlay {
+  border: 1px solid #0196d8;
+  background-color: #e6f5fc;
+}
+.card3:focus .overlay {
+  border: 1px solid #edbd35;
+  background-color: #fef9eb;
+}
+.card4:focus .overlay {
+  border: 1px solid #3a67b1;
+  background-color: #edf0f8;
+}
+
+.card:hover .icon_overlay {
+  opacity: 0;
+}
+.card:focus .icon_overlay {
+  opacity: 0;
+}
+
+.card:hover .card_info {
+  opacity: 1;
+}
+.card:focus .card_info {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 264px;
+    height: 526px;
+  }
+  .card_title {
+    font-size: 16px;
+    width: 216px;
+  }
+  .card_text {
+    font-size: 16px;
+    width: 216px;
+  }
+
+  .overlay {
+    width: 102px;
+    height: 102px;
+  }
+
+  .card:hover .overlay {
+    width: 264px;
+    height: 526px;
+  }
+  .card:focus .overlay {
+    width: 264px;
+    height: 526px;
+  }
+  .card_info {
+    margin-left: 24px;
+    width: 216px;
+  }
+
+  .card_title {
+    width: 216px;
+  }
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (max-width: 480px) {
+  .card:first-child {
+    margin-left: 16px;
+  }
+  .card:last-child {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767.9px) {
+  .card:first-child {
+    margin-left: calc((100vw - 480px) / 2 + 16px);
+  }
+  .card:last-child {
+    margin-right: calc((100vw - 480px) / 2 + 16px);
+  }
+}
