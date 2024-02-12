@@ -16,87 +16,105 @@ import { useLocalization } from '@/contexts/LocalizationContext';
 import { IHeroProps } from './heroProps';
 import s from './HeroSection.module.css';
 
+// Треба ще доопрацювати, додати тайтл, опис (через це і не показуються потрібні стилі)
+
 export const HeroSection = ({ heroData }: IHeroProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1440 });
   const { t } = useTranslation('common');
   const { locale } = useLocalization();
 
-  const imagesUa = [
-    {
-      src: heroData[0].photo1,
-      alt: heroData[0].alt_text_1_uk,
-    },
-    {
-      src: heroData[0].photo2,
-      alt: heroData[0].alt_text_2_uk,
-    },
-    {
-      src: heroData[0].photo3,
-      alt: heroData[0].alt_text_3_uk,
-    },
-  ];
-
-  const imagesEn = [
-    {
-      src: heroData[0].photo1,
-      alt: heroData[0].alt_text_1_en,
-    },
-    {
-      src: heroData[0].photo2,
-      alt: heroData[0].alt_text_2_en,
-    },
-    {
-      src: heroData[0].photo3,
-      alt: heroData[0].alt_text_3_en,
-    },
-  ];
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   if (!isMounted) {
-    return null; // Render nothing on the server side until the component is mounted on the client side
+    return null;
   }
+
+  const defaultImagesUa = [
+    { src: '/images/hero/hero_01d.jpg', alt: 'Укр' },
+    { src: '/images/hero/hero_02d.jpg', alt: 'Укр' },
+    { src: '/images/hero/hero_03d.jpg', alt: 'Укр' },
+  ];
+
+  const defaultImagesEn = [
+    { src: '/images/hero/hero_01d.jpg', alt: 'En' },
+    { src: '/images/hero/hero_02d.jpg', alt: 'En' },
+    { src: '/images/hero/hero_03d.jpg', alt: 'En' },
+  ];
+
+  const imagesUa = heroData
+    ? [
+        {
+          src: heroData[0]?.photo1 || defaultImagesUa[0].src,
+          alt: heroData[0]?.alt_text_1_uk || defaultImagesUa[0].alt,
+        },
+        {
+          src: heroData[0]?.photo2 || defaultImagesUa[1].src,
+          alt: heroData[0]?.alt_text_2_uk || defaultImagesUa[1].alt,
+        },
+        {
+          src: heroData[0]?.photo3 || defaultImagesUa[2].src,
+          alt: heroData[0]?.alt_text_3_uk || defaultImagesUa[2].alt,
+        },
+      ]
+    : defaultImagesUa;
+
+  const imagesEn = heroData
+    ? [
+        {
+          src: heroData[0]?.photo1 || defaultImagesEn[0].src,
+          alt: heroData[0]?.alt_text_1_en || defaultImagesEn[0].alt,
+        },
+        {
+          src: heroData[0]?.photo2 || defaultImagesEn[1].src,
+          alt: heroData[0]?.alt_text_2_en || defaultImagesEn[1].alt,
+        },
+        {
+          src: heroData[0]?.photo3 || defaultImagesEn[2].src,
+          alt: heroData[0]?.alt_text_3_en || defaultImagesEn[2].alt,
+        },
+      ]
+    : defaultImagesEn;
 
   return (
     <Section className={s.first_section}>
-      {isDesktop ? (
-        <Container>
+      <Container>
+        {isDesktop ? (
           <div className={s.desktopVersion}>
             <div>
               <Title className={s.title} tag='h1'>
                 {locale === 'uk'
-                  ? heroData[0].title_1_uk
-                  : heroData[0].title_1_en}
+                  ? heroData?.[0]?.title_1_uk
+                  : heroData?.[0]?.title_1_en}
                 <Flag
                   className={s.flag}
                   aria-label={t('flag.aria')}
                   style={{
                     display:
-                      (locale === 'uk' && heroData[0].show_flag_uk) ||
-                      (locale === 'en' && heroData[0].show_flag_en)
+                      (locale === 'uk' && heroData?.[0]?.show_flag_uk) ||
+                      (locale === 'en' && heroData?.[0]?.show_flag_en)
                         ? 'inline'
                         : 'none',
                   }}
                 />
-                {((locale === 'uk' && !heroData[0].show_flag_uk) ||
-                  (locale === 'en' && !heroData[0].show_flag_en)) &&
+                {((locale === 'uk' && !heroData?.[0]?.show_flag_uk) ||
+                  (locale === 'en' && !heroData?.[0]?.show_flag_en)) &&
                   ' '}
                 {locale === 'uk'
-                  ? heroData[0].title_2_uk
-                  : heroData[0].title_2_en}{' '}
+                  ? heroData?.[0]?.title_2_uk
+                  : heroData?.[0]?.title_2_en}{' '}
                 <span className={s.accentTitle}>
                   {locale === 'uk'
-                    ? heroData[0].title_3_uk
-                    : heroData[0].title_3_en}
+                    ? heroData?.[0]?.title_3_uk
+                    : heroData?.[0]?.title_3_en}
                 </span>
               </Title>
               <p className={s.description}>
                 {locale === 'uk'
-                  ? heroData[0].subtitle_uk
-                  : heroData[0].subtitle_en}
+                  ? heroData?.[0]?.subtitle_uk
+                  : heroData?.[0]?.subtitle_en}
               </p>
               <div className={s.cta}>
                 <MainButton
@@ -111,39 +129,41 @@ export const HeroSection = ({ heroData }: IHeroProps) => {
               <HeroSlider images={locale === 'uk' ? imagesUa : imagesEn} />
             </div>
           </div>
-        </Container>
-      ) : (
-        <Container>
-          <Title className={s.title} tag='h1'>
-            {locale === 'uk' ? heroData[0].title_1_uk : heroData[0].title_1_en}
-            <Flag className={s.flag} />
-            {locale === 'uk'
-              ? heroData[0].title_2_uk
-              : heroData[0].title_2_en}{' '}
-            <span className={s.accentTitle}>
+        ) : (
+          <>
+            <Title className={s.title} tag='h1'>
               {locale === 'uk'
-                ? heroData[0].title_3_uk
-                : heroData[0].title_3_en}
-            </span>
-          </Title>
-          <div className={s.sliderblock}>
-            <HeroSlider images={locale === 'uk' ? imagesUa : imagesEn} />
-          </div>
-          <p className={s.description}>
-            {locale === 'uk'
-              ? heroData[0].subtitle_uk
-              : heroData[0].subtitle_en}
-          </p>
-          <div className={s.cta}>
-            <MainButton
-              href={router.JOINUS}
-              text={t('buttons.join')}
-              style='primaryNavy'
-            />
-            <MainButton text={t('buttons.donate')} style='secondaryNavy' />
-          </div>
-        </Container>
-      )}
+                ? heroData?.[0]?.title_1_uk
+                : heroData?.[0]?.title_1_en}
+              <Flag className={s.flag} />
+              {locale === 'uk'
+                ? heroData?.[0]?.title_2_uk
+                : heroData?.[0]?.title_2_en}{' '}
+              <span className={s.accentTitle}>
+                {locale === 'uk'
+                  ? heroData?.[0]?.title_3_uk
+                  : heroData?.[0]?.title_3_en}
+              </span>
+            </Title>
+            <div className={s.sliderblock}>
+              <HeroSlider images={locale === 'uk' ? imagesUa : imagesEn} />
+            </div>
+            <p className={s.description}>
+              {locale === 'uk'
+                ? heroData?.[0]?.subtitle_uk
+                : heroData?.[0]?.subtitle_en}
+            </p>
+            <div className={s.cta}>
+              <MainButton
+                href={router.JOINUS}
+                text={t('buttons.join')}
+                style='primaryNavy'
+              />
+              <MainButton text={t('buttons.donate')} style='secondaryNavy' />
+            </div>
+          </>
+        )}
+      </Container>
     </Section>
   );
 };
