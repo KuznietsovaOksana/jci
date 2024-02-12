@@ -29,7 +29,7 @@ export const MainSection = ({ photoMainBannerData }: IMainPhotoProps) => {
     return null;
   }
   const { alt_text_photo_en, alt_text_photo_uk, photo } =
-    photoMainBannerData[0];
+    photoMainBannerData[0] || {};
   return (
     <>
       <Section className={s.first_section}>
