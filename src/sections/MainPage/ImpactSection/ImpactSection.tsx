@@ -14,7 +14,7 @@ import s from './ImpactSection.module.css';
 export const ImpactSection = ({ mediaData }: IMediaProps) => {
   const { t } = useTranslation('mainPage');
   const { locale } = useLocalization();
-  const { alt_text_photo_uk, alt_text_photo_en, photo } = mediaData[0];
+  const { alt_text_photo_uk, alt_text_photo_en, photo } = mediaData[0] || {};
 
   return (
     <Section className={s.section}>

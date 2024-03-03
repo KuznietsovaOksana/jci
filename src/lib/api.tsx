@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'https://jcibackend-jci.koyeb.app/';
+// const baseURL = 'https://jcibackend-jci.koyeb.app/';
+const baseURL = 'https://jci-maracasabat.koyeb.app/';
 
 const api = axios.create({
   baseURL,
@@ -30,6 +31,18 @@ export const fetchMemberCard = async () => {
 
 export const fetchPhotoGallery = async (path: string) => {
   const photoPath = 'photo_gallery/' + path;
+
+  try {
+    const response = await api.get(photoPath);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+    return [];
+  }
+};
+
+export const fetchNews = async () => {
+  const photoPath = 'news-cards/';
 
   try {
     const response = await api.get(photoPath);

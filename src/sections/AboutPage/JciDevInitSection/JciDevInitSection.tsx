@@ -47,29 +47,14 @@ export const JciDevInitSection = () => {
   }
 
   return (
-      <Section>
-        <Container>
-          <div className={s.title}>
-            {titleElement1}
-            {titleElement2}
-          </div>
-          <p className={s.text}>{items.text}</p>
-          {!isMobile && (
-            <>
-              <div className={s.cardsBlock}>
-                {cards.map(({ title, text, style }, index) => (
-                  <JciDevelopmentCard
-                    key={index}
-                    title={title}
-                    text={text}
-                    style={style}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </Container>
-        {isMobile && (
+    <Section>
+      <Container>
+        <div className={s.title}>
+          {titleElement1}
+          {titleElement2}
+        </div>
+        <p className={s.text}>{items.text}</p>
+        {!isMobile && (
           <>
             <div className={s.cardsBlock}>
               {cards.map(({ title, text, style }, index) => (
@@ -83,6 +68,21 @@ export const JciDevInitSection = () => {
             </div>
           </>
         )}
-      </Section>
+      </Container>
+      {isMobile && (
+        <>
+          <div className={s.cardsBlock}>
+            {cards.map(({ title, text, style }, index) => (
+              <JciDevelopmentCard
+                key={index}
+                title={title}
+                text={text}
+                style={style}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </Section>
   );
 };
