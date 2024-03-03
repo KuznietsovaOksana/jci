@@ -21,9 +21,10 @@
   margin-left: 24px;
   width: 40px;
   height: 40px;
-  fill: var(--blue-primary-color);
-  /* background-color: var(--blue-primary-color); */
+
 }
+
+
 
 .cardsBlock {
   position: relative;

@@ -1,9 +1,4 @@
-<svg width="69" height="68" viewBox="0 0 69 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.625 57.3734H9C6.6625 57.3734 4.75 55.4609 4.75 53.1234V43.7734" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M30.25 51C27.9125 51 26 49.0875 26 46.75V40.375H34.5V46.75C34.5 49.0875 32.5875 51 30.25 51Z" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M38.75 17H21.75V12.75C21.75 10.4125 23.6625 8.5 26 8.5H34.5C36.8375 8.5 38.75 10.4125 38.75 12.75V17Z" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M51.5 65.875C59.7152 65.875 66.375 59.2152 66.375 51C66.375 42.7848 59.7152 36.125 51.5 36.125C43.2848 36.125 36.625 42.7848 36.625 51C36.625 59.2152 43.2848 65.875 51.5 65.875Z" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M51.5 44.625V57.375" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M45.125 51H57.875" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M26 46.75H11.125C6.45 46.75 2.625 42.925 2.625 38.25V21.25C2.625 18.9125 4.5375 17 6.875 17H53.625C55.9625 17 57.875 18.9125 57.875 21.25V37.6125" stroke="#3A67B1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 69 68">
+  <path stroke="#3A67B1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36.625 57.373H9a4.262 4.262 0 0 1-4.25-4.25v-9.35M30.25 51A4.262 4.262 0 0 1 26 46.75v-6.375h8.5v6.375A4.262 4.262 0 0 1 30.25 51Zm8.5-34h-17v-4.25A4.262 4.262 0 0 1 26 8.5h8.5a4.262 4.262 0 0 1 4.25 4.25V17ZM51.5 65.875c8.215 0 14.875-6.66 14.875-14.875S59.715 36.125 51.5 36.125 36.625 42.785 36.625 51s6.66 14.875 14.875 14.875Zm0-21.25v12.75M45.125 51h12.75"/>
+  <path stroke="#3A67B1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M26 46.75H11.125c-4.675 0-8.5-3.825-8.5-8.5v-17A4.262 4.262 0 0 1 6.875 17h46.75a4.262 4.262 0 0 1 4.25 4.25v16.362"/>
 </svg>

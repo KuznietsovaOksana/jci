@@ -10,10 +10,10 @@ import { Title } from '@/components/typography/Title';
 // import { cards } from './cards';
 import { BenefitsOfMembership } from './sectionTypes';
 import Icon1 from 'public/icons/icongrow1.svg';
-import icon2 from 'public/icons/iconinternational2.svg';
-import icon3 from 'public/icons/iconbusiness3.svg';
-import icon4 from 'public/icons/iconnetwork4.svg';
-import icon5 from 'public/icons/iconsocial5.svg';
+import Icon2 from 'public/icons/iconinternational2.svg';
+import Icon3 from 'public/icons/iconbusiness3.svg';
+import Icon4 from 'public/icons/iconnetwork4.svg';
+import Icon5 from 'public/icons/iconsocial5.svg';
 import s from './BenefitsOfMembershipSection.module.css';
 import { BenefitCard } from '@/components/cards/BenefitCard';
 
@@ -33,6 +33,22 @@ export const BenefitsOfMembershipSection = () => {
     return null;
   }
 
+  const icons = [
+    <Icon1 key="0" className={s.card_icon}/>, 
+    <Icon2  key="1" className={s.card_icon}/>, 
+    <Icon3  key="2" className={s.card_icon}/>, 
+    <Icon4  key="3" className={s.card_icon}/>, 
+    <Icon5  key="4" className={s.card_icon}/>
+  ];
+
+  const cardsArray = items.cards.map((item, index) => {
+        return {
+            card: item,
+            icon: icons[index]
+        };
+  });
+console.log(cardsArray)
+  
 
 
   return (
@@ -45,46 +61,17 @@ export const BenefitsOfMembershipSection = () => {
             </div>
             <Title tag='h2'>{items.title[2]}</Title>
           </div>
-          <div className={s.card_icon}><Icon1 /></div>
-          {items.cards.map(({ title, text }, index) => (
-                  <BenefitCard 
-                  key={index}
-                  icon={Icon1}
-                  title={title}
-                  text={text}/>
-          ))}
+          <div className={s.cardsBlock}>
+            {cardsArray.map(({ card , icon }, index) => (
+                <BenefitCard 
+                key={index}
+                icon={icon}
+                title={card.title}
+                text={card.text}/>
+            ))} 
+          </div>
 
-          
-          
-          {/* {!isMobile && (
-            <>
-              <div className={s.cardsBlock}>
-                {cards.map(({ title, text, style }, index) => (
-                  <JciDevelopmentCard
-                    key={index}
-                    title={title}
-                    text={text}
-                    style={style}
-                  />
-                ))}
-              </div>
-            </>
-          )} */}
         </Container>
-        {/* {isMobile && (
-          <>
-            <div className={s.cardsBlock}>
-              {cards.map(({ title, text, style }, index) => (
-                <JciDevelopmentCard
-                  key={index}
-                  title={title}
-                  text={text}
-                  style={style}
-                />
-              ))}
-            </div>
-          </>
-        )} */}
       </Section>
   );
 };
