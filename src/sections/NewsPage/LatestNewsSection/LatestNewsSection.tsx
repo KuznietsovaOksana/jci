@@ -78,7 +78,7 @@ export const LatestNewsSection = ({ newsData }: ILatestMewsProps) => {
           <ul className={s.list_news}>
             {currentNews.map(newsItem => (
               <li key={newsItem.id}>
-                <Link href='#' className={s.card}>
+                <Link href={`/news/${newsItem.id}`} className={s.card}>
                   <Image
                     className={s.picture}
                     src={newsItem.multimedia[0].photo}

@@ -26,6 +26,22 @@
     gap: 16px;
   }
 }
+
+.tab_list_news {
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    gap: 0px;
+    overflow-x: hidden;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 16px;
+    justify-content: start;
+  }
+}
+
 .tab_list_team {
   margin-bottom: 24px;
   gap: 8px;
@@ -79,4 +95,31 @@
 .tab_active {
   border-bottom: 2px solid var(--black-90-color);
   color: var(--black-90-color);
+}
+
+.button_common_news {
+  color: var(--blue-30-color);
+}
+
+.tab_active_news {
+  color: var(--blue-primary-color);
+  border-bottom: 2px solid var(--blue-primary-color);
+}
+
+.button_common_news:hover {
+  border-bottom: 2px solid var(--blue-30-color);
+}
+
+.button_common_news {
+  padding: 10px 20px;
+}
+@media (min-width: 768px) {
+  .button_common_news {
+    padding: 10px 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .button_common_team {
+    padding: 18px 20px;
+  }
 }

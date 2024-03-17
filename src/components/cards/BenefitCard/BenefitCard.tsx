@@ -3,6 +3,7 @@ import React from 'react';
 import s from './BenefitCard.module.css';
 
 interface BenefitCardProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any;
   title: string;
   text: string;
