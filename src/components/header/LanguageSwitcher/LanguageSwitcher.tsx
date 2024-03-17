@@ -29,10 +29,15 @@ export const LanguageSwitcher = () => {
   }, [router.locale, setLocale]);
 
   const newLocale = locale === 'en' ? 'uk' : 'en';
+  //  add for dynamic path
+  const { pathname, query } = router;
+  //  add for dynamic path
 
   return (
     <Link
-      href={router.pathname}
+      //  add for dynamic path
+      href={{ pathname, query }}
+      // href={router.pathname}
       locale={newLocale}
       className={s.button}
       aria-label={t('language.aria') as string}

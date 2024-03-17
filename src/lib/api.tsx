@@ -41,11 +41,20 @@ export const fetchPhotoGallery = async (path: string) => {
   }
 };
 
-export const fetchNews = async () => {
+export const fetchNews = async (limit?: number, singleNewsId?: string) => {
   const photoPath = 'news-cards/';
+  const queryParams: { [key: string]: unknown } = {};
+
+  if (limit) {
+    queryParams.limit = limit;
+  }
+
+  if (singleNewsId) {
+    queryParams.id = singleNewsId;
+  }
 
   try {
-    const response = await api.get(photoPath);
+    const response = await api.get(photoPath, { params: queryParams });
     return response.data;
   } catch (err) {
     if (err instanceof Error) console.log(err.message);

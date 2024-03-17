@@ -6,6 +6,8 @@ import { TabsCurrentProjectInfo } from '@/components/TabsCurrentProjectInfo';
 import { TabsDonationInfo } from '@/components/TabsDonationtInfo';
 
 import s from './Tabs.module.css';
+import { INews } from '@/sections/CurrentNewsPage/CurrentNewsSection/currentNewsProps';
+import { TabsNewsInfo } from '@/components/TabsNewsInfo';
 
 interface ITAb {
   tabsDesk?: string[];
@@ -17,9 +19,10 @@ interface ITabProps {
   type: 'project' | 'donation' | 'news' | 'team';
   tabs: ITAb;
   onClickTabTeam?: (index: number) => void;
+  data?: INews;
 }
 
-export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam }) => {
+export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam, data }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [numberTab, setNumberTab] = useState(0);
 
@@ -92,8 +95,8 @@ export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam }) => {
                         s.button_common
                       }`
                     : `${s.tab_active} ${s['button_common_' + type]} ${
-                        s.button_common
-                      }`
+                        s.tab_active_news
+                      } ${s.button_common}`
                 }
                 onClick={() => onClickTab(ind)}
               >
@@ -104,9 +107,9 @@ export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam }) => {
       </ul>
       {type === 'project' && <TabsCurrentProjectInfo numberTab={numberTab} />}
       {type === 'donation' && <TabsDonationInfo numberTab={numberTab} />}
-
-      {/* for  news */}
-      {type === 'news' && <div> news render</div>}
+      {type === 'news' && (
+        <TabsNewsInfo numberTab={numberTab} data={data as INews} />
+      )}
     </>
   );
 };
