@@ -1,7 +1,8 @@
-{ "main_section":{
+{ 
+	"main_section":{
         "title":"We are Junior Chamber International",
         "title_span": " Ukraine!"
-    },
+  	},
     "change_world_section": {
         "title": [
             "We are",
@@ -91,6 +92,12 @@
                 "text": "JCI Ukraine is dedicated to creating meaningful change within the community via a range of initiatives and projects. By joining us, you can play an active role in these endeavors and leave a lasting impact." 
             }
         ]
+    },
+		"join_jci_section": {
+        "title_1": "Join ",
+				"span_title": "JCI Ukraine",
+				"title_2": ", impact your community today.",
+        "alt_text":"JCI community"
     }
 }
 

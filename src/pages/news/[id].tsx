@@ -48,6 +48,11 @@ export async function getStaticProps({
   const currentNews = news.find(
     (item: ILatestMewsItem) => item.id.toString() === currentPageId
   );
+  if (!currentNews) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       news,
