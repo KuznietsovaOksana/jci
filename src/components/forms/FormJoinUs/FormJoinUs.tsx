@@ -20,6 +20,7 @@ import { nameType } from '@/components/inputs/Input/Input.props';
 
 import s from './FormJoinUs.module.css';
 import { textAreaName } from '@/components/inputs/Textarea/Textarea.props';
+import { fetchJoinUs } from '@/lib/api';
 
 const KEY_JOIN_US = 'key_join_us';
 
@@ -39,10 +40,7 @@ const initialState = {
 };
 
 export const FormJoinUs = () => {
-  // Katya's code
   const [formSuccess, setFormSuccess] = useState(false);
-  // Katya's code
-
   return (
     <>
       {!formSuccess ? (
@@ -53,11 +51,25 @@ export const FormJoinUs = () => {
             if (!validate) {
               return;
             }
-            // some logic
-            // Katya's code
-            setFormSuccess(true);
-            // Katya's code
-            actions.resetForm();
+            const newData = {
+              full_name: values.name,
+              date_of_birth: values.date,
+              email: values.email,
+              city: values.city,
+              phone_number: values.phone,
+              occupation_role: values.role,
+              project_direction: values.project,
+              expectations: values.expectations,
+              how_did_you_learn: values.info,
+              other_text: values.other,
+            };
+            console.log(newData);
+            const data = await fetchJoinUs(newData);
+            console.log(data);
+            if (data) {
+              actions.resetForm();
+              setFormSuccess(true);
+            }
           }}
           validationSchema={schema}
         >
