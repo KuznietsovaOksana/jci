@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { IJoinUs } from './types.api';
 
 // const baseURL = 'https://jcibackend-jci.koyeb.app/';
 const baseURL = 'https://jci-maracasabat.koyeb.app/';
@@ -61,3 +62,18 @@ export const fetchNews = async (limit?: number, singleNewsId?: string) => {
     return [];
   }
 };
+
+// For form
+
+export const fetchJoinUs = async (bodyData: IJoinUs) => {
+  const joinUsPath = 'member-application/';
+
+  try {
+    const response = await api.post(joinUsPath, bodyData);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+  }
+};
+
+// For form

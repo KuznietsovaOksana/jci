@@ -54,23 +54,23 @@
     "title": "How did you learn about us? *",
     "radio_buttons": [
       {
-        "text": "Website/ Social media;",
+        "text": "Website/ Social media",
         "name": "info"
       },
       {
-        "text": "Friends / acquaintances;",
+        "text": "Friends / acquaintances",
         "name": "info"
       },
       {
-        "text": "Work;",
+        "text": "Work",
         "name": "info"
       },
       {
-        "text": "Chambers in other countries;",
+        "text": "Chambers in other countries",
         "name": "info"
       },
       {
-        "text": "Other:",
+        "text": "Other",
         "name": "info"
       }
     ]

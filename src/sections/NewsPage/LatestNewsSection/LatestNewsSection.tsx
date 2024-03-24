@@ -128,7 +128,7 @@ export const LatestNewsSection = ({ newsData }: ILatestMewsProps) => {
           {filteredNews.length > endIndex && (
             <button type='button' onClick={handleLoadMore} className={s.button}>
               {t('latest_news_section.button')}
-              <IconMore class={`${s.icon_more} ${s.rotate}`} />
+              <IconMore className={`${s.icon_more} ${s.rotate}`} />
             </button>
           )}
         </div>
