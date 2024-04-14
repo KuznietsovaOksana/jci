@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
+import { SwiperSlide } from 'swiper/react';
 
 import { useLocalization } from '@/contexts/LocalizationContext';
 import { useScreen } from '@/hooks/use_screen';
@@ -18,6 +18,7 @@ import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
 import { Title } from '@/components/typography/Title';
 import { Tabs } from '@/components/common/Tabs';
+import { CurrentNewsSlider } from '@/components/sliders/CurrentNewsSlider';
 
 import { ICurrentMewsProps } from './currentNewsProps';
 
@@ -39,10 +40,6 @@ export const CurrentNewsSection = ({
   const recentNews = lastFourNews.slice(-3);
   // for last 3 new news
 
-  //
-  // console.log(currentNews);
-  // console.log(recentNews);
-  //
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -71,7 +68,7 @@ export const CurrentNewsSection = ({
           </span>
         </div>
         <Title isBlue className={s.title_main} tag='h1'>
-          {locale === 'en' ? currentNews.title_en : currentNews.agenda_uk}
+          {locale === 'en' ? currentNews.title_en : currentNews.title_uk}
         </Title>
         <div className={s.block_for_desk}>
           <div>
@@ -89,18 +86,7 @@ export const CurrentNewsSection = ({
                 <span className={s.decorCircle}>&#8226;</span>
                 <p className={s.level}>{currentNews.event_category}</p>
               </div>
-              <Image
-                className={s.picture}
-                src={currentNews.multimedia[0].photo}
-                width={552}
-                height={176}
-                alt={
-                  locale === 'uk'
-                    ? currentNews.multimedia[0].alt_text_uk
-                    : currentNews.multimedia[0].alt_text_en
-                }
-                style={{ objectFit: 'cover' }}
-              />
+              <CurrentNewsSlider images={currentNews.multimedia} />
             </div>
             <Tabs type='news' tabs={{ tabs }} data={currentNews} />
             <div className={s.logos_list}>
@@ -248,54 +234,52 @@ export const CurrentNewsSection = ({
           <div className={s.newsSliderContainer}>
             <div className={s.newsSliderCards}>
               {recentNews.map(newsItem => (
-                <SwiperSlide key={newsItem.id}>
-                  <div key={newsItem.id}>
-                    <Link href={`/news/${newsItem.id}`} className={s.card}>
-                      <Image
-                        className={`${s.picture}  ${s.picture_other}`}
-                        src={newsItem.multimedia[0].photo}
-                        width={552}
-                        height={318}
-                        alt={
-                          locale === 'uk'
-                            ? newsItem.multimedia[0].alt_text_uk
-                            : newsItem.multimedia[0].alt_text_en
-                        }
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div className={s.textblock}>
-                        <div className={s.data}>
-                          <div className={s.datePrimary}>
-                            <p className={s.date}>
-                              {formatDate(newsItem.start_date)}
-                            </p>
-                            <span className={s.decor}>|</span>
-                            <p className={s.location}>
-                              {locale === 'uk'
-                                ? newsItem.location_uk
-                                : newsItem.location_en}
-                            </p>
-                          </div>
-                          <span className={s.decorCircle}>&#8226;</span>
-                          <p className={s.level}>{newsItem.event_category}</p>
-                        </div>
-
-                        <div className={s.info}>
-                          <h3 className={s.title}>
+                <div key={newsItem.id}>
+                  <Link href={`/news/${newsItem.id}`} className={s.card}>
+                    <Image
+                      className={`${s.picture}  ${s.picture_other}`}
+                      src={newsItem.multimedia[0].photo}
+                      width={552}
+                      height={318}
+                      alt={
+                        locale === 'uk'
+                          ? newsItem.multimedia[0].alt_text_uk
+                          : newsItem.multimedia[0].alt_text_en
+                      }
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div className={s.textblock}>
+                      <div className={s.data}>
+                        <div className={s.datePrimary}>
+                          <p className={s.date}>
+                            {formatDate(newsItem.start_date)}
+                          </p>
+                          <span className={s.decor}>|</span>
+                          <p className={s.location}>
                             {locale === 'uk'
-                              ? newsItem.title_uk
-                              : newsItem.title_en}
-                          </h3>
-                          <p className={s.text}>
-                            {locale === 'uk'
-                              ? newsItem.overview_uk
-                              : newsItem.overview_en}
+                              ? newsItem.location_uk
+                              : newsItem.location_en}
                           </p>
                         </div>
+                        <span className={s.decorCircle}>&#8226;</span>
+                        <p className={s.level}>{newsItem.event_category}</p>
                       </div>
-                    </Link>
-                  </div>
-                </SwiperSlide>
+
+                      <div className={s.info}>
+                        <h3 className={s.title}>
+                          {locale === 'uk'
+                            ? newsItem.title_uk
+                            : newsItem.title_en}
+                        </h3>
+                        <p className={s.text}>
+                          {locale === 'uk'
+                            ? newsItem.overview_uk
+                            : newsItem.overview_en}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>

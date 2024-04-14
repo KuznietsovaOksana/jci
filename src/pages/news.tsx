@@ -61,8 +61,17 @@ export default function News({ newsData }: INewsApiProps) {
   );
 }
 
+function compareDates(
+  a: { start_date: string },
+  b: { start_date: string }
+): number {
+  return new Date(b.start_date).getTime() - new Date(a.start_date).getTime();
+}
+
 export async function getStaticProps({ locale }: { locale: string }) {
   const newsData = await fetchNews();
+  newsData.sort(compareDates);
+
   return {
     props: {
       newsData,
