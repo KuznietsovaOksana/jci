@@ -79,6 +79,12 @@
   background: var(--white-color);
   border-radius: 25px;
   border: 1px solid #d8e1ef;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border: 1px solid var(--blue-30-color);
+  box-shadow: 0 4px 20px 0 rgba(14, 17, 28, 0.1);
 }
 
 .picture {
@@ -128,6 +134,7 @@
   font-size: 18px;
   line-height: 1.2;
   color: #0a0f29;
+  transition: color 0.3s ease;
 
   width: 100%;
   overflow: hidden;
@@ -135,6 +142,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+.card:hover .title {
+  color: var(--blue-primary-color);
 }
 
 .textblock {
@@ -183,11 +194,11 @@
     height: 525px;
     margin-bottom: 20px;
   }
-  .list_news > li:first-child .title {
+  /* .list_news > li:first-child .title {
     font-size: 30px;
     font-family: 'NAMU';
     line-height: 1.4;
-  }
+  } */
 
   .list_news > li .text {
     margin-top: 20px;
