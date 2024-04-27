@@ -63,6 +63,18 @@ export const fetchNews = async (limit?: number, singleNewsId?: string) => {
   }
 };
 
+export const fetchProjects = async () => {
+  const photoPath = 'page_project/';
+
+  try {
+    const response = await api.get(photoPath);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+    return [];
+  }
+};
+
 // For form
 
 export const fetchJoinUs = async (bodyData: IJoinUs) => {

@@ -8,6 +8,7 @@ import { IMediaProps } from '@/sections/MainPage/ImpactSection/mediaProps';
 import { IMemberCardProps } from '@/sections/AboutPage/TeamSection/type';
 import { IMainPhotoProps } from '@/sections/AboutPage/MainSection/type';
 import { ILatestMewsProps } from '@/sections/NewsPage/LatestNewsSection/latestNewsProps';
+import { IProjectsProps } from '@/sections/ProjectsPage/lProjectsProps';
 
 export interface IMainApiProps
   extends AccordionProps,
@@ -15,7 +16,9 @@ export interface IMainApiProps
     IPresidentProps,
     IHeroProps,
     IPartnersProps,
-    IMediaProps {}
+    IMediaProps,
+    ILatestMewsProps,
+    IProjectsProps {}
 
 export interface IAboutApiProps extends IMemberCardProps, IMainPhotoProps {}
 

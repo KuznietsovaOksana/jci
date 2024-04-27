@@ -16,14 +16,18 @@ import { IconButton } from '@/components/buttons/IconButton';
 import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 
-import { cards } from './cards';
+// import { cards } from './cards';
 import s from './NewsSection.module.css';
+import { ILatestMewsProps } from '@/sections/NewsPage/LatestNewsSection/latestNewsProps';
+import { router } from '@/utils/routes';
 
-export const NewsSection = () => {
+export const NewsSection = ({ newsData }: ILatestMewsProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const { t: mainPageT } = useTranslation('mainPage');
   const { t: commonT } = useTranslation('common');
+
+  const shortNewsData = newsData.slice(0, 12);
 
   useEffect(() => {
     setIsMounted(true);
@@ -46,8 +50,8 @@ export const NewsSection = () => {
         <>
           <div className='newsSliderContainer'>
             <div className='newsSliderCards'>
-              {cards.map((card, index) => (
-                <SwiperSlide key={index}>
+              {shortNewsData.map(card => (
+                <SwiperSlide key={card.id}>
                   <NewsCard card={card} />
                 </SwiperSlide>
               ))}
@@ -82,8 +86,8 @@ export const NewsSection = () => {
                 },
               }}
             >
-              {cards.map((card, index) => (
-                <SwiperSlide key={index}>
+              {shortNewsData.map(card => (
+                <SwiperSlide key={card.id}>
                   <NewsCard card={card} />
                 </SwiperSlide>
               ))}
@@ -102,7 +106,7 @@ export const NewsSection = () => {
 
       <Container>
         <div className={s.button_wrapper}>
-          <IconButton text={commonT('buttons.allNews')} />
+          <IconButton href={router.NEWS} text={commonT('buttons.allNews')} />
         </div>
       </Container>
     </Section>
