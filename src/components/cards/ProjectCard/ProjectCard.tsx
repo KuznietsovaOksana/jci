@@ -59,7 +59,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <Image
               src={image_dt}
               alt='Project photo'
-              priority
               className={s.project_img}
               width={552}
               height={435}

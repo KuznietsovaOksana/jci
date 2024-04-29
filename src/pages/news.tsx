@@ -8,6 +8,7 @@ import { Layout } from '@/layout/Layout';
 import { fetchNews } from '@/lib/api';
 import { INewsApiProps } from '@/types/typesApiProps';
 import { LatestNewsSection } from '@/sections/NewsPage/LatestNewsSection';
+import { compareDates } from '@/services/sortNews';
 
 export default function News({ newsData }: INewsApiProps) {
   const [showModal, setShowModal] = useState(false);
@@ -59,13 +60,6 @@ export default function News({ newsData }: INewsApiProps) {
       </Layout>
     </>
   );
-}
-
-function compareDates(
-  a: { start_date: string },
-  b: { start_date: string }
-): number {
-  return new Date(b.start_date).getTime() - new Date(a.start_date).getTime();
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {

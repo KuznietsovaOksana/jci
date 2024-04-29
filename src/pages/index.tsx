@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { fetchMain } from '@/lib/api';
+import { fetchMain, fetchNews } from '@/lib/api';
 import { Layout } from '@/layout/Layout';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
@@ -23,6 +23,9 @@ import { ImpactSection } from '@/sections/MainPage/ImpactSection';
 import { PartnersSection } from '@/sections/MainPage/PartnersSection';
 
 import { IMainApiProps } from '@/types/typesApiProps';
+import { compareDates } from '@/services/sortNews';
+import { fetchProjects } from '../lib/api';
+import { compareNumbers } from '@/services/sortProjects';
 
 export default function Home({
   faqData,
@@ -31,6 +34,8 @@ export default function Home({
   heroData,
   partnersData,
   mediaData,
+  newsData,
+  projectsData,
 }: IMainApiProps) {
   const [showModal, setShowModal] = useState(false);
   const { t } = useTranslation('mainPage');
@@ -82,9 +87,9 @@ export default function Home({
           <ImpactSection mediaData={mediaData} />
           <WarSection />
           <TogetherSection achievementsData={achievementsData} />
-          <ProjectSection />
+          <ProjectSection projectsData={projectsData} />
           <DonateSection heading={t('donate.text')} />
-          <NewsSection />
+          <NewsSection newsData={newsData} />
           <PartnersSection partnersData={partnersData} />
           <OurPresident presidentData={presidentData} />
           <FAQSection faqData={faqData} />
@@ -101,6 +106,10 @@ export async function getStaticProps({ locale }: { locale: string }) {
   const heroData = await fetchMain('main-banner');
   const partnersData = await fetchMain('partners');
   const mediaData = await fetchMain('media');
+  const newsData = await fetchNews();
+  newsData.sort(compareDates);
+  const projectsData = await fetchProjects();
+  partnersData.sort(compareNumbers);
 
   return {
     props: {
@@ -110,6 +119,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
       heroData,
       partnersData,
       mediaData,
+      newsData,
+      projectsData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
