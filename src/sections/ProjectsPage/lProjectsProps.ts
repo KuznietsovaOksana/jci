@@ -43,3 +43,17 @@ export interface IProjectItem {
 export interface IProjectsProps {
   projectsData: IProjectItem[];
 }
+
+export interface ICompletedProjects {
+  card: IProjectItem;
+}
+
+export interface IIntroSection {
+  currentProject: IProjectItem;
+}
+
+export interface IProjects {
+  projects: IProjectItem[];
+}
+
+export interface ICurrentProject extends IIntroSection, IProjects {}

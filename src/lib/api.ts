@@ -43,7 +43,7 @@ export const fetchPhotoGallery = async (path: string) => {
 };
 
 export const fetchNews = async (limit?: number, singleNewsId?: string) => {
-  const photoPath = 'news-cards/';
+  const newsPath = 'news-cards/';
   const queryParams: { [key: string]: unknown } = {};
 
   if (limit) {
@@ -55,7 +55,7 @@ export const fetchNews = async (limit?: number, singleNewsId?: string) => {
   }
 
   try {
-    const response = await api.get(photoPath, { params: queryParams });
+    const response = await api.get(newsPath, { params: queryParams });
     return response.data;
   } catch (err) {
     if (err instanceof Error) console.log(err.message);
@@ -63,11 +63,24 @@ export const fetchNews = async (limit?: number, singleNewsId?: string) => {
   }
 };
 
-export const fetchProjects = async () => {
-  const photoPath = 'page_project/';
+export const fetchProjects = async (id = '') => {
+  const idProject = id ? `${id}/` : '';
+  const projectPath = `page_project/${idProject}`;
 
   try {
-    const response = await api.get(photoPath);
+    const response = await api.get(projectPath);
+    return response.data;
+  } catch (err) {
+    if (err instanceof Error) console.log(err.message);
+    return [];
+  }
+};
+
+export const fetchEvents = async () => {
+  const eventPath = `events_page/`;
+
+  try {
+    const response = await api.get(eventPath);
     return response.data;
   } catch (err) {
     if (err instanceof Error) console.log(err.message);

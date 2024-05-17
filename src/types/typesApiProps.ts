@@ -9,6 +9,7 @@ import { IMemberCardProps } from '@/sections/AboutPage/TeamSection/type';
 import { IMainPhotoProps } from '@/sections/AboutPage/MainSection/type';
 import { ILatestMewsProps } from '@/sections/NewsPage/LatestNewsSection/latestNewsProps';
 import { IProjectsProps } from '@/sections/ProjectsPage/lProjectsProps';
+import { ICalendarProps } from '@/sections/NewsPage/CalendarSection/CalendarSectionProps';
 
 export interface IMainApiProps
   extends AccordionProps,
@@ -22,5 +23,7 @@ export interface IMainApiProps
 
 export interface IAboutApiProps extends IMemberCardProps, IMainPhotoProps {}
 
+export interface INewsApiProps extends ILatestMewsProps, ICalendarProps {}
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface INewsApiProps extends ILatestMewsProps {}
+export interface IProjectsApiProps extends IProjectsProps {}

@@ -18,6 +18,8 @@ interface ProjectCardProps {
   subtitle: string;
   text: string;
   hover_dt: string;
+  alt: string;
+  id: string | number;
 }
 
 export const ProjectPageCard: React.FC<ProjectCardProps> = ({
@@ -25,17 +27,19 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
   title,
   subtitle,
   text,
+  alt,
+  id,
 }) => {
   const { t } = useTranslation('common');
 
   return (
     <div className={s.project_card}>
-      <a href='#' className={s.project_link}>
+      <a href={`/projects/${id}`} className={s.project_link}>
         <div className={s.img_wrapper}>
           <MediaQuery maxWidth={767}>
             <Image
               src={image_dt}
-              alt='Project photo'
+              alt={alt}
               priority
               className={s.project_img}
               width={252}
@@ -46,7 +50,7 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
           <MediaQuery minWidth={768} maxWidth={1439}>
             <Image
               src={image_dt}
-              alt='Project photo'
+              alt={alt}
               priority
               className={s.project_img}
               width={552}
@@ -57,7 +61,7 @@ export const ProjectPageCard: React.FC<ProjectCardProps> = ({
           <MediaQuery minWidth={1440}>
             <Image
               src={image_dt}
-              alt='Project photo'
+              alt={alt}
               priority
               className={s.project_img}
               width={552}

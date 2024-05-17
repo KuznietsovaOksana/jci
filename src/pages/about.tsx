@@ -96,5 +96,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'mainPage',
       ])),
     },
+    revalidate: 30,
   };
 }

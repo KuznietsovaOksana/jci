@@ -67,5 +67,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'navigation',
       ])),
     },
+    revalidate: 30,
   };
 }

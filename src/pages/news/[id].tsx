@@ -63,6 +63,7 @@ export async function getStaticProps({
         'newsPage',
       ])),
     },
+    revalidate: 30,
   };
 }
 

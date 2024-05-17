@@ -422,10 +422,6 @@ button {
   margin: 0 auto;
 }
 
-.highlighted-date {
-  background-color: red !important;
-}
-
 /* FollowUs */
 
 .followSliderContainer {
@@ -481,4 +477,75 @@ button {
   .followSliderCards .swiper-slide:last-child {
     margin-right: 158px;
   }
+}
+
+/* Calendar */
+.react-calendar {
+  border: none !important;
+  position: relative !important;
+}
+.react-calendar__viewContainer {
+  margin-top: 10px !important;
+}
+
+.react-calendar__navigation__arrow {
+  margin-top: 6px !important;
+  border-radius: 50% !important;
+  border: 2px solid #d8e1ef !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  font-size: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-bottom: 3px !important;
+  color: #3a67b1 !important;
+}
+
+.react-calendar--doubleView {
+  width: 100% !important;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  gap: 20px !important;
+}
+
+.react-calendar__navigation__label {
+  font-family: 'NAMU' !important;
+  font-weight: 800px !important;
+
+  font-size: 32px !important;
+  color: #414042 !important;
+
+  @media (max-width: 767px) {
+    font-size: 20px !important;
+  }
+}
+
+.react-calendar__tile {
+  border: 1px solid #d8e1ef !important;
+  font-size: 16px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.highlighted-date {
+  background-color: #ebf1fc !important;
+  color: #a5a9b1 !important;
+}
+
+@media (max-width: 1439.9px) {
+  .react-calendar {
+    width: 100% !important;
+  }
+}
+
+.Sample__container__content {
+  position: relative !important;
+}
+
+.react-calendar__tile--active {
+  /* color: initial !important; */
+  /* background-color: initial !important; */
+  /* box-shadow: none !important; */
 }

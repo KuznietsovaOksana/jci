@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Link from 'next/link';
 
 import ArrowRight from 'public/icons/arrow-right.svg';
 import ArrowDown from 'public/icons/chevron_Down.svg';
@@ -12,14 +11,16 @@ export const IconButton: FC<ButtonProps> = ({
   className = '',
   href = '/',
   isDown,
+  Tag = 'a',
+  onClick,
 }) => {
   const LogoIcon = isDown ? ArrowDown : ArrowRight;
 
   return (
-    <Link href={href} className={`${s.button} ${className}`}>
+    <Tag onClick={onClick} href={href} className={`${s.button} ${className}`}>
       {text}
       <LogoIcon className={s.icon} />
-    </Link>
+    </Tag>
   );
 };
 

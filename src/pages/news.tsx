@@ -5,12 +5,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Portal } from '@/components/common/Portal';
 import { ModalMenu } from '@/components/header/ModalMenu';
 import { Layout } from '@/layout/Layout';
-import { fetchNews } from '@/lib/api';
+import { fetchEvents, fetchNews } from '@/lib/api';
 import { INewsApiProps } from '@/types/typesApiProps';
 import { LatestNewsSection } from '@/sections/NewsPage/LatestNewsSection';
 import { compareDates } from '@/services/sortNews';
+import { CalendarSection } from '@/sections/NewsPage/CalendarSection';
 
-export default function News({ newsData }: INewsApiProps) {
+export default function News({ newsData, calendarData }: INewsApiProps) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -56,6 +57,7 @@ export default function News({ newsData }: INewsApiProps) {
       <Layout setShowModal={setShowModal}>
         <main>
           <LatestNewsSection newsData={newsData} />
+          <CalendarSection calendarData={calendarData} />
         </main>
       </Layout>
     </>
@@ -64,11 +66,13 @@ export default function News({ newsData }: INewsApiProps) {
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const newsData = await fetchNews();
-  newsData.sort(compareDates);
 
+  const calendarData = await fetchEvents();
+  newsData.sort(compareDates);
   return {
     props: {
       newsData,
+      calendarData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
@@ -76,5 +80,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'mainPage',
       ])),
     },
+    revalidate: 30,
   };
 }

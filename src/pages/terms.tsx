@@ -68,5 +68,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'termsPage',
       ])),
     },
+    revalidate: 30,
   };
 }

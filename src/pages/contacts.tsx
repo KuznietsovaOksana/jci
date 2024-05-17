@@ -69,5 +69,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'contactsPage',
       ])),
     },
+    revalidate: 30,
   };
 }

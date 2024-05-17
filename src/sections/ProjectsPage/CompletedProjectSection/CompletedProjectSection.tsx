@@ -14,13 +14,19 @@ import RightArrow from 'public/icons/chevron_Right.svg';
 import { Title } from '@/components/typography/Title';
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
-import { cards } from './cards';
+// import { cards } from './cards';
 import { CompletedCard } from '@/components/cards/CompletedCard';
 
 import s from './CopmpletedProjectSection.module.css';
+import { IProjectsProps } from '../lProjectsProps';
 
-export const CompleteProjectSection = () => {
+export const CompleteProjectSection = ({ projectsData }: IProjectsProps) => {
   const { t } = useTranslation('projectsPage');
+
+  // it as temporary decision
+  if (projectsData.length === 1)
+    projectsData = [...projectsData, ...projectsData];
+  // it as temporary decision
 
   return (
     <Section className={s.section}>
@@ -35,12 +41,13 @@ export const CompleteProjectSection = () => {
         </Container>
         <div className='projectSliderContainer sliderContainerTablet'>
           <div className='projectSliderCards sliderCardsTablet'>
-            {cards.map((card, index) => (
-              <SwiperSlide key={index}>
-                <CompletedCard card={card} />
-                <div className={s.div_tablet}></div>
-              </SwiperSlide>
-            ))}
+            {projectsData.length > 0 &&
+              projectsData.map(card => (
+                <SwiperSlide key={card.id}>
+                  <CompletedCard card={card} />
+                  <div className={s.div_tablet}></div>
+                </SwiperSlide>
+              ))}
           </div>
         </div>
       </MediaQuery>
@@ -72,11 +79,12 @@ export const CompleteProjectSection = () => {
                 },
               }}
             >
-              {cards.map((card, index) => (
-                <SwiperSlide key={index}>
-                  <CompletedCard card={card} />
-                </SwiperSlide>
-              ))}
+              {projectsData.length > 0 &&
+                projectsData.map((card, index) => (
+                  <SwiperSlide key={index}>
+                    <CompletedCard card={card} />
+                  </SwiperSlide>
+                ))}
             </Swiper>
             <div className='newsSliderNavBtns'>
               <div className='newsSliderBtnPrev'>

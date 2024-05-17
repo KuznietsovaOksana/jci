@@ -68,5 +68,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'donationPage',
       ])),
     },
+    revalidate: 30,
   };
 }

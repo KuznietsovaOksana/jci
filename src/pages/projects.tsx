@@ -9,9 +9,15 @@ import { ProjectSectionPP } from '@/sections/ProjectsPage/ProjectSection';
 import { QuoteSection } from '@/sections/ProjectsPage/QuoteSection';
 import { CompleteProjectSection } from '@/sections/ProjectsPage/CompletedProjectSection';
 import { PhotoGallerySection } from '@/sections/ProjectsPage/PhotoGallerySection';
+import { fetchProjects } from '@/lib/api';
+import { compareNumbers } from '@/services/sortProjects';
+import { IProjectsApiProps } from '@/types/typesApiProps';
 
-export default function Projects() {
+export default function Projects({ projectsData }: IProjectsApiProps) {
   const [showModal, setShowModal] = useState(false);
+
+  const notCompletedProjects = projectsData.filter(el => !el.done);
+  const completedProjects = projectsData.filter(el => el.done);
 
   return (
     <>
@@ -55,9 +61,9 @@ export default function Projects() {
       )}
       <Layout setShowModal={setShowModal}>
         <main>
-          <ProjectSectionPP />
+          <ProjectSectionPP projectsData={notCompletedProjects} />
           <QuoteSection />
-          <CompleteProjectSection />
+          <CompleteProjectSection projectsData={completedProjects} />
           <PhotoGallerySection />
         </main>
       </Layout>
@@ -66,13 +72,17 @@ export default function Projects() {
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
+  const projectsData = await fetchProjects();
+  projectsData.sort(compareNumbers);
   return {
     props: {
+      projectsData,
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'navigation',
         'projectsPage',
       ])),
     },
+    revalidate: 30,
   };
 }

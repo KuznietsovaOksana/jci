@@ -12,25 +12,25 @@ import { useScreen } from '@/hooks/use_screen';
 import { MainButton } from '@/components/buttons/MainButton';
 
 import s from './OtherProjectCard.module.css';
+import { ICompletedProjects } from '@/sections/ProjectsPage/lProjectsProps';
+import { useLocalization } from '@/contexts/LocalizationContext';
 
-type CardOtherProjectProps = {
-  card: {
-    picture: {
-      src: string;
-      alt: string;
-    };
+// type CardOtherProjectProps = {
+//   card: {
+//     picture: {
+//       src: string;
+//       alt: string;
+//     };
 
-    title: string;
-    text: string;
-    subtitle: string;
-  };
-};
+//     title: string;
+//     text: string;
+//     subtitle: string;
+//   };
+// };
 
-export const OtherProjectCard: FC<CardOtherProjectProps> = ({
-  card: { picture, text, title, subtitle },
-}) => {
+export const OtherProjectCard: FC<ICompletedProjects> = ({ card }) => {
   const { isMobile, isTablet } = useScreen();
-
+  const { locale } = useLocalization();
   const { t } = useTranslation('common');
 
   let width: number;
@@ -53,19 +53,31 @@ export const OtherProjectCard: FC<CardOtherProjectProps> = ({
         <div className={s.block_picture}>
           <Image
             className={s.picture}
-            src={picture.src}
+            src={card.multimedia[0].photo}
             width={width}
             height={height}
-            alt={picture.alt}
+            alt={
+              locale === 'uk'
+                ? card.multimedia[0].alt_text_uk
+                : card.multimedia[0].alt_text_en
+            }
             style={{ objectFit: 'cover' }}
             priority
           />
         </div>
         <div className={s.text_block}>
           <div>
-            <h3 className={s.title}>{title}</h3>
-            <p className={s.subtitle}>{subtitle}</p>
-            <p className={s.text}>{text}</p>
+            <h3 className={s.title}>
+              {locale === 'uk' ? card.name_uk : card.name_en}
+            </h3>
+            <p className={s.subtitle}>
+              {locale === 'uk' ? card.founder_uk : card.founder_en}
+            </p>
+            <p className={s.text}>
+              {locale === 'uk'
+                ? card.project_detail_uk
+                : card.project_detail_en}
+            </p>
           </div>
           <MediaQuery minWidth={768} maxWidth={1439.9}>
             <p className={s.tablet_goal}> OUR GOAL</p>
