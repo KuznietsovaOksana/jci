@@ -532,6 +532,7 @@ button {
 .highlighted-date {
   background-color: #ebf1fc !important;
   color: #a5a9b1 !important;
+  position: relative;
 }
 
 @media (max-width: 1439.9px) {
@@ -548,4 +549,11 @@ button {
   /* color: initial !important; */
   /* background-color: initial !important; */
   /* box-shadow: none !important; */
+}
+
+.tile-content {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -10px;
 }

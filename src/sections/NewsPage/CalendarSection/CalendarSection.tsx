@@ -13,6 +13,7 @@ import { ICalendarProps } from './CalendarSectionProps';
 import CloseMenu from 'public/icons/remove.svg';
 import CalendarIcon from 'public/icons/Calendar.svg';
 import LocationIcon from 'public/icons/Location2.svg';
+import Event from 'public/icons/Event.svg';
 import 'react-calendar/dist/Calendar.css';
 
 import s from './CalendarSection.module.css';
@@ -129,6 +130,42 @@ export const CalendarSection = ({ calendarData }: ICalendarProps) => {
             onChange={onChange}
             showFixedNumberOfWeeks={false}
             selectRange={true}
+            tileContent={({ date }) => {
+              const matchingEvents = calendarData.filter(event => {
+                const eventDateStart = new Date(event.start_date);
+                const eventDateFinish = new Date(event.finish_date);
+                const startDate = new Date(
+                  eventDateStart.getFullYear(),
+                  eventDateStart.getMonth(),
+                  eventDateStart.getDate()
+                );
+                const finishDate = new Date(
+                  eventDateFinish.getFullYear(),
+                  eventDateFinish.getMonth(),
+                  eventDateFinish.getDate()
+                );
+                const tileDate = new Date(
+                  date.getFullYear(),
+                  date.getMonth(),
+                  date.getDate()
+                );
+                return tileDate >= startDate && tileDate <= finishDate;
+              });
+
+              if (matchingEvents.length > 0) {
+                return (
+                  <div className='tile-content'>
+                    {matchingEvents.map((event, index) => (
+                      <div key={index}>
+                        <Event />
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+
+              return null;
+            }}
             tileClassName={({ date }) => {
               return calendarData.some(event => {
                 const eventDateStart = new Date(event.start_date);
