@@ -8,6 +8,7 @@ import { TabsDonationInfo } from '@/components/TabsDonationtInfo';
 import s from './Tabs.module.css';
 import { INews } from '@/sections/CurrentNewsPage/CurrentNewsSection/currentNewsProps';
 import { TabsNewsInfo } from '@/components/TabsNewsInfo';
+import { IProjectItem } from '@/sections/ProjectsPage/lProjectsProps';
 
 interface ITAb {
   tabsDesk?: string[];
@@ -19,7 +20,7 @@ interface ITabProps {
   type: 'project' | 'donation' | 'news' | 'team';
   tabs: ITAb;
   onClickTabTeam?: (index: number) => void;
-  data?: INews;
+  data?: INews | IProjectItem;
 }
 
 export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam, data }) => {
@@ -105,7 +106,12 @@ export const Tabs: FC<ITabProps> = ({ type, tabs, onClickTabTeam, data }) => {
             </li>
           ))}
       </ul>
-      {type === 'project' && <TabsCurrentProjectInfo numberTab={numberTab} />}
+      {type === 'project' && (
+        <TabsCurrentProjectInfo
+          numberTab={numberTab}
+          data={data as IProjectItem}
+        />
+      )}
       {type === 'donation' && <TabsDonationInfo numberTab={numberTab} />}
       {type === 'news' && (
         <TabsNewsInfo numberTab={numberTab} data={data as INews} />

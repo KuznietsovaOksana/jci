@@ -12,13 +12,16 @@ import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 import { Container } from '@/components/common/Container';
 import { Section } from '@/components/sections/Section';
-import { cards } from './cards';
+// import { cards } from './cards';
 import { OtherProjectCard } from '@/components/cards/OtherProjectCard';
 
 import s from './OtherProjectsSection.module.css';
+import { IProjects } from '@/sections/ProjectsPage/lProjectsProps';
 
-export const OtherProjectsSection = () => {
+export const OtherProjectsSection = ({ projects }: IProjects) => {
   const { t } = useTranslation('projectPage');
+
+  projects = projects.filter(item => !item.done);
 
   return (
     <Section>
@@ -34,8 +37,8 @@ export const OtherProjectsSection = () => {
         </Container>
         <div className='projectSliderContainer sliderContainerTablet'>
           <div className='projectSliderCards sliderCardsTablet'>
-            {cards.map((card, index) => (
-              <SwiperSlide key={index}>
+            {projects.map(card => (
+              <SwiperSlide key={card.id}>
                 <OtherProjectCard card={card} />
                 <div className={s.div_tablet}></div>
               </SwiperSlide>
@@ -72,8 +75,8 @@ export const OtherProjectsSection = () => {
                 },
               }}
             >
-              {cards.map((card, index) => (
-                <SwiperSlide key={index}>
+              {projects.map(card => (
+                <SwiperSlide key={card.id}>
                   <OtherProjectCard card={card} />
                 </SwiperSlide>
               ))}

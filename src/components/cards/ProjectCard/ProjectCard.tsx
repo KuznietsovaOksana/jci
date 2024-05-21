@@ -17,6 +17,8 @@ interface ProjectCardProps {
   subtitle: string;
   text: string;
   hover_dt: string;
+  alt: string;
+  id: string | number;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -24,6 +26,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   subtitle,
   text,
+  alt,
+  id,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation('common');
@@ -42,12 +46,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <a href='#' className={s.project_link}>
+      <a href={`/projects/${id}`} className={s.project_link}>
         <div className={s.img_wrapper}>
           <MediaQuery maxWidth={767}>
             <Image
               src={image_dt}
-              alt='Project photo'
+              alt={alt}
               priority
               className={s.project_img}
               width={252}
@@ -58,7 +62,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <MediaQuery minWidth={768} maxWidth={1439}>
             <Image
               src={image_dt}
-              alt='Project photo'
+              alt={alt}
               className={s.project_img}
               width={552}
               height={435}
@@ -68,7 +72,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <MediaQuery minWidth={1440}>
             <Image
               src={image_dt}
-              alt='Project photo'
+              alt={alt}
               priority
               className={s.project_img}
               width={264}

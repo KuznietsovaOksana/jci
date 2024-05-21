@@ -1,16 +1,10 @@
 export interface ImageProps {
-  src: string;
-  alt: string;
+  photo: string;
+  alt_text_en: string;
+  alt_text_uk: string;
 }
 
-interface Data {
-  projectName: string;
-  organization: string;
-  moneyAmount: string;
-  images: ImageProps[];
-}
-
-export const data: Data = {
+export const data = {
   projectName: 'Housing for IDP',
   organization: 'JCI "OLIMP"',
   moneyAmount: '800,000 EUR',

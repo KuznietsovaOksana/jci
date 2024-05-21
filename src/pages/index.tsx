@@ -105,11 +105,11 @@ export async function getStaticProps({ locale }: { locale: string }) {
   const presidentData = await fetchMain('jci-ukraine-president');
   const heroData = await fetchMain('main-banner');
   const partnersData = await fetchMain('partners');
+  partnersData.sort(compareNumbers);
   const mediaData = await fetchMain('media');
   const newsData = await fetchNews();
   newsData.sort(compareDates);
   const projectsData = await fetchProjects();
-  partnersData.sort(compareNumbers);
 
   return {
     props: {
@@ -127,5 +127,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
         'mainPage',
       ])),
     },
+    revalidate: 30,
   };
 }

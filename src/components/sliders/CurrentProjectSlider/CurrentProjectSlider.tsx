@@ -11,6 +11,7 @@ import LeftArrow from 'public/icons/chevron_Left.svg';
 import RightArrow from 'public/icons/chevron_Right.svg';
 
 import { ImageProps } from '@/sections/CurrentProjectPage/IntroSection/data';
+import { useLocalization } from '@/contexts/LocalizationContext';
 
 interface CurrentProjectSliderProps {
   images: ImageProps[];
@@ -19,6 +20,7 @@ interface CurrentProjectSliderProps {
 export const CurrentProjectSlider: React.FC<CurrentProjectSliderProps> = ({
   images,
 }) => {
+  const { locale } = useLocalization();
   return (
     <Swiper
       // autoplay={{
@@ -39,8 +41,8 @@ export const CurrentProjectSlider: React.FC<CurrentProjectSliderProps> = ({
       {images.map((image, index) => (
         <SwiperSlide key={index} className={styles.currentProjectSlider}>
           <Image
-            src={image.src}
-            alt={image.alt}
+            src={image.photo}
+            alt={locale === 'uk' ? image.alt_text_uk : image.alt_text_en}
             width='287'
             height='225'
             className={styles.photo}

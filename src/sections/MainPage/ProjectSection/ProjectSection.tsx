@@ -58,11 +58,17 @@ export const ProjectSection = ({ projectsData }: IProjectsProps) => {
           {mainPageT('projects.title')}
         </Title>
         <ul className={s.projects_wrapper}>
-          {shortProjectsData.map((project, index) => (
+          {shortProjectsData.map(project => (
             <ProjectCard
-              key={index}
+              key={project.id}
+              id={project.id}
               image_dt={project.multimedia[0].photo}
               hover_dt={project.multimedia[0].photo}
+              alt={
+                locale === 'uk'
+                  ? project.multimedia[0].alt_text_uk
+                  : project.multimedia[0].alt_text_en
+              }
               title={locale === 'uk' ? project.name_uk : project.name_en}
               subtitle={
                 locale === 'uk' ? project.founder_uk : project.founder_en
